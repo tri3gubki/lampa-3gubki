@@ -13,7 +13,6 @@ import Template from '../../../interaction/template'
 import LineModule from '../../../interaction/items/line/module/module'
 import ContentRows from '../../content_rows'
 import Permit from '../../account/permit'
-import VPN from '../../../core/vpn'
 import Keys from '../../tmdb/keys'
 
 let network = new Reguest()

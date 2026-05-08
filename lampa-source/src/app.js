@@ -70,7 +70,6 @@ import Color from './utils/color'
 import Cache from './utils/cache'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
-import VPN from './core/vpn'
 import ParentalControl from './interaction/parental_control'
 import Sound from './core/sound'
 import Iptv from './core/iptv'
@@ -313,7 +312,6 @@ function initClass(){
         Torrent,
         Torserver,
         ParentalControl,
-        VPN,
         Bell,
         StorageMenager,
         RemoteHelper,
@@ -702,7 +700,6 @@ function loadTask(){
 
         LoadingProgress.step(4)
 
-        VPN.task(next)
     })
 
     Task.queue((next)=>{
