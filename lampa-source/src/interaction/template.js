@@ -78,7 +78,6 @@ import icon_search from '../templates/icons/search'
 import icon_settings from '../templates/icons/settings'
 import icon_bell from '../templates/icons/bell'
 import icon_bell_plus from '../templates/icons/bell_plus'
-import icon_broadcast from '../templates/icons/broadcast'
 import icon_create_account from '../templates/icons/create_account'
 import icon_empty_subscribe from '../templates/icons/empty_subscribe'
 import icon_empty_bookmarks from '../templates/icons/empty_bookmarks'
@@ -90,7 +89,6 @@ import timeline from '../templates/timeline'
 import timeline_details from '../templates/timeline_details'
 import list_empty from '../templates/list_empty'
 import plugins_catalog from "../templates/plugins_catalog";
-import broadcast from "../templates/broadcast";
 import lang_choice from '../templates/lang'
 import iframe from '../templates/iframe'
 import account from '../templates/account'
@@ -197,7 +195,6 @@ let templates = {
     icon_settings,
     icon_bell,
     icon_bell_plus,
-    icon_broadcast,
     icon_create_account,
     icon_empty_subscribe,
     icon_empty_bookmarks,
@@ -209,7 +206,6 @@ let templates = {
     timeline_details,
     list_empty,
     plugins_catalog,
-    broadcast,
     lang_choice,
     iframe,
     account,

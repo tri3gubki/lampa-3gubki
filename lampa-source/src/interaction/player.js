@@ -9,7 +9,6 @@ import Storage from '../core/storage/storage'
 import Platform from '../core/platform'
 import Torserver from './torserver'
 import Android from '../core/android'
-import Broadcast from './broadcast'
 import Select from './select'
 import Modal from './modal'
 import Settings from './settings/settings'
@@ -340,16 +339,8 @@ function init(){
         }
     })
 
-    /** Нажали на кнопку (отправить) */
-    Panel.listener.follow('share',(e)=>{
-        Broadcast.open({
-            type: 'play',
-            object: {
-                player: work,
-                playlist: Playlist.get()
-            }
-        })
-    })
+    // Broadcast (CUB-share) удалён — кнопка «Отправить» в плеере
+    // больше ни во что не открывает.
 
     /** Событие на переключение серии */
     Playlist.listener.follow('select',(e)=>{

@@ -47,7 +47,6 @@ import Card from './interaction/card'
 import Account from './core/account/account'
 import Socket from './core/socket'
 import TimeTable from './core/timetable'
-import Broadcast from './interaction/broadcast'
 import Helper from './interaction/helper'
 import Tizen from './core/tizen'
 import InteractionMain from './interaction/items/old/main'
@@ -291,7 +290,6 @@ function initClass(){
         Socket,
         Input,
         TimeTable,
-        Broadcast,
         Helper,
         InteractionMain,
         InteractionCategory,
@@ -550,8 +548,6 @@ function startApp(){
     LoadingProgress.status('Iptv init')
 
 
-    Broadcast.init()
-    LoadingProgress.status('Broadcast init')
 
     Search.init()
     LoadingProgress.status('Search init')
