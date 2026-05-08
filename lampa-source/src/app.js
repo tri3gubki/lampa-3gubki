@@ -99,15 +99,6 @@ import ServiceTorserver from './services/torrserver'
 import ServiceWatched from './services/watched'
 import ServiceSettings from './services/settings'
 import ServiceLibs from './services/libs'
-import ServiceMetric from './services/metric'
-import ServiceDeveloper from './services/developer'
-import ServiceRemoteFavorites from './services/remote_favorites'
-import ServiceDMCA from './services/dmca'
-import ServiceLGBT from './services/lgbt'
-import ServiceFPS from './services/fps'
-import ServiceEvents from './services/events'
-import ServiceChildren from './services/children'
-import ServiceRemoteConfiguration from './services/remote_configuration'
 
 window.screen_width  = window.innerWidth
 window.screen_height = window.innerHeight
@@ -608,8 +599,6 @@ function startApp(){
 
     // Инициализируем остальные сервисы
 
-    ServiceDeveloper.init()
-    LoadingProgress.status('ServiceDeveloper init')
 
     ServiceTorserver.init()
     LoadingProgress.status('ServiceTorserver init')
@@ -620,32 +609,16 @@ function startApp(){
     ServiceSettings.init()
     LoadingProgress.status('ServiceSettings init')
 
-    ServiceMetric.init()
-    LoadingProgress.status('ServiceMetric init')
 
-    ServiceRemoteFavorites.init()
-    LoadingProgress.status('ServiceRemoteFavorites init')
 
-    ServiceDMCA.init()
-    LoadingProgress.status('ServiceDMCA init')
 
-    ServiceFPS.init()
-    LoadingProgress.status('ServiceFPS init')
 
-    ServiceEvents.init()
-    LoadingProgress.status('ServiceEvents init')
 
     ServiceLibs.init()
     LoadingProgress.status('ServiceLibs init')
 
-    ServiceLGBT.init()
-    LoadingProgress.status('ServiceLGBT init')
 
-    ServiceChildren.init()
-    LoadingProgress.status('ServiceChildren init')
 
-    ServiceRemoteConfiguration.init()
-    LoadingProgress.status('ServiceRemoteConfiguration init')
 
     // Обновляем слои
 
