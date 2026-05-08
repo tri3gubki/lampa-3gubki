@@ -79,7 +79,6 @@ import Cache from './utils/cache'
 import Demo from './core/demo'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
-import Speedtest from './interaction/speedtest'
 import VPN from './core/vpn'
 import Processing from './interaction/processing'
 import ParentalControl from './interaction/parental_control'
@@ -340,7 +339,6 @@ function initClass(){
         Cache,
         Torrent,
         Torserver,
-        Speedtest,
         Processing,
         ParentalControl,
         VPN,
@@ -582,8 +580,6 @@ function startApp(){
     Demo.init()
     LoadingProgress.status('Demo init')
 
-    Speedtest.init()
-    LoadingProgress.status('Speedtest init')
 
     Processing.init()
     LoadingProgress.status('Processing init')

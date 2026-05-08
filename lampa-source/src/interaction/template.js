@@ -112,7 +112,6 @@ import feed_item from '../templates/feed/item'
 import feed_head from '../templates/feed/head'
 import feed_episode from '../templates/feed/episode'
 import register from '../templates/register'
-import speedtest from '../templates/speedtest'
 import ad_bot from '../templates/ad/bot'
 import ad_video_block from '../templates/ad/video'
 import discuss_rules from '../templates/discuss_rules'
@@ -235,7 +234,6 @@ let templates = {
     feed_head,
     feed_episode,
     register,
-    speedtest,
     season_episode,
     season_episode_rate,
     season_info,
