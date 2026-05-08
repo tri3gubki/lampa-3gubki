@@ -7,7 +7,6 @@ import Android from '../core/android'
 import Lang from '../core/lang'
 import Platform from '../core/platform'
 import Manifest from '../core/manifest'
-import Mirrors from '../core/mirrors'
 import Cache from './cache'
 import Utils from './utils'
 
@@ -520,7 +519,7 @@ function Request(){
         }
 
         let datatype = params.dataType || 'json';
-        let timeout  = !Mirrors.connected() && params.url.indexOf(Manifest.cub_domain) >= 0 ? 2000 : params.timeout || need.timeout;
+        let timeout  = params.timeout || need.timeout;
 
         let data = {
             dataType: datatype,
@@ -636,7 +635,7 @@ function Request(){
             if(params.end) params.end();
         }
 
-        params.timeout = !Mirrors.connected() && params.url.indexOf(Manifest.cub_domain) >= 0 ? 3000 : params.timeout || need.timeout;
+        params.timeout = params.timeout || need.timeout;
 
         Android.httpReq(params, {complite: secuses, error: error})
 

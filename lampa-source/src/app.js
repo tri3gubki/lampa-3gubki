@@ -76,7 +76,6 @@ import Iptv from './core/iptv'
 import Bell from './interaction/bell'
 import HoverSwitcher from './core/switcher'
 import Ai from './core/api/sources/ai'
-import Mirrors from './core/mirrors'
 import HTTPS from './core/https'
 import Task from './core/loading'
 import App from './interaction/app'
@@ -460,8 +459,6 @@ function startApp(){
     HTTPS.init()
     LoadingProgress.status('HTTPS init')
 
-    Mirrors.init()
-    LoadingProgress.status('Mirrors init')
 
 
     Head.init()
@@ -681,11 +678,9 @@ function loadTask(){
     })
 
     Task.queue((next)=>{
-        LoadingProgress.status('Mirrors initialization')
 
         LoadingProgress.step(2)
 
-        Mirrors.task(next)
     })
 
     Task.queue((next)=>{
