@@ -7,7 +7,6 @@ import Arrays from '../utils/arrays'
 import Manifest from '../core/manifest'
 import Controller from '../core/controller'
 import Utils from '../utils/utils'
-import Plugions from '../core/plugins'
 
 
 let max_wait_time = 300000 // 5 минут
@@ -171,23 +170,7 @@ function install(row){
         console.log('Remote configuration', 'install', item)
 
         try{
-            if(item.type == 'extension'){
-                Arrays.extend(item, {
-                    author: '@lampa',
-                    status: 1
-                })
-
-                if(item.url && !Plugions.get().find(ext=>ext.url == item.url)){
-                    Plugions.add(item)
-
-                    request_instlall_log.push({
-                        name: Lang.translate('settings_main_plugins'),
-                        value: Utils.shortText(item.url, 30),
-                        icon: 'history'
-                    })
-                }
-            }
-            else if(item.type == 'storage'){
+            if(item.type == 'storage'){
                 Storage.set(item.name, item.value)
 
                 request_instlall_log.push({

@@ -15,7 +15,6 @@ import settings_server from '../templates/settings/server'
 import settings_player from '../templates/settings/player'
 import settings_more from '../templates/settings/more'
 import settings_tmdb from '../templates/settings/tmdb'
-import settings_plugins from '../templates/settings/plugins'
 import settings_account from '../templates/settings/account'
 import items_line from '../templates/items/line'
 import card from '../templates/card'
@@ -96,13 +95,6 @@ import screensaver from "../templates/screensaver";
 import plugins_catalog from "../templates/plugins_catalog";
 import broadcast from "../templates/broadcast";
 import lang_choice from '../templates/lang'
-import extensions from '../templates/extensions/main'
-import extensions_block from '../templates/extensions/block'
-import extensions_item from '../templates/extensions/item'
-import extensions_recomend from '../templates/extensions/recomend'
-import extensions_info from '../templates/extensions/info'
-import extensions_theme from '../templates/extensions/theme'
-import extensions_screensaver from '../templates/extensions/screensaver'
 import iframe from '../templates/iframe'
 import account from '../templates/account'
 import account_limited from '../templates/account_limited'
@@ -149,7 +141,6 @@ let templates = {
     settings_player,
     settings_more,
     settings_tmdb,
-    settings_plugins,
     settings_account,
     scroll,
     items_line,
@@ -227,13 +218,6 @@ let templates = {
     plugins_catalog,
     broadcast,
     lang_choice,
-    extensions,
-    extensions_block,
-    extensions_item,
-    extensions_recomend,
-    extensions_info,
-    extensions_theme,
-    extensions_screensaver,
     iframe,
     account,
     account_limited,

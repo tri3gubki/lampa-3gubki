@@ -49,7 +49,6 @@ import Api from './core/api/api'
 import Info from './interaction/info_old'
 import Card from './interaction/card'
 import Account from './core/account/account'
-import Plugins from './core/plugins'
 import Socket from './core/socket'
 import Recomends from './core/recomend'
 import TimeTable from './core/timetable'
@@ -61,7 +60,6 @@ import InteractionCategory from './interaction/items/old/category'
 import InteractionLine from './interaction/items/old/line'
 import Status from './utils/status'
 import LangChoice from './interaction/lang'
-import Extensions from './interaction/extensions/extensions'
 import Iframe from './interaction/iframe'
 import Parser from './core/api/sources/parser'
 import TMDB from './core/tmdb/tmdb'
@@ -326,8 +324,6 @@ function initClass(){
         InteractionCategory,
         InteractionLine,
         Status,
-        Plugins,
-        Extensions,
         Tizen,
         Layer,
         Console,
@@ -561,11 +557,7 @@ function startApp(){
     Account.init()
     LoadingProgress.status('Account init')
 
-    Extensions.init()
-    LoadingProgress.status('Extensions init')
 
-    Plugins.init()
-    LoadingProgress.status('Plugins init')
 
     Recomends.init()
     LoadingProgress.status('Recomends init')
@@ -795,7 +787,6 @@ function loadTask(){
 
         LoadingProgress.step(3)
 
-        Plugins.task(next)
     })
 
     Task.queue((next)=>{
@@ -821,7 +812,6 @@ function loadTask(){
     Task.secondary(()=>{
         LoadingProgress.status('Loading plugins')
 
-        Plugins.load(showApp)
     })
 
     Task.start()
