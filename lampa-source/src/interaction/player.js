@@ -21,7 +21,6 @@ import Arrays from '../utils/arrays'
 import Background from './background'
 import TV from './player/iptv' 
 import ParentalControl from './parental_control'
-import Preroll from './advert/preroll'
 import Footer from './player/footer'
 import Segments from './player/segments'
 import ExternalPlayer from '../core/externalPlayer.js'
@@ -810,11 +809,10 @@ function start(data, need, inner){
         })
 
         if (external_url) {
-            Preroll.show(data,()=>{
-                listener.send('external',data)
+                            listener.send('external',data)
 
                 window.location.assign(external_url)
-            })
+            
         }
         else if(Storage.field(player_need) == 'ios'){
             html.addClass('player--ios')
@@ -832,11 +830,10 @@ function start(data, need, inner){
         })
 
         if (external_url) {
-            Preroll.show(data,()=>{
-                listener.send('external',data)
+                            listener.send('external',data)
 
                 window.location.assign(external_url)
-            })
+            
         }
         else launchInner()
     }
@@ -856,17 +853,15 @@ function start(data, need, inner){
         })
 
         if (external_url) {
-            Preroll.show(data,()=>{
-                listener.send('external',data)
+                            listener.send('external',data)
 
                 window.location.assign(external_url)
-            })
+            
         }
         else launchInner()
     }
     else if(Platform.is('webos') && (Storage.field(player_need) == 'webos' || launch_player == 'webos')){
-        Preroll.show(data,()=>{
-            runWebOS({
+                    runWebOS({
                 need: 'com.webos.app.photovideo',
                 url: data.url.replace('&preload','&play'),
                 name: data.path || data.title,
@@ -874,7 +869,7 @@ function start(data, need, inner){
             })
 
             listener.send('external',data)
-        })
+        
     } 
     else if(Platform.is('android') && (Storage.field(player_need) == 'android' || launch_player == 'android' || data.torrent_hash)){
         data.url   = data.url.replace('&preload','&play')
@@ -889,21 +884,19 @@ function start(data, need, inner){
             })
         }
 
-        Preroll.show(data,()=>{
-            data.position = data.timeline ? (data.timeline.time || -1) : -1
+                    data.position = data.timeline ? (data.timeline.time || -1) : -1
 
             Android.openPlayer(data.url, data)
 
             listener.send('external',data)
-        })
+        
     }
     else if(Platform.desktop() && Storage.field(player_need) == 'other'){
         const path = Storage.field('player_nw_path')
         const supportedTypes = Object.values(ExternalPlayer.PLAYER_TYPES)
         const detectedType = supportedTypes.find(type => path.toLowerCase().indexOf(type) !== -1)
 
-        Preroll.show(data,()=>{
-            const url = data.url.replace('&preload','&play')
+                    const url = data.url.replace('&preload','&play')
             if (detectedType) {
                 ExternalPlayer.openPlayer(url, data, {
                     type: detectedType,
@@ -919,7 +912,7 @@ function start(data, need, inner){
                 }
             }
             listener.send('external', data)
-        })
+        
     }
     else launchInner()
 }
@@ -991,8 +984,7 @@ function play(data){
     let lauch = ()=>{
         work = data
 
-        Preroll.show(data,()=>{
-            Background.theme('black')
+                    Background.theme('black')
 
             $('body').addClass('player--viewing')
 
@@ -1051,7 +1043,7 @@ function play(data){
 
                 listener.send('ready',data)
             })
-        })
+        
     }
 
     start(data, data.torrent_hash ? 'torrent' : '', lauch)
@@ -1090,7 +1082,7 @@ function iptv(data){
         }
 
         let ads = ()=>{
-            if(data.vast_url) Preroll.show(data,lauch)
+            if(data.vast_url) lauch()
             else lauch()
         }
 
