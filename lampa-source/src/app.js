@@ -72,7 +72,6 @@ import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
 import VPN from './core/vpn'
 import ParentalControl from './interaction/parental_control'
-import Personal from './core/personal'
 import Sound from './core/sound'
 import Iptv from './core/iptv'
 import Bell from './interaction/bell'
@@ -466,8 +465,6 @@ function startApp(){
     Mirrors.init()
     LoadingProgress.status('Mirrors init')
 
-    Personal.init()
-    LoadingProgress.status('Personal init')
 
     Head.init()
     LoadingProgress.status('Head init')
