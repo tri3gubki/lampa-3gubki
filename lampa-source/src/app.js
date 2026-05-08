@@ -55,12 +55,10 @@ import InteractionCategory from './interaction/items/old/category'
 import InteractionLine from './interaction/items/old/line'
 import Status from './utils/status'
 import LangChoice from './interaction/lang'
-import Iframe from './interaction/iframe'
 import Parser from './core/api/sources/parser'
 import TMDB from './core/tmdb/tmdb'
 import Base64 from './utils/base64'
 import Loading from './interaction/loading'
-import WebOSLauncher from './interaction/webos_launcher'
 import Event from './utils/event'
 import Search from './interaction/search/global'
 import DeviceInput from './interaction/device_input'
@@ -71,7 +69,6 @@ import NavigationBar from './interaction/navigation_bar'
 import Endless from './interaction/endless'
 import Color from './utils/color'
 import Cache from './utils/cache'
-import Demo from './core/demo'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
 import VPN from './core/vpn'
@@ -311,13 +308,11 @@ function initClass(){
         Status,
         Tizen,
         Layer,
-        Iframe,
         Parser,
         Manifest,
         TMDB,
         Base64,
         Loading,
-        WebOSLauncher,
         Event,
         Search,
         DeviceInput,
@@ -536,14 +531,10 @@ function startApp(){
     Player.init()
     LoadingProgress.status('Player init')
 
-    Iframe.init()
-    LoadingProgress.status('Iframe init')
 
     Parser.init()
     LoadingProgress.status('Parser init')
 
-    WebOSLauncher.init()
-    LoadingProgress.status('WebOSLauncher init')
 
     Theme.init()
     LoadingProgress.status('Theme init')
@@ -552,8 +543,6 @@ function startApp(){
     NavigationBar.init()
     LoadingProgress.status('NavigationBar init')
 
-    Demo.init()
-    LoadingProgress.status('Demo init')
 
 
 
