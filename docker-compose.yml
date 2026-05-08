@@ -1,0 +1,7 @@
+services:
+  lampa-web:
+    build: .
+    container_name: lampa-web
+    ports:
+      - "8095:80"
+    restart: unless-stopped
