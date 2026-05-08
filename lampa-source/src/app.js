@@ -67,7 +67,6 @@ import YouTube from './interaction/youtube'
 import WebOSLauncher from './interaction/webos_launcher'
 import Event from './utils/event'
 import Search from './interaction/search/global'
-import Developer from './interaction/developer'
 import DeviceInput from './interaction/device_input'
 import AppWorker from './utils/worker'
 import Theme from './core/theme'
@@ -440,21 +439,9 @@ function developerApp(proceed){
     let check = ()=>{
         pressed++
 
-        if(pressed === 3){
-            clearTimeout(timer)
-
-            expect = false
-
-            Keypad.enable()
-
-            Developer.open(()=>{
-                Keypad.disable()
-
-                proceed()
-            })
-
-            console.log('Developer mode','on')
-        }
+        // Точка входа в developer-mode удалена вместе с
+        // interaction/developer.js. 3 нажатия больше ни во что не
+        // открывают; основной поток продолжается через timer.
     }
 
     let keydown = (event)=>{
