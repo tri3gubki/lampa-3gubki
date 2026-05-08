@@ -12,7 +12,6 @@ import Panel from './panel'
 import Utils from '../../utils/utils'
 import DeviceInput from '../device_input'
 import Orsay from './orsay'
-import YouTube from './youtube'
 import TV from './iptv'
 import Controller from '../../core/controller'
 import Player from '../player'
@@ -133,11 +132,8 @@ function init(){
         webos_wait.tracks = convertToArray(data.tracks)
     })
 
-    registerTube({
-        name: 'YouTube',
-        verify: (src) => src.indexOf('youtube.com') >= 0 || src.indexOf('youtu.be') >= 0,
-        create: YouTube
-    })
+    // YouTube-плеер удалён вместе с трейлерами — registerTube({YouTube})
+    // здесь больше не нужен.
 
     Segments.listener.follow('skip', (e) => {
         if(Storage.get('player_segments_' + e.type, 'auto') == 'auto'){

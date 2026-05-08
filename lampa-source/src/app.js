@@ -60,7 +60,6 @@ import Parser from './core/api/sources/parser'
 import TMDB from './core/tmdb/tmdb'
 import Base64 from './utils/base64'
 import Loading from './interaction/loading'
-import YouTube from './interaction/youtube'
 import WebOSLauncher from './interaction/webos_launcher'
 import Event from './utils/event'
 import Search from './interaction/search/global'
@@ -318,7 +317,6 @@ function initClass(){
         TMDB,
         Base64,
         Loading,
-        YouTube,
         WebOSLauncher,
         Event,
         Search,
