@@ -94,7 +94,6 @@ import HTTPS from './core/https'
 import Task from './core/loading'
 import App from './interaction/app'
 import LoadingProgress from './interaction/loading_progress'
-import Logs from './interaction/logs'
 import StorageMenager from './interaction/storage_manager'
 import Markers from './core/markers'
 import RemoteHelper from './interaction/remote_helper'
@@ -601,8 +600,6 @@ function startApp(){
     Iptv.init()
     LoadingProgress.status('Iptv init')
 
-    Logs.init()
-    LoadingProgress.status('Logs init')
 
     Broadcast.init()
     LoadingProgress.status('Broadcast init')
