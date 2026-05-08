@@ -17,7 +17,6 @@ import NoticeClassLampa from './interaction/notice/lampa'
 import Head from './interaction/head/head'
 import Menu from './interaction/menu/menu'
 import Utils from './utils/utils'
-import Console from './interaction/console'
 import Params from './interaction/settings/params'
 import Input from './interaction/settings/input'
 import Android from './core/android'
@@ -317,7 +316,6 @@ function initClass(){
         Status,
         Tizen,
         Layer,
-        Console,
         Iframe,
         Parser,
         Manifest,
@@ -378,9 +376,7 @@ function prepareApp(){
 
     LoadingProgress.status('Controller observe init')
 
-    Console.init()
 
-    LoadingProgress.status('Console init')
 
     Keypad.init()
 

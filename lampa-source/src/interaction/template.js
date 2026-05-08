@@ -65,7 +65,6 @@ import torrent_install from '../templates/torrent/install'
 import torrent_error from '../templates/torrent/error'
 import torrent_file_serial from '../templates/torrent/serial'
 import search_box from '../templates/search'
-import console from '../templates/console'
 import icon_star from '../templates/icons/star'
 import icon_viewed from '../templates/icons/viewed'
 import icon_lock from '../templates/icons/lock'
@@ -186,7 +185,6 @@ let templates = {
     torrent_error,
     filter,
     search_box,
-    console,
     icon_star,
     icon_viewed,
     icon_lock,
