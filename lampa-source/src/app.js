@@ -11,9 +11,6 @@ import Layer from './core/layer'
 import Select from './interaction/select'
 import Favorite from './core/favorite'
 import Background from './interaction/background'
-import Notice from './interaction/notice/notice'
-import NoticeClass from './interaction/notice/class'
-import NoticeClassLampa from './interaction/notice/lampa'
 import Head from './interaction/head/head'
 import Menu from './interaction/menu/menu'
 import Utils from './utils/utils'
@@ -251,9 +248,6 @@ function initClass(){
         Params,
         Menu,
         Head,
-        Notice,
-        NoticeClass,
-        NoticeClassLampa,
         Background,
         Favorite,
         Select,
@@ -479,8 +473,6 @@ function startApp(){
     Markers.init()
     LoadingProgress.status('Markers init')
 
-    Notice.init()
-    LoadingProgress.status('Notice init')
 
     Bell.init()
     LoadingProgress.status('Bell init')

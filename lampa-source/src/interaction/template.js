@@ -47,8 +47,6 @@ import modal_qr from '../templates/modal_qr'
 import person_start from '../templates/person/start'
 import empty from '../templates/empty/simple'
 import empty_filter from '../templates/empty/filter'
-import notice from '../templates/notice'
-import notice_card from '../templates/notice_card'
 import torrent from '../templates/torrent/item'
 import torrent_file from '../templates/torrent/file'
 import files from '../templates/files'
@@ -76,8 +74,6 @@ import icon_hd from '../templates/icons/hd'
 import icon_collection from '../templates/icons/collection'
 import icon_search from '../templates/icons/search'
 import icon_settings from '../templates/icons/settings'
-import icon_bell from '../templates/icons/bell'
-import icon_bell_plus from '../templates/icons/bell_plus'
 import icon_create_account from '../templates/icons/create_account'
 import icon_empty_subscribe from '../templates/icons/empty_subscribe'
 import icon_empty_bookmarks from '../templates/icons/empty_bookmarks'
@@ -166,8 +162,6 @@ let templates = {
     person_start,
     empty,
     empty_filter,
-    notice,
-    notice_card,
     torrent,
     torrent_file,
     files,
@@ -193,8 +187,6 @@ let templates = {
     icon_collection,
     icon_search,
     icon_settings,
-    icon_bell,
-    icon_bell_plus,
     icon_create_account,
     icon_empty_subscribe,
     icon_empty_bookmarks,
