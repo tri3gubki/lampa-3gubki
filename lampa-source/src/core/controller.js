@@ -1,7 +1,6 @@
 import Subscribe from '../utils/subscribe'
 import Activity from '../interaction/activity/activity'
 import Storage from './storage/storage'
-import Screensaver from '../interaction/screensaver'
 import Utils from '../utils/utils'
 import Layer from './layer'
 import Platform from './platform'
@@ -352,7 +351,6 @@ function toContent(){
 
     let trys = 0
 
-    Screensaver.stopSlideshow()
 
     let any = ()=>{
         return parseInt([

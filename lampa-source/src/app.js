@@ -20,7 +20,6 @@ import Utils from './utils/utils'
 import Console from './interaction/console'
 import Params from './interaction/settings/params'
 import Input from './interaction/settings/input'
-import Screensaver from './interaction/screensaver'
 import Android from './core/android'
 import Subscribe from './utils/subscribe'
 import Storage from './core/storage/storage'
@@ -313,7 +312,6 @@ function initClass(){
         Account,
         Socket,
         Input,
-        Screensaver,
         TimeTable,
         Broadcast,
         Helper,
@@ -545,8 +543,6 @@ function startApp(){
     Activity.init()
     LoadingProgress.status('Activity init')
 
-    Screensaver.init()
-    LoadingProgress.status('Screensaver init')
 
     Socket.init()
     LoadingProgress.status('Socket init')
@@ -731,7 +727,6 @@ function showApp(){
 
         Keypad.enable()
 
-        Screensaver.enable()
 
         $('.welcome').fadeOut(500,()=>{
             $(this).remove()

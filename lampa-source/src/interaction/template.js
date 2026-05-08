@@ -91,7 +91,6 @@ import icon_back from '../templates/icons/back'
 import timeline from '../templates/timeline'
 import timeline_details from '../templates/timeline_details'
 import list_empty from '../templates/list_empty'
-import screensaver from "../templates/screensaver";
 import plugins_catalog from "../templates/plugins_catalog";
 import broadcast from "../templates/broadcast";
 import lang_choice from '../templates/lang'
@@ -214,7 +213,6 @@ let templates = {
     timeline,
     timeline_details,
     list_empty,
-    screensaver,
     plugins_catalog,
     broadcast,
     lang_choice,

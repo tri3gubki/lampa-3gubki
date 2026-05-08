@@ -5,7 +5,6 @@ import Controller from '../../core/controller'
 import Head from '../head/head'
 import Storage from '../../core/storage/storage'
 import Lang from '../../core/lang'
-import Screensaver from '../screensaver'
 import Utils from '../../utils/utils'
 import Arrays from '../../utils/arrays'
 import Platform from '../../core/platform'
@@ -90,7 +89,6 @@ function init(){
     window.addEventListener('popstate', () => {
         if(fullout || wait) return
 
-        Screensaver.stop()
     
         if(swip_status == 0) empty() //это чтоб не выходило с приложения, однако на айфонах это вызвает зависание на 2-3 сек
     

@@ -7,7 +7,6 @@ import Utils from '../utils/utils'
 import Playlist from './player/playlist'
 import Storage from '../core/storage/storage'
 import Platform from '../core/platform'
-import Screensaver from './screensaver'
 import Torserver from './torserver'
 import Android from '../core/android'
 import Broadcast from './broadcast'
@@ -89,7 +88,6 @@ function init(){
         Panel.update('timeend',Utils.secondsToTime(e.duration || 0))
         Panel.update('position', (e.current / e.duration * 100) + '%')
 
-        Screensaver.resetTimer()
 
         if(work && work.timeline && !work.timeline.waiting_for_user && !work.timeline.stop_recording && e.duration){
             if(Storage.field('player_timecode') !== 'again' && !work.timeline.continued){

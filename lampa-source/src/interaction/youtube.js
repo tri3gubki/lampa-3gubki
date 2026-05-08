@@ -1,5 +1,4 @@
 import Controller from '../core/controller'
-import Screensaver from './screensaver'
 
 let player
 let html
@@ -58,7 +57,6 @@ function update(){
 
         $('#youtube-player__progress').css('width',progress + '%')
 
-        Screensaver.resetTimer()
 
         update()
     }, 400)
