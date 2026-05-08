@@ -26,7 +26,6 @@ import Template from './interaction/template'
 import Component from './core/component'
 import Reguest from './utils/reguest'
 import Filter from './interaction/filter'
-import Files from './interaction/files_old'
 import Explorer from './interaction/explorer'
 import Scroll from './interaction/scroll'
 import Empty from './interaction/empty/empty'
@@ -44,7 +43,6 @@ import Settings from './interaction/settings/settings'
 import SettingsApi from './interaction/settings/api'
 import Modal from './interaction/modal'
 import Api from './core/api/api'
-import Info from './interaction/info_old'
 import Card from './interaction/card'
 import Account from './core/account/account'
 import Socket from './core/socket'
@@ -283,7 +281,6 @@ function initClass(){
         Component,
         Reguest,
         Filter,
-        Files,
         Explorer,
         Scroll,
         Empty,
@@ -303,7 +300,6 @@ function initClass(){
         SettingsApi,
         Android,
         Card,
-        Info,
         Account,
         Socket,
         Input,

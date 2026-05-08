@@ -35,7 +35,6 @@ import player_footer_card from '../templates/player/footer/card'
 import selectbox from '../templates/selectbox/box'
 import selectbox_item from '../templates/selectbox/item'
 import selectbox_icon from '../templates/selectbox/icon'
-import info from '../templates/info_old'
 import filter from '../templates/filter'
 import more from '../templates/more'
 import search from '../templates/search/main'
@@ -158,7 +157,6 @@ let templates = {
     player_footer_card,
     selectbox,
     selectbox_item,
-    info,
     more,
     search,
     settings_input,
