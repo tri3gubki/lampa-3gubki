@@ -50,7 +50,6 @@ import Info from './interaction/info_old'
 import Card from './interaction/card'
 import Account from './core/account/account'
 import Socket from './core/socket'
-import Recomends from './core/recomend'
 import TimeTable from './core/timetable'
 import Broadcast from './interaction/broadcast'
 import Helper from './interaction/helper'
@@ -316,7 +315,6 @@ function initClass(){
         Socket,
         Input,
         Screensaver,
-        Recomends,
         TimeTable,
         Broadcast,
         Helper,
@@ -558,9 +556,6 @@ function startApp(){
     LoadingProgress.status('Account init')
 
 
-
-    Recomends.init()
-    LoadingProgress.status('Recomends init')
 
     TimeTable.init()
     LoadingProgress.status('Timetable init')

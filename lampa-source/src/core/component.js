@@ -9,16 +9,12 @@ import mytorrents from '../components/mytorrents'
 import relise from '../components/relise'
 import nocomponent from '../components/nocomponent'
 import timetable from '../components/timetable'
-import subscribes from '../components/subscribes'
 import company from '../components/company'
-import feed from '../components/feed'
 import bookmarks from '../components/bookmarks'
 import episodes from '../components/episodes'
 import myperson from '../components/myperson'
 import ai_facts from '../components/facts'
-import ai_recommendations from '../components/recommendations'
 import discuss from '../components/discuss'
-import recomend from '../components/recomend'
 
 let component = {
     main,
@@ -32,16 +28,12 @@ let component = {
     relise,
     nocomponent,
     timetable,
-    subscribes,
     company,
-    feed,
     bookmarks,
     episodes,
     myperson,
     ai_facts,
-    ai_recommendations,
-    discuss,
-    recomend
+    discuss
 }
 
 /**
