@@ -80,7 +80,6 @@ import Demo from './core/demo'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
 import VPN from './core/vpn'
-import Processing from './interaction/processing'
 import ParentalControl from './interaction/parental_control'
 import Personal from './core/personal'
 import Sound from './core/sound'
@@ -339,7 +338,6 @@ function initClass(){
         Cache,
         Torrent,
         Torserver,
-        Processing,
         ParentalControl,
         VPN,
         Bell,
@@ -581,8 +579,6 @@ function startApp(){
     LoadingProgress.status('Demo init')
 
 
-    Processing.init()
-    LoadingProgress.status('Processing init')
 
     ParentalControl.init()
     LoadingProgress.status('ParentalControl init')
