@@ -678,7 +678,6 @@ export default {
     menu_history: "Historie",
     menu_timeline: "Rozvrh",
     menu_torrents: "Torrenty",
-    menu_settings: "Nastavení",
     menu_multmovie: "Animované filmy",
     menu_multtv: "Animované seriály",
     menu_feed: "Kanál",

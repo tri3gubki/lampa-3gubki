@@ -588,7 +588,6 @@ export default {
     menu_history: 'Історія',
     menu_timeline: 'Розклад',
     menu_torrents: 'Торренти',
-    menu_settings: 'Налаштування',
     menu_multmovie: 'Мультфільми',
     menu_multtv: 'Мультсеріали',
     menu_feed: 'Стрічка',

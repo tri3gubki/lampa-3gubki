@@ -210,11 +210,6 @@ function ready(){
 
         if(action == 'search') Controller.toggle('search')
 
-        if(action == 'settings'){
-                            Controller.toggle('settings')
-            
-        }
-
         if(action == 'favorite'){
                             if(prepared('bookmarks',['bookmarks'])){
                     Router.call('bookmarks', {

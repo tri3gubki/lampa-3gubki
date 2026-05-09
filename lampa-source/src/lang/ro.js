@@ -618,7 +618,6 @@ export default {
     menu_history: 'Istoric',
     menu_timeline: 'Program',
     menu_torrents: 'Torrente',
-    menu_settings: 'Setări',
     menu_multmovie: 'Desene animate',
     menu_multtv: 'Seriale animate',
 

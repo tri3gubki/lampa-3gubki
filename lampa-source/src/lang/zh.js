@@ -590,7 +590,6 @@ export default {
     menu_history: '历史',
     menu_timeline: '日历',
     menu_torrents: '种子',
-    menu_settings: '设置',
     menu_multmovie: '卡通',
     menu_multtv: '动画系列',
     time_viewed: '看至',

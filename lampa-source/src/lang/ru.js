@@ -722,7 +722,6 @@ export default {
     menu_history: 'История',
     menu_timeline: 'Расписание',
     menu_torrents: 'Торренты',
-    menu_settings: 'Настройки',
     menu_multmovie: 'Мультфильмы',
     menu_multtv: 'Мультсериалы',
     menu_feed: 'Лента',

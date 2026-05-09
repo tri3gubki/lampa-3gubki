@@ -618,7 +618,6 @@ export default {
     menu_history: 'Historique',
     menu_timeline: 'Calendrier',
     menu_torrents: 'Torrents',
-    menu_settings: 'Paramètres',
     menu_multmovie: 'Dessins animés',
     menu_multtv: 'Séries animées',
 

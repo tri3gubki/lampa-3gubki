@@ -584,7 +584,6 @@ export default {
     menu_history: 'היסטוריה',
     menu_timeline: 'לוח זמנים',
     menu_torrents: 'טורנטים',
-    menu_settings: 'הגדרות',
     menu_multmovie: 'סרטים מצוירים',
     menu_multtv: 'סדרות משופשפות',
     time_viewed: 'צפייה',

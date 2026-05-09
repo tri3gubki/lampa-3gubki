@@ -618,7 +618,6 @@ export default {
     menu_history: 'История',
     menu_timeline: 'Разписание',
     menu_torrents: 'Торенти',
-    menu_settings: 'Настройки',
     menu_multmovie: 'Анимации',
     menu_multtv: 'Анимационни сериали',
 
