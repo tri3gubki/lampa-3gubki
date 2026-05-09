@@ -783,31 +783,47 @@ function start(data, need, inner){
         return
     }
 
-    if(launch_player == 'lampa' || launch_player == 'inner' || Video.verifyTube(data.url)) launchInner()
+    // Явный inner-форс через data.launch_player (трейлеры, manual call)
+    if(launch_player == 'lampa' || launch_player == 'inner' || Video.verifyTube(data.url)){
+        launchInner()
+        return
+    }
+
+    // Если выбран 'inner' в настройках — встроенный, без внешнего
+    if(Storage.field(player_need) == 'inner'){
+        launchInner()
+        return
+    }
+
     if(Platform.is('apple')){
-        let external_url = externalPlayer(player_need, data, {
-            vlc:        'vlc://${furl}',
-            nplayer:    'nplayer-${furl}',
-            infuse:     'infuse://x-callback-url/play?url=${url}',
-            senplayer:  'senplayer://x-callback-url/play?url=${url}',
-            vidhub:     'open-vidhub://x-callback-url/open?&url=${url}',
-            svplayer:   'svplayer://x-callback-url/stream?url=${url}',
-            tracyplayer:'tracy://open?url=${url}'
-        })
-
-        if (external_url) {
-                            listener.send('external',data)
-
-                window.location.assign(external_url)
-            
-        }
+        // 'ios' = нативный плеер Safari (всё ещё через <video>)
         if(Storage.field(player_need) == 'ios'){
             html.addClass('player--ios')
-            
             launchInner()
+            return
         }
+
+        let external_url = externalPlayer(player_need, data, {
+            vlc:         'vlc://${furl}',
+            nplayer:     'nplayer-${furl}',
+            infuse:      'infuse://x-callback-url/play?url=${url}',
+            senplayer:   'senplayer://x-callback-url/play?url=${url}',
+            vidhub:      'open-vidhub://x-callback-url/open?&url=${url}',
+            svplayer:    'svplayer://x-callback-url/stream?url=${url}',
+            tracyplayer: 'tracy://open?url=${url}'
+        })
+
+        if(external_url){
+            listener.send('external', data)
+            window.location.assign(external_url)
+            return
+        }
+
+        // Fallback — внешний не сработал
         launchInner()
+        return
     }
+
     if(Platform.macOS()){
         let external_url = externalPlayer(player_need, data, {
             mpv:    'mpv://${_url}',
@@ -816,52 +832,57 @@ function start(data, need, inner){
             infuse: 'infuse://x-callback-url/play?url=${url}'
         })
 
-        if (external_url) {
-                            listener.send('external',data)
-
-                window.location.assign(external_url)
-            
+        if(external_url){
+            listener.send('external', data)
+            window.location.assign(external_url)
+            return
         }
+
         launchInner()
+        return
     }
+
     if(Platform.is('apple_tv')){
         let apple_tv_client = Storage.field('apple_tv_client') ?? 'lampa';
         let external_url = externalPlayer(player_need, data, {
-            vlc:        'vlc-x-callback://x-callback-url/stream?url=${url}',
-            infuse:     `infuse://x-callback-url/play?x-success=${apple_tv_client}://infuseDidFinish&x-error=${apple_tv_client}://infuseDidFail&url=\${url}&playlist=\${playlist}`,
-            senplayer:  'SenPlayer://x-callback-url/play?url=${url}',
-            vidhub:     'open-vidhub://x-callback-url/open?url=${url}',
-            svplayer:   'svplayer://x-callback-url/stream?url=${url}',
-            tracyplayer:'tracy://open?url=${url}',
-            tvospro:       'lampa://video?player=tvospro&src=${url}&playlist=${playlist}&segments=${segments}',
-            tvos:       'lampa://video?player=tvos&src=${url}&playlist=${playlist}&segments=${segments}',
-            tvosl:      'lampa://video?player=tvosav&src=${url}&playlist=${playlist}&segments=${segments}',
-            tvosSelect: 'lampa://video?player=lists&src=${url}&playlist=${playlist}&segments=${segments}'
+            vlc:         'vlc-x-callback://x-callback-url/stream?url=${url}',
+            infuse:      `infuse://x-callback-url/play?x-success=${apple_tv_client}://infuseDidFinish&x-error=${apple_tv_client}://infuseDidFail&url=\${url}&playlist=\${playlist}`,
+            senplayer:   'SenPlayer://x-callback-url/play?url=${url}',
+            vidhub:      'open-vidhub://x-callback-url/open?url=${url}',
+            svplayer:    'svplayer://x-callback-url/stream?url=${url}',
+            tracyplayer: 'tracy://open?url=${url}',
+            tvospro:     'lampa://video?player=tvospro&src=${url}&playlist=${playlist}&segments=${segments}',
+            tvos:        'lampa://video?player=tvos&src=${url}&playlist=${playlist}&segments=${segments}',
+            tvosl:       'lampa://video?player=tvosav&src=${url}&playlist=${playlist}&segments=${segments}',
+            tvosSelect:  'lampa://video?player=lists&src=${url}&playlist=${playlist}&segments=${segments}'
         })
 
-        if (external_url) {
-                            listener.send('external',data)
-
-                window.location.assign(external_url)
-            
+        if(external_url){
+            listener.send('external', data)
+            window.location.assign(external_url)
+            return
         }
-        launchInner()
-    }
-    if(Platform.is('webos') && (Storage.field(player_need) == 'webos' || launch_player == 'webos')){
-                    runWebOS({
-                need: 'com.webos.app.photovideo',
-                url: data.url.replace('&preload','&play'),
-                name: data.path || data.title,
-                position: data.timeline ? (data.timeline.time || -1) : -1
-            })
 
-            listener.send('external',data)
-        
-    } 
+        launchInner()
+        return
+    }
+
+    if(Platform.is('webos') && (Storage.field(player_need) == 'webos' || launch_player == 'webos')){
+        runWebOS({
+            need: 'com.webos.app.photovideo',
+            url: data.url.replace('&preload','&play'),
+            name: data.path || data.title,
+            position: data.timeline ? (data.timeline.time || -1) : -1
+        })
+
+        listener.send('external', data)
+        return
+    }
+
     if(Platform.is('android') && (Storage.field(player_need) == 'android' || launch_player == 'android' || data.torrent_hash)){
         data.url   = data.url.replace('&preload','&play')
         data.title = Utils.clearHtmlTags(data.title || '').trim()
-        
+
         if(data.playlist && Array.isArray(data.playlist)){
             data.playlist = data.playlist.filter(p=>typeof p.url == 'string')
 
@@ -871,36 +892,40 @@ function start(data, need, inner){
             })
         }
 
-                    data.position = data.timeline ? (data.timeline.time || -1) : -1
+        data.position = data.timeline ? (data.timeline.time || -1) : -1
 
-            Android.openPlayer(data.url, data)
-
-            listener.send('external',data)
-        
+        Android.openPlayer(data.url, data)
+        listener.send('external', data)
+        return
     }
+
     if(Platform.desktop() && Storage.field(player_need) == 'other'){
         const path = Storage.field('player_nw_path')
         const supportedTypes = Object.values(ExternalPlayer.PLAYER_TYPES)
         const detectedType = supportedTypes.find(type => path.toLowerCase().indexOf(type) !== -1)
 
-                    const url = data.url.replace('&preload','&play')
-            if (detectedType) {
-                ExternalPlayer.openPlayer(url, data, {
-                    type: detectedType,
-                    fullscreen: Storage.field('player_external_fullscreen')
-                })
-            } else {
-                const file = require('fs')
-                if (file.existsSync(path)) {
-                    const spawn = require('child_process').spawn
-                    spawn(path, [encodeURI(url)])
-                } else {
-                    Noty.show(Lang.translate('player_not_found') + ': ' + path)
-                }
+        const url = data.url.replace('&preload','&play')
+        if(detectedType){
+            ExternalPlayer.openPlayer(url, data, {
+                type: detectedType,
+                fullscreen: Storage.field('player_external_fullscreen')
+            })
+        }
+        else{
+            const file = require('fs')
+            if(file.existsSync(path)){
+                const spawn = require('child_process').spawn
+                spawn(path, [encodeURI(url)])
             }
-            listener.send('external', data)
-        
+            else{
+                Noty.show(Lang.translate('player_not_found') + ': ' + path)
+            }
+        }
+        listener.send('external', data)
+        return
     }
+
+    // Фолбек — встроенный (если ни одна ветка не сработала)
     launchInner()
 }
 
