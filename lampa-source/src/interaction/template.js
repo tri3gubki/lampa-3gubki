@@ -38,6 +38,7 @@ import settings_input from '../templates/settings/input'
 import modal from '../templates/modal'
 import company from '../templates/company'
 import modal_loading from '../templates/modal_loading'
+import empty from '../templates/empty/simple'
 import empty_filter from '../templates/empty/filter'
 import torrent from '../templates/torrent/item'
 import torrent_file from '../templates/torrent/file'
@@ -119,6 +120,7 @@ let templates = {
     modal,
     company,
     modal_loading,
+    empty,
     empty_filter,
     torrent,
     torrent_file,
