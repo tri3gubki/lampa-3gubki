@@ -399,7 +399,7 @@ function Card(data, params = {}){
                     where: m,
                     picked: status[m],
                     collect: true,
-                    noenter: !Account.hasPremium()
+                    noenter: !false
                 })
             })
         }
@@ -477,7 +477,7 @@ function Card(data, params = {}){
             },
             onDraw: (item, elem)=>{
                 if(elem.collect){
-                    if(!Account.hasPremium()){
+                    if(!false){
                         let wrap = $('<div class="selectbox-item__lock"></div>')
                             wrap.append(Template.js('icon_lock'))
 
@@ -488,7 +488,7 @@ function Card(data, params = {}){
                         item.on('hover:enter',()=>{
                             Select.close()
 
-                            Account.showCubPremium()
+                            void 0
                         })
                     }
                 }

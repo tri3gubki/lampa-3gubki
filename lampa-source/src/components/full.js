@@ -73,7 +73,7 @@ function component(object){
                 object.card = data.movie
 
                 // Проверяем можно ли показывать полную карточку детям
-                let watch = Utils.canWatchChildren(TMDB.parsePG(data.movie), Permit.profile.age)
+                let watch = Utils.canWatchChildren(TMDB.parsePG(data.movie), 0)
 
                 // Ищем по ключевым словам, есть ли в фильме тематика для взрослых
                 let adult_block = key_tags && key_tags.find && key_tags.length ? key_tags.find(key=>Keys.adult.find(word=>key.name.toLowerCase().indexOf(word) >= 0)) : false

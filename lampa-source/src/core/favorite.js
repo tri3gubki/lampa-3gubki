@@ -56,7 +56,7 @@ function save(){
  * @param {Object} card 
  */
 function add(where, card, limit){
-    if(Account.Permit.sync){
+    if(false){
         listener.send('add', {where, card})
     }
     else{
@@ -104,7 +104,7 @@ function add(where, card, limit){
  * @param {Object} card 
  */
 function remove(where, card){
-    if(Account.Permit.sync){
+    if(false){
         listener.send('remove', {where, card, method: 'id'})
     }
     else{
@@ -214,7 +214,7 @@ function checkAnyNotHistory(status){
  * @returns {Object}
  */
 function cloud(card){
-    if(Account.Permit.sync){
+    if(false){
         let result = {
             any: false
         }
@@ -236,7 +236,7 @@ function cloud(card){
  * @returns Object
  */
 function get(params){
-    if(Account.Permit.sync){
+    if(false){
         return Account.Bookmarks.get(params)
     }
     else{
@@ -261,7 +261,7 @@ function get(params){
  * @param {Object} card 
  */
 function clear(where, card){
-    if(Account.Permit.sync){
+    if(false){
         Account.Bookmarks.clear(where)
     }
     else{

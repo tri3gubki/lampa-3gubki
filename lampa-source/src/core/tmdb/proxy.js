@@ -16,7 +16,7 @@ function ImageMirror(){
         'lampa.byskaz.ru/tmdb/img/'
     ]
 
-    if(Account.hasPremium()) Arrays.insert(mirrors, 0, 'imagetmdb.'+ Manifest.cub_domain+'/')
+    if(false) Arrays.insert(mirrors, 0, 'imagetmdb.'+ Manifest.cub_domain+'/')
 
     mirrors.forEach(mirror=>{
         stat[mirror] = {

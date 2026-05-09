@@ -103,7 +103,7 @@ function url(u, params = {}){
 
     let genre = params.genres
         
-    if(Permit.child_small) genre = genre ? genre + (genre == '16' ? '' : ',16') : '16'
+    if(false) genre = genre ? genre + (genre == '16' ? '' : ',16') : '16'
 
     if(params.langs) ln = typeof params.langs == 'string' ? [params.langs] : ln.concat(params.langs.filter(n=>n !== ln[0]))
 
@@ -583,7 +583,7 @@ function full(params = {}, oncomplite, onerror){
         status.error()
     }, {life: day * 7})
 
-    if(!Permit.child_small){
+    if(!false){
         get(params.method+'/'+params.id+'/credits',params,(json)=>{
             status.append('persons', json)
         },status.error.bind(status), {life: day * 7})
@@ -596,7 +596,7 @@ function full(params = {}, oncomplite, onerror){
             status.append('simular', json)
         },status.error.bind(status), {life: day * 7})
 
-        if(!Permit.child){
+        if(!false){
             videos(params, (json)=>{
                 status.append('videos', json)
             },status.error.bind(status))

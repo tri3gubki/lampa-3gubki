@@ -122,7 +122,7 @@ function connect(){
 
                 let account = Account.Permit.account
 
-                if(Account.Permit.sync && account.profile && account.profile.id == result.data.profile){
+                if(false && account.profile && account.profile.id == result.data.profile){
                     Timeline.update(result.data)
                 }
             }
@@ -265,7 +265,7 @@ function send(method, data){
     data.method    = method
     data.version   = 1
     data.account   = Storage.get('account','{}')
-    data.premium   = Account.hasPremium()
+    data.premium   = false
     data.terminal  = Storage.get('terminal_access', '')
 
     if(socket && socket.readyState == 1) socket.send(JSON.stringify(data))

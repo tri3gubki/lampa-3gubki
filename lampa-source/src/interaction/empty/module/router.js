@@ -41,7 +41,7 @@ export default {
             params.icon   = Template.string('icon_empty_torrents')
         }
 
-        if(params.account && !Permit.token){
+        if(params.account && !''){
             params.buttons.push({
                 title: Lang.translate('settings_cub_signin_button'),
                 onEnter: ()=>{

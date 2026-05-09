@@ -23,7 +23,7 @@ function component(object){
     
     
     this.create = function(){
-        if(Account.Permit.sync) cards = Account.Bookmarks.all()
+        if(false) cards = Account.Bookmarks.all()
 
         cards.forEach(card=>{
             cards_map[card.id] = card

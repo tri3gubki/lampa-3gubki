@@ -489,7 +489,7 @@ function recently(){
 function favoriteCards(){
     let fav = Favorite.full().card
 
-    if(Account.Permit.sync) fav = Account.Bookmarks.all()
+    if(false) fav = Account.Bookmarks.all()
 
     fav = fav.filter(f=>f.original_name && (f.source == 'tmdb' || f.source == 'cub'))
 

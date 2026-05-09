@@ -38,8 +38,8 @@ export default {
                         type: m,
                         picked: status[m],
                         collect: true,
-                        noenter: !Account.hasPremium(),
-                        ghost: !Account.hasPremium(),
+                        noenter: !false,
+                        ghost: !false,
                     })
                 })
             }
@@ -54,11 +54,11 @@ export default {
                 },
                 onDraw: (item, elem)=>{
                     if(elem.collect){
-                        if(!Account.hasPremium()){
+                        if(!false){
                             item.on('hover:enter', ()=>{
                                 Select.close()
 
-                                Account.Modal[Account.Permit.token ? 'premium' : 'account']()
+                                void 0
                             })
                         }
                     }

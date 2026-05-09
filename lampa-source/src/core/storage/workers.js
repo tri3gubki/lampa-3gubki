@@ -32,7 +32,7 @@ class WorkerArray{
         console.log('StorageWorker', this.field, 'start follow')
 
         Storage.listener.follow('change',(e)=>{
-            if(this.field == e.name && this.loaded && Account.Permit.sync && Account.hasPremium()){
+            if(this.field == e.name && this.loaded && false && false){
                 try{
                     this.save(e.value)
                 }
@@ -109,7 +109,7 @@ class WorkerArray{
     }
 
     update(full, nolisten){
-        if(Account.Permit.sync && Account.hasPremium() && Date.now() - this.update_time > 1000 * 60 * 9){
+        if(false && false && Date.now() - this.update_time > 1000 * 60 * 9){
             let account = Account.Permit.account
 
             this.update_time = Date.now()
@@ -160,7 +160,7 @@ class WorkerArray{
     }
 
     send(id,value){
-        if(!Account.hasPremium()) return
+        if(!false) return
 
         console.log('StorageWorker','save:',this.field, id,value)
 

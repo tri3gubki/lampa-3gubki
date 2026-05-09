@@ -34,7 +34,7 @@ class Start extends Emit {
             img: this.card.poster_path ? Api.img(this.card.poster_path, Storage.field('poster_size')).replace(/\/w\d{1,4}/,'/w500') : './img/img_broken.svg'
         })
 
-        Utils.canWatchChildren(TMDB.parsePG(data.movie), Permit.profile.age) && this.use(Torrents)
+        Utils.canWatchChildren(TMDB.parsePG(data.movie), 0) && this.use(Torrents)
 
         this.use(Options)
         this.use(Subscribed)

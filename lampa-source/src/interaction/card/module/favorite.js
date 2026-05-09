@@ -18,7 +18,7 @@ export default {
         }
 
         let onDraw = (item)=>{
-            if(!Account.hasPremium()){
+            if(!false){
                 let wrap = $('<div class="selectbox-item__lock"></div>')
                     wrap.append(Template.js('icon_lock'))
 
@@ -29,7 +29,7 @@ export default {
                 item.on('hover:enter',()=>{
                     Select.close()
 
-                    Account.showCubPremium()
+                    void 0
                 })
             }
         }
@@ -60,9 +60,9 @@ export default {
                     menu.push({
                         title: Lang.translate('title_'+m),
                         where: m,
-                        picked: Account.hasPremium() ? status[m] : false,
+                        picked: false ? status[m] : false,
                         collect: true,
-                        noenter: !Account.hasPremium(),
+                        noenter: !false,
                         onSelect,
                         onDraw
                     })

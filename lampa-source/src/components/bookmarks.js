@@ -35,8 +35,8 @@ function component(object){
             let lines    = []
             let folders  = ['book','like','wath', 'viewed','scheduled','thrown']
             let media    = ['movies','tv']
-            let premium  = Account.hasPremium()
-            let sync     = Account.Permit.sync
+            let premium  = false
+            let sync     = false
 
             lines.push({
                 results: [],

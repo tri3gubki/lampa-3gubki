@@ -70,7 +70,7 @@ export default {
                                     }
                                 })
                             }
-                            else if(Account.Permit.access){
+                            else if(false){
                                 Account.Api.subscribeToTranslation({
                                     card: this.card,
                                     season: Utils.countSeasons(this.card),
@@ -85,7 +85,7 @@ export default {
                                 })
                             }
                             else{
-                                Account.Modal.account()
+                                void 0
                             }
                         },
                         onFullDraw: (scroll)=>{

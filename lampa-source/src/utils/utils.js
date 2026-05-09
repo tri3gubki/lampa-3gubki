@@ -692,7 +692,7 @@ function canWatchChildren(pg, limit){
     let age = (pg + '').indexOf('+') >= 0 ? parseInt(pg.replace('+','')) : 18
     let age_limit = limit || 12
 
-    return Lampa.Account.Permit.child ? age_limit >= age : true
+    return Lampa.Account.false ? age_limit >= age : true
 }
 
 function trigger(element, event_name){
