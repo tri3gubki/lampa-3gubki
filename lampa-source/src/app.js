@@ -162,6 +162,17 @@ if(!window.localStorage.getItem('black_style_reset_v19')){
     window.localStorage.setItem('black_style_reset_v19','1')
 }
 
+// v20: раздел 'Остальное' минимизирован. Удалены screensaver / source /
+// time_offset / device_name из UI. source форсим в 'tmdb' (CUB-source
+// удалён ранее, других не осталось). Старые значения сбрасываем.
+if(!window.localStorage.getItem('rest_simplified_v20')){
+    ['screensaver','screensaver_type','screensaver_time','time_offset','device_name'].forEach(k=>{
+        window.localStorage.removeItem(k)
+    })
+    window.localStorage.setItem('source','"tmdb"')
+    window.localStorage.setItem('rest_simplified_v20','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

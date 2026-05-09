@@ -50,15 +50,6 @@ function init(){
         select('player', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}'}, 'none')
     }
 
-    let screensaver_types = {
-        'nature': '#{settings_param_screensaver_nature}',
-        'chrome': 'ChromeCast',
-        'cub': 'CUB',
-        'aerial': 'Aerial'
-    }
-
-    select('screensaver_type',screensaver_types,'aerial')
-
     select('keyboard_type', {
         'lampa': '#{settings_param_keyboard_lampa}',
         'integrate': '#{settings_param_keyboard_system}'
@@ -399,14 +390,6 @@ select('torrserver_use_link',{
     'two': '#{settings_param_link_use_two}'
 },'one')
 
-select('screensaver_time',{
-    '1': '1',
-    '2': '2',
-    '5': '5',
-    '10': '10',
-},'5')
-
-
 select('parse_lang',{
     'df': '#{settings_param_torrent_lang_orig}'
 },'df')
@@ -424,11 +407,6 @@ select('player_timecode',{
     'continue': '#{settings_param_player_timecode_continue}',
     'ask': '#{settings_param_player_timecode_ask}',
 },'continue')
-
-select('source',{
-    'tmdb': 'TMDB',
-    'cub': 'CUB'
-},'tmdb')
 
 select('start_page', {
     'main': '#{title_main}',
@@ -453,29 +431,6 @@ select('card_interfice_type', {
     'new': '#{settings_param_card_interface_new}'
 }, 'new')
 
-select('time_offset', {
-    'n-10': '-10',
-    'n-9': '-9',
-    'n-8': '-8',
-    'n-7': '-7',
-    'n-6': '-6',
-    'n-5': '-5',
-    'n-4': '-4',
-    'n-3': '-3',
-    'n-2': '-2',
-    'n-1': '-1',
-    'n0': '0',
-    'n1': '1',
-    'n2': '2',
-    'n3': '3',
-    'n4': '4',
-    'n5': '5',
-    'n6': '6',
-    'n7': '7',
-    'n8': '8',
-    'n9': '9',
-    'n10': '10',
-}, 'n0')
 
 
 /**
@@ -491,7 +446,6 @@ trigger('account_use',false)
 trigger('torrserver_auth',false)
 trigger('playlist_next',true)
 trigger('internal_torrclient', true)
-trigger('screensaver', true)
 trigger('proxy_tmdb', true)
 trigger('proxy_tmdb_auto', true)
 trigger('proxy_other', true)
