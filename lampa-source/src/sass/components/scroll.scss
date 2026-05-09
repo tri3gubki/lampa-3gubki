@@ -28,11 +28,11 @@
     }
 
     &--mask{
-        mask-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%);
+        // Сверху без fade (заголовки rows читаются без полупрозрачности),
+        // снизу плавный fade-out для красивого затухания на нижнем крае.
+        mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%);
 
         .scroll__content{
-            // Top-padding уменьшен — контент activity начинается ближе
-            // к шапке; bottom-padding оставлен для нижнего fade.
             padding: 0.5em 0 2.5em;
 
             @media screen and (max-width: $media_xs) {
