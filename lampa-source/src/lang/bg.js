@@ -120,27 +120,10 @@ export default {
     settings_player_path_descr: 'Укажете пътя до плейър.exe',
     settings_player_external_header: 'Външен плейър',
     settings_player_external_fullscreen: 'Стартиране в пълен екран',
-    settings_player_normalization: 'Нормализация на звука',
-    settings_player_normalization_descr: 'Нормализира звука до едно ниво, понижава силните звуци и усилва тихите.',
     settings_player_next_episode: 'Следващ епизод',
     settings_player_next_episode_descr: 'Автоматично превключване към следващата серия след краят на текущата',
     settings_player_timecode: 'Времеви код',
     settings_player_timecode_descr: 'Продължи от последното преглеждано место',
-    settings_player_scale: 'Метод за мащабиране',
-    settings_player_scale_descr: 'Как да се изчисли мащабирането на видеото',
-    settings_player_subs: 'Субтитри',
-    settings_player_subs_use: 'Включи',
-    settings_player_subs_use_descr: 'Винаги да се включват субтитри след стартиране на видеото',
-    settings_player_subs_size: 'Размер',
-    settings_player_subs_size_descr: 'Размерът на субтитрите върху екрана',
-    settings_player_subs_stroke_use: 'Обкантване',
-    settings_player_subs_stroke_use_descr: 'Субтитрите ще бъдат обкантени в черно за по-добра четимост',
-    settings_player_subs_backdrop_use: 'Фон',
-    settings_player_subs_backdrop_use_descr: 'Субтитрите ще бъдат изобразени на полупрозрачна основа за подобряване на четливостта',
-    settings_player_quality: 'Видео качество по подразбиране',
-    settings_player_quality_descr: 'Предпочитаното видео качество при преглед',
-    settings_player_hls_title: 'Обработка на .m3u8 поток',
-    settings_player_hls_descr: 'Не променяйте този параметър, ако не знаете какво правите.',
 
     settings_plugins_notice: 'За да приложите плъгина, трябва да рестартирате приложението',
     settings_plugins_add: 'Добави плъгин',
@@ -653,17 +636,11 @@ export default {
     settings_param_link_use_one: 'Главна',
     settings_param_link_use_two: 'Допълнителна',
     settings_param_link_use_both: 'И двете',
-    settings_param_subtitles_size_small: 'малки',
-    settings_param_subtitles_size_normal: 'нормални',
-    settings_param_subtitles_size_bigger: 'големи',
     settings_param_screensaver_nature: 'Природа',
     settings_param_torrent_lang_orig: 'Оригинал',
     settings_param_player_timecode_again: 'Стартирай отначало',
     settings_param_player_timecode_continue: 'Продължи',
     settings_param_player_timecode_ask: 'Питай',
-    settings_param_player_scale_method: 'Пресмятане',
-    settings_param_player_hls_app: 'Системен',
-    settings_param_player_hls_js: 'Програмен',
     settings_param_card_view_load: 'Качени',
     settings_param_card_view_all: 'Покажи всички',
     settings_param_navigation_remote: 'Дистанционно управление',
@@ -712,11 +689,6 @@ export default {
     player_video_speed: 'Скорост на възпроизвеждане',
     player_share_title: 'Споделяне ',
     player_share_descr: 'Възпроизвеждане на това видео на друго устройство',
-    player_normalization_power_title: 'Нормализация на силата',
-    player_normalization_smooth_title: 'Нормализация на скоростта',
-    player_normalization_step_low: 'Ниско',
-    player_normalization_step_medium: 'Средно',
-    player_normalization_step_hight: 'Високо',
 
 
     card_new_episode: 'Нови сериали',
@@ -801,7 +773,6 @@ export default {
     extensions_edit: 'Редакция',
     extensions_no_name: 'Без заглавие',
 
-    player_normalization: 'Нормализация',
     change_source_on_cub: 'Променете източника на CUB',
     settings_param_jackett_interview_all: 'Всички',
     settings_param_jackett_interview_healthy: 'Само налични',
@@ -849,8 +820,6 @@ export default {
     title_upcoming_episodes: 'Предстоящи епизоди',
     title_recent_episodes: 'Наскоро излезли епизоди',
 
-    settings_player_rewind_title: 'Назад',
-    settings_player_rewind_descr: 'Интервал Назад в секунди',
 
     settings_interface_card_reactions: 'Показване на реакциите',
     title_look: 'Гледащи',
@@ -903,7 +872,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Предоставете връзка към сървъра Prowlarr',
     settings_parser_prowlarr_key_descr: 'Намира се в раздела с настройки на Prowlarr в общата категория',
 
-    player_normalization_step_none: 'Нула',
 
 
     settings_interface_sound: 'Системни звуци',
@@ -917,10 +885,6 @@ export default {
     title_fire: 'Огън!',
     title_top_100: 'Топ 100',
 
-    player_normalization_type_title: 'Тип нормализация',
-    player_normalization_type_all: 'Всички',
-    player_normalization_type_up: 'Само увеличаване',
-    player_normalization_type_down: 'Само намаляване',
 
     title_ai_assistant: 'AI-асистент',
     title_facts: 'Интересни факти',

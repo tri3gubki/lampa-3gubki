@@ -122,27 +122,10 @@ export default {
     settings_player_path_descr: 'Especifique o caminho para o player .exe',
     settings_player_external_header: 'Reprodutor externo',
     settings_player_external_fullscreen: 'Iniciar em modo de tela cheia',
-    settings_player_normalization: 'Normalização de som',
-    settings_player_normalization_descr: 'Normaliza o som para um nível, diminui os sons altos e aumenta os silenciosos.',
     settings_player_next_episode: 'Próximo episódio',
     settings_player_next_episode_descr: 'Passar automaticamente para o próximo episódio após o final do atual',
     settings_player_timecode: 'Tempo visualizado',
     settings_player_timecode_descr: 'Retomar reprodução na última localização visualizada',
-    settings_player_scale: 'Método de dimensionamento',
-    settings_player_scale_descr: 'Como calcular o dimensionamento de vídeo',
-    settings_player_subs: 'Legendas',
-    settings_player_subs_use: 'Ativar',
-    settings_player_subs_use_descr: 'Ativar sempre as legendas depois de iniciar um vídeo',
-    settings_player_subs_size: 'Tamanho',
-    settings_player_subs_size_descr: 'Tamanho das legendas',
-    settings_player_subs_stroke_use: 'Usar borda',
-    settings_player_subs_stroke_use_descr: 'As legendas serão contornadas em preto para melhor legibilidade',
-    settings_player_subs_backdrop_use: 'Usar fundo',
-    settings_player_subs_backdrop_use_descr: 'As legendas serão mostradas em um fundo translúcido para melhorar a legibilidade',
-    settings_player_quality: 'Qualidade de vídeo padrão',
-    settings_player_quality_descr: 'Qualidade de vídeo preferida para visualização',
-    settings_player_hls_title: 'Processando o stream .m3u8',
-    settings_player_hls_descr: 'Não toque neste parâmetro se você não sabe o motivo.',
     
 	settings_plugins_notice: 'Para aplicar o plugin, você precisa reiniciar a aplicação',
     settings_plugins_add: 'Adicionar plugin',
@@ -653,17 +636,11 @@ export default {
     settings_param_link_use_one: 'Principal',
     settings_param_link_use_two: 'Secundário',
     settings_param_link_use_both: 'Ambas',
-    settings_param_subtitles_size_small: 'Pequeno',
-    settings_param_subtitles_size_normal: 'Normal',
-    settings_param_subtitles_size_bigger: 'Grande',
     settings_param_screensaver_nature: 'Natureza',
     settings_param_torrent_lang_orig: 'Original',
     settings_param_player_timecode_again: 'Começar de novo',
     settings_param_player_timecode_continue: 'Continuar',
     settings_param_player_timecode_ask: 'Perguntar',
-    settings_param_player_scale_method: 'Calcular',
-    settings_param_player_hls_app: 'Sistema',
-    settings_param_player_hls_js: 'Programa',
     settings_param_card_view_load: 'Carregar',
     settings_param_card_view_all: 'Mostrar tudo',
     settings_param_navigation_remote: 'Comando',
@@ -712,11 +689,6 @@ export default {
     player_video_speed: 'Velocidade de reprodução',
     player_share_title: 'Partilhar',
     player_share_descr: 'Reproduzir este vídeo em outro dispositivo',
-    player_normalization_power_title: 'Normalização',
-    player_normalization_smooth_title: 'Velocidade de normalização',
-    player_normalization_step_low: 'Baixo',
-    player_normalization_step_medium: 'Médio',
-    player_normalization_step_hight: 'Alto',
 	
 
 	card_new_episode: 'Novo episódio',
@@ -801,7 +773,6 @@ export default {
     extensions_edit: 'Editar',
     extensions_no_name: 'Sem título',
 
-    player_normalization: 'Normalização',
     change_source_on_cub: 'Alterar fonte para CUB',
     settings_param_jackett_interview_all: 'Tudo',
     settings_param_jackett_interview_healthy: 'Disponível apenas',
@@ -849,8 +820,6 @@ export default {
     title_upcoming_episodes: 'Próximos lançamentos de episódios',
     title_recent_episodes: 'Lançamentos recentes de episódios',
 
-    settings_player_rewind_title: 'Rebobinar',
-    settings_player_rewind_descr: 'Intervalo de retrocesso em segundos',
 
     settings_interface_card_reactions: 'Mostrar reações',
     title_look: 'A assistir',
@@ -901,7 +870,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Forneça um link para o servidor Prowlarr',
     settings_parser_prowlarr_key_descr: 'Localizado na guia de configurações do Prowlarr na categoria geral',
 
-    player_normalization_step_none: 'Zero',
 
 
     settings_interface_sound: 'Sons do sistema',
@@ -915,10 +883,6 @@ export default {
     title_fire: 'Fogo!',
     title_top_100: '100 melhores',
 
-    player_normalization_type_title: 'Tipo de Normalização',
-    player_normalization_type_all: 'Todos',
-    player_normalization_type_up: 'Apenas Aumento',
-    player_normalization_type_down: 'Apenas Diminuição',
 
     title_ai_assistant: 'Assistente de IA',
     title_facts: 'Fatos Interessantes',

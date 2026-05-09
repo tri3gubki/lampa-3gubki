@@ -121,27 +121,10 @@ export default {
     settings_player_path_descr: 'Укажыце шлях да плэера .exe',
     settings_player_external_header: 'Знешні плэер',
     settings_player_external_fullscreen: 'Запускать у поўнаэкранным рэжыме',
-    settings_player_normalization: 'Нармалізацыя гуку',
-    settings_player_normalization_descr: 'Нармалізуе гук у адзін узровень, паніжае гучныя гукі і павялічвае ціхія.',
     settings_player_next_episode: 'Наступная серыя',
     settings_player_next_episode_descr: 'Аўтаматычна пераключаць на наступную серыю пасля заканчэння бягучай',
     settings_player_timecode: 'Тайм-код',
     settings_player_timecode_descr: 'Працягнуць з апошняга месца прагляду',
-    settings_player_scale: 'Метад маштабавання',
-    settings_player_scale_descr: 'Якім чынам рабіць вылічэнні для маштабавання відэа',
-    settings_player_subs: 'Субтытры',
-    settings_player_subs_use: 'Уключыць',
-    settings_player_subs_use_descr: 'Заўсёды ўключаць субтытры пасля запуску відэа',
-    settings_player_subs_size: 'Памер',
-    settings_player_subs_size_descr: 'Памер субтытраў на экране',
-    settings_player_subs_stroke_use: 'Выкарыстоўваць акантоўку',
-    settings_player_subs_stroke_use_descr: 'Субтытры будуць абведзены чорным колерам для паляпшэння чытальнасці',
-    settings_player_subs_backdrop_use: 'Выкарыстоўваць падкладку',
-    settings_player_subs_backdrop_use_descr: 'Субтытры будуць адлюстроўвацца на напаўпразрыстай падкладцы для паляпшэння чытальнасці',
-    settings_player_quality: 'Якасць відэа па змаўчанні',
-    settings_player_quality_descr: 'Пераважная якасць відэа для прагляду',
-    settings_player_hls_title: 'Апрацоўка патоку .m3u8',
-    settings_player_hls_descr: 'Не чапайце гэты параметр калі не ведаеце навошта ён.',
 
     settings_plugins_notice: 'Для прымянення плагіна неабходна перазагрузіць дадатак',
     settings_plugins_add: 'Дадаць плагін',
@@ -657,17 +640,11 @@ export default {
     settings_param_link_use_one: 'Асноўную',
     settings_param_link_use_two: 'Дадатковую',
     settings_param_link_use_both: 'Абедзве',
-    settings_param_subtitles_size_small: 'Маленькія',
-    settings_param_subtitles_size_normal: 'Звычайныя',
-    settings_param_subtitles_size_bigger: 'Вялікія',
     settings_param_screensaver_nature: 'Прырода',
     settings_param_torrent_lang_orig: 'Арыгінал',
     settings_param_player_timecode_again: 'Пачаць з пачатку',
     settings_param_player_timecode_continue: 'Працягнуць',
     settings_param_player_timecode_ask: 'Пытаць',
-    settings_param_player_scale_method: 'Разлічыць',
-    settings_param_player_hls_app: 'Сістэмны',
-    settings_param_player_hls_js: 'Праграмны',
     settings_param_card_view_load: 'Падгружаць',
     settings_param_card_view_all: 'Паказаць усё',
     settings_param_navigation_remote: 'Пульт',
@@ -716,11 +693,6 @@ export default {
     player_video_speed: 'Хуткасць прайгравання',
     player_share_title: 'Падзеліцца',
     player_share_descr: 'Запусціць гэтае відэа на іншай прыладзе',
-    player_normalization_power_title: 'Сіла нармалізацыі',
-    player_normalization_smooth_title: 'Хуткасць нармалізацыі',
-    player_normalization_step_low: 'Нізкае',
-    player_normalization_step_medium: 'Сярэдняе',
-    player_normalization_step_hight: 'Высокае',
 
 
     card_new_episode: 'Новая серыя',
@@ -814,7 +786,6 @@ export default {
     extensions_edit: 'рэдагаваць',
     extensions_no_name: 'Без назвы',
 
-    player_normalization: 'Нармалізацыя',
     change_source_on_cub: 'Змяніць крыніцу на CUB',
     settings_param_jackett_interview_all: 'Усё',
     settings_param_jackett_interview_healthy: 'Толькі даступныя',
@@ -862,8 +833,6 @@ export default {
     title_upcoming_episodes: 'Бліжэйшыя выхады эпізодаў',
     title_recent_episodes: 'Нядаўнія выхады эпізодаў',
 
-    settings_player_rewind_title: 'Перамотка',
-    settings_player_rewind_descr: 'Інтэрвал перамоткі ў секундах',
 
     settings_interface_card_reactions: 'Паказаць рэакцыі',
     title_look: 'Гляджу',
@@ -917,7 +886,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Пазначце спасылку на сервер Prowlarr',
     settings_parser_prowlarr_key_descr: 'Знаходзіцца ва ўкладцы налад Prowlarr у катэгорыі асноўнае',
 
-    player_normalization_step_none: 'Нулявая',
 
 
     settings_interface_sound: 'Сістэмныя гукі',
@@ -941,10 +909,6 @@ export default {
     title_fire: 'Агонь!',
     title_top_100: 'Топ 100',
 
-    player_normalization_type_title: 'Тып нармалізацыі',
-    player_normalization_type_all: 'Усе',
-    player_normalization_type_up: 'Толькі павышэнне',
-    player_normalization_type_down: 'Толькі паніжэнне',
 
     title_ai_assistant: 'AI-асістэнт',
     title_facts: 'Цікавыя факты',

@@ -402,12 +402,6 @@ select('torrserver_use_link',{
     'two': '#{settings_param_link_use_two}'
 },'one')
 
-select('subtitles_size',{
-    'small': '#{settings_param_subtitles_size_small}',
-    'normal': '#{settings_param_subtitles_size_normal}',
-    'large': '#{settings_param_subtitles_size_bigger}',
-},'normal')
-
 select('screensaver_time',{
     '1': '1',
     '2': '2',
@@ -428,32 +422,11 @@ select('parse_timeout',{
     '120': '120'
 },'15')
 
-select('player_rewind',{
-    '5': '5',
-    '10': '10',
-    '15': '15',
-    '20': '20',
-    '30': '30',
-    '50': '50',
-    '100': '100'
-},'20')
-
 select('player_timecode',{
     'again': '#{settings_param_player_timecode_again}',
     'continue': '#{settings_param_player_timecode_continue}',
     'ask': '#{settings_param_player_timecode_ask}',
 },'continue')
-
-select('player_scale_method',{
-    'transform': 'Transform',
-    'calculate': '#{settings_param_player_scale_method}',
-},'transform')
-
-select('player_hls_method',{
-    'application': '#{settings_param_player_hls_app}',
-    'hlsjs': '#{settings_param_player_hls_js}',
-},'application')
-
 
 select('source',{
     'tmdb': 'TMDB',
@@ -527,15 +500,6 @@ select('time_offset', {
 }, 'n0')
 
 
-select('video_quality_default',{
-    '480': '480p',
-    '720': '720p',
-    '1080': '1080p',
-    '1440': '1440p',
-    '2160': '2160p',
-},'1080')
-
-
 /**
  * Добовляем триггеры
  */
@@ -550,17 +514,13 @@ trigger('torrserver_auth',false)
 trigger('mask',true)
 trigger('playlist_next',true)
 trigger('internal_torrclient', true)
-trigger('subtitles_stroke', true)
-trigger('subtitles_backdrop', false)
 trigger('screensaver', true)
 trigger('proxy_tmdb', true)
 trigger('proxy_tmdb_auto', true)
 trigger('proxy_other', true)
 trigger('parse_in_search', false)
-trigger('subtitles_start', false)
 trigger('helper', true)
 trigger('light_version', false)
-trigger('player_normalization', false)
 trigger('card_quality', true)
 trigger('card_episodes', true)
 trigger('card_interfice_poster', true)

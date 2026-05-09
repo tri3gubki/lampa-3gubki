@@ -1209,7 +1209,7 @@ function rewindStart(position_time,immediately){
  */
 function rewind(forward, custom_step){
     if(video.duration){
-        let step = Storage.field('player_rewind')
+        let step = Storage.field('player_rewind') || 20
 
         if(rewind_position == 0){
             rewind_force = Math.max(5,custom_step || step)

@@ -121,27 +121,10 @@ export default {
     settings_player_path_descr: 'Specify the path to the player .exe',
     settings_player_external_header: 'External player',
     settings_player_external_fullscreen: 'Launch in fullscreen mode',
-    settings_player_normalization: 'Sound normalization',
-    settings_player_normalization_descr: 'Normalizes sound to one level, lowers loud sounds and boosts quiet ones.',
     settings_player_next_episode: 'Next episode',
     settings_player_next_episode_descr: 'Automatically switch to the next series after the end of the current one',
     settings_player_timecode: 'Timecode',
     settings_player_timecode_descr: 'Continue from last viewed location',
-    settings_player_scale: 'Scaling Method',
-    settings_player_scale_descr: 'How to calculate video scaling',
-    settings_player_subs: 'Subtitles',
-    settings_player_subs_use: 'Turn on',
-    settings_player_subs_use_descr: 'Always turn on subtitles after starting a video',
-    settings_player_subs_size: 'The size',
-    settings_player_subs_size_descr: 'Screen size of subtitles',
-    settings_player_subs_stroke_use: 'Use edging',
-    settings_player_subs_stroke_use_descr: 'Subtitles will be outlined in black for better readability',
-    settings_player_subs_backdrop_use: 'Use an underlay',
-    settings_player_subs_backdrop_use_descr: 'Subtitles will be displayed on a translucent backing to improve readability',
-    settings_player_quality: 'Default video quality',
-    settings_player_quality_descr: 'Preferred video quality for viewing',
-    settings_player_hls_title: 'Processing the .m3u8 stream',
-    settings_player_hls_descr: 'Do not touch this parameter if you do not know why it is.',
 
     settings_plugins_notice: 'To apply the plugin, you need to restart the application',
     settings_plugins_add: 'Add Plugin',
@@ -653,17 +636,11 @@ export default {
     settings_param_link_use_one: 'Main',
     settings_param_link_use_two: 'Additional',
     settings_param_link_use_both: 'Both',
-    settings_param_subtitles_size_small: 'small',
-    settings_param_subtitles_size_normal: 'Ordinary',
-    settings_param_subtitles_size_bigger: 'Large',
     settings_param_screensaver_nature: 'Nature',
     settings_param_torrent_lang_orig: 'Original',
     settings_param_player_timecode_again: 'Start over',
     settings_param_player_timecode_continue: 'Proceed',
     settings_param_player_timecode_ask: 'To ask',
-    settings_param_player_scale_method: 'Calculate',
-    settings_param_player_hls_app: 'Systemic',
-    settings_param_player_hls_js: 'Program',
     settings_param_card_view_load: 'Upload',
     settings_param_card_view_all: 'Show all',
     settings_param_navigation_remote: 'Remote controller',
@@ -712,11 +689,6 @@ export default {
     player_video_speed: 'Playback speed',
     player_share_title: 'Share',
     player_share_descr: 'Play this video on another device',
-    player_normalization_power_title: 'Normalization power',
-    player_normalization_smooth_title: 'Normalization speed',
-    player_normalization_step_low: 'Low',
-    player_normalization_step_medium: 'Average',
-    player_normalization_step_hight: 'High',
 
 
     card_new_episode: 'New series',
@@ -801,7 +773,6 @@ export default {
     extensions_edit: 'Edit',
     extensions_no_name: 'Untitled',
 
-    player_normalization: 'Normalization',
     change_source_on_cub: 'Change source to CUB',
     settings_param_jackett_interview_all: 'All',
     settings_param_jackett_interview_healthy: 'Available only',
@@ -849,8 +820,6 @@ export default {
     title_upcoming_episodes: 'Upcoming episode releases',
     title_recent_episodes: 'Recent episode releases',
 
-    settings_player_rewind_title: 'Rewind',
-    settings_player_rewind_descr: 'Rewind interval in seconds',
 
     settings_interface_card_reactions: 'Show reactions',
     title_look: 'Looking',
@@ -902,7 +871,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Provide a link to the Prowlarr server',
     settings_parser_prowlarr_key_descr: 'Located in the Prowlarr settings tab in the general category',
 
-    player_normalization_step_none: 'Zero',
 
 
     settings_interface_sound: 'System sounds',
@@ -916,10 +884,6 @@ export default {
     title_fire: 'Fire!',
     title_top_100: 'Top 100',
 
-    player_normalization_type_title: 'Normalization Type',
-    player_normalization_type_all: 'All',
-    player_normalization_type_up: 'Only Increase',
-    player_normalization_type_down: 'Only Decrease',
 
     title_ai_assistant: 'AI Assistant',
     title_facts: 'Interesting Facts',

@@ -121,27 +121,10 @@ export default {
     settings_player_path_descr: 'Spécifier le chemin vers l\'exécutable du lecteur (.exe)',
     settings_player_external_header: 'Lecteur externe',
     settings_player_external_fullscreen: 'Lancer en plein écran',
-    settings_player_normalization: 'Normalisation du son',
-    settings_player_normalization_descr: 'Équilibre le volume : baisse les sons forts et augmente les sons faibles.',
     settings_player_next_episode: 'Épisode suivant',
     settings_player_next_episode_descr: 'Passer automatiquement à l\'épisode suivant à la fin du visionnage',
     settings_player_timecode: 'Reprise de lecture',
     settings_player_timecode_descr: 'Reprendre à partir du dernier emplacement visionné',
-    settings_player_scale: 'Méthode de mise à l\'échelle',
-    settings_player_scale_descr: 'Calcul de la mise à l\'échelle vidéo',
-    settings_player_subs: 'Sous-titres',
-    settings_player_subs_use: 'Activer',
-    settings_player_subs_use_descr: 'Toujours activer les sous-titres au démarrage',
-    settings_player_subs_size: 'Taille',
-    settings_player_subs_size_descr: 'Taille d\'affichage des sous-titres',
-    settings_player_subs_stroke_use: 'Bordure',
-    settings_player_subs_stroke_use_descr: 'Ajoute une bordure noire pour une meilleure lisibilité',
-    settings_player_subs_backdrop_use: 'Fond opaque',
-    settings_player_subs_backdrop_use_descr: 'Affiche un fond translucide derrière les sous-titres',
-    settings_player_quality: 'Qualité vidéo par défaut',
-    settings_player_quality_descr: 'Qualité vidéo préférée pour le visionnage',
-    settings_player_hls_title: 'Traitement du flux .m3u8',
-    settings_player_hls_descr: 'Ne modifiez pas ce paramètre sauf si vous savez ce que vous faites.',
 
     settings_plugins_notice: 'Vous devez redémarrer l\'application pour appliquer les modifications d\'extensions',
     settings_plugins_add: 'Ajouter une extension',
@@ -653,17 +636,11 @@ export default {
     settings_param_link_use_one: 'Principal',
     settings_param_link_use_two: 'Secondaire',
     settings_param_link_use_both: 'Les deux',
-    settings_param_subtitles_size_small: 'Petit',
-    settings_param_subtitles_size_normal: 'Standard',
-    settings_param_subtitles_size_bigger: 'Grand',
     settings_param_screensaver_nature: 'Nature',
     settings_param_torrent_lang_orig: 'Originale',
     settings_param_player_timecode_again: 'Recommencer',
     settings_param_player_timecode_continue: 'Continuer',
     settings_param_player_timecode_ask: 'Demander',
-    settings_param_player_scale_method: 'Calculer',
-    settings_param_player_hls_app: 'Système',
-    settings_param_player_hls_js: 'Programme',
     settings_param_card_view_load: 'Charger',
     settings_param_card_view_all: 'Tout afficher',
     settings_param_navigation_remote: 'Télécommande',
@@ -712,11 +689,6 @@ export default {
     player_video_speed: 'Vitesse de lecture',
     player_share_title: 'Partager',
     player_share_descr: 'Lire sur un autre appareil',
-    player_normalization_power_title: 'Force de normalisation',
-    player_normalization_smooth_title: 'Vitesse de normalisation',
-    player_normalization_step_low: 'Basse',
-    player_normalization_step_medium: 'Moyenne',
-    player_normalization_step_hight: 'Haute',
 
 
     card_new_episode: 'Nouvel épisode',
@@ -801,7 +773,6 @@ export default {
     extensions_edit: 'Modifier',
     extensions_no_name: 'Sans titre',
 
-    player_normalization: 'Normalisation',
     change_source_on_cub: 'Changer la source pour CUB',
     settings_param_jackett_interview_all: 'Tous',
     settings_param_jackett_interview_healthy: 'Disponibles uniquement',
@@ -849,8 +820,6 @@ export default {
     title_upcoming_episodes: 'Prochaines sorties d\'épisodes',
     title_recent_episodes: 'Sorties d\'épisodes récentes',
 
-    settings_player_rewind_title: 'Retour rapide',
-    settings_player_rewind_descr: 'Intervalle de retour (secondes)',
 
     settings_interface_card_reactions: 'Afficher les réactions',
     title_look: 'Regarde',
@@ -902,7 +871,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Lien vers le serveur Prowlarr',
     settings_parser_prowlarr_key_descr: 'Clé API trouvée dans les paramètres Prowlarr',
 
-    player_normalization_step_none: 'Aucun',
 
 
     settings_interface_sound: 'Sons système',
@@ -916,10 +884,6 @@ export default {
     title_fire: 'Incendiaire !',
     title_top_100: 'Top 100',
 
-    player_normalization_type_title: 'Type de normalisation',
-    player_normalization_type_all: 'Tout',
-    player_normalization_type_up: 'Augmenter seulement',
-    player_normalization_type_down: 'Diminuer seulement',
 
     title_ai_assistant: 'Assistant IA',
     title_facts: 'Anecdotes',

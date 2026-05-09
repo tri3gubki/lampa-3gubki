@@ -121,27 +121,10 @@ export default {
     settings_player_path_descr: 'Specifică calea către executabilul player-ului (.exe)',
     settings_player_external_header: 'Player extern',
     settings_player_external_fullscreen: 'Lansare în modul pe tot ecranul',
-    settings_player_normalization: 'Normalizare sunet',
-    settings_player_normalization_descr: 'Normalizează sunetul la un singur nivel, scade sunetele puternice și le amplifică pe cele încet.',
     settings_player_next_episode: 'Următorul episod',
     settings_player_next_episode_descr: 'Trece automat la următorul episod după finalizarea celui curent',
     settings_player_timecode: 'Progres',
     settings_player_timecode_descr: 'Continuă de la ultima poziție vizionată',
-    settings_player_scale: 'Metodă scalare',
-    settings_player_scale_descr: 'Cum se calculează scalarea video',
-    settings_player_subs: 'Subtitrări',
-    settings_player_subs_use: 'Activează',
-    settings_player_subs_use_descr: 'Activează mereu subtitrările la pornirea video-ului',
-    settings_player_subs_size: 'Dimensiune',
-    settings_player_subs_size_descr: 'Dimensiunea subtitrărilor pe ecran',
-    settings_player_subs_stroke_use: 'Folosește contur',
-    settings_player_subs_stroke_use_descr: 'Subtitrările vor avea un contur negru pentru o lizibilitate mai bună',
-    settings_player_subs_backdrop_use: 'Folosește fundal',
-    settings_player_subs_backdrop_use_descr: 'Subtitrările vor fi afișate pe un fundal translucid',
-    settings_player_quality: 'Calitate video implicită',
-    settings_player_quality_descr: 'Calitatea video preferată pentru vizionare',
-    settings_player_hls_title: 'Procesare flux .m3u8',
-    settings_player_hls_descr: 'Nu modifica acest parametru dacă nu știi ce face.',
 
     settings_plugins_notice: 'Pentru a aplica plugin-ul, trebuie să repornești aplicația',
     settings_plugins_add: 'Adaugă Plugin',
@@ -653,17 +636,11 @@ export default {
     settings_param_link_use_one: 'General',
     settings_param_link_use_two: 'Adițional',
     settings_param_link_use_both: 'Ambele',
-    settings_param_subtitles_size_small: 'Mici',
-    settings_param_subtitles_size_normal: 'Obișnuite',
-    settings_param_subtitles_size_bigger: 'Mari',
     settings_param_screensaver_nature: 'Natură',
     settings_param_torrent_lang_orig: 'Originală',
     settings_param_player_timecode_again: 'De la început',
     settings_param_player_timecode_continue: 'Continuă',
     settings_param_player_timecode_ask: 'Întreabă',
-    settings_param_player_scale_method: 'Calculat',
-    settings_param_player_hls_app: 'Sistem',
-    settings_param_player_hls_js: 'Program',
     settings_param_card_view_load: 'Încarcă',
     settings_param_card_view_all: 'Afișează tot',
     settings_param_navigation_remote: 'Telecomandă',
@@ -712,11 +689,6 @@ export default {
     player_video_speed: 'Viteză de redare',
     player_share_title: 'Partajează',
     player_share_descr: 'Redă acest video pe un alt dispozitiv',
-    player_normalization_power_title: 'Putere normalizare',
-    player_normalization_smooth_title: 'Viteză normalizare',
-    player_normalization_step_low: 'Scăzută',
-    player_normalization_step_medium: 'Medie',
-    player_normalization_step_hight: 'Ridicată',
 
 
     card_new_episode: 'Episod nou',
@@ -801,7 +773,6 @@ export default {
     extensions_edit: 'Editează',
     extensions_no_name: 'Fără nume',
 
-    player_normalization: 'Normalizare',
     change_source_on_cub: 'Schimbă sursa în CUB',
     settings_param_jackett_interview_all: 'Toate',
     settings_param_jackett_interview_healthy: 'Doar cele disponibile',
@@ -849,8 +820,6 @@ export default {
     title_upcoming_episodes: 'Lansări episoade viitoare',
     title_recent_episodes: 'Lansări episoade recente',
 
-    settings_player_rewind_title: 'Derulare',
-    settings_player_rewind_descr: 'Interval de derulare în secunde',
 
     settings_interface_card_reactions: 'Afișează reacțiile',
     title_look: 'Urmăresc',
@@ -902,7 +871,6 @@ export default {
     settings_parser_prowlarr_link_descr: 'Introdu link-ul către serverul Prowlarr',
     settings_parser_prowlarr_key_descr: 'Se află în setările Prowlarr la categoria General',
 
-    player_normalization_step_none: 'Zero',
 
 
     settings_interface_sound: 'Sunete sistem',
@@ -916,10 +884,6 @@ export default {
     title_fire: 'Tare!',
     title_top_100: 'Top 100',
 
-    player_normalization_type_title: 'Tip normalizare',
-    player_normalization_type_all: 'Toate',
-    player_normalization_type_up: 'Doar creștere',
-    player_normalization_type_down: 'Doar scădere',
 
     title_ai_assistant: 'Asistent AI',
     title_facts: 'Curiozități',
