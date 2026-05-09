@@ -506,7 +506,6 @@ function destroy(){
     viewing.current    = 0
 
     html.removeClass('player--ios')
-    html.removeClass('iptv')
     html.removeClass('player--panel-visible')
     html.removeClass('player--loading')
 
@@ -990,7 +989,7 @@ function play(data){
 
                 Info.set('name',data.title)
 
-                if(!data.iptv){
+                if(true){
                     if(data.card) Footer.appendAbout(data.card)
                     else{
                         Lampa.Activity.active().movie && Footer.appendAbout(Lampa.Activity.active().movie)
@@ -1021,44 +1020,7 @@ function play(data){
     launch_player = ''
 }
 
-function iptv(data){
-    locked(data, ()=>{
-        console.log('Player','play iptv')
 
-        data.iptv = true //пометка для ведра, что это iptv
-
-        let lauch = ()=>{
-            Background.theme('black')
-
-            listener.send('start',data)
-
-            html.toggleClass('iptv',true)
-
-            // TV.start removed (IPTV)
-
-            Video.size(Storage.get('player_size','default'))
-
-            Video.speed(Storage.get('player_speed','default'))
-
-            $('body').append(html)
-
-            is_opened = true
-
-            toggle()
-
-            Panel.show(true)
-
-            listener.send('ready',data)
-        }
-
-        let ads = ()=>{
-            if(data.vast_url) lauch()
-            lauch()
-        }
-
-        start(data, 'iptv', ads)
-    })
-}
 
 /**
  * Статистика для торрсервера
@@ -1182,7 +1144,6 @@ export default {
     runas,
     callback: onBack,
     opened,
-    iptv,
     close: backward,
     getUrlQuality,
     loading,

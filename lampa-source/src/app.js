@@ -174,9 +174,6 @@ Arrays.extend(window.lampa_settings,{
     // Добавлять в адресную строку название текущего экрана
     push_state: true,
 
-    // Является ли приложение IPTV
-    iptv: false,
-
     // Показать ленту
     feed: true,
 
@@ -212,15 +209,6 @@ Arrays.extend(window.lampa_settings,{
 if(window.localStorage.getItem('remove_white_and_demo')){
     window.lampa_settings.demo         = false
     window.lampa_settings.white_use    = false
-}
-
-// Если IPTV, то отключаем все лишнее
-if(window.lampa_settings.iptv){
-    window.lampa_settings.socket_use    = false
-    window.lampa_settings.plugins_store = false
-    window.lampa_settings.plugins_use   = false
-    window.lampa_settings.account_sync  = false
-    window.lampa_settings.torrents_use  = false
 }
 
 /**
