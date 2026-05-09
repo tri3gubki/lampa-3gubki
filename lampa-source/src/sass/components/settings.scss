@@ -69,6 +69,7 @@
 
     &__body{
         display: flex;
+        align-items: flex-start;
         min-height: 0;
 
         @media screen and (max-width: $media_xm) {
@@ -78,6 +79,7 @@
 
         > * {
             width: 100%;
+            height: auto;
         }
     }
 

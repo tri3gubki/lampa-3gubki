@@ -96,9 +96,9 @@ function size(){
     // в ряду умещается 6-7 карточек, на экране — 2 полные строки и
     // третья наполовину видна.
     let sz = {
-        normal: 0.85,
-        small: 0.75,
-        bigger: 0.95
+        normal: 1,
+        small: 0.9,
+        bigger: 1.05
     }
 
     let fs = sz[sl] || sz.normal
