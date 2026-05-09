@@ -210,6 +210,14 @@ if(!window.localStorage.getItem('tmdb_synced_v25')){
     window.localStorage.removeItem('tmdb_synced_v24') // флаг от битой v24
 }
 
+// v26: раздел 'TMDB' в настройках удалён. Чистим proxy-ключи.
+if(!window.localStorage.getItem('tmdb_proxy_removed_v26')){
+    ['proxy_tmdb','proxy_tmdb_auto','tmdb_proxy_api','tmdb_proxy_image'].forEach(k=>{
+        window.localStorage.removeItem(k)
+    })
+    window.localStorage.setItem('tmdb_proxy_removed_v26','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

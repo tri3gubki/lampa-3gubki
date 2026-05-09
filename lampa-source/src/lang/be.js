@@ -63,17 +63,12 @@ export default {
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Пашырэння',
 
-    settings_rest_tmdb_prox: 'Праксіраваць TMDB',
-    settings_rest_tmdb_prox_auto: 'Уключыць проксі аўтаматычна',
     settings_rest_pages: 'Колькі старонак захоўваць у памяці',
     settings_rest_pages_descr: 'Захоўвае старонкі ў тым стане, у якім вы іх пакінулі',
     settings_rest_navigation: 'Тып навігацыі',
     settings_rest_keyboard: 'Тып клавіятуры',
     settings_rest_cache: 'Ачысціць кэш',
     settings_rest_cache_descr: 'Будуць ачышчаны ўсе налады і дадзеныя',
-    settings_rest_tmdb_example: 'Напрыклад:',
-    settings_rest_tmdb_api_descr: 'Для атрымання дадзеных',
-    settings_rest_tmdb_image_descr: 'Для атрымання малюнкаў',
 
     settings_parser_use: 'Выкарыстоўваць парсер',
     settings_parser_use_descr: 'Тым самым, вы згаджаецеся прыняць на сябе ўсю адказнасць за выкарыстанне публічных спасылак для прагляду торэнт і анлайн кантэнту.',

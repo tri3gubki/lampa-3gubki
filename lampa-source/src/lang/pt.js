@@ -64,17 +64,12 @@ export default {
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Extensões',
 
-    settings_rest_tmdb_prox: 'Proxy TMDB',
-    settings_rest_tmdb_prox_auto: 'Ativar proxy automaticamente',
     settings_rest_pages: 'Quantas páginas manter na memória',
     settings_rest_pages_descr: 'Manter as páginas no estado em as deixei',
     settings_rest_navigation: 'Tipo de navegação',
     settings_rest_keyboard: 'Teclado',
     settings_rest_cache: 'Limpar cache',
     settings_rest_cache_descr: 'Todas as configurações e dados serão apagados',
-    settings_rest_tmdb_example: 'Por examplo:',
-    settings_rest_tmdb_api_descr: 'Para obter dados',
-    settings_rest_tmdb_image_descr: 'Para obter imagens',
 
     settings_parser_use: 'Usar analisador',
     settings_parser_use_descr: 'Por meio deste, você concorda em aceitar toda a responsabilidade pelo uso de links públicos para visualizar torrents e conteúdo online.',

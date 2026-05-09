@@ -1,61 +1,28 @@
-import Storage from '../storage/storage'
 import Utils from '../../utils/utils'
 
-let broken_images = 0
-
-function proxy(name){
-    let proxy = Storage.field(name)
-
-    if(proxy.length > 0 && proxy.charAt(proxy.length - 1) == '/'){
-        proxy = proxy.substring(0, proxy.length - 1)
-    }
-
-    return Utils.checkHttp(proxy)
-}
-
 /**
- * Проксировать API запрос
- * @param {string} url URL запроса
- * @return {string} Проксированный URL запроса
+ * URL для API-запроса TMDB
  */
 function api(url){
-    let base  = Utils.protocol() + 'api.themoviedb.org/3/' + url
-
-    return Storage.field('proxy_tmdb') && Storage.field('tmdb_proxy_api') ? proxy('tmdb_proxy_api') + '/' + base : base
+    return Utils.protocol() + 'api.themoviedb.org/3/' + url
 }
 
 /**
- * Проксировать изображение
- * @param {string} url URL изображения
- * @return {string} Проксированный URL изображения
+ * URL для изображения TMDB. Нормализуем двойные слеши после "https://"
+ * — TMDB API часто возвращает poster_path с leading "/", из-за чего
+ * получалось image.tmdb.org/t/p/w300//qKK...jpg → Safari ругался на CORS.
  */
 function image(url){
-    let base = Utils.protocol() + 'image.tmdb.org/' + url
-    let full = Storage.field('proxy_tmdb') && Storage.field('tmdb_proxy_image') ? proxy('tmdb_proxy_image') + '/' + base : base
-
-    // нормализуем двойные слеши после "https://" — TMDB API часто
-    // возвращает poster_path с leading "/", из-за чего получалось
-    // image.tmdb.org/t/p/w300//qKK...jpg — Safari ругался на CORS
+    let full = Utils.protocol() + 'image.tmdb.org/' + url
     return full.slice(0, 8) + full.slice(8).replace(/\/+/g, '/')
 }
 
 /**
- * Сообщить о сломанных изображениях
+ * Заглушка — раньше счётчик битых картинок переключал на TMDB-прокси.
+ * Прокси удалены, но image.onerror в карточках всё ещё дёргает функцию.
  */
-function broken(){
-    broken_images++
+function broken(){}
 
-    if(broken_images > 50){
-        broken_images = 0
-
-        if(Storage.field('tmdb_proxy_image') && Storage.field('proxy_tmdb_auto')) Storage.set('proxy_tmdb', true)
-    }
-}
-
-/**
- * Получить ключ TMDB
- * @return {string} Ключ TMDB
- */
 function key(){
     return '4ef0d7355d9ffb5151e987764708ce96'
 }

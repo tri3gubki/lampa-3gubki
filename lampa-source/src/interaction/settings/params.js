@@ -446,8 +446,6 @@ trigger('account_use',false)
 trigger('torrserver_auth',false)
 trigger('playlist_next',true)
 trigger('internal_torrclient', true)
-trigger('proxy_tmdb', true)
-trigger('proxy_tmdb_auto', true)
 trigger('proxy_other', true)
 trigger('parse_in_search', false)
 trigger('helper', true)
@@ -483,8 +481,6 @@ select('account_email','','')
 select('account_password','','')
 select('device_name','','Lampa')
 select('player_nw_path','','C:/Program Files/VideoLAN/VLC/vlc.exe')
-select('tmdb_proxy_api','','')
-select('tmdb_proxy_image','','')
 
 export default {
     listener,

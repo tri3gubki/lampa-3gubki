@@ -62,17 +62,12 @@ export default {
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Разширения',
 
-    settings_rest_tmdb_prox: 'Прокси TMDB',
-    settings_rest_tmdb_prox_auto: 'Автоматично активиране на прокси',
     settings_rest_pages: 'Колко страници да се пазят в паметта',
     settings_rest_pages_descr: 'Пази страниците в състоянието, в което сте ги оставили',
     settings_rest_navigation: 'Тип навигация',
     settings_rest_keyboard: 'Тип клавиатура',
     settings_rest_cache: 'Изчисти кеша',
     settings_rest_cache_descr: 'Всички настройки и данни ще бъдат изчистени',
-    settings_rest_tmdb_example: 'Например:',
-    settings_rest_tmdb_api_descr: 'За да получите данни',
-    settings_rest_tmdb_image_descr: 'За да получите изображения',
 
     settings_parser_use: 'Използвай анализатор',
     settings_parser_use_descr: 'С настоящото вие се съгласявате да поемете цялата отговорност за използването на публични връзки за гледане на торент и онлайн съдържание.',

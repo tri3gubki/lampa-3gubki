@@ -63,17 +63,12 @@ export default {
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Extensii',
 
-    settings_rest_tmdb_prox: 'Proxy TMDB',
-    settings_rest_tmdb_prox_auto: 'Activează proxy automat',
     settings_rest_pages: 'Pagini păstrate în memorie',
     settings_rest_pages_descr: 'Păstrează paginile în starea în care le-ai lăsat',
     settings_rest_navigation: 'Tip navigare',
     settings_rest_keyboard: 'Tip tastatură',
     settings_rest_cache: 'Șterge cache',
     settings_rest_cache_descr: 'Toate setările și datele vor fi șterse',
-    settings_rest_tmdb_example: 'De exemplu:',
-    settings_rest_tmdb_api_descr: 'Pentru date',
-    settings_rest_tmdb_image_descr: 'Pentru imagini',
 
     settings_parser_use: 'Folosește parser',
     settings_parser_use_descr: 'Prin prezenta, ești de acord cu întreaga responsabilitate pentru utilizarea link-urilor publice pentru vizionarea torrentelor și a conținutului online.',

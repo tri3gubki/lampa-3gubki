@@ -63,17 +63,12 @@ export default {
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Extensions',
 
-    settings_rest_tmdb_prox: 'Proxy TMDB',
-    settings_rest_tmdb_prox_auto: 'Activer le proxy automatiquement',
     settings_rest_pages: 'Pages en mémoire',
     settings_rest_pages_descr: 'Nombre de pages à conserver dans leur état actuel',
     settings_rest_navigation: 'Type de navigation',
     settings_rest_keyboard: 'Type de clavier',
     settings_rest_cache: 'Vider le cache',
     settings_rest_cache_descr: 'Tous les paramètres et données seront effacés',
-    settings_rest_tmdb_example: 'Par exemple :',
-    settings_rest_tmdb_api_descr: 'Pour obtenir des données',
-    settings_rest_tmdb_image_descr: 'Pour obtenir des images',
 
     settings_parser_use: 'Utiliser l\'analyseur',
     settings_parser_use_descr: 'En activant cette option, vous acceptez toute responsabilité quant à l\'utilisation de liens publics pour visionner du contenu.',
