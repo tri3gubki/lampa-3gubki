@@ -24,7 +24,6 @@ function menuAlwaysVisible(){
 
 let menu_items = [
     {action: 'main', title: 'menu_main', sprite: 'home'},
-    {action: 'feed', title: 'menu_feed', sprite: 'feed'},
     {action: 'movie', title: 'menu_movies', sprite: 'movie'},
     {action: 'cartoon', title: 'menu_multmovie', sprite: 'cartoon'},
     {action: 'tv', title: 'menu_tv', sprite: 'tv'},
@@ -52,9 +51,8 @@ function init(){
         if(!window.lampa_settings.torrents_use && item.action == 'mytorrents') return false
         if(window.lampa_settings.disable_features.persons && item.action == 'myperson') return false
         if(window.lampa_settings.disable_features.subscribe && item.action == 'subscribes') return false
-        if(!window.lampa_settings.feed && item.action == 'feed') return false
 
-        if(!Lang.selected(['ru','uk','be']) && (item.action == 'anime' || item.action == 'feed')) return false
+        if(!Lang.selected(['ru','uk','be']) && item.action == 'anime') return false
 
         return true
     })
@@ -287,12 +285,6 @@ function ready(){
         if(prepared(action,['timetable'])){
             Router.call('timetable', {
                 title: Lang.translate('title_timetable')
-            })
-        }
-
-        if(prepared(action,['feed'])){
-            Router.call('feed', {
-                title: Lang.translate('menu_feed')
             })
         }
 

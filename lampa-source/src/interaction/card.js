@@ -384,26 +384,6 @@ function Card(data, params = {}){
             }
         ]
 
-        if( window.lampa_settings.account_use){
-            let marks = ['look', 'viewed', 'scheduled', 'continued', 'thrown']
-
-            menu_favorite.push({
-                title: Lang.translate('settings_cub_status'),
-                separator: true
-            })
-
-            marks.forEach(m=>{
-                menu_favorite.push({
-                    title: Lang.translate('title_'+m),
-                    where: m,
-                    picked: status[m],
-                    collect: true,
-                    noenter: !false
-                })
-            })
-        }
-
-        
         Manifest.plugins.forEach(plugin=>{
             if(plugin.type == 'video' && plugin.onContextMenu && plugin.onContextLauch){
                 menu_plugins.push({

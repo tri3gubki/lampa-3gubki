@@ -10,8 +10,6 @@ import TMDB from '../../core/api/sources/tmdb'
 
 import Options from './start/options'
 import Torrents from './start/torrents'
-import Subscribed  from './start/subscribed'
-import Trailers from './start/trailers'
 import Poster from './start/poster'
 import Translations from './start/translations'
 import Bookmarks from './start/bookmarks'
@@ -35,8 +33,6 @@ class Start extends Emit {
         Utils.canWatchChildren(TMDB.parsePG(data.movie), 0) && this.use(Torrents)
 
         this.use(Options)
-        this.use(Subscribed)
-        this.use(Trailers)
         this.use(Poster)
         this.use(Translations)
         this.use(Bookmarks)

@@ -104,112 +104,33 @@ let conditions   = [
 if(conditions.indexOf(true) >= 0) torrents_use = false
 
 Arrays.extend(window.lampa_settings,{
-    // Использовать сокеты для синхронизации данных
-    socket_use: true,
-
-    // Адрес сокета, по умолчанию лампа берет адреса из манифеста
-    socket_url: undefined,
-
-    // Обрабатывать сообщения сокетов
-    socket_methods: true,
-
-    // Использовать аккаунты CUB
-    account_use: true,
-
-    // Синхронизировать закладки, таймкоды и прочее
-    account_sync: true,
-
-    // Разрешить установку плагинов и расширений
-    plugins_use: true,
-
-    // Разрешить использование магазина расширений
-    plugins_store: true,
+    // CUB-фичи (subscribe/persons/trailers/ai/discuss/etc) удалены —
+    // disable_features.X = true гарантирует ранний return там, где код
+    // ещё проверяет эти флаги.
+    disable_features: {
+        dmca: true, lgbt: true, reactions: true, discuss: true, ai: true,
+        subscribe: true, blacklist: true, persons: true, ads: true,
+        trailers: true, install_proxy: true, remote_configuration: true
+    },
 
     // Показывать кнопку торрентов
     torrents_use: torrents_use,
 
-    // Отключить фитчи куба и лампы
-    disable_features: {
-        // Блокировку карточек
-        dmca: false,
-        // Блокировка ЛГБТ-контента
-        lgbt: false,
-        // Реакции
-        reactions: false,
-        // Обсуждения
-        discuss: false,
-        // ИИ
-        ai: false,
-        // Подписка на уведомления
-        subscribe: false,
-        // Черный список плагинов
-        blacklist: false,
-        // Подписка на актеров
-        persons: false,
-        // Вспомогатиленые сервисы на подписку према
-        ads: false,
-        // Трейлеры
-        trailers: false,
-        // Установка прокси для запросов
-        install_proxy: false,
-        // Удаленная конфигурация
-        remote_configuration: false
-    },
-
-    // Подключить другие языки интерфейса, по умолчанию только русский и английский
-    lang_use: true,
-
-    // Белая и пушистая лампа, для одобрения модерации
-    white_use: false,
-
-    // Режим только для чтения, без кнопок онлайн и расширений
-    read_only: false,
-
-    // Добавить список блокировки карточек, пример: [{"id":3566556,"cat":"movie"},...]
+    // Использовать локальные DCMA / LGBT-блок-листы (не CUB-related)
     dcma: false,
-
-    // Добавить блокировку ЛГБТ контента, пример: [{"id":3566556,"type":"movie"},...]
     lgbt: false,
 
-    // Добавлять в адресную строку название текущего экрана
-    push_state: true,
+    // Подключить другие языки интерфейса
+    lang_use: true,
 
-    // Показать ленту
-    feed: true,
-
-    // Различные сервисы в приложении
-    services: true,
-
-    // Подключить YouTube API
-    youtube: true,
-
-    // Определять гео по IP, иначе будет RU
-    geo: true,
-
-    // Использовать поиск зеркал
-    mirrors: true,
-
-    // Режим разработчика
-    developer: {
-        enabled: false
-    },
-
-    // Размывать постер для мобильных устройств, эффект стекла
-    blur_poster: true,
-
-    // Скрывать важные параметры в приложении
+    // Прочие флаги UI
+    push_state:            true,
+    blur_poster:           true,
     hide_important_params: true,
-
-    // Фикс для виджетов, чтобы не подгружались стили с github
-    fix_widget: window.localStorage.getItem('fix_widget') ? true : false,
+    read_only:             false,
+    white_use:             false,
+    fix_widget:            window.localStorage.getItem('fix_widget') ? true : false,
 })
-
-
-// Если отключили 
-if(window.localStorage.getItem('remove_white_and_demo')){
-    window.lampa_settings.demo         = false
-    window.lampa_settings.white_use    = false
-}
 
 /**
  * Делаем классы доступными в глобальной области видимости

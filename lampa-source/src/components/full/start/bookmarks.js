@@ -8,7 +8,6 @@ export default {
     onCreate: function(){
         this.html.find('.button--book').on('hover:enter',()=>{
             let status = Favorite.check(this.card)
-            let marks  = ['look', 'viewed', 'scheduled', 'continued', 'thrown']
 
             let label = (a)=>{
                 Favorite.toggle(a.type, this.card)
@@ -24,24 +23,6 @@ export default {
                     checked: status[type]
                 }
             })
-
-            if(window.lampa_settings.account_use){
-                items.push({
-                    title: Lang.translate('settings_cub_status'),
-                    separator: true
-                })
-
-                marks.forEach(m=>{
-                    items.push({
-                        title: Lang.translate('title_'+m),
-                        type: m,
-                        picked: status[m],
-                        collect: true,
-                        noenter: !false,
-                        ghost: !false,
-                    })
-                })
-            }
 
             Select.show({
                 title: Lang.translate('settings_input_links'),

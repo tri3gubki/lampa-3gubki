@@ -1,15 +1,4 @@
 let html = `<div>
-    <div class="settings-folder selector" data-component="account">
-        <div class="settings-folder__icon">
-            <svg height="169" viewBox="0 0 172 169" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="85.765" cy="47.5683" r="15.5683" stroke="white" stroke-width="12"/>
-                <path d="M121.53 112C121.53 92.2474 105.518 76.2349 85.7651 76.2349C66.0126 76.2349 50 92.2474 50 112" stroke="white" stroke-width="12"/>
-                <rect x="44" y="125" width="84" height="16" rx="8" fill="white"/>
-                <rect x="6" y="6" width="160" height="157" rx="21" stroke="white" stroke-width="12"/>
-            </svg>
-        </div>
-        <div class="settings-folder__name">#{settings_cub_sync}</div>
-    </div>
     <div class="settings-folder selector" data-component="interface">
         <div class="settings-folder__icon">
             <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,25 +32,6 @@ let html = `<div>
             </svg>
         </div>
         <div class="settings-folder__name">TMDB</div>
-    </div>
-    <div class="settings-folder selector" data-component="plugins" data-static="true">
-        <div class="settings-folder__icon">
-            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2.00439" y="1.97363" width="33.3257" height="33.3257" rx="3.5" stroke="white" stroke-width="3"/>
-                <rect x="11.3193" y="17.2463" width="14.6958" height="2.78015" rx="1.39008" fill="white"/>
-                <rect x="17.2773" y="25.9844" width="14.6958" height="2.78015" rx="1.39008" transform="rotate(-90 17.2773 25.9844)" fill="white"/>
-            </svg>
-        </div>
-        <div class="settings-folder__name">#{settings_main_plugins}</div>
-    </div>
-    <div class="settings-folder selector" data-component="parental_control">
-        <div class="settings-folder__icon">
-            <svg width="35" height="38" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M34.171 8.37254L34.1218 7.21457L32.9688 7.09618C28.5402 6.64136 24.733 4.98873 22.3189 3.68243C19.6748 2.25169 18.0721 0.909411 18.0574 0.897023L17.1918 0.165649L16.3257 0.895967C16.3097 0.909371 14.707 2.25169 12.063 3.68239C9.64886 4.98869 5.84167 6.64132 1.41305 7.09614L0.260081 7.21453L0.210854 8.3725C0.20204 8.5798 0.0168308 13.5185 1.91913 19.4987C3.04163 23.0278 4.6627 26.1897 6.73729 28.8972C9.34237 32.2968 12.6651 34.9766 16.6133 36.862L17.1909 37.138L17.7685 36.862C21.7167 34.9766 25.0395 32.2969 27.6445 28.8972C29.7191 26.1898 31.3402 23.0277 32.4627 19.4988C34.365 13.5186 34.1798 8.57988 34.171 8.37254ZM17.1909 34.1585C13.8971 32.4847 11.1094 30.1827 8.89734 27.3087C7.01303 24.8606 5.53384 21.9881 4.50073 18.7712C3.23805 14.8392 2.95488 11.3326 2.89757 9.61072C4.67391 9.34696 6.46971 8.90315 8.25211 8.28676C9.99454 7.68418 11.7288 6.91588 13.4066 6.00328C15.109 5.07731 16.4045 4.1929 17.1909 3.61457C17.9773 4.19286 19.2728 5.07731 20.9752 6.00328C22.653 6.91592 24.3872 7.68418 26.1296 8.28676C27.9125 8.90335 29.7089 9.34716 31.4857 9.61092C31.4305 11.3159 31.1529 14.7731 29.9081 18.6863C28.8798 21.9191 27.4023 24.806 25.5167 27.2668C23.2993 30.1604 20.5007 32.4766 17.1909 34.1585Z" fill="white"/>
-                <path d="M24.4966 12.5542L22.6265 14.4243L15.6567 21.3941L12.1244 17.8618L11.644 17.3815L10.6963 18.3292V18.3292L9.74854 19.277L15.6567 25.1852L26.3921 14.4498L24.4966 12.5542Z" fill="white"/>
-            </svg>
-        </div>
-        <div class="settings-folder__name">#{title_parental_control}</div>
     </div>
     <div class="settings-folder selector" data-component="more">
         <div class="settings-folder__icon">
