@@ -155,6 +155,13 @@ if(!window.localStorage.getItem('interface_simplified_v18')){
     window.localStorage.setItem('interface_simplified_v18','1')
 }
 
+// v19: black_style убран из UI, дефолт false. Сбрасываем у тех, кто
+// его раньше включил.
+if(!window.localStorage.getItem('black_style_reset_v19')){
+    window.localStorage.removeItem('black_style')
+    window.localStorage.setItem('black_style_reset_v19','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

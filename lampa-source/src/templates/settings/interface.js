@@ -9,13 +9,6 @@ let html = `<div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param-title"><span>#{settings_interface_background}</span></div>
-
-    <div class="settings-param selector" data-type="toggle" data-name="black_style">
-        <div class="settings-param__name">#{settings_interface_black_style}</div>
-        <div class="settings-param__value"></div>
-    </div>
-
     <div class="settings-param-title"><span>#{settings_interface_performance}</span></div>
 
     <div class="settings-param selector" data-type="toggle" data-name="animation">
