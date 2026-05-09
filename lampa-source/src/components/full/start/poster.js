@@ -10,7 +10,9 @@ export default {
 
         if(window.innerWidth <= 480){
             this.img_poster = new Image()
-            this.img_poster.crossOrigin = "Anonymous"
+            // Без crossOrigin — Safari ругается из-за кеша без
+            // CORS-headers. Если canvas для blur даст SecurityError,
+            // try/catch ниже скипнет blur и оставит обычный постер.
         }
 
         this.img_poster.onerror = (e)=>{
@@ -73,15 +75,23 @@ export default {
                 }
                 
                 if(window.lampa_settings.blur_poster){
-                    Color.blurPoster(this.img_poster, im.width(), im.height(), (nim)=>{
-                        im[0].src = nim.src
+                    try{
+                        Color.blurPoster(this.img_poster, im.width(), im.height(), (nim)=>{
+                            im[0].src = nim.src
+
+                            draw()
+                        })
+                    }
+                    catch(e){
+                        // canvas tainted (CORS) — показываем без blur
+                        im[0].src = this.img_poster.src
 
                         draw()
-                    })
+                    }
                 }
                 else{
                     im[0].src = this.img_poster.src
-                    
+
                     draw()
                 }
             }
