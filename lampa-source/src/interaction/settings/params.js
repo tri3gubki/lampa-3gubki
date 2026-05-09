@@ -6,7 +6,6 @@ import Select from '../select'
 import Controller from '../../core/controller'
 import Subscribe from '../../utils/subscribe'
 import Lang from '../../core/lang'
-import Manifest from '../../core/manifest'
 
 let values   = {}
 let defaults = {}
@@ -700,13 +699,6 @@ select('player_launch_trailers',{
     'inner': '#{settings_param_player_inner}',
     'youtube': 'YouTube',
 },'inner')
-
-let mirrors_select = {}
-
-Manifest.cub_mirrors.forEach((mirror)=>{
-    mirrors_select[mirror] = mirror
-})
-
 
 /**
  * Добовляем триггеры

@@ -2,11 +2,6 @@ import Storage from './storage/storage'
 import Manifest from './manifest'
 import Utils from '../utils/utils'
 import Orsay from './orsay'
-import Modal from '../interaction/modal'
-import Template from '../interaction/template'
-import Controller from './controller'
-import Lang from './lang'
-import Bell from '../interaction/bell'
 
 function init(){
     let agent = navigator.userAgent.toLowerCase()
@@ -192,57 +187,6 @@ function screen(need){
 }
 
 /**
- * Установка приложения
- * @param {String} what - что устанавливать? apk
- * @returns void
- */
-function install(what){
-    if($('.modal').length) Modal.close()
-
-    if(what == 'apk'){
-        let html = Template.js('account_none')
-
-        if(tv()){
-            let code = html.find('.account-modal-split__qr-code')
-
-            html.addClass('layer--' + (mouse() ? 'wheight' : 'height'))
-
-            Utils.qrcode(Manifest.apk_link_download, code, ()=>{
-                html.find('.account-modal-split__qr').addClass('hide')
-            })
-        }
-        else html.addClass('account-modal-split--mobile')
-
-        html.find('.account-modal-split__title').text(Lang.translate('install_app_apk_title'))
-        html.find('.account-modal-split__text').html(Lang.translate('install_app_apk_text'))
-        html.find('.account-modal-split__qr-text').text(Lang.translate('install_app_apk_qr'))
-        
-        html.find('.simple-button').text(Lang.translate('copy_link_buffer')).on('hover:enter',()=>{
-            Utils.copyTextToClipboard(Manifest.apk_link_download, ()=>{
-                Bell.push({text: Lang.translate('copy_secuses')})
-            })
-        })
-
-        Modal.open({
-            title: '',
-            html: $(html),
-            size: tv() ? 'full' : 'medium',
-            scroll: {
-                nopadding: true
-            },
-            onBack: ()=>{
-                Modal.close()
-
-                Controller.toggle('content')
-            }
-        })
-    }
-    else{
-        Controller.toggle('content')
-    }
-}
-
-/**
  * Версия Chrome для Android TV
  * @returns Number
  */
@@ -270,7 +214,6 @@ export default {
     desktop,
     version,
     screen,
-    install,
     macOS,
     chromeVersion,
     widgetVersion

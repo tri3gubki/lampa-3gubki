@@ -104,19 +104,10 @@ let conditions   = [
 if(conditions.indexOf(true) >= 0) torrents_use = false
 
 Arrays.extend(window.lampa_settings,{
-    // CUB-фичи (subscribe/persons/trailers/ai/discuss/etc) удалены —
-    // disable_features.X = true гарантирует ранний return там, где код
-    // ещё проверяет эти флаги.
-    disable_features: {
-        dmca: true, lgbt: true, reactions: true, discuss: true, ai: true,
-        subscribe: true, blacklist: true, persons: true, ads: true,
-        trailers: true, install_proxy: true, remote_configuration: true
-    },
-
     // Показывать кнопку торрентов
     torrents_use: torrents_use,
 
-    // Использовать локальные DCMA / LGBT-блок-листы (не CUB-related)
+    // Локальные DCMA / LGBT-блок-листы
     dcma: false,
     lgbt: false,
 

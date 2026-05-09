@@ -304,14 +304,6 @@ function fixProtocolLink(u){
     return rewriteIfHTTPS((localStorage.getItem('protocol') || 'https') + '://' + u.replace(/^(http:\/\/|https:\/\/)/, ''))
 }
 
-function fixMirrorLink(u){
-    Manifest.old_mirrors.forEach(mirror=>{
-        u = u.replace('://' + mirror, '://' + Manifest.cub_domain)
-    })
-
-    return u
-}
-
 function shortText(fullStr, strLen, separator){
     if (fullStr.length <= strLen) return fullStr;
     
@@ -328,9 +320,7 @@ function shortText(fullStr, strLen, separator){
 }
 
 function protocol(){
-    let prot = localStorage.getItem('protocol')
-
-    Manifest.cub_mirrors_only_https.indexOf(Manifest.cub_domain) > -1 ? prot = 'https' : prot = prot || 'https'
+    let prot = localStorage.getItem('protocol') || 'https'
 
     return window.location.protocol == 'https:' ? 'https://' : prot + '://'
 }
@@ -355,7 +345,6 @@ function putScript(items, complite, error, success, show_logs){
             return next()
         }
 
-        u = u.replace('cub.watch', Lampa.Manifest.cub_domain)
 
         if(l) console.log('Script','create:',u)
 
@@ -398,7 +387,6 @@ function putScriptAsync(items, complite, error, success, show_logs){
     }
 
     function put(u){
-        u = u.replace('cub.watch', Lampa.Manifest.cub_domain)
         
         if(l) console.log('Script','create:',u)
 
@@ -1106,7 +1094,6 @@ export default {
     buildUrl,
     simpleMarkdownParser,
     fixProtocolLink,
-    fixMirrorLink,
     callWaiting,
     clearCard,
     qualityToText,

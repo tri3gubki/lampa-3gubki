@@ -408,9 +408,6 @@ function list(items, params){
         item.on('hover:enter',()=>{
             stopAutostart()
 
-            //если это андроид, но не андроид, то нефиг смотреть
-            if(navigator.userAgent.toLowerCase().indexOf('android') >= 0 && !Platform.is('android')) return Platform.install('apk')
-
             if(params.movie.id) Favorite.add('history', params.movie, 100)
 
             if ((Platform.is('android') || Platform.is('apple_tv')) && playlist.length > 1){

@@ -1,6 +1,5 @@
 import Storage from './storage/storage'
 import Arrays from '../utils/arrays'
-import Manifest from './manifest'
 import Utils from '../utils/utils'
 
 import meta from '../lang/meta'
@@ -46,8 +45,6 @@ function translate(name, custom_code){
     else{
         result = langs[code][name] || langs[lang_default][name] || name
     }
-
-    result = result.replace(/{site}/g, Manifest.cub_site)
 
     return result
 }
