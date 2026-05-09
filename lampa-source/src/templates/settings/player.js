@@ -5,11 +5,6 @@ let html = `<div>
         <div class="settings-param__descr">#{settings_player_type_descr}</div>
     </div>
 
-    <div class="settings-param selector is--android" data-type="select" data-name="player_launch_trailers">
-        <div class="settings-param__name">#{settings_player_launch_trailers}</div>
-        <div class="settings-param__value"></div>
-    </div>
-    
     <div class="settings-param selector is--android" data-type="button" data-name="reset_player" data-static="true">
         <div class="settings-param__name">#{settings_player_reset}</div>
         <div class="settings-param__value"></div>

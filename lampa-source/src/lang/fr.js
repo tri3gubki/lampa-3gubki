@@ -264,7 +264,6 @@ export default {
     title_persons: 'Personnes',
     title_comments: 'Commentaires',
     title_torrents: 'Torrents',
-    title_trailers: 'Bandes-annonces',
     title_watch: 'Regarder',
     title_error: 'Erreur',
     title_links: 'Liens',
@@ -859,7 +858,6 @@ export default {
     title_viewed: 'Vu',
     title_thrown: 'Abandonné',
     title_reactions: 'Réactions',
-    settings_player_launch_trailers: 'Lecteur de bandes-annonces',
     title_continued: 'À suivre',
     title_language_short: 'Langue',
 

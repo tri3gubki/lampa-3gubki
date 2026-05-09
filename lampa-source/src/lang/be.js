@@ -265,7 +265,6 @@ export default {
     title_persons: 'Персоны',
     title_comments: 'Каментары',
     title_torrents: 'Торэнты',
-    title_trailers: 'Трэйлеры',
     title_watch: 'Глядзець',
     title_error: 'Памылка',
     title_links: 'Спасылкі',
@@ -872,7 +871,6 @@ export default {
     title_viewed: 'Прагледжана',
     title_thrown: 'Выбрасена',
     title_reactions: 'Рэакцыі',
-    settings_player_launch_trailers: 'Плэер для трэйлераў',
     title_continued: 'Працяг будзе',
     title_language_short: 'Мова',
 

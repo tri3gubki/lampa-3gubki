@@ -264,7 +264,6 @@ export default {
     title_persons: 'Persons',
     title_comments: 'Comments',
     title_torrents: 'Torrents',
-    title_trailers: 'Trailers',
     title_watch: 'Watch',
     title_error: 'Error',
     title_links: 'Links',
@@ -859,7 +858,6 @@ export default {
     title_viewed: 'Viewed',
     title_thrown: 'Thrown',
     title_reactions: 'Reactions',
-    settings_player_launch_trailers: 'Trailer Player',
     title_continued: 'To be continued',
     title_language_short: 'Language',
 

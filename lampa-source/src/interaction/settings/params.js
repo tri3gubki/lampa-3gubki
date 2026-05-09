@@ -536,11 +536,6 @@ select('video_quality_default',{
 },'1080')
 
 
-select('player_launch_trailers',{
-    'inner': '#{settings_param_player_inner}',
-    'youtube': 'YouTube',
-},'inner')
-
 /**
  * Добовляем триггеры
  */

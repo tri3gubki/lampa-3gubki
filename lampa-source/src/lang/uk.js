@@ -242,7 +242,6 @@ export default {
     title_persons: 'Особи',
     title_comments: 'Коментарі',
     title_torrents: 'Торренти',
-    title_trailers: 'Трейлери',
     title_watch: 'Дивитись',
     title_error: 'Помилка',
     title_links: 'Посилання',
@@ -820,7 +819,6 @@ export default {
     title_viewed: 'Переглянуто',
     title_thrown: 'Відкинуто',
     title_reactions: 'Реакції',
-    settings_player_launch_trailers: 'Плеєр для трейлерів',
     title_continued: 'Далі буде',
     title_language_short: 'Мова',
 

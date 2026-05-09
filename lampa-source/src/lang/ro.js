@@ -264,7 +264,6 @@ export default {
     title_persons: 'Persoane',
     title_comments: 'Comentarii',
     title_torrents: 'Torrente',
-    title_trailers: 'Trailere',
     title_watch: 'Vizionează',
     title_error: 'Eroare',
     title_links: 'Link-uri',
@@ -859,7 +858,6 @@ export default {
     title_viewed: 'Vizionat',
     title_thrown: 'Abandonat',
     title_reactions: 'Reacții',
-    settings_player_launch_trailers: 'Player trailere',
     title_continued: 'Continuă vizionarea',
     title_language_short: 'Limbă',
 

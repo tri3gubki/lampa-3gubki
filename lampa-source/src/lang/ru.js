@@ -170,7 +170,6 @@ export default {
     settings_player_hls_descr: 'Не трогайте этот параметр, если не знаете, зачем он.',
     settings_player_rewind_title: 'Перемотка',
     settings_player_rewind_descr: 'Интервал перемотки в секундах',
-    settings_player_launch_trailers: 'Плеер для трейлеров',
 
     settings_plugins_notice: 'Для применения плагина необходимо перезагрузить приложение',
     settings_plugins_add: 'Добавить плагин',
@@ -300,7 +299,6 @@ export default {
     title_person_about: 'О персоне',
     title_comments: 'Комментарии',
     title_torrents: 'Торренты',
-    title_trailers: 'Трейлеры',
     title_watch: 'Смотреть',
     title_error: 'Ошибка',
     title_links: 'Ссылки',

@@ -243,7 +243,6 @@ export default {
     title_persons: '演员',
     title_comments: '评论',
     title_torrents: '种子',
-    title_trailers: '预告片',
     title_watch: '观看',
     title_error: '错误',
     title_links: '链接',
@@ -810,7 +809,6 @@ export default {
     title_viewed: '已查看',
     title_thrown: '丢弃',
     title_reactions: '反馈',
-    settings_player_launch_trailers: '预告片播放器',
     title_continued: '待续',
     title_language_short: '语言',
 

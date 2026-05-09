@@ -168,7 +168,6 @@ export default {
     settings_player_hls_descr: "Nedotýkejte se tohoto nastavení, pokud nevíte, k čemu slouží.",
     settings_player_rewind_title: "Přetáčení",
     settings_player_rewind_descr: "Interval přetáčení v sekundách",
-    settings_player_launch_trailers: "Přehrávač pro trailery",
 
     settings_plugins_notice: "Pro použití pluginu je nutné restartovat aplikaci",
     settings_plugins_add: "Přidat plugin",
@@ -295,7 +294,6 @@ export default {
     title_persons: "Osoby",
     title_comments: "Komentáře",
     title_torrents: "Torrenty",
-    title_trailers: "Trailery",
     title_watch: "Sledovat",
     title_error: "Chyba",
     title_links: "Odkazy",
