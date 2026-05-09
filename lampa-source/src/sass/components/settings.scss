@@ -64,8 +64,8 @@
     }
 
     &__body{
-        flex-grow: 1;
         display: flex;
+        min-height: 0;
 
         @media screen and (max-width: $media_xm) {
             height: auto !important;

@@ -53,8 +53,17 @@ function Component(name, component_params = {}){
 
         if(!window.lampa_settings.lang_use) comp.find('[data-name="light_version"]').prev().remove()
 
-        scrl.render().find('.scroll__content').addClass('layer--wheight').data('mheight',$('.settings__head'))
-        scrl.render().css('max-height', window.innerWidth <= 480 ? window.innerHeight * 0.6 : 'unset')
+        // На больших экранах окно настроек ограничено 80vh (см. settings.scss),
+        // поэтому max-height скролла = высота окна минус шапка. Без layer--wheight,
+        // т.к. layer.js считает height = innerHeight (полная высота экрана) —
+        // контент тогда обрезается родительским окном с потерей последних пунктов.
+        if(window.innerWidth <= 480){
+            scrl.render().css('max-height', window.innerHeight * 0.6)
+        }
+        else{
+            let head_h = $('.settings__head').outerHeight() || 0
+            scrl.render().css('max-height', 'calc(80vh - ' + head_h + 'px)')
+        }
 
         Params.bind(comp.find('.selector'), comp)
 
