@@ -1,4 +1,3 @@
-import TV from './iptv'
 import Template from '../template'
 import Subscribe from '../../utils/subscribe'
 import Controller from '../../core/controller'
@@ -111,13 +110,8 @@ function init(){
                 clearTimeout(timer.hide)
 
                 timer.hide = setTimeout(()=>{
-                    if(TV.playning()){
-                        TV.reset()
-
-                        Controller.toggle('player')
-                    } 
-                    else if(!Video.video().paused) visible(false)
-                },TV.playning() ? 5000 : 3000)
+                    if(!Video.video().paused) visible(false)
+                }, 3000)
             }
         }
     })
@@ -536,7 +530,6 @@ function program(data){
     if(elems.iptv_channel_active){
         let prog = elems.iptv_channel_active.find('.player-panel-iptv-item__prog')
 
-        TV.drawProgram(prog)
 
         playAnimation(prog,data.dir > 0 ? 'endless-left' : 'endless-right')
     }
@@ -549,7 +542,7 @@ function playAnimation(elem, anim){
 }
 
 function channel(data){
-    let select = TV.select()
+    let select = null
 
     elems.iptv_channel.removeClass('up down')
 
@@ -1103,52 +1096,7 @@ function normalName(name){
  * Добавить контроллеры
  */
  function addController(){
-    Controller.add('player_tv',{
-        invisible: true,
-        toggle: ()=>{
-            Controller.clear()
-
-            condition.visible = false
-
-            state.start()
-        },
-        up: ()=>{
-            TV.prevChannel()
-
-            state.start()
-        },
-        down: ()=>{
-            TV.nextChannel()
-
-            state.start()
-        },
-        left: ()=>{
-            condition.visible = true
-
-            TV.openMenu()
-
-            state.start()
-        },
-        right: ()=>{
-            condition.visible = true
-
-            showParams()
-
-            state.start()
-        },
-        enter: ()=>{
-            TV.play()
-
-            state.start()
-        },
-        back: ()=>{
-            TV.reset()
-
-            Controller.toggle('player')
-
-            hide()
-        }
-    })
+    // Controller 'player_tv' (IPTV pult navigation) удалён вместе с TV.
 
     Controller.add('player_rewind',{
         toggle: ()=>{
@@ -1179,11 +1127,8 @@ function normalName(name){
 
     Controller.add('player_panel',{
         toggle: ()=>{
-            if(TV.playning()) Controller.toggle('player_tv')
-            else{
-                Controller.collectionSet(render())
-                Controller.collectionFocus(last_panel_focus ? last_panel_focus : $(isTV() ? '.player-panel__next' : '.player-panel__playpause',html)[0],render())
-            } 
+            Controller.collectionSet(render())
+            Controller.collectionFocus(last_panel_focus ? last_panel_focus : $(isTV() ? '.player-panel__next' : '.player-panel__playpause',html)[0],render())
         },
         up: ()=>{
             isTV() || html.hasClass('panel--norewind') ? Controller.toggle('player') : toggleRewind()
@@ -1310,8 +1255,7 @@ function toggle(){
 
     state.start()
 
-    if(TV.playning()) Controller.toggle('player_tv')
-    else if(!Platform.screen('mobile')) toggleRewind()
+    if(!Platform.screen('mobile')) toggleRewind()
 }
 
 /**

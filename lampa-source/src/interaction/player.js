@@ -1,4 +1,3 @@
-import TV from './player/iptv'
 import Video from './player/video'
 import Panel from './player/panel'
 import Info from './player/info'
@@ -366,7 +365,7 @@ function init(){
         }
 
         if(type == 'string') call()
-        else if(type == 'function' && !wait_for_loading_url){
+        if(type == 'function' && !wait_for_loading_url){
             Info.loading()
 
             wait_for_loading_url = true
@@ -417,31 +416,31 @@ function toggle(){
             Panel.toggle()
         },
         right: ()=>{
-            if(TV.playning()) Panel.toggle()
-            else Video.rewind(true)
+            
+            Video.rewind(true)
         },
         left: ()=>{
-            if(TV.playning()) Panel.toggle()
-            else Video.rewind(false)
+            
+            Video.rewind(false)
         },
         enter: ()=>{
-            if(TV.playning()) Panel.toggle()
-            else Video.playpause()
+            
+            Video.playpause()
         },
         playpause: () => {
-            if(!TV.playning()) Video.playpause()
+            Video.playpause()
         },
         play: () => {
-            if(!TV.playning()) Video.play()
+            Video.play()
         },
         pause: () => {
-            if(!TV.playning()) Video.pause()
+            Video.pause()
         },
         rewindForward: () => {
-            if(!TV.playning()) Video.rewind(true)
+            Video.rewind(true)
         },
         rewindBack: () => {
-            if(!TV.playning()) Video.rewind(false)
+            Video.rewind(false)
         },
         stop: backward,
         back: backward
@@ -475,7 +474,7 @@ function backward(){
     destroy()
 
     if(callback) callback()
-    else Controller.toggle('content')
+    Controller.toggle('content')
 
     callback = false
 }
@@ -579,7 +578,7 @@ function runWebOS(params){
 
                 runWebOS(params)
             }
-            else if(params.need == 'com.webos.app.smartshare'){
+            if(params.need == 'com.webos.app.smartshare'){
                 params.need = 'com.webos.app.mediadiscovery'
 
                 runWebOS(params)
@@ -679,7 +678,7 @@ function locked(data, call){
                     Controller.toggle(name)
         
     }
-    else call()
+    call()
 }
 
 function externalPlayer(player_need, data, players){
@@ -762,13 +761,13 @@ function start(data, need, inner){
     let player_need = 'player' + (need ? '_' + need : '')
     let launchInner = ()=>{
         if(needInnerPlayerDisclaimer(player_need)) showInnerPlayerDisclaimer(inner)
-        else inner()
+        inner()
     }
 
     if(data.launch_player) launch_player = data.launch_player
 
     if(launch_player == 'lampa' || launch_player == 'inner' || Video.verifyTube(data.url)) launchInner()
-    else if(Platform.is('apple')){
+    if(Platform.is('apple')){
         let external_url = externalPlayer(player_need, data, {
             vlc:        'vlc://${furl}',
             nplayer:    'nplayer-${furl}',
@@ -785,14 +784,14 @@ function start(data, need, inner){
                 window.location.assign(external_url)
             
         }
-        else if(Storage.field(player_need) == 'ios'){
+        if(Storage.field(player_need) == 'ios'){
             html.addClass('player--ios')
             
             launchInner()
         }
-        else launchInner()
+        launchInner()
     }
-    else if(Platform.macOS()){
+    if(Platform.macOS()){
         let external_url = externalPlayer(player_need, data, {
             mpv:    'mpv://${_url}',
             iina:   'iina://weblink?url=${url}',
@@ -806,9 +805,9 @@ function start(data, need, inner){
                 window.location.assign(external_url)
             
         }
-        else launchInner()
+        launchInner()
     }
-    else if(Platform.is('apple_tv')){
+    if(Platform.is('apple_tv')){
         let apple_tv_client = Storage.field('apple_tv_client') ?? 'lampa';
         let external_url = externalPlayer(player_need, data, {
             vlc:        'vlc-x-callback://x-callback-url/stream?url=${url}',
@@ -829,9 +828,9 @@ function start(data, need, inner){
                 window.location.assign(external_url)
             
         }
-        else launchInner()
+        launchInner()
     }
-    else if(Platform.is('webos') && (Storage.field(player_need) == 'webos' || launch_player == 'webos')){
+    if(Platform.is('webos') && (Storage.field(player_need) == 'webos' || launch_player == 'webos')){
                     runWebOS({
                 need: 'com.webos.app.photovideo',
                 url: data.url.replace('&preload','&play'),
@@ -842,7 +841,7 @@ function start(data, need, inner){
             listener.send('external',data)
         
     } 
-    else if(Platform.is('android') && (Storage.field(player_need) == 'android' || launch_player == 'android' || data.torrent_hash)){
+    if(Platform.is('android') && (Storage.field(player_need) == 'android' || launch_player == 'android' || data.torrent_hash)){
         data.url   = data.url.replace('&preload','&play')
         data.title = Utils.clearHtmlTags(data.title || '').trim()
         
@@ -862,7 +861,7 @@ function start(data, need, inner){
             listener.send('external',data)
         
     }
-    else if(Platform.desktop() && Storage.field(player_need) == 'other'){
+    if(Platform.desktop() && Storage.field(player_need) == 'other'){
         const path = Storage.field('player_nw_path')
         const supportedTypes = Object.values(ExternalPlayer.PLAYER_TYPES)
         const detectedType = supportedTypes.find(type => path.toLowerCase().indexOf(type) !== -1)
@@ -885,7 +884,7 @@ function start(data, need, inner){
             listener.send('external', data)
         
     }
-    else launchInner()
+    launchInner()
 }
 
 /**
@@ -1054,7 +1053,7 @@ function iptv(data){
 
         let ads = ()=>{
             if(data.vast_url) lauch()
-            else lauch()
+            lauch()
         }
 
         start(data, 'iptv', ads)

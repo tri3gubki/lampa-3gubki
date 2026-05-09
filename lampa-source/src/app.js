@@ -33,7 +33,6 @@ import PlayerVideo from './interaction/player/video'
 import PlayerPanel from './interaction/player/panel'
 import PlayerFooter from './interaction/player/footer'
 import PlayerInfo from './interaction/player/info'
-import PlayerIPTV from './interaction/player/iptv'
 import PlayerPlaylist from './interaction/player/playlist'
 import Timeline from './interaction/timeline'
 import Settings from './interaction/settings/settings'
@@ -258,7 +257,6 @@ function initClass(){
         PlayerInfo,
         PlayerPanel,
         PlayerFooter,
-        PlayerIPTV,
         PlayerPlaylist,
         Timeline,
         Modal,
