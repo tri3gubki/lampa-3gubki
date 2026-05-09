@@ -35,17 +35,6 @@ let html = `<div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector" data-type="toggle" data-name="card_quality">
-        <div class="settings-param__name">#{settings_rest_card_quality}</div>
-        <div class="settings-param__value"></div>
-        <div class="settings-param__descr">#{settings_rest_card_quality_descr}</div>
-    </div>
-
-    <div class="settings-param selector" data-type="toggle" data-name="card_episodes">
-        <div class="settings-param__name">#{settings_rest_card_episodes}</div>
-        <div class="settings-param__value"></div>
-        <div class="settings-param__descr">#{settings_rest_card_episodes_descr}</div>
-    </div>
 </div>`
 
 export default html

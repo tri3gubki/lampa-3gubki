@@ -78,10 +78,6 @@ export default {
     settings_rest_tmdb_example: 'Например:',
     settings_rest_tmdb_api_descr: 'За да получите данни',
     settings_rest_tmdb_image_descr: 'За да получите изображения',
-    settings_rest_card_quality: 'Знаци за качество',
-    settings_rest_card_quality_descr: 'Покажи знаци за качеството върху картите',
-    settings_rest_card_episodes: 'Индекс за епизоди',
-    settings_rest_card_episodes_descr: 'Покажи индекс за епизодите върху картите',
 
     settings_parser_use: 'Използвай анализатор',
     settings_parser_use_descr: 'С настоящото вие се съгласявате да поемете цялата отговорност за използването на публични връзки за гледане на торент и онлайн съдържание.',

@@ -79,10 +79,6 @@ export default {
     settings_rest_tmdb_example: 'Напрыклад:',
     settings_rest_tmdb_api_descr: 'Для атрымання дадзеных',
     settings_rest_tmdb_image_descr: 'Для атрымання малюнкаў',
-    settings_rest_card_quality: 'Адзнакі якасці',
-    settings_rest_card_quality_descr: 'Адлюстроўваць адзнакі якасці на картках',
-    settings_rest_card_episodes: 'Адзнакі эпізодаў',
-    settings_rest_card_episodes_descr: 'Адлюстроўваць адзнакі эпізодаў на картках',
 
     settings_parser_use: 'Выкарыстоўваць парсер',
     settings_parser_use_descr: 'Тым самым, вы згаджаецеся прыняць на сябе ўсю адказнасць за выкарыстанне публічных спасылак для прагляду торэнт і анлайн кантэнту.',

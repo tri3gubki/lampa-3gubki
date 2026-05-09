@@ -152,20 +152,6 @@ function Card(data, params = {}){
 
                 this.card.querySelector('.card__view').appendChild(vote_elem)
             }
-
-            let qu = data.quality || data.release_quality
-
-            if(qu && Storage.field('card_quality') && !data.original_name){
-                let quality = document.createElement('div')
-                    quality.classList.add('card__quality')
-                
-                let quality_inner = document.createElement('div')
-                    quality_inner.innerText = qu
-
-                    quality.appendChild(quality_inner)
-
-                this.card.querySelector('.card__view').appendChild(quality)
-            }
         }
 
         this.card.addEventListener('visible',this.visible.bind(this))

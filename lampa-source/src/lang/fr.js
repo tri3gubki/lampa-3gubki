@@ -79,10 +79,6 @@ export default {
     settings_rest_tmdb_example: 'Par exemple :',
     settings_rest_tmdb_api_descr: 'Pour obtenir des données',
     settings_rest_tmdb_image_descr: 'Pour obtenir des images',
-    settings_rest_card_quality: 'Indicateurs de qualité',
-    settings_rest_card_quality_descr: 'Afficher la qualité sur les fiches',
-    settings_rest_card_episodes: 'Indicateurs d\'épisodes',
-    settings_rest_card_episodes_descr: 'Afficher les marqueurs d\'épisodes sur les fiches',
 
     settings_parser_use: 'Utiliser l\'analyseur',
     settings_parser_use_descr: 'En activant cette option, vous acceptez toute responsabilité quant à l\'utilisation de liens publics pour visionner du contenu.',

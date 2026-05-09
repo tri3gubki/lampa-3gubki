@@ -79,10 +79,6 @@ export default {
     settings_rest_tmdb_example: 'For example:',
     settings_rest_tmdb_api_descr: 'To get data',
     settings_rest_tmdb_image_descr: 'To get images',
-    settings_rest_card_quality: 'Quality marks',
-    settings_rest_card_quality_descr: 'Display quality marks on cards',
-    settings_rest_card_episodes: 'Episode marks',
-    settings_rest_card_episodes_descr: 'Display episode markers on cards',
 
     settings_parser_use: 'Use parser',
     settings_parser_use_descr: 'Hereby, you agree to accept all responsibility for the use of public links to view torrent and online content.',

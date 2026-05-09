@@ -79,10 +79,6 @@ export default {
     settings_rest_tmdb_example: 'De exemplu:',
     settings_rest_tmdb_api_descr: 'Pentru date',
     settings_rest_tmdb_image_descr: 'Pentru imagini',
-    settings_rest_card_quality: 'Marcaje calitate',
-    settings_rest_card_quality_descr: 'Afișează calitatea pe postere',
-    settings_rest_card_episodes: 'Marcaje episoade',
-    settings_rest_card_episodes_descr: 'Afișează numărul episoadelor pe postere',
 
     settings_parser_use: 'Folosește parser',
     settings_parser_use_descr: 'Prin prezenta, ești de acord cu întreaga responsabilitate pentru utilizarea link-urilor publice pentru vizionarea torrentelor și a conținutului online.',

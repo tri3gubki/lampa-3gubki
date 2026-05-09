@@ -173,6 +173,15 @@ if(!window.localStorage.getItem('rest_simplified_v20')){
     window.localStorage.setItem('rest_simplified_v20','1')
 }
 
+// v21: card_quality удалён (TMDB не отдаёт quality поле — значок
+// никогда не рисовался). card_episodes скрыт из UI, дефолт true —
+// сбрасываем у тех, кто вручную выключил.
+if(!window.localStorage.getItem('card_flags_v21')){
+    window.localStorage.removeItem('card_quality')
+    window.localStorage.removeItem('card_episodes')
+    window.localStorage.setItem('card_flags_v21','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */
