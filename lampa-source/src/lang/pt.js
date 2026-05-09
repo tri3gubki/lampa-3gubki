@@ -65,8 +65,6 @@ export default {
     settings_main_plugins: 'Extensões',
     settings_main_rest: 'Outros',
 
-    settings_rest_start: 'Página inicial',
-    settings_rest_start_descr: 'Qual página iniciar na inicialização',
     settings_rest_tmdb_lang: 'Qual o idioma para mostrar os dados do TMDB',
     settings_rest_tmdb_prox: 'Proxy TMDB',
     settings_rest_tmdb_prox_auto: 'Ativar proxy automaticamente',

@@ -182,6 +182,13 @@ if(!window.localStorage.getItem('card_flags_v21')){
     window.localStorage.setItem('card_flags_v21','1')
 }
 
+// v22: start_page скрыт из UI, всегда 'main'. Сбрасываем чтобы дефолт
+// 'main' (из select() в params.js) применился.
+if(!window.localStorage.getItem('start_page_main_v22')){
+    window.localStorage.removeItem('start_page')
+    window.localStorage.setItem('start_page_main_v22','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

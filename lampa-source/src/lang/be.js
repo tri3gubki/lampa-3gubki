@@ -64,8 +64,6 @@ export default {
     settings_main_plugins: 'Пашырэння',
     settings_main_rest: 'Астатняе',
 
-    settings_rest_start: 'Стартавая старонка',
-    settings_rest_start_descr: 'З якой старонкі пачынаць пры запуску',
     settings_rest_tmdb_lang: 'На якой мове адлюстроўваць дадзеныя з TMDB',
     settings_rest_tmdb_prox: 'Праксіраваць TMDB',
     settings_rest_tmdb_prox_auto: 'Уключыць проксі аўтаматычна',

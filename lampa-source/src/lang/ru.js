@@ -71,8 +71,6 @@ export default {
     settings_main_plugins: 'Расширения',
     settings_main_rest: 'Остальное',
 
-    settings_rest_start: 'Стартовая страница',
-    settings_rest_start_descr: 'С какой страницы начинать при запуске',
     settings_rest_tmdb_lang: 'На каком языке отображать данные с TMDB',
     settings_rest_tmdb_prox: 'Проксировать TMDB',
     settings_rest_tmdb_prox_auto: 'Включить прокси автоматически',

@@ -71,8 +71,6 @@ export default {
     settings_main_plugins: "Rozšíření",
     settings_main_rest: "Ostatní",
 
-    settings_rest_start: "Úvodní stránka",
-    settings_rest_start_descr: "Z jaké stránky začít při spuštění",
     settings_rest_tmdb_lang: "V jakém jazyce zobrazovat data z TMDB",
     settings_rest_tmdb_prox: "Proxy TMDB",
     settings_rest_tmdb_prox_auto: "Automaticky zapnout proxy",
