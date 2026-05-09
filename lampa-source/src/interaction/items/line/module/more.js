@@ -4,20 +4,10 @@ import More from '../../../more'
 
 
 export default {
-    onVisible: function(){
-        let pages = this.data.total_pages || 1
-
-        if(pages <= 1) return
-
-        let button = document.createElement('div')
-            button.classList.add('items-line__more')
-            button.classList.add('selector')
-            button.text(Lang.translate('more'))
-
-            button.on('hover:enter', this.emit.bind(this, 'more', this.data))
-
-        this.html.find('.items-line__head').append(button)
-    },
+    // Кнопка 'Ещё' в углу шапки row (onVisible) убрана —
+    // юзер не хочет дублирующую кнопку. More-карточка в конце ряда
+    // (onScroll) сохранена — появляется когда доскроллил до последней
+    // карточки и работает как 'загрузить следующую страницу'.
 
     onScroll: function(){
         if(!this.more && this.data.results.length == this.items.length && this.data.total_pages > 1){
