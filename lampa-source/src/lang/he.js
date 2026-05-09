@@ -578,7 +578,6 @@ export default {
     menu_movies: 'סרטים',
     menu_tv: 'סדרה',
     menu_catalog: 'קטלוג',
-    menu_filter: 'סנון',
     menu_collections: 'קולקציות',
     menu_relises: 'השקה',
     menu_bookmark: 'סימניות',

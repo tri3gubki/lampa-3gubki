@@ -29,16 +29,6 @@ let html = `
         <rect x="7.55957" y="0.391113" width="24.0957" height="3.01074" rx="1.50537" fill="currentColor"/>
     </symbol>
 
-    <symbol id="sprite-filter" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1.85742" y="1.70898" width="35.501" height="35.501" rx="4.5" stroke="currentColor" stroke-width="3"/>
-        <rect x="6.9043" y="8.02637" width="25.4062" height="2.98926" rx="1.49463" fill="currentColor"/>
-        <rect x="6.9043" y="17.9648" width="25.4062" height="2.98926" rx="1.49463" fill="currentColor"/>
-        <rect x="6.9043" y="27.9033" width="25.4062" height="2.98926" rx="1.49463" fill="currentColor"/>
-        <circle cx="26.0732" cy="9.521" r="3.42188" fill="currentColor"/>
-        <circle cx="21.6035" cy="29.3979" r="3.42188" fill="currentColor"/>
-        <circle cx="13.6904" cy="19.4595" r="3.42188" fill="currentColor"/>
-    </symbol>
-
     <symbol id="sprite-hd" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="1.85742" y="1.70898" width="35.501" height="35.501" rx="4.5" stroke="currentColor" stroke-width="3"/>
         <rect x="9.11133" y="12.77" width="2.96094" height="14.2765" rx="1" fill="currentColor"/>

@@ -582,7 +582,6 @@ export default {
     menu_movies: 'Фільми',
     menu_tv: 'Серіали',
     menu_catalog: 'Каталог',
-    menu_filter: 'Фільтр',
     menu_collections: 'Добірки',
     menu_relises: 'Релізи',
     menu_bookmark: 'Закладки',

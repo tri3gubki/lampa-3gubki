@@ -584,7 +584,6 @@ export default {
     menu_movies: '电影',
     menu_tv: '剧集',
     menu_catalog: '目录',
-    menu_filter: '筛选',
     menu_collections: '合集',
     menu_relises: '发布',
     menu_bookmark: '书签',

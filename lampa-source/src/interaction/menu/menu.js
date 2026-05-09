@@ -28,7 +28,6 @@ let menu_items = [
     {action: 'cartoon', title: 'menu_multmovie', sprite: 'cartoon'},
     {action: 'tv', title: 'menu_tv', sprite: 'tv'},
     {action: 'catalog', title: 'menu_catalog', sprite: 'catalog'},
-    {action: 'filter', title: 'menu_filter', sprite: 'filter'},
     {action: 'favorite', title: 'settings_input_links', sprite: 'favorite'},
     {action: 'history', title: 'menu_history', sprite: 'history'},
     {action: 'timetable', title: 'menu_timeline', sprite: 'calendar'},
@@ -280,8 +279,6 @@ function ready(){
         if(action == 'console'){
             Controller.toggle('console')
         }
-
-        // content_filter удалён
 
         if(action == 'edit') Editor.start()
 

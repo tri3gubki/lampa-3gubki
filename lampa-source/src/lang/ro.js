@@ -612,7 +612,6 @@ export default {
     menu_movies: 'Filme',
     menu_tv: 'Seriale',
     menu_catalog: 'Catalog',
-    menu_filter: 'Filtru',
     menu_collections: 'Colecții',
     menu_relises: 'Lansări',
     menu_bookmark: 'Bookmark-uri',

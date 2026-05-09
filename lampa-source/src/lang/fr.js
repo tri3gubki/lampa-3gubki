@@ -612,7 +612,6 @@ export default {
     menu_movies: 'Films',
     menu_tv: 'Séries',
     menu_catalog: 'Catalogue',
-    menu_filter: 'Filtre',
     menu_collections: 'Collections',
     menu_relises: 'Sorties',
     menu_bookmark: 'Favoris',

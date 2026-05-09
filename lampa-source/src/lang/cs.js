@@ -672,7 +672,6 @@ export default {
     menu_movies: "Filmy",
     menu_tv: "Seriály",
     menu_catalog: "Katalog",
-    menu_filter: "Filtr",
     menu_collections: "Kolekce",
     menu_relises: "Vydání",
     menu_bookmark: "Záložky",

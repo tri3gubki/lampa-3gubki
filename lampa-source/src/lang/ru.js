@@ -716,7 +716,6 @@ export default {
     menu_movies: 'Фильмы',
     menu_tv: 'Сериалы',
     menu_catalog: 'Каталог',
-    menu_filter: 'Фильтр',
     menu_collections: 'Подборки',
     menu_relises: 'Релизы',
     menu_bookmark: 'Закладки',
