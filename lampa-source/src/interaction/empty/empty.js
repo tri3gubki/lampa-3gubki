@@ -160,7 +160,6 @@ class Empty extends Emit{
             line('TMDB Proxy', Storage.field('tmdb_proxy') ? 'Yes' : 'No')
             line('TMDB Proxy api',  Lampa.TMDB.api('').split('/').slice(0,3).join('/'))
             line('Premium', false ? 'Yes' : 'No')
-            line('Mirror', Manifest.cub_domain)
 
             if(add_information){
                 add_information.forEach((info)=>{

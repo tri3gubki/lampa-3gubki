@@ -5,7 +5,6 @@ import category from '../components/category/main'
 import favorite from '../components/favorite'
 import torrents from '../components/torrents'
 import mytorrents from '../components/mytorrents'
-import relise from '../components/relise'
 import nocomponent from '../components/nocomponent'
 import timetable from '../components/timetable'
 import company from '../components/company'
@@ -20,7 +19,6 @@ let component = {
     favorite,
     torrents,
     mytorrents,
-    relise,
     nocomponent,
     timetable,
     company,

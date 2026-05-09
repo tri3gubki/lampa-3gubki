@@ -22,20 +22,7 @@ function init(){
         markers_object[marker].element = Head.render()[0].querySelector('.head__markers .item--' + marker)
     })
 
-    if(typeof requestAnimationFrame !== 'undefined'){
-        Lampa.Listener.follow('request_error', (e)=>{
-            if(e.params.url.indexOf(Manifest.cub_domain) > -1 && e.error.status == 0 && e.exception !== 'timeout'){
-                error('request')
-            }
-        })
-
-        Lampa.Listener.follow('request_secuses', (e)=>{
-            if(e.params.url.indexOf(Manifest.cub_domain) > -1){
-                pass('request')
-                normal('request')
-            }
-        })
-    }
+    // CUB-error tracking удалён — за ошибками cub.rip-домена больше не следим.
 }
 
 function update(){

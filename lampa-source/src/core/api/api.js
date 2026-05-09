@@ -199,16 +199,7 @@ function favorite(params = {}, oncomplite, onerror){
     else onerror()
 }
 
-/**
- * Релизы
- * @param {function} oncomplite 
- * @param {function} onerror 
- */
-function relise(params, oncomplite, onerror){
-    network.silent(Utils.protocol() + 'tmdb.'+Manifest.cub_domain+'?sort=releases&results=20&page='+params.page,(data)=>{
-        oncomplite(Utils.addSource(data, 'cub'))
-    }, onerror)
-}
+
 
 function partKeywords(parts, type, shift = 0, filter = [], req_params = {}){
     if(shift == 0) shift = parts.length
@@ -374,7 +365,6 @@ export default {
     favorite,
     seasons,
     screensavers: TMDB.screensavers,
-    relise,
     menu,
     collections,
     menuCategory,

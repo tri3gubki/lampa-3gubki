@@ -80,7 +80,6 @@ import Router from './core/router'
 import Timer from './core/timer'
 
 import ServiceTorserver from './services/torrserver'
-import ServiceWatched from './services/watched'
 import ServiceSettings from './services/settings'
 import ServiceLibs from './services/libs'
 
@@ -558,8 +557,6 @@ function startApp(){
     ServiceTorserver.init()
     LoadingProgress.status('ServiceTorserver init')
 
-    ServiceWatched.init()
-    LoadingProgress.status('ServiceWatched init')
 
     ServiceSettings.init()
     LoadingProgress.status('ServiceSettings init')

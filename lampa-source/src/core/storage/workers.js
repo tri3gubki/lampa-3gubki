@@ -1,15 +1,7 @@
 import Utils from '../../utils/utils'
 import Storage from './storage'
-import Reguest from '../../utils/reguest'
 import Arrays from '../../utils/arrays'
-import Manifest from '../manifest'
 
-
-let network = new Reguest()
-
-function api(){
-    return Utils.protocol() + Manifest.cub_domain + '/api/'
-}
 
 class WorkerArray{
     constructor(field){

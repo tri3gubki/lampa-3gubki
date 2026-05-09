@@ -31,7 +31,6 @@ let menu_items = [
     {action: 'myperson', title: 'title_persons', sprite: 'person'},
     {action: 'catalog', title: 'menu_catalog', sprite: 'catalog'},
     {action: 'filter', title: 'menu_filter', sprite: 'filter'},
-    {action: 'relise', title: 'menu_relises', sprite: 'hd'},
     {action: 'anime', title: 'menu_anime', sprite: 'anime'},
     {action: 'favorite', title: 'settings_input_links', sprite: 'favorite'},
     {action: 'history', title: 'menu_history', sprite: 'history'},
@@ -55,7 +54,7 @@ function init(){
         if(window.lampa_settings.disable_features.subscribe && item.action == 'subscribes') return false
         if(!window.lampa_settings.feed && item.action == 'feed') return false
 
-        if(!Lang.selected(['ru','uk','be']) && (item.action == 'relise' || item.action == 'anime' || item.action == 'feed')) return false
+        if(!Lang.selected(['ru','uk','be']) && (item.action == 'anime' || item.action == 'feed')) return false
 
         return true
     })
@@ -303,11 +302,7 @@ function ready(){
             })
         }
 
-        if(prepared(action,['relise'])){
-            Router.call('relise', {
-                title: Lang.translate('title_relises')
-            })
-        }
+        // CUB-«Релизы» удалены вместе с компонентом relise.
 
         if(action == 'console'){
             Controller.toggle('console')
