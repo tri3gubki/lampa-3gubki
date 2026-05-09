@@ -26,7 +26,6 @@ let menu_items = [
     {action: 'movie', title: 'menu_movies', sprite: 'movie'},
     {action: 'cartoon', title: 'menu_multmovie', sprite: 'cartoon'},
     {action: 'tv', title: 'menu_tv', sprite: 'tv'},
-    {action: 'catalog', title: 'menu_catalog', sprite: 'catalog'},
     {action: 'favorite', title: 'settings_input_links', sprite: 'favorite'},
     {action: 'history', title: 'menu_history', sprite: 'history'},
     {action: 'timetable', title: 'menu_timeline', sprite: 'calendar'},
@@ -183,8 +182,6 @@ function ready(){
         let action = $(e.target).data('action')
 
         Lampa.Listener.send('menu',{type:'action', action: action, target: e.target, abort: ()=>{ action = null }})
-
-        if(action == 'catalog') catalog()
 
         if(action == 'movie' || action == 'tv'){
             Router.call('category', {
@@ -355,5 +352,6 @@ export default {
     addElement,
     addButton,
     open,
-    close
+    close,
+    catalog
 }

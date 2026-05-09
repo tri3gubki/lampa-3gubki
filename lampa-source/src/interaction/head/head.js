@@ -67,6 +67,10 @@ function init(){
         Utils.toggleFullscreen()
     }).toggleClass('hide', Platform.tv() || Platform.is('android') || !Utils.canFullScreen())
 
+    html.find('.open--catalog').on('hover:enter',()=>{
+        Menu.catalog()
+    })
+
     observe()
 
     Controller.add('head',{
