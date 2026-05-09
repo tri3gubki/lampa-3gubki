@@ -16,6 +16,20 @@ RUN npm install --legacy-peer-deps
 # Один pack_github не работает: ему нужен dest/app.js от merge-шага.
 RUN npx gulp build
 
+# Генерируем favicon.ico (16/32/64) и apple-touch-icon.png (180×180)
+# из стандартного Lampa-лого. Тёмный фон #1d1f20 — как у самой страницы.
+RUN apk add --no-cache imagemagick librsvg \
+ && convert -background "#1d1f20" -density 400 \
+      -resize 180x180 -gravity center -extent 180x180 \
+      build/github/lampa/img/logo-icon.svg \
+      build/github/lampa/apple-touch-icon.png \
+ && convert -background "#1d1f20" -density 400 \
+      -resize 64x64 -gravity center -extent 64x64 \
+      build/github/lampa/img/logo-icon.svg \
+      /tmp/favicon-base.png \
+ && convert /tmp/favicon-base.png -define icon:auto-resize=16,32,48,64 \
+      build/github/lampa/favicon.ico
+
 # ===== STAGE 2: serve =====
 FROM nginx:alpine
 
