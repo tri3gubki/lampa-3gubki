@@ -271,10 +271,7 @@ body.mouse--controll:not(.true--mobile){
     .head__logo-icon{
         display: none;
     }
-    .head__menu-icon{
-        display: block;
-        margin-right: 1.2em;
-    }
+    // .head__menu-icon скрыт — меню всегда раскрыто (menu--always)
     .head__backward{
         display: block;
     }

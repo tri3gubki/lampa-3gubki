@@ -254,7 +254,10 @@ function toggleClasses(){
     $('body').toggleClass('black--style', Storage.field('black_style'))
     $('body').toggleClass('card--no-cover', !Storage.field('card_interfice_cover'))
     $('body').toggleClass('system--keyboard',Storage.field('keyboard_type') == 'lampa' ? false : true)
-    $('body').toggleClass('menu--always', Platform.screen('tv') && Storage.field('menu_always'))
+    // Меню всегда раскрыто кроме мобильного портрета (iPhone / маленькие
+    // экраны). Storage-флаг menu_always больше не учитывается — настройка
+    // удалена из UI, поведение зашитое.
+    $('body').toggleClass('menu--always', !Platform.screen('mobile'))
 
     // Зашитые наглухо: расширенная анимация, маска (fade), эффект стекла
     // с прозрачностью 'blacked'. Раньше тогглились, теперь просто

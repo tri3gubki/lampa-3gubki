@@ -86,6 +86,8 @@
 
     &-folder{
         padding: 1.5em 2em;
+        margin: 0 0.5em;
+        border-radius: 0.6em;
         display: flex;
         will-change: transform;
 
@@ -107,12 +109,15 @@
         }
 
         &.focus{
-            background-color: #353535;
+            background-color: #fff;
+            color: #000;
         }
     }
 
     &-param{
         padding: 1.5em 2em;
+        margin: 0 0.5em;
+        border-radius: 0.6em;
         position: relative;
         will-change: transform;
 
@@ -161,7 +166,12 @@
         }
 
         &.focus{
-            background-color: #353535;
+            background-color: #fff;
+            color: #000;
+
+            .settings-param__descr{
+                opacity: 0.7;
+            }
         }
 
         &--button{
