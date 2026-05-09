@@ -769,13 +769,21 @@ function start(data, need, inner){
     // YouTube-трейлеры и явно запрошенный inner (data.launch_player='inner')
     // пропускаем — они не зависят от настройки.
     if(Storage.field(player_need) == 'none' && launch_player != 'inner' && launch_player != 'lampa' && !Video.verifyTube(data.url)){
+        // Запомнить активный controller ДО открытия модалки — модалка
+        // заберёт фокус на 'modal', а после close() надо вернуть его
+        // в исходное место (например 'select' = окно выбора торрент-файла,
+        // 'content' = карточка). Иначе controller 'modal' остаётся
+        // активным, но DOM модалки уже удалён → нажатия в никуда.
+        let active = Controller.enabled()
+        let prev_controller = active && active.name && active.name !== 'modal' ? active.name : 'content'
+
         Modal.open({
             title:  Lang.translate('player_none_title'),
             html:   $('<div class="about"><div>'+ Lang.translate('player_none_text') +'</div></div>'),
             size:  'medium',
             onBack: ()=>{
                 Modal.close()
-                Controller.toggle('content')
+                Controller.toggle(prev_controller)
             }
         })
 
