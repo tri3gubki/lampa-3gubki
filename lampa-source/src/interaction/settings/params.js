@@ -504,7 +504,7 @@ trigger('black_style', false)
 trigger('hide_outside_the_screen', true)
 trigger('card_interfice_cover', true)
 trigger('cache_images', false)
-trigger('menu_always', false)
+trigger('menu_always', true)
 trigger('player_external_fullscreen', true)
 trigger('adult_content_view', false)
 

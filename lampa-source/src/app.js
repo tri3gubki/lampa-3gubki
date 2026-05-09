@@ -142,6 +142,19 @@ if(!window.localStorage.getItem('player_migrated_v17')){
     window.localStorage.setItem('player_migrated_v17','1')
 }
 
+// Миграция интерфейса v18 (2026-05-09):
+// - menu_always всегда видно (был toggle, стал зашитым)
+// - background / background_type / card_interfice_poster / card_interfice_cover
+//   убраны из UI настроек; их дефолты применятся только если в Storage пусто.
+// Сбрасываем старые значения чтобы новые дефолты подхватились.
+if(!window.localStorage.getItem('interface_simplified_v18')){
+    ['menu_always','background','background_type','card_interfice_poster','card_interfice_cover'].forEach(k=>{
+        window.localStorage.removeItem(k)
+    })
+
+    window.localStorage.setItem('interface_simplified_v18','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */
