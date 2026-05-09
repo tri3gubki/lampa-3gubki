@@ -65,7 +65,6 @@ import Cache from './utils/cache'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
 import Sound from './core/sound'
-import Iptv from './core/iptv'
 import Bell from './interaction/bell'
 import HoverSwitcher from './core/switcher'
 import HTTPS from './core/https'
@@ -517,8 +516,6 @@ function startApp(){
     Sound.init()
     LoadingProgress.status('Sound init')
 
-    Iptv.init()
-    LoadingProgress.status('Iptv init')
 
 
 
