@@ -50,21 +50,14 @@ function Sources(params = {}){
             horizontal: true
         })
 
-        let sources
+        // CUB-source удалён — child-ветка с cub.discovery() убрана,
+        // используется только TMDB-discovery.
+        let sources = params.sources || Api.availableDiscovery()
 
-        if(Permit.child){
-            sources = [Api.sources.cub.discovery()]
+        sources.forEach(this.build.bind(this))
 
-            sources.forEach(this.build.bind(this))
-        }
-        else{
-            sources = params.sources || Api.availableDiscovery()
-
-            sources.forEach(this.build.bind(this))
-
-            if(!params.sources){
-                params.additional.forEach(this.build.bind(this))
-            }
+        if(!params.sources){
+            params.additional.forEach(this.build.bind(this))
         }
 
         this.enable(results[0])

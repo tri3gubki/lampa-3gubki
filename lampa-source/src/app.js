@@ -68,7 +68,6 @@ import Sound from './core/sound'
 import Iptv from './core/iptv'
 import Bell from './interaction/bell'
 import HoverSwitcher from './core/switcher'
-import Ai from './core/api/sources/ai'
 import HTTPS from './core/https'
 import Task from './core/loading'
 import App from './interaction/app'
@@ -534,7 +533,6 @@ function startApp(){
     
     // Добавляем источники поиска
 
-    if(window.lampa_settings.account_use && !window.lampa_settings.disable_features.ai) Search.addSource(Ai.discovery())
 
     LoadingProgress.status('Initialization successful')
 

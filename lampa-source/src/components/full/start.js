@@ -15,7 +15,6 @@ import Torrents from './start/torrents'
 import Subscribed  from './start/subscribed'
 import Trailers from './start/trailers'
 import Poster from './start/poster'
-import Reactions from './start/reactios'
 import Translations from './start/translations'
 import Bookmarks from './start/bookmarks'
 import Buttons from './start/buttons'
@@ -43,7 +42,6 @@ class Start extends Emit {
         this.use(Poster)
         this.use(Translations)
         this.use(Bookmarks)
-        this.use(Reactions)
         this.use(Buttons)
 
         this.emit('init')

@@ -37,19 +37,7 @@ export default {
                     }
                 })
 
-                options.push({
-                    title: Lang.translate('title_facts'),
-                    onSelect: ()=>{
-                        Controller.toggle('content')
-
-                        Activity.push({
-                            url: '',
-                            title: Lang.translate('title_facts'),
-                            component: 'ai_facts',
-                            card: this.card
-                        })
-                    }
-                })
+                // AI-факты удалены вместе с компонентом ai_facts.
             }
 
             Select.show({
