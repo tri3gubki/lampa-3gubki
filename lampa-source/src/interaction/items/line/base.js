@@ -17,7 +17,7 @@ class Base extends Emit{
             items: {
                 mapping: 'line',
                 align_left: false,
-                view: 7
+                view: 14
             },
             scroll: {
                 horizontal: true,
