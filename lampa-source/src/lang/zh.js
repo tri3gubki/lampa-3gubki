@@ -44,12 +44,13 @@ export default {
     settings_interface_background_use: '显示背景',
     settings_interface_background_type: '背景类型',
     settings_interface_performance: '性能',
+    settings_interface_general: '通用',
     settings_interface_animation: '动画',
     settings_interface_animation_descr: '卡片和内容的动画',
     settings_interface_view_card: '卡片视图类型',
     settings_interface_view_card_descr: '当您滚动时，卡片将逐渐加载或全部加载',
     settings_interface_lang: '界面语言',
-    settings_main_interface: '界面',
+    settings_main_interface: '常规',
     settings_main_player: '播放器',
     settings_main_parser: '解析器',
     settings_main_torrserver: 'TorrServer',
@@ -772,9 +773,7 @@ export default {
     settings_rest_cache_only_descr: '基本设置将被保留',
     settings_rest_cache_all: '清除缓存和数据',
     settings_rest_cache_all_descr: '所有设置和数据将被清除',
-    settings_rest_cache_calculate: '还剩多少内存',
 
-    title_left:'左边',
 
 
     title_parental_control: '家长控制',

@@ -50,13 +50,14 @@ export default {
     settings_interface_background_use: 'Покажи фон',
     settings_interface_background_type: 'Тип фон',
     settings_interface_performance: 'Производителност',
+    settings_interface_general: 'Общи',
     settings_interface_animation: 'Анимация',
     settings_interface_animation_descr: 'Анимация на карти и съдържание',
     settings_interface_view_card: 'Тип изглед на карта',
     settings_interface_view_card_descr: 'Докато превъртате емисията, картите да се зареждат постепенно или всички',
     settings_interface_lang: 'Език на интерфейса',
 
-    settings_main_interface: 'Интерфейс',
+    settings_main_interface: 'Основни',
     settings_main_player: 'Плеър',
     settings_main_parser: 'Парсър/Анализатор',
     settings_main_torrserver: 'TorrServer',
@@ -821,9 +822,7 @@ export default {
     settings_rest_cache_only_descr: 'Основните настройки ще бъдат запазени',
     settings_rest_cache_all: 'Кеш и данни',
     settings_rest_cache_all_descr: 'Ще бъдат изчистени всички настройки и данни',
-    settings_rest_cache_calculate: 'Колко памет остава',
 
-    title_left:'Остават',
 
 
     title_parental_control: 'Родителски контрол',

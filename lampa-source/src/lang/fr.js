@@ -51,13 +51,14 @@ export default {
     settings_interface_background_use: 'Afficher l\'arrière-plan',
     settings_interface_background_type: 'Type d\'arrière-plan',
     settings_interface_performance: 'Performance',
+    settings_interface_general: 'Général',
     settings_interface_animation: 'Animation',
     settings_interface_animation_descr: 'Animation des fiches et du contenu',
     settings_interface_view_card: 'Type d\'affichage des fiches',
     settings_interface_view_card_descr: 'Chargement progressif ou complet des fiches lors du défilement',
     settings_interface_lang: 'Langue de l\'interface',
 
-    settings_main_interface: 'Interface',
+    settings_main_interface: 'Général',
     settings_main_player: 'Lecteur',
     settings_main_parser: 'Analyseur (Parser)',
     settings_main_torrserver: 'TorrServer',
@@ -820,9 +821,7 @@ export default {
     settings_rest_cache_only_descr: 'Les paramètres de base seront conservés',
     settings_rest_cache_all: 'Cache et données',
     settings_rest_cache_all_descr: 'Tout sera réinitialisé',
-    settings_rest_cache_calculate: 'Mémoire restante',
 
-    title_left: 'Restant',
 
 
     title_parental_control: 'Contrôle parental',

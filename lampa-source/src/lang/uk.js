@@ -45,12 +45,13 @@ export default {
     settings_interface_background_use: 'Показувати фон',
     settings_interface_background_type: 'Тип фону',
     settings_interface_performance: 'Швидкодія',
+    settings_interface_general: 'Загальне',
     settings_interface_animation: 'Анімація',
     settings_interface_animation_descr: 'Анімація карток та контенту',
     settings_interface_view_card: 'Тип перегляду карток',
     settings_interface_view_card_descr: 'У міру скролінгу стрічки картки підвантажуватимуться поступово або завантажуватимуться всі',
     settings_interface_lang: 'Мова інтерфейсу',
-    settings_main_interface: 'Інтерфейс',
+    settings_main_interface: 'Основні',
     settings_main_player: 'Плеєр',
     settings_main_parser: 'Парсер',
     settings_main_torrserver: 'TorrServer',
@@ -781,9 +782,7 @@ export default {
     settings_rest_cache_only_descr: 'Базові налаштування залишаться',
     settings_rest_cache_all: 'Кеш та дані',
     settings_rest_cache_all_descr: 'Будуть очищені всі налаштування та дані',
-    settings_rest_cache_calculate: 'Скільки залишилося пам\'яті',
 
-    title_left:'Залишилось',
 
 
     title_parental_control: 'Батьківський контроль',

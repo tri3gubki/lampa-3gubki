@@ -51,6 +51,7 @@ export default {
     settings_interface_background_use: 'Показывать фон',
     settings_interface_background_type: 'Тип фона',
     settings_interface_performance: 'Быстродействие',
+    settings_interface_general: 'Общее',
     settings_interface_animation: 'Анимация',
     settings_interface_animation_descr: 'Анимация карточек и контента',
     settings_interface_view_card: 'Тип просмотра карточек',
@@ -64,7 +65,7 @@ export default {
     settings_interface_hide_outside_the_screen_descr: 'Это ускорит рендер интерфейса и улучшит производительность',
 
 
-    settings_main_interface: 'Интерфейс',
+    settings_main_interface: 'Основные',
     settings_main_player: 'Плеер',
     settings_main_parser: 'Парсер',
     settings_main_torrserver: 'TorrServer',
@@ -79,7 +80,6 @@ export default {
     settings_rest_cache_only_descr: 'Основные настройки сохранятся',
     settings_rest_cache_all: 'Кеш и данные',
     settings_rest_cache_all_descr: 'Будут очищены все настройки и данные',
-    settings_rest_cache_calculate: 'Сколько осталось памяти',
 
     settings_parser_use: 'Использовать парсер',
     settings_parser_use_descr: 'Тем самым, вы соглашаетесь принять на себя всю ответственность за использование публичных ссылок для просмотра торрент и онлайн контента.',
@@ -317,7 +317,6 @@ export default {
     title_reactions: 'Реакции',
     title_last_year: 'Прошлый год',
     title_reset: 'Перезагрузить',
-    title_left:'Осталось',
     title_parental_control: 'Родительский контроль',
     title_worth_rewatch: 'Стоит пересмотреть',
     title_fire: 'Огонь!',

@@ -52,13 +52,14 @@ export default {
     settings_interface_background_use: 'Mostar fundo',
     settings_interface_background_type: 'Tipo de fundo',
     settings_interface_performance: 'Performance',
+    settings_interface_general: 'Geral',
     settings_interface_animation: 'Animação',
     settings_interface_animation_descr: 'Animação de cartões e conteúdo',
     settings_interface_view_card: 'Tipo de visualização do cartão',
     settings_interface_view_card_descr: 'Conforme rola o feed, os cartões serão carregados gradualmente ou carregarão todos',
     settings_interface_lang: 'Idioma da interface',
 
-    settings_main_interface: 'Interface',
+    settings_main_interface: 'Geral',
     settings_main_player: 'Videoplayer',
     settings_main_parser: 'Analisador',
     settings_main_torrserver: 'TorrServer',
@@ -819,9 +820,7 @@ export default {
     settings_rest_cache_only_descr: 'As configurações básicas serão preservadas',
     settings_rest_cache_all: 'Cache e Dados',
     settings_rest_cache_all_descr: 'Todas as configurações e dados serão apagados',
-    settings_rest_cache_calculate: 'Quanta memória resta',
 
-    title_left:'Esquerda',
 
 
     title_parental_control: 'Controle Parental',

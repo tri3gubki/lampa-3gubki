@@ -51,13 +51,14 @@ export default {
     settings_interface_background_use: 'Show background',
     settings_interface_background_type: 'Background type',
     settings_interface_performance: 'Performance',
+    settings_interface_general: 'General',
     settings_interface_animation: 'Animation',
     settings_interface_animation_descr: 'Animation of cards and content',
     settings_interface_view_card: 'Card view type',
     settings_interface_view_card_descr: 'As you scroll the feed, the cards will load gradually or load all',
     settings_interface_lang: 'Interface language',
 
-    settings_main_interface: 'Interface',
+    settings_main_interface: 'General',
     settings_main_player: 'Player',
     settings_main_parser: 'Parser',
     settings_main_torrserver: 'TorrServer',
@@ -820,9 +821,7 @@ export default {
     settings_rest_cache_only_descr: 'Basic settings will be preserved',
     settings_rest_cache_all: 'Cache and Data',
     settings_rest_cache_all_descr: 'All settings and data will be cleared',
-    settings_rest_cache_calculate: 'How much memory is left',
 
-    title_left:'Left',
 
 
     title_parental_control: 'Parental Control',

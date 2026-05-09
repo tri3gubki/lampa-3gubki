@@ -51,6 +51,7 @@ export default {
     settings_interface_background_use: "Zobrazit pozadí",
     settings_interface_background_type: "Typ pozadí",
     settings_interface_performance: "Výkon",
+    settings_interface_general: 'Obecné',
     settings_interface_animation: "Animace",
     settings_interface_animation_descr: "Animace karet a obsahu",
     settings_interface_view_card: "Typ zobrazení karet",
@@ -64,7 +65,7 @@ export default {
     settings_interface_hide_outside_the_screen_descr: "To urychlí vykreslování rozhraní a zlepší výkon",
 
 
-    settings_main_interface: "Rozhraní",
+    settings_main_interface: "Hlavní",
     settings_main_player: "Přehrávač",
     settings_main_parser: "Parser",
     settings_main_torrserver: "TorrServer",
@@ -79,7 +80,6 @@ export default {
     settings_rest_cache_only_descr: "Hlavní nastavení budou uložena",
     settings_rest_cache_all: "Cache a data",
     settings_rest_cache_all_descr: "Budou vymazána všechna nastavení a data",
-    settings_rest_cache_calculate: "Kolik paměti zbývá",
 
     settings_parser_use: "Použít parser",
     settings_parser_use_descr: "Tímto souhlasíte s převzetím veškeré odpovědnosti za používání veřejných odkazů pro sledování torrentu a online obsahu.",
@@ -314,7 +314,6 @@ export default {
     title_reactions: "Reakce",
     title_last_year: "Minulý rok",
     title_reset: "Restartovat",
-    title_left: "Zbývá",
     title_parental_control: "Rodičovská kontrola",
     title_worth_rewatch: "Stojí za zhlédnutí znovu",
 

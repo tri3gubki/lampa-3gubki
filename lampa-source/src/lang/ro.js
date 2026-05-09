@@ -51,13 +51,14 @@ export default {
     settings_interface_background_use: 'Afișează fundalul',
     settings_interface_background_type: 'Tip fundal',
     settings_interface_performance: 'Performanță',
+    settings_interface_general: 'General',
     settings_interface_animation: 'Animație',
     settings_interface_animation_descr: 'Animația posterelor și a conținutului',
     settings_interface_view_card: 'Tip vizualizare poster',
     settings_interface_view_card_descr: 'Pe măsură ce derulezi, posterele se vor încărca treptat sau toate odată',
     settings_interface_lang: 'Limba interfeței',
 
-    settings_main_interface: 'Interfață',
+    settings_main_interface: 'General',
     settings_main_player: 'Player',
     settings_main_parser: 'Parser',
     settings_main_torrserver: 'TorrServer',
@@ -820,9 +821,7 @@ export default {
     settings_rest_cache_only_descr: 'Setările de bază vor fi păstrate',
     settings_rest_cache_all: 'Cache și Date',
     settings_rest_cache_all_descr: 'Toate setările și datele vor fi șterse',
-    settings_rest_cache_calculate: 'Câtă memorie a rămas',
 
-    title_left:'Rămas',
 
 
     title_parental_control: 'Control parental',

@@ -51,13 +51,14 @@ export default {
     settings_interface_background_use: 'Паказваць фон',
     settings_interface_background_type: 'Тып фону',
     settings_interface_performance: 'Хуткадзейнасць',
+    settings_interface_general: 'Агульныя',
     settings_interface_animation: 'Анімацыя',
     settings_interface_animation_descr: 'Анімацыя картак і кантэнту',
     settings_interface_view_card: 'Тып прагляду картак',
     settings_interface_view_card_descr: 'Па меры скралінга стужкі карткі будуць падгружацца паступова або загружацца ўсё',
     settings_interface_lang: 'Мова інтэрфейсу',
 
-    settings_main_interface: 'Інтэрфейс',
+    settings_main_interface: 'Асноўныя',
     settings_main_player: 'Плэер',
     settings_main_parser: 'Парсер',
     settings_main_torrserver: 'TorrServer',
@@ -834,9 +835,7 @@ export default {
     settings_rest_cache_only_descr: 'Асноўныя налады застануцца',
     settings_rest_cache_all: 'Кеш і дадзеныя',
     settings_rest_cache_all_descr: 'Будуць ачышчаныя ўсе налады і дадзеныя',
-    settings_rest_cache_calculate: 'Колькі засталося памяці',
 
-    title_left:'Засталося',
 
 
     title_parental_control: 'Кантроль бацькіў',

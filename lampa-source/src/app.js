@@ -64,7 +64,6 @@ import HoverSwitcher from './core/switcher'
 import Task from './core/loading'
 import App from './interaction/app'
 import LoadingProgress from './interaction/loading_progress'
-import StorageMenager from './interaction/storage_manager'
 import Markers from './core/markers'
 import RemoteHelper from './interaction/remote_helper'
 import DataBase from './interaction/database'
@@ -282,7 +281,6 @@ function initClass(){
         Torrent,
         Torserver,
         Bell,
-        StorageMenager,
         RemoteHelper,
         Network: new Reguest(),
         Maker,
