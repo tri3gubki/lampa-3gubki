@@ -199,11 +199,15 @@ if(!window.localStorage.getItem('rest_more_v23')){
 
 // v24: tmdb_lang скрыт из UI, привязан к языку интерфейса (Storage.language).
 // poster_size форсим 'w500' (высокое разрешение, UI скрыт).
-if(!window.localStorage.getItem('tmdb_synced_v24')){
-    let lang = (window.localStorage.getItem('language') || '"ru"').replace(/"/g,'')
-    window.localStorage.setItem('tmdb_lang', '"'+lang+'"')
-    window.localStorage.setItem('poster_size', '"w500"')
-    window.localStorage.setItem('tmdb_synced_v24','1')
+// ВАЖНО: Lampa Storage хранит строки в localStorage БЕЗ обёртки кавычками
+// (JSON.parse делается только для значений начинающихся на [ или {).
+// Поэтому записываем без кавычек.
+if(!window.localStorage.getItem('tmdb_synced_v25')){
+    let lang = (window.localStorage.getItem('language') || 'ru').replace(/^"|"$/g,'')
+    window.localStorage.setItem('tmdb_lang', lang)
+    window.localStorage.setItem('poster_size', 'w500')
+    window.localStorage.setItem('tmdb_synced_v25','1')
+    window.localStorage.removeItem('tmdb_synced_v24') // флаг от битой v24
 }
 
 /**
