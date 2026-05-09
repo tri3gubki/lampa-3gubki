@@ -18,13 +18,14 @@
     }
 
     &__content{
-        // Компактное окно прижатое к правому краю. Ширина и высота
-        // подстраиваются под контент (fit-content) — короткое меню
-        // = короткое окно, длинное = до max-height 80vh со скроллом.
+        // Компактное окно прижатое к правому краю под верхним head bar.
+        // Ширина и высота по контенту (fit-content) — короткое меню =
+        // короткое окно, длинное = до max-height 85vh со внутренним
+        // скроллом.
         position: fixed;
-        top: 50%;
+        top: 4em;
         right: $offset;
-        transform: translate3d(calc(100% + #{$offset}), -50%, 0);
+        transform: translate3d(calc(100% + #{$offset}), 0, 0);
         transition: transform $speed;
         background: #262829;
         border-radius: 1em;
@@ -32,7 +33,7 @@
         min-width: 22em;
         max-width: 40%;
         height: fit-content;
-        max-height: 80vh;
+        max-height: calc(100vh - 5em);
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -69,7 +70,6 @@
 
     &__body{
         display: flex;
-        align-items: flex-start;
         min-height: 0;
 
         @media screen and (max-width: $media_xm) {
@@ -79,7 +79,6 @@
 
         > * {
             width: 100%;
-            height: auto;
         }
     }
 
@@ -290,13 +289,7 @@ body.settings--open{
             display: block;
         }
         &__content{
-            @media screen and (min-width: $media_xm) {
-                transform: translate3d(0, -50%, 0);
-            }
-
-            @media screen and (max-width: $media_xm) {
-                transform: translate3d(0, 0, 0);
-            }
+            transform: translate3d(0, 0, 0);
         }
     }
 }
