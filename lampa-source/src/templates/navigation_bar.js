@@ -25,7 +25,7 @@ let html = `<div class="navigation-bar">
             <div class="navigation-bar__icon">
                 <svg><use xlink:href="#sprite-settings"></use></svg>
             </div>
-            <div class="navigation-bar__label">#{menu_settings}</div>
+            <div class="navigation-bar__label">#{title_settings}</div>
         </div>
     </div>
 </div>`
