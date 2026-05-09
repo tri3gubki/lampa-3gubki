@@ -1,3 +1,4 @@
+import TV from './player/iptv'
 import Video from './player/video'
 import Panel from './player/panel'
 import Info from './player/info'
@@ -17,7 +18,6 @@ import Noty from '../interaction/noty'
 import Lang from '../core/lang'
 import Arrays from '../utils/arrays'
 import Background from './background'
-import TV from './player/iptv' 
 import Footer from './player/footer'
 import Segments from './player/segments'
 import ExternalPlayer from '../core/externalPlayer.js'
@@ -55,7 +55,6 @@ function init(){
     Video.init()
     Info.init()
     Footer.init()
-    TV.init()
 
     html = Template.get('player')
     html.append(Video.render())
@@ -400,20 +399,6 @@ function init(){
             }
         }
     })
-
-    TV.listener.follow('play',(data)=>{
-        locked(data.channel, ()=>{
-            Video.destroy()
-
-            console.log('Player','url:',data.channel.url)
-
-            Video.url(data.channel.url)
-
-            Info.set('name', '')
-
-            Controller.toggle('player_tv')
-        })
-    })
 }
 
 /**
@@ -526,7 +511,6 @@ function destroy(){
     html.removeClass('player--panel-visible')
     html.removeClass('player--loading')
 
-    TV.destroy()
 
     Video.destroy()
 
@@ -1051,7 +1035,7 @@ function iptv(data){
 
             html.toggleClass('iptv',true)
 
-            TV.start(data)
+            // TV.start removed (IPTV)
 
             Video.size(Storage.get('player_size','default'))
 
@@ -1200,7 +1184,6 @@ export default {
     callback: onBack,
     opened,
     iptv,
-    programReady: TV.programReady,
     close: backward,
     getUrlQuality,
     loading,

@@ -1,3 +1,4 @@
+import TV from './iptv'
 import Template from '../template'
 import Subscribe from '../../utils/subscribe'
 import Controller from '../../core/controller'
@@ -10,7 +11,6 @@ import Lang from '../../core/lang'
 import Utils from '../../utils/utils'
 import DeviceInput from '../device_input'
 import Video from './video'
-import TV from './iptv'
 import Footer from './footer'
 import Playlist from './playlist'
 import Segments from './segments'
@@ -444,9 +444,6 @@ function init(){
             })
         }
     })
-
-    TV.listener.follow('channel', channel)
-    TV.listener.follow('draw-program', program)
 
     Footer.listener.follow('open',()=>{
         html.addClass('panel--footer-open')
