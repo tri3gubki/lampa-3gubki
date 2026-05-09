@@ -47,7 +47,7 @@ class Tracker {
      * @returns {number}
      */
     profile(){
-        return '' ? Permit.account.profile.id : 0
+        return 0
     }
 
     /**

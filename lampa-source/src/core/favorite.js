@@ -1,7 +1,6 @@
 import Arrays from '../utils/arrays'
 import Storage from './storage/storage'
 import Subscribe from '../utils/subscribe'
-import Account from './account/account'
 import ContentRows from './content_rows'
 import Lang from './lang'
 import Utils from '../utils/utils'
@@ -56,46 +55,41 @@ function save(){
  * @param {Object} card 
  */
 function add(where, card, limit){
-    if(false){
+    let find = data[where].find(id=>id == card.id)
+
+    if(!find){
+        Arrays.insert(data[where],0,card.id)
+
         listener.send('add', {where, card})
+
+        if(!search(card.id)) data.card.push(Utils.clearCard(Arrays.clone(card)))
+
+        if(limit){
+            let excess = data[where].slice(limit)
+
+            for(let i = excess.length - 1; i >= 0; i--){
+                remove(where, {id: excess[i]})
+            }
+        }
+
+        save()
     }
     else{
-        let find = data[where].find(id=>id == card.id)
+        Arrays.remove(data[where],card.id)
+        Arrays.insert(data[where],0,card.id)
 
-        if(!find){
-            Arrays.insert(data[where],0,card.id) 
+        save()
 
-            listener.send('add', {where, card})
-
-            if(!search(card.id)) data.card.push(Utils.clearCard(Arrays.clone(card)))
-
-            if(limit){
-                let excess = data[where].slice(limit)
-
-                for(let i = excess.length - 1; i >= 0; i--){
-                    remove(where, {id: excess[i]})
-                }
-            } 
-
-            save()
-        }
-        else{
-            Arrays.remove(data[where],card.id)
-            Arrays.insert(data[where],0,card.id) 
-
-            save()
-
-            listener.send('added', {where, card})
-        }
-
-        Lampa.Listener.send('state:changed', {
-            target: 'favorite',
-            reason: 'update',
-            method: !find ? 'add' : 'added', 
-            type: where, 
-            card
-        })
+        listener.send('added', {where, card})
     }
+
+    Lampa.Listener.send('state:changed', {
+        target: 'favorite',
+        reason: 'update',
+        method: !find ? 'add' : 'added',
+        type: where,
+        card
+    })
 }
 
 /**
@@ -104,34 +98,29 @@ function add(where, card, limit){
  * @param {Object} card 
  */
 function remove(where, card){
-    if(false){
-        listener.send('remove', {where, card, method: 'id'})
-    }
-    else{
-        Arrays.remove(data[where], card.id)
+    Arrays.remove(data[where], card.id)
 
-        listener.send('remove', {where, card, method: 'id'})
+    listener.send('remove', {where, card, method: 'id'})
 
-        for(let i = data.card.length - 1; i >= 0; i--){
-            let element = data.card[i]
+    for(let i = data.card.length - 1; i >= 0; i--){
+        let element = data.card[i]
 
-            if(!check(element).any){
-                Arrays.remove(data.card, element)
+        if(!check(element).any){
+            Arrays.remove(data.card, element)
 
-                listener.send('remove', {where, card: element, method: 'card'})
-            } 
+            listener.send('remove', {where, card: element, method: 'card'})
         }
-
-        save()
-
-        Lampa.Listener.send('state:changed', {
-            target: 'favorite',
-            reason: 'update',
-            method: 'remove',
-            type: where, 
-            card
-        })
     }
+
+    save()
+
+    Lampa.Listener.send('state:changed', {
+        target: 'favorite',
+        reason: 'update',
+        method: 'remove',
+        type: where,
+        card
+    })
 }
 
 /**
@@ -214,20 +203,7 @@ function checkAnyNotHistory(status){
  * @returns {Object}
  */
 function cloud(card){
-    if(false){
-        let result = {
-            any: false
-        }
-
-        category.forEach(a=>{
-            result[a] = Boolean(Account.Bookmarks.find({type: a, id: card.id}))
-
-            if(result[a]) result.any = true
-        })
-
-        return result
-    }
-    else return check(card)
+    return check(card)
 }
 
 /**
@@ -236,23 +212,18 @@ function cloud(card){
  * @returns Object
  */
 function get(params){
-    if(false){
-        return Account.Bookmarks.get(params)
-    }
-    else{
-        let result = []
-        let ids    = data[params.type]
+    let result = []
+    let ids    = data[params.type]
 
-        ids.forEach(id => {
-            for (let i = 0; i < data.card.length; i++) {
-                const card = data.card[i];
-                
-                if(card.id == id) result.push(card)
-            }
-        })
+    ids.forEach(id => {
+        for (let i = 0; i < data.card.length; i++) {
+            const card = data.card[i]
 
-        return result
-    }
+            if(card.id == id) result.push(card)
+        }
+    })
+
+    return result
 }
 
 /**
@@ -261,17 +232,12 @@ function get(params){
  * @param {Object} card 
  */
 function clear(where, card){
-    if(false){
-        Account.Bookmarks.clear(where)
-    }
+    if(card) remove(where, card)
     else{
-        if(card) remove(where, card)
-        else{
-            for(let i = data[where].length - 1; i >= 0; i--){
-                let card = search(data[where][i])
-        
-                if(card) remove(where, card)
-            }
+        for(let i = data[where].length - 1; i >= 0; i--){
+            let card = search(data[where][i])
+
+            if(card) remove(where, card)
         }
     }
 }

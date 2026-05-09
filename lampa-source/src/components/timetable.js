@@ -23,7 +23,6 @@ function component(object){
     
     
     this.create = function(){
-        if(false) cards = Account.Bookmarks.all()
 
         cards.forEach(card=>{
             cards_map[card.id] = card
