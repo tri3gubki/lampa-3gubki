@@ -144,23 +144,6 @@ body.true--mobile .player-info{
     }
 }
 
-.player.iptv .player-info{
-    &__name{
-        display: none;
-    }
-    &__line{
-        position: relative;
-    }
-    &__time{
-        position: absolute;
-        top: -0.15em;
-        right: 0;
-    }
-    &__values{
-        margin-top: 0;
-    }
-}
-
 .player.player--loading{
     .player-info__values{
         display: none;
