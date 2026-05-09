@@ -80,20 +80,16 @@ function init(){
         return s + e
     }
 
-    function email(){
-        return Storage.get('account','{}').email || ''
-    }
-
     TMDB.image = function(url){
-        let base  = Utils.protocol() + 'image.tmdb.org/' + url
+        let base = Utils.protocol() + 'image.tmdb.org/' + url
 
-        return Utils.addUrlComponent(filter(Storage.field('proxy_tmdb') ? Utils.protocol() + IMG.current() + url : base), 'email=' + encodeURIComponent(email()))
+        return filter(Storage.field('proxy_tmdb') ? Utils.protocol() + IMG.current() + url : base)
     }
 
     TMDB.api = function(url){
-        let base  = Utils.protocol() + 'api.themoviedb.org/3/' + url
+        let base = Utils.protocol() + 'api.themoviedb.org/3/' + url
 
-        return Utils.addUrlComponent(filter(Storage.field('proxy_tmdb') ? Utils.protocol() + tmdb_proxy.path_api + url : base), 'email=' + encodeURIComponent(email()))
+        return filter(Storage.field('proxy_tmdb') ? Utils.protocol() + tmdb_proxy.path_api + url : base)
     }
 
     TMDB.broken = function(url){

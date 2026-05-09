@@ -52,7 +52,6 @@ import Loading from './interaction/loading'
 import Search from './interaction/search/global'
 import DeviceInput from './interaction/device_input'
 import AppWorker from './utils/worker'
-import Theme from './core/theme'
 import DB from './utils/db'
 import NavigationBar from './interaction/navigation_bar'
 import Endless from './interaction/endless'
@@ -384,10 +383,6 @@ function startApp(){
 
     Parser.init()
     LoadingProgress.status('Parser init')
-
-
-    Theme.init()
-    LoadingProgress.status('Theme init')
 
 
     NavigationBar.init()

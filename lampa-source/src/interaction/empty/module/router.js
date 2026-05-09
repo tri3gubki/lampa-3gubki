@@ -13,12 +13,6 @@ export default {
 
         let params = this.params.empty
 
-        if(params.router == 'subscribe'){
-            params.title  = Lang.translate('empty_subscribes_title')
-            params.descr  = Lang.translate('empty_subscribes_text')
-            params.icon   = Template.string('icon_empty_subscribe')
-        }
-
         if(params.router == 'bookmarks'){
             params.title  = Lang.translate('empty_bookmark_title')
             params.descr  = Lang.translate('empty_bookmark_text')

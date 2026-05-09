@@ -5,7 +5,6 @@ import wrap from '../templates/wrap'
 import menu from '../templates/menu'
 import activitys from '../templates/activitys'
 import activity from '../templates/activity'
-import activity_wait_refresh from '../templates/activity_wait_refresh'
 import scroll from '../templates/scroll'
 import settings from '../templates/settings'
 import settings_main from '../templates/settings/main'
@@ -15,7 +14,6 @@ import settings_server from '../templates/settings/server'
 import settings_player from '../templates/settings/player'
 import settings_more from '../templates/settings/more'
 import settings_tmdb from '../templates/settings/tmdb'
-import settings_account from '../templates/settings/account'
 import items_line from '../templates/items/line'
 import card from '../templates/card'
 import card_parser from '../templates/card_parser'
@@ -23,8 +21,6 @@ import card_watched from '../templates/card_watched'
 import card_episode from '../templates/card_episode'
 import full_start_new from '../templates/full/start_new'
 import full_descr from '../templates/full/descr'
-import full_person from '../templates/full/person'
-import full_review from '../templates/full/review'
 import full_episode from '../templates/full/episode'
 import player from '../templates/player'
 import player_panel from '../templates/player/panel'
@@ -42,9 +38,6 @@ import settings_input from '../templates/settings/input'
 import modal from '../templates/modal'
 import company from '../templates/company'
 import modal_loading from '../templates/modal_loading'
-import modal_pending from '../templates/modal_pending'
-import modal_qr from '../templates/modal_qr'
-import empty from '../templates/empty/simple'
 import empty_filter from '../templates/empty/filter'
 import torrent from '../templates/torrent/item'
 import torrent_file from '../templates/torrent/file'
@@ -54,8 +47,6 @@ import error from '../templates/error'
 import season_episode from '../templates/season/episode'
 import season_episode_rate from '../templates/season/rate'
 import season_info from '../templates/season/info'
-import torrent_noconnect from '../templates/torrent/errors/noconnect'
-import torrent_nocheck from '../templates/torrent/errors/nocheck'
 import torrent_nohash from '../templates/torrent/errors/nohash'
 import torrent_install from '../templates/torrent/install'
 import torrent_error from '../templates/torrent/error'
@@ -64,53 +55,30 @@ import search_box from '../templates/search'
 import icon_star from '../templates/icons/star'
 import icon_viewed from '../templates/icons/viewed'
 import icon_lock from '../templates/icons/lock'
-import icon_like from '../templates/icons/like'
-import icon_text from '../templates/icons/text'
 import icon_card from '../templates/icons/card'
 import icon_top from '../templates/icons/top'
 import icon_fire from '../templates/icons/fire'
-import icon_hd from '../templates/icons/hd'
-import icon_collection from '../templates/icons/collection'
 import icon_search from '../templates/icons/search'
 import icon_settings from '../templates/icons/settings'
-import icon_create_account from '../templates/icons/create_account'
-import icon_empty_subscribe from '../templates/icons/empty_subscribe'
 import icon_empty_bookmarks from '../templates/icons/empty_bookmarks'
 import icon_empty_history from '../templates/icons/empty_history'
 import icon_empty_torrents from '../templates/icons/empty_torrents'
-import icon_profile from '../templates/icons/profile'
 import icon_back from '../templates/icons/back'
 import timeline from '../templates/timeline'
 import timeline_details from '../templates/timeline_details'
-import list_empty from '../templates/list_empty'
-import plugins_catalog from "../templates/plugins_catalog";
 import lang_choice from '../templates/lang'
-import iframe from '../templates/iframe'
-import account from '../templates/account'
-import account_limited from '../templates/account_limited'
-import account_none from '../templates/account/none'
-import account_premium from '../templates/account/premium'
-import cub_premium from '../templates/cub_premium'
-import cub_premium_modal from '../templates/cub_premium_modal'
 import explorer from '../templates/explorer/main'
 import explorer_button_back from '../templates/explorer/button_back'
-import https from '../templates/https'
 import navigation_bar from '../templates/navigation_bar'
 import head_backward from '../templates/head_backward'
-import account_add_device from '../templates/account/add_device_old'
-import account_add_device_new from '../templates/account/add_device'
-import feed_item from '../templates/feed/item'
-import feed_head from '../templates/feed/head'
-import feed_episode from '../templates/feed/episode'
-import ad_bot from '../templates/ad/bot'
-import ad_video_block from '../templates/ad/video'
 import bookmarks_folder from '../templates/bookmarks_folder'
 import ai_search_animation from '../templates/ai/search_animation'
-import plugins_rules from '../templates/plugins_rule'
 import remote_helper from '../templates/remote_helper'
 import watched_history from '../templates/watched_history'
 import icons_sprite from '../templates/icons/sprite'
 import warning from '../templates/warning'
+import register from '../templates/register'
+import notice_card from '../templates/notice_card'
 
 
 let templates = {
@@ -119,7 +87,6 @@ let templates = {
     menu,
     activitys,
     activity,
-    activity_wait_refresh,
     settings,
     settings_main,
     settings_interface,
@@ -128,7 +95,6 @@ let templates = {
     settings_player,
     settings_more,
     settings_tmdb,
-    settings_account,
     scroll,
     items_line,
     card,
@@ -137,8 +103,6 @@ let templates = {
     card_episode,
     full_start_new,
     full_descr,
-    full_person,
-    full_review,
     full_episode,
     player,
     player_panel,
@@ -148,83 +112,55 @@ let templates = {
     player_footer_card,
     selectbox,
     selectbox_item,
+    selectbox_icon,
     more,
     search,
     settings_input,
     modal,
     company,
     modal_loading,
-    modal_pending,
-    modal_qr,
-    empty,
     empty_filter,
     torrent,
     torrent_file,
-    files,
-    about,
-    error,
-    torrent_noconnect,
     torrent_file_serial,
-    torrent_nocheck,
     torrent_nohash,
     torrent_install,
     torrent_error,
+    files,
+    about,
+    error,
+    season_episode,
+    season_episode_rate,
+    season_info,
     filter,
     search_box,
     icon_star,
     icon_viewed,
     icon_lock,
-    icon_like,
-    icon_text,
     icon_card,
     icon_top,
     icon_fire,
-    icon_hd,
-    icon_collection,
     icon_search,
     icon_settings,
-    icon_create_account,
-    icon_empty_subscribe,
     icon_empty_bookmarks,
     icon_empty_history,
     icon_empty_torrents,
-    icon_profile,
     icon_back,
     timeline,
     timeline_details,
-    list_empty,
-    plugins_catalog,
     lang_choice,
-    iframe,
-    account,
-    account_limited,
-    account_none,
-    account_premium,
-    cub_premium,
-    cub_premium_modal,
-    selectbox_icon,
     explorer,
     explorer_button_back,
-    https,
     navigation_bar,
     head_backward,
-    account_add_device,
-    account_add_device_new,
-    feed_item,
-    feed_head,
-    feed_episode,
-    season_episode,
-    season_episode_rate,
-    season_info,
-    ad_bot,
-    ad_video_block,
     bookmarks_folder,
     ai_search_animation,
-    plugins_rules,
     remote_helper,
     watched_history,
     icons_sprite,
-    warning
+    warning,
+    register,
+    notice_card
 }
 
 let created = {}
