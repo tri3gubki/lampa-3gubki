@@ -7,12 +7,6 @@ let html = `<div>
         </div>
         <div class="settings-folder__name">#{settings_main_interface}</div>
     </div>
-    <div class="settings-folder selector" data-component="player">
-        <div class="settings-folder__icon">
-            <img src="./img/icons/settings/player.svg" />
-        </div>
-        <div class="settings-folder__name">#{settings_main_player}</div>
-    </div>
     <div class="settings-folder selector" data-component="parser">
         <div class="settings-folder__icon">
             <img src="./img/icons/settings/parser.svg" />

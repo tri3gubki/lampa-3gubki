@@ -11,7 +11,6 @@ import settings_main from '../templates/settings/main'
 import settings_interface from '../templates/settings/interface'
 import settings_parser from '../templates/settings/parser'
 import settings_server from '../templates/settings/server'
-import settings_player from '../templates/settings/player'
 import items_line from '../templates/items/line'
 import card from '../templates/card'
 import card_parser from '../templates/card_parser'
@@ -90,7 +89,6 @@ let templates = {
     settings_interface,
     settings_parser,
     settings_server,
-    settings_player,
     scroll,
     items_line,
     card,
