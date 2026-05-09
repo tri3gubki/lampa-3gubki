@@ -635,8 +635,7 @@ export default {
 
     settings_param_player_inner: 'Lampa',
     settings_param_player_none: 'Not selected',
-    player_none_title: 'Player not selected',
-    player_none_text: 'Please choose a player in <b>Settings → Player → Player type</b>. The built-in browser player struggles with HEVC, 4K, HDR, MKV and Dolby Audio — set up an external player (VLC, Infuse, MX Player, etc.) for proper playback.',
+    player_none_text: 'Player not selected. Open Settings → Player.',
     settings_param_player_outside: 'External',
     settings_param_player_inner_tvos: 'Internal',
     settings_param_yes: 'Yes',

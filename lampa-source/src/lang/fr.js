@@ -635,8 +635,7 @@ export default {
 
     settings_param_player_inner: 'Lampa',
     settings_param_player_none: 'Non sélectionné',
-    player_none_title: 'Lecteur non sélectionné',
-    player_none_text: 'Veuillez choisir un lecteur dans <b>Paramètres → Lecteur → Type de lecteur</b>.',
+    player_none_text: 'Lecteur non sélectionné. Ouvrez Paramètres → Lecteur.',
     settings_param_player_outside: 'Externe',
     settings_param_player_inner_tvos: 'Interne',
     settings_param_yes: 'Oui',

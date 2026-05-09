@@ -635,8 +635,7 @@ export default {
 
     settings_param_player_inner: 'Lampa',
     settings_param_player_none: 'Neselectat',
-    player_none_title: 'Player neselectat',
-    player_none_text: 'Alegeți un player în <b>Setări → Player → Tip player</b>.',
+    player_none_text: 'Player neselectat. Deschideți Setări → Player.',
     settings_param_player_outside: 'Extern',
     settings_param_player_inner_tvos: 'Intern',
     settings_param_yes: 'Da',
