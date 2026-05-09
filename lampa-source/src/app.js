@@ -474,11 +474,7 @@ function startApp(){
     LoadingProgress.status('Activity init')
 
 
-    Socket.init()
-    LoadingProgress.status('Socket init')
 
-    Account.init()
-    LoadingProgress.status('Account init')
 
 
 
@@ -675,11 +671,9 @@ function loadTask(){
     })
 
     Task.queue((next)=>{
-        LoadingProgress.status('Account initialization')
 
         LoadingProgress.step(5)
 
-        Account.task(next)
     })
 
     Task.secondary(()=>{
