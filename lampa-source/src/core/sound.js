@@ -1,6 +1,5 @@
 import Storage from './storage/storage'
 import Platform from './platform'
-import Manifest from './manifest'
 
 let sounds = {}
 
@@ -71,17 +70,9 @@ function Sound(option){
 
 function init(){
     if(Platform.is('android') || Platform.is('browser') || Platform.is('apple_tv') || Platform.desktop()){
-        add('hover',{
-            url: Manifest.github_lampa + 'sound/hover.ogg'
-        })
-
-        add('enter',{
-            url: Manifest.github_lampa + 'sound/hover.ogg',
-        })
-
-        add('bell',{
-            url: Manifest.github_lampa + 'sound/bell.ogg',
-        })
+        add('hover', { url: './sound/hover.ogg' })
+        add('enter', { url: './sound/hover.ogg' })
+        add('bell',  { url: './sound/bell.ogg' })
     }
 }
 

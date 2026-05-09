@@ -191,7 +191,7 @@ export default {
     torent_nohash_do_one: 'Check if you configured Jackett correctly',
     torent_nohash_do_two: 'Private sources may not provide a link to the file',
     torent_nohash_do_three: 'Make sure Jackett can download the file too',
-    torent_nohash_do_four: 'Write to our telegram group: @lampa_group',
+    torent_nohash_do_four: 'Write to our telegram group: ',
     torent_nohash_do_five: 'Specify which movie, which distribution and, if possible, a photo of this distribution',
 
     torrent_error_text: 'Failed to connect to TorrServer. Let\'s quickly go through the list of possible problems and check everything.',
@@ -207,7 +207,7 @@ export default {
     torrent_error_info_4: 'Frequent occurrence, antivirus or firewall can block access by IP address, try disabling antivirus and firewall.',
     torrent_error_info_5: 'On any other device on the same network, open the {ip} address in a browser and check if the TorrServer web interface is available.',
     torrent_error_info_6: 'If, after all the checks, a connection error still occurs, try restarting TorrServer and the Internet adapter.',
-    torrent_error_info_7: 'If the problem persists, write to the Telegram group @lampa_group with the text (Lampa does not connect to TorrServer after all checks, the current address is {ip})',
+    torrent_error_info_7: 'If the problem persists, write to the Telegram group  with the text (Lampa does not connect to TorrServer after all checks, the current address is {ip})',
     torrent_error_start: 'Start verification',
     torrent_error_nomatrix: 'Failed to verify Matrix version',
     torrent_error_made: 'Performed',
@@ -218,7 +218,6 @@ export default {
 
     torrent_install_need: 'Requires TorrServer',
     torrent_install_text: 'TorrServer is an application that allows you to view content from torrent files online.<br><br>More detailed information on installation can be found in the Telegram groups below.',
-    torrent_install_contact: 'Telegram groups',
 
     torrent_item_bitrate: 'Bitrate',
     torrent_item_seeds: 'Seeds',
@@ -272,8 +271,6 @@ export default {
     torrent_parser_torlook_fallback_search_notification: 'Jackett parser is not available or the connection settings are incorrect. Searching Torlook...',
 
     about_text: 'The application is completely free and uses public links to get information about videos, new releases, popular movies, etc. All available information is used solely for educational purposes, the application does not use its own servers to distribute information.',
-    about_channel: 'Our channel',
-    about_group: 'Group',
     about_version: 'Version',
     about_donate: 'Donat',
 
@@ -979,7 +976,7 @@ export default {
     settings_rest_protocol_use: 'Secure connection',
     settings_rest_protocol_descr: 'Use HTTPS protocol',
     install_app_apk_title: 'How to install Lampa on Android',
-    install_app_apk_text: 'We noticed that you use MediaStationX to run Lampa on Android. We recommend installing Lampa as an APK app. This will ensure more stable operation and access to all the app\'s features. <br><br>Go to the <span class="account-modal__site">@lampa_group</span> Telegram group to download the latest APK and installation instructions.',
+    install_app_apk_text: 'We noticed that you use MediaStationX to run Lampa on Android. We recommend installing Lampa as an APK app. This will ensure more stable operation and access to all the app\'s features. <br><br>Go to the TorrServer Telegram group to download the latest APK and installation instructions.',
     install_app_apk_qr: 'Scan the QR code to download the Lampa APK',
     copy_link_buffer: 'Copy link',
 

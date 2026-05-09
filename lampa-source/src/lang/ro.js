@@ -191,7 +191,7 @@ export default {
     torent_nohash_do_one: 'Verifică dacă ai configurat corect Jackett',
     torent_nohash_do_two: 'Sursele private s-ar putea să nu ofere un link direct către fișier',
     torent_nohash_do_three: 'Asigură-te că Jackett poate descărca fișierul',
-    torent_nohash_do_four: 'Scrie pe grupul nostru de telegram: @lampa_group',
+    torent_nohash_do_four: 'Scrie pe grupul nostru de telegram: ',
     torent_nohash_do_five: 'Specifică filmul, distribuția și, dacă e posibil, o poză cu aceasta',
 
     torrent_error_text: 'Eșec la conectarea cu TorrServer. Hai să verificăm rapid lista de probleme posibile.',
@@ -207,7 +207,7 @@ export default {
     torrent_error_info_4: 'Antivirusul sau firewall-ul pot bloca accesul prin IP. Încearcă să le dezactivezi temporar.',
     torrent_error_info_5: 'Pe orice alt dispozitiv din rețea, deschide {ip} în browser și vezi dacă interfața web TorrServer este accesibilă.',
     torrent_error_info_6: 'Dacă după toate verificările eroarea persistă, restartează TorrServer și routerul.',
-    torrent_error_info_7: 'Dacă problema continuă, scrie pe grupul Telegram @lampa_group cu textul (Lampa nu se conectează la TorrServer, adresa curentă este {ip})',
+    torrent_error_info_7: 'Dacă problema continuă, scrie pe grupul Telegram  cu textul (Lampa nu se conectează la TorrServer, adresa curentă este {ip})',
     torrent_error_start: 'Începe verificarea',
     torrent_error_nomatrix: 'Eșec la verificarea versiunii Matrix',
     torrent_error_made: 'Efectuat',
@@ -218,7 +218,6 @@ export default {
 
     torrent_install_need: 'Necesită TorrServer',
     torrent_install_text: 'TorrServer este o aplicație care îți permite să vizionezi conținut din fișiere torrent online.<br><br>Detalii despre instalare găsești pe grupurile de Telegram de mai jos.',
-    torrent_install_contact: 'Grupuri Telegram',
 
     torrent_item_bitrate: 'Bitrate',
     torrent_item_seeds: 'Seeds',
@@ -272,8 +271,6 @@ export default {
     torrent_parser_torlook_fallback_search_notification: 'Parser-ul Jackett nu este disponibil sau setările sunt incorecte. Se caută pe Torlook...',
 
     about_text: 'Aplicația este complet gratuită și folosește link-uri publice pentru a obține informații despre videoclipuri, noutăți, filme populare etc. Toate informațiile sunt folosite exclusiv în scop educațional, aplicația nu folosește servere proprii pentru a distribui conținutul.',
-    about_channel: 'Canalul nostru',
-    about_group: 'Grup',
     about_version: 'Versiune',
     about_donate: 'Donații',
 

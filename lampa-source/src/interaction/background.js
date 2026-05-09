@@ -3,7 +3,6 @@ import Storage from '../core/storage/storage'
 import Arrays from '../utils/arrays'
 import Platform from '../core/platform'
 import Player from './player'
-import Manifest from '../core/manifest'
 
 let html = $(`
     <div class="background">
@@ -52,10 +51,7 @@ function init(){
         if(event.name == 'background' || event.name == 'background_type') resize()
     })
 
-    let u = Platform.any() ? Manifest.github_lampa : './'
-    if(Platform.is('orsay')){
-        u = './'
-    }
+    let u = './'
     for (let i = 1; i <= 6; i++) {
         let im = new Image()
             im.src = u + 'img/bokeh-h/'+i+'.png'

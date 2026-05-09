@@ -198,7 +198,6 @@ export default {
     torrent_error_connect: 'בעיית חיבור',
     torrent_install_need: 'דורש TorrServe',
     torrent_install_text: 'TorrServe היא אפליקציה המאפשרת לך לצפות בתוכן מקבצי טורנט באינטרנט.<br><br>מידע מפורט יותר על התקנה ניתן למצוא בקבוצות הטלגרם למטה.',
-    torrent_install_contact: 'Telegram groups',
     torrent_item_bitrate: 'קצב סיביות',
     torrent_item_seeds: 'זרעים',
     torrent_item_grabs: 'ליצרס',
@@ -247,8 +246,6 @@ export default {
     torrent_parser_no_responce: 'הקואורדינטות לא מגיבות לבקשה.',
     torrent_parser_torlook_fallback_search_notification: 'parser Jackett אינו זמין או הגדרות החיבור שגויות. חיפוש Torlook...',
     about_text: 'האפליקציה חינמית לחלוטין ומשתמשת בקישורים ציבוריים כדי לקבל מידע על סרטונים, מהדורות חדשות, סרטים פופולריים וכו. כל המידע הזמין משמש אך ורק למטרות חינוכיות, האפליקציה אינה משתמשת בשרתים שלה להפצת מידע.',
-    about_channel: 'הערוץ שלנו',
-    about_group: 'קבוצה',
     about_version: 'גרסה',
     about_donate: 'Donat',
     title_watched: 'אתה צפית.',
@@ -1045,7 +1042,7 @@ export default {
     filter_keyword_christmas: 'חג המולד',
 
     install_app_apk_title: 'כיצד להתקין את Lampa באנדרואיד',
-    install_app_apk_text: 'שמנו לב שאתה משתמש ב-MediaStationX כדי להפעיל את Lampa באנדרואיד. אנו ממליצים להתקין את Lampa כאפליקציית APK. זה יבטיח פעולה יציבה יותר וגישה לכל תכונות האפליקציה. <br><br>עבור לקבוצת הטלגרם <span class="account-modal__site">@lampa_group</span> כדי להוריד את ה-APK והוראות ההתקנה העדכניות ביותר.',
+    install_app_apk_text: 'שמנו לב שאתה משתמש ב-MediaStationX כדי להפעיל את Lampa באנדרואיד. אנו ממליצים להתקין את Lampa כאפליקציית APK. זה יבטיח פעולה יציבה יותר וגישה לכל תכונות האפליקציה. <br><br>עבור לקבוצת הטלגרם TorrServer כדי להוריד את ה-APK והוראות ההתקנה העדכניות ביותר.',
     install_app_apk_qr: 'סרוק את קוד ה-QR כדי להוריד את ה-APK של Lampa',
     copy_link_buffer: 'העתק קישור',
 

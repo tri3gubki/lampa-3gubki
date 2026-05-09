@@ -49,11 +49,11 @@ function loadStyle(){
         LoadingProgress.status('PutStyle ' + Manifest.css_version)
 
         Utils.putStyle([
-            Manifest.github_lampa + 'css/app.css?v' + Manifest.css_version
+            './css/app.css?v' + Manifest.css_version
         ],()=>{
             old_css.remove()
         },()=>{
-            
+
         })
     }
 }

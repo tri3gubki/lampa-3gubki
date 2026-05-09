@@ -556,7 +556,7 @@ function loadLang(){
         LoadingProgress.status('Loading language')
 
         $.ajax({
-            url: (location.protocol == 'file:' || Platform.desktop() ? Manifest.github_lampa : './') + 'lang/' + code + '.js',
+            url: './lang/' + code + '.js',
             dataType: 'text',
             timeout: 10000,
             success: (data)=>{

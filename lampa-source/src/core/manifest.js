@@ -1,8 +1,6 @@
 // Версия и github-fallback. CUB / mirrors / qr — выпилены.
 
 let object = {
-    author: 'Yumata',
-    github: 'https://github.com/yumata/lampa-source',
     css_version: '3.1.8',
     app_version: '3.1.8',
 }
@@ -19,12 +17,6 @@ Object.defineProperty(object, 'plugins', {
             plugins.push(plugin)
         }
     }
-})
-
-// Используется в putScriptAsync для file:// и chrome-extension://
-Object.defineProperty(object, 'github_lampa', {
-    get: ()=> 'https://yumata.github.io/lampa/',
-    set: ()=> {}
 })
 
 export default object

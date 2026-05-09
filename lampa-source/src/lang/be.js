@@ -191,7 +191,7 @@ export default {
     torent_nohash_do_one: 'Праверце ці правільна вы наладзілі Jackett',
     torent_nohash_do_two: 'Прыватныя крыніцы могуць не выдаваць спасылку на файл',
     torent_nohash_do_three: 'Пераканайцеся, што Jackett таксама можа спампаваць файл',
-    torent_nohash_do_four: 'Напісаць у нашу тэлеграм групу: @lampa_group',
+    torent_nohash_do_four: 'Напісаць у нашу тэлеграм групу: ',
     torent_nohash_do_five: 'Пакажыце які фільм, якая раздача і па магчымасці фота гэтай раздачы',
 
     torrent_error_text: 'Немагчыма падлучыцца да TorrServer. Давайце хутка пройдземся па спісе магчымых праблем і ўсё праверым.',
@@ -207,7 +207,7 @@ export default {
     torrent_error_info_4: 'Частая з\'ява, антывірус ці брандмаўэр можа блакаваць доступ па IP-адрасу, паспрабуйце адключыць антывірус і брандмаўэр.',
     torrent_error_info_5: 'На любой іншай прыладзе ў гэтай жа сетцы, адкрыйце ў браўзэры адрас {ip} і праверце, ці даступны вэб-інтэрфейс TorrServer.',
     torrent_error_info_6: 'Калі пасля ўсіх праверак усё роўна ўзнікае памылка падлучэння, паспрабуйце перазагрузіць TorrServer і інтэрнэт-адаптар.',
-    torrent_error_info_7: 'Калі праблема не ўхіленая, пішыце ў Telegram-групу @lampa_group з тэкстам (Lampa не падлучаецца да TorrServer пасля ўсіх праверак, бягучы адрас {ip})',
+    torrent_error_info_7: 'Калі праблема не ўхіленая, пішыце ў Telegram-групу  з тэкстам (Lampa не падлучаецца да TorrServer пасля ўсіх праверак, бягучы адрас {ip})',
     torrent_error_start: 'Пачаць праверку',
     torrent_error_nomatrix: 'Не атрымалася пацвердзіць версію Matrix',
     torrent_error_made: 'Выканана',
@@ -218,7 +218,6 @@ export default {
 
     torrent_install_need: 'Неабходны TorrServer',
     torrent_install_text: 'TorrServer – дадатак, якое дазваляе праглядаць кантэнт з торэнт-файлаў у анлайн рэжыме.<br><br>Больш дэталёвую інфармацыю па ўстаноўцы вы знойдзеце ў Telegram-групах, указаных ніжэй.',
-    torrent_install_contact: 'Telegram-групы',
 
     torrent_item_bitrate: 'Бітрэйт',
     torrent_item_seeds: 'Раздаюць',
@@ -272,8 +271,6 @@ export default {
     torrent_parser_torlook_fallback_search_notification: 'Парсэр Jackett не даступны або налады падлучэння не дакладныя. Ажыццяўляецца пошук у Torlook...',
 
     about_text: 'Дадатак цалкам бясплатны і выкарыстоўвае публічныя спасылкі для атрымання інфармацыі пра відэа, навінкі, папулярныя фільмы і г.д. Уся даступная інфармацыя выкарыстоўваецца выключна ў пазнавальных мэтах, прыкладанне не выкарыстоўвае свае ўласныя серверы для распаўсюджвання інфармацыі.',
-    about_channel: 'Наш канал',
-    about_group: 'Група',
     about_version: 'Версія',
     about_donate: 'Данат',
 
@@ -978,7 +975,7 @@ export default {
     settings_rest_protocol_use: 'Бяспечнае злучэнне',
     settings_rest_protocol_descr: 'Выкарыстоўваць пратакол HTTPS',
     install_app_apk_title: 'Як усталяваць Lampa на Android', 
-    install_app_apk_text: 'Мы заўважылі, што для запуску Lampa на Android вы карыстаецеся MediaStationX. Мы рэкамендуем вам усталяваць Lampa у выглядзе APK-прыкладанні. Гэта забяспечыць больш стабільную працу і доступ да ўсіх функцый прыкладання. <br><br>Перайдзіце ў групу <span class="account-modal__site">@lampa_group</span> у Тэлеграме, каб спампаваць апошнюю версію APK і інструкцыі па ўстаноўцы.', 
+    install_app_apk_text: 'Мы заўважылі, што для запуску Lampa на Android вы карыстаецеся MediaStationX. Мы рэкамендуем вам усталяваць Lampa у выглядзе APK-прыкладанні. Гэта забяспечыць больш стабільную працу і доступ да ўсіх функцый прыкладання. <br><br>Перайдзіце ў групу TorrServer у Тэлеграме, каб спампаваць апошнюю версію APK і інструкцыі па ўстаноўцы.', 
     install_app_apk_qr: 'Адскануйце QR-код, каб спампаваць Lampa APK', 
     copy_link_buffer: 'Скапіяваць спасылку',
 
