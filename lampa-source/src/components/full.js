@@ -2,7 +2,6 @@ import Start from '../components/full/start'
 import Description from '../components/full/descr'
 import Api from '../core/api/api'
 import Arrays from '../utils/arrays'
-import Discuss from './full/discuss'
 import Episodes from './full/episodes'
 import Timetable from '../core/timetable'
 import Lang from '../core/lang'
@@ -23,7 +22,6 @@ let components = {
     start: Start,
     description: Description,
     cards: Cards,
-    discuss: Discuss,
     episodes: Episodes
 }
 
@@ -132,14 +130,6 @@ function component(object){
 
                 // Блоки «Режиссёр» и «Актёры» удалены вместе со страницей
                 // actor-карточки.
-
-                // Создаем отзывы
-                if(!adult_block && data.discuss) this.rows.push(['discuss', {
-                    ...data.discuss,
-                    movie: data.movie,
-                    title: Lang.translate('title_comments'),
-                    results: data.discuss.result || []
-                }])
 
                 // Создаем коллекцию
                 if(!adult_block && data.collection && data.collection.results && data.collection.results.length){

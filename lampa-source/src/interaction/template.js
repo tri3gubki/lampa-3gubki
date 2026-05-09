@@ -105,7 +105,6 @@ import feed_episode from '../templates/feed/episode'
 import register from '../templates/register'
 import ad_bot from '../templates/ad/bot'
 import ad_video_block from '../templates/ad/video'
-import discuss_rules from '../templates/discuss_rules'
 import bookmarks_folder from '../templates/bookmarks_folder'
 import ai_search_animation from '../templates/ai/search_animation'
 import plugins_rules from '../templates/plugins_rule'
@@ -221,7 +220,6 @@ let templates = {
     season_info,
     ad_bot,
     ad_video_block,
-    discuss_rules,
     bookmarks_folder,
     ai_search_animation,
     plugins_rules,

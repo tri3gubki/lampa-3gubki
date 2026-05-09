@@ -12,7 +12,6 @@ import company from '../components/company'
 import bookmarks from '../components/bookmarks'
 import episodes from '../components/episodes'
 import ai_facts from '../components/facts'
-import discuss from '../components/discuss'
 
 let component = {
     main,
@@ -29,7 +28,6 @@ let component = {
     bookmarks,
     episodes,
     ai_facts,
-    discuss
 }
 
 /**
