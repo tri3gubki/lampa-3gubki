@@ -20,7 +20,7 @@ function init(){
             else if(action == 'main'){
                 Activity.push({
                     url: '',
-                    title: Lang.translate('title_main') + ' - ' + Storage.field('source').toUpperCase(),
+                    title: Lang.translate('title_main'),
                     component: 'main',
                     source: Storage.field('source')
                 })

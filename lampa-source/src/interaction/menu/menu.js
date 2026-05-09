@@ -186,7 +186,7 @@ function ready(){
         if(action == 'movie' || action == 'tv'){
             Router.call('category', {
                 url: action,
-                title: Lang.translate(action == 'movie' ? 'menu_movies' : 'menu_tv') + ' - ' + Storage.field('source').toUpperCase(),
+                title: Lang.translate(action == 'movie' ? 'menu_movies' : 'menu_tv'),
                 source: Storage.field('source')
             })
         }
@@ -194,14 +194,14 @@ function ready(){
         if(action == 'cartoon'){
             Router.call('category', {
                 url: 'movie',
-                title: Lang.translate('menu_multmovie') + ' - ' + Storage.field('source').toUpperCase(),
+                title: Lang.translate('menu_multmovie'),
                 genres: 16
             })
         }
 
         if(prepared(action,['main'])){
             Router.call('main', {
-                title: Lang.translate('title_main') + ' - ' + Storage.field('source').toUpperCase()
+                title: Lang.translate('title_main')
             })
         }
 
@@ -271,7 +271,7 @@ function catalog(){
 
                 Router.call(tmdb ? 'category' : 'category_full', {
                     url: 'movie',
-                    title: (a.title || Lang.translate('title_catalog')) + ' - ' + Storage.field('source').toUpperCase(),
+                    title: (a.title || Lang.translate('title_catalog')),
                     genres: a.id,
                     id: a.id
                 })
