@@ -346,11 +346,11 @@ select('navigation_type', {
     'touch': '#{settings_param_navigation_touch}',
 }, 'controll')
 
+// poster_size зашит на 'w500' (UI скрыт). Сам ключ в Storage оставлен —
+// его читают core/api/sources/tmdb.js и components/full/start.js.
 select('poster_size',{
-    'w200': '#{settings_param_poster_quality_low}',
-    'w300': '#{settings_param_poster_quality_average}',
     'w500': '#{settings_param_poster_quality_high}'
-},'w300')
+},'w500')
 
 select('parser_torrent_type',{
     'jackett': 'Jackett',

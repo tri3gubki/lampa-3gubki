@@ -197,6 +197,15 @@ if(!window.localStorage.getItem('rest_more_v23')){
     window.localStorage.setItem('rest_more_v23','1')
 }
 
+// v24: tmdb_lang скрыт из UI, привязан к языку интерфейса (Storage.language).
+// poster_size форсим 'w500' (высокое разрешение, UI скрыт).
+if(!window.localStorage.getItem('tmdb_synced_v24')){
+    let lang = (window.localStorage.getItem('language') || '"ru"').replace(/"/g,'')
+    window.localStorage.setItem('tmdb_lang', '"'+lang+'"')
+    window.localStorage.setItem('poster_size', '"w500"')
+    window.localStorage.setItem('tmdb_synced_v24','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */
@@ -401,6 +410,12 @@ function startApp(){
 
     Storage.init()
     LoadingProgress.status('Storage init')
+
+    // tmdb_lang всегда == language (язык интерфейса). UI-настройки tmdb_lang
+    // больше нет — синхронизация автоматическая.
+    Storage.listener.follow('change', (e)=>{
+        if(e.name === 'language') Storage.set('tmdb_lang', e.value)
+    })
 
     Timeline.init()
     LoadingProgress.status('Timeline init')
