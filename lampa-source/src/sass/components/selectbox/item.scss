@@ -1,5 +1,7 @@
 .selectbox-item{
     padding: 1.5em 2em;
+    margin: 0 0.5em;
+    border-radius: 0.6em;
     position: relative;
     will-change: transform;
 
@@ -110,6 +112,16 @@
         }
     }
     &.focus{
-        background-color: #353535;
+        background-color: #fff;
+        color: #000;
+
+        .selectbox-item__subtitle{
+            opacity: 0.8;
+        }
+
+        &::after{
+            border-right-color: #000 !important;
+            border-bottom-color: #000 !important;
+        }
     }
 }
