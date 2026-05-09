@@ -254,6 +254,12 @@ function ready(){
  * @returns {void}
  */
 function catalog(){
+    // Запомнить controller, который был активен в момент открытия каталога
+    // (head — когда нажали кнопку 'Каталог' в верхней панели; menu — когда
+    // открыли через левое меню). При закрытии Select возвращаем фокус туда.
+    let active = Controller.enabled()
+    let prev   = active && active.name && active.name !== 'select' ? active.name : 'menu'
+
     Api.menu({
         source: Storage.field('source')
     },(menu)=>{
@@ -262,7 +268,7 @@ function catalog(){
             items: menu,
             onSelect: (a)=>{
                 let tmdb = (Storage.field('source') == 'tmdb' || Storage.field('source') == 'cub')
-                
+
                 Router.call(tmdb ? 'category' : 'category_full', {
                     url: 'movie',
                     title: (a.title || Lang.translate('title_catalog')) + ' - ' + Storage.field('source').toUpperCase(),
@@ -270,7 +276,9 @@ function catalog(){
                     id: a.id
                 })
             },
-            onBack: open
+            onBack: ()=>{
+                Controller.toggle(prev)
+            }
         })
     })
 }
