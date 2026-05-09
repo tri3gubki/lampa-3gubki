@@ -18,8 +18,9 @@
     }
 
     &__content{
-        // Компактное окно прижатое к правому краю. Ширина подстраивается
-        // под контент (fit-content), но ограничена min/max. Высота — до 80vh.
+        // Компактное окно прижатое к правому краю. Ширина и высота
+        // подстраиваются под контент (fit-content) — короткое меню
+        // = короткое окно, длинное = до max-height 80vh со скроллом.
         position: fixed;
         top: 50%;
         right: $offset;
@@ -30,6 +31,7 @@
         width: fit-content;
         min-width: 22em;
         max-width: 40%;
+        height: fit-content;
         max-height: 80vh;
         display: flex;
         flex-direction: column;
