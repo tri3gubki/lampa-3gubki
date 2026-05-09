@@ -47,7 +47,10 @@
         overflow: hidden;
 
         .scroll__content{
-            padding: 0 $offset;
+            // Вертикальный padding 0.7em — запас под белую focus-обводку
+            // карточки (.card.focus .card__view::after { top: -0.5em }).
+            // Без него overflow:hidden обрезает верхнюю/нижнюю часть рамки.
+            padding: 0.7em $offset;
         }
 
         &.scroll--mask{
@@ -56,10 +59,10 @@
             mask-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%);
 
             .scroll__content{
-                padding: 0 2.5em;
+                padding: 0.7em 2.5em;
 
                 @media screen and (max-width: $media_xs) {
-                    padding: 0 $offset;
+                    padding: 0.7em $offset;
                 }
             }
         }
