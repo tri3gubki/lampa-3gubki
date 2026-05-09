@@ -115,8 +115,6 @@ export default {
 
     settings_player_type: 'Type de lecteur',
     settings_player_type_descr: 'Choisir le lecteur par défaut',
-    settings_player_iptv_type: 'Lecteur pour l\'IPTV',
-    settings_player_iptv_type_descr: 'Lecteur utilisé pour les chaînes IPTV',
     settings_player_reset: 'Réinitialiser le lecteur',
     settings_player_reset_descr: 'Réinitialise le lecteur Android sélectionné dans l\'application',
     settings_player_path: 'Chemin du lecteur',
@@ -906,8 +904,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'Lien vers le serveur Prowlarr',
     settings_parser_prowlarr_key_descr: 'Clé API trouvée dans les paramètres Prowlarr',
-    settings_player_torrent_type: 'Lecteur pour torrents',
-    settings_player_torrent_type_descr: 'Lecteur utilisé pour les fichiers torrent',
 
     player_normalization_step_none: 'Aucun',
 

@@ -105,8 +105,6 @@ export default {
     settings_parser_timeout_descr: 'Час у секундах, який очікуватиметься відповіді від сервера',
     settings_player_type: 'Тип плеєра',
     settings_player_type_descr: 'Яким плеєром відтворювати',
-    settings_player_iptv_type: 'Тип плеєра для IPTV',
-    settings_player_iptv_type_descr: 'Яким плеєром відтворювати IPTV канали',
     settings_player_reset: 'Скинути програвач за замовчуванням',
     settings_player_reset_descr: 'Скидає вибраний Android плеєр у програмі',
     settings_player_path: 'Шлях до плеєра',
@@ -867,8 +865,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'Вкажіть посилання на сервер Prowlarr',
     settings_parser_prowlarr_key_descr: 'Знаходиться у вкладці налаштувань Prowlarr у категорії основне',
-    settings_player_torrent_type: 'Тип плеєра для торентів',
-    settings_player_torrent_type_descr: 'Яким плеєром відтворювати торренти',
 
     player_normalization_step_none: 'Нульова',
 

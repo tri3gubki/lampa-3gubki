@@ -115,8 +115,6 @@ export default {
 
     settings_player_type: 'Tip player',
     settings_player_type_descr: 'Ce player să fie folosit',
-    settings_player_iptv_type: 'Tip player pentru IPTV',
-    settings_player_iptv_type_descr: 'Ce player să fie folosit pentru canale IPTV',
     settings_player_reset: 'Resetează player implicit',
     settings_player_reset_descr: 'Resetează player-ul Android selectat în aplicație',
     settings_player_path: 'Cale către player',
@@ -906,8 +904,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'Introdu link-ul către serverul Prowlarr',
     settings_parser_prowlarr_key_descr: 'Se află în setările Prowlarr la categoria General',
-    settings_player_torrent_type: 'Tip player pentru torrente',
-    settings_player_torrent_type_descr: 'Ce player să ruleze torrentele',
 
     player_normalization_step_none: 'Zero',
 

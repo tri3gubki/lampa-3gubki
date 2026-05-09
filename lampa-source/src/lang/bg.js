@@ -114,8 +114,6 @@ export default {
 
     settings_player_type: 'Тип плейър',
     settings_player_type_descr: 'Кой плейър да се използва',
-    settings_player_iptv_type: 'Тип плеър за IPTV',
-    settings_player_iptv_type_descr: 'Кой плейър да се използва за IPTV канали',
     settings_player_reset: 'Нулирай плейъра по подразбиране',
     settings_player_reset_descr: 'Нулира избрания Android плейър в приложението',
     settings_player_path: 'Път до плейъра',
@@ -907,8 +905,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'Предоставете връзка към сървъра Prowlarr',
     settings_parser_prowlarr_key_descr: 'Намира се в раздела с настройки на Prowlarr в общата категория',
-    settings_player_torrent_type: 'Тип плеър за торенти',
-    settings_player_torrent_type_descr: 'На кой плеър да пускате торенти',
 
     player_normalization_step_none: 'Нула',
 

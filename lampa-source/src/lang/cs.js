@@ -139,10 +139,6 @@ export default {
 
     settings_player_type: "Typ přehrávače",
     settings_player_type_descr: "Jakým přehrávačem přehrávat video",
-    settings_player_iptv_type: "Typ přehrávače pro IPTV",
-    settings_player_iptv_type_descr: "Jakým přehrávačem přehrávat IPTV kanály",
-    settings_player_torrent_type: "Typ přehrávače pro torrenty",
-    settings_player_torrent_type_descr: "Jakým přehrávačem přehrávat torrenty",
     settings_player_reset: "Resetovat přehrávač na výchozí",
     settings_player_reset_descr: "Resetuje vybraný Android přehrávač v aplikaci",
     settings_player_path: "Cesta k přehrávači",

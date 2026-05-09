@@ -75,8 +75,6 @@ function init(){
         },3000)
     })
 
-    if(!window.localStorage.getItem('player_torrent')) Storage.set('player_torrent', Storage.field('player'))
-
     /** Следим за обновлением времени */
     Video.listener.follow('timeupdate',(e)=>{
         Panel.update('time',Utils.secondsToTime(e.current | 0,true))
@@ -757,7 +755,9 @@ function showInnerPlayerDisclaimer(call){
 }
 
 function start(data, need, inner){
-    let player_need = 'player' + (need ? '_' + need : '')
+    // Один селект 'player' для всего контента — раздельных
+    // player_torrent / player_iptv больше нет.
+    let player_need = 'player'
     let launchInner = ()=>{
         if(needInnerPlayerDisclaimer(player_need)) showInnerPlayerDisclaimer(inner)
         inner()

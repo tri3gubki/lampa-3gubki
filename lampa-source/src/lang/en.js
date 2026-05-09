@@ -115,8 +115,6 @@ export default {
 
     settings_player_type: 'Player type',
     settings_player_type_descr: 'Which player to play',
-    settings_player_iptv_type: 'Player type for IPTV',
-    settings_player_iptv_type_descr: 'Which player to play IPTV channels',
     settings_player_reset: 'Reset default player',
     settings_player_reset_descr: 'Resets the selected Android player in the application',
     settings_player_path: 'Path to the player',
@@ -906,8 +904,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'Provide a link to the Prowlarr server',
     settings_parser_prowlarr_key_descr: 'Located in the Prowlarr settings tab in the general category',
-    settings_player_torrent_type: 'Player type for torrents',
-    settings_player_torrent_type_descr: 'Which player to play torrents',
 
     player_normalization_step_none: 'Zero',
 

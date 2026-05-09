@@ -121,6 +121,28 @@ Arrays.extend(window.lampa_settings,{
     fix_widget:            window.localStorage.getItem('fix_widget') ? true : false,
 })
 
+// Миграция плеера v17 (2026-05-09):
+// - убраны раздельные player_torrent / player_iptv (один глобальный 'player')
+// - дефолт 'inner' заменён на 'none' для browser / iOS / macOS / desktop / android
+// Существующие устройства имеют 'inner'/'android' в Storage от старых
+// версий; если юзер не делал явного выбора — сбрасываем на 'none' раз.
+if(!window.localStorage.getItem('player_migrated_v17')){
+    window.localStorage.removeItem('player_torrent')
+    window.localStorage.removeItem('player_iptv')
+
+    let agent  = navigator.userAgent.toLowerCase()
+    let is_tv  = agent.indexOf('tizen') >= 0 || agent.indexOf('webos') >= 0 ||
+                 agent.indexOf('appletv') >= 0 || agent.indexOf('smarttv') >= 0 ||
+                 agent.indexOf('googletv') >= 0 || agent.indexOf('android tv') >= 0
+
+    if(!is_tv){
+        let cur = window.localStorage.getItem('player')
+        if(cur === 'inner' || cur === '"inner"') window.localStorage.removeItem('player')
+    }
+
+    window.localStorage.setItem('player_migrated_v17','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

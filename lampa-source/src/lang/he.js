@@ -101,8 +101,6 @@ export default {
     settings_parser_timeout_descr: 'זמן בשניות לחכות לתגובה מהשרת',
     settings_player_type: 'סוג שחקן',
     settings_player_type_descr: 'VOD בחר סוג נגן',
-    settings_player_iptv_type: 'IPTV סוג נגן עבור',
-    settings_player_iptv_type_descr: 'IPTV איזה נגן להפעיל בערוצי',
     settings_player_reset: 'אפס נגן ברירת מחדל',
     settings_player_reset_descr: 'מאתחל את נגן האנדרואיד הנבחר ביישום',
     settings_player_path: 'נתיב אל נגן',
@@ -805,8 +803,6 @@ export default {
 
     settings_parser_prowlarr_link_descr: 'ספק קישור לשרת Prowlarr',
     settings_parser_prowlarr_key_descr: 'ממוקם בלשונית הגדרות Prowlarr בקטגוריה הכללית',
-    settings_player_torrent_type: 'סוג נגן עבור טורנטים',
-    settings_player_torrent_type_descr: 'באיזה שחקן לשחק טורנטים',
 
     player_normalization_step_none: 'אֶפֶס',
 
