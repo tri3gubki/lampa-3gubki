@@ -707,7 +707,6 @@ Manifest.cub_mirrors.forEach((mirror)=>{
     mirrors_select[mirror] = mirror
 })
 
-select('cub_domain', mirrors_select, Manifest.cub_domain)
 
 /**
  * Добовляем триггеры

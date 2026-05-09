@@ -48,7 +48,6 @@ function translate(name, custom_code){
     }
 
     result = result.replace(/{site}/g, Manifest.cub_site)
-    result = result.replace(/{mirror}/g, Utils.protocol() + Manifest.cub_domain)
 
     return result
 }

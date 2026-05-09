@@ -627,39 +627,16 @@ function loadTask(){
         Storage.task(next)
     })
 
-    Task.queue((next)=>{
-
-        LoadingProgress.step(2)
-
-    })
-
-    Task.queue((next)=>{
-        LoadingProgress.status('Plugins initialization')
-
-        LoadingProgress.step(3)
-
-    })
-
-    Task.queue((next)=>{
-        LoadingProgress.status('Proxy initialization')
-
-        LoadingProgress.step(4)
-
-    })
-
-    Task.queue((next)=>{
-
-        LoadingProgress.step(5)
-
-    })
+    // Mirrors / Plugins / Proxy / VPN / Account тэски удалены — пустые
+    // queue-шаги превращены в no-op с немедленным next(), чтобы цепочка
+    // не зависала на 5 секунд (раньше fallback-таймер showApp вытягивал).
+    Task.queue((next)=>{ LoadingProgress.step(2); next() })
+    Task.queue((next)=>{ LoadingProgress.step(3); next() })
+    Task.queue((next)=>{ LoadingProgress.step(4); next() })
+    Task.queue((next)=>{ LoadingProgress.step(5); next() })
 
     Task.secondary(()=>{
-        setTimeout(showApp, 5000)
-    })
-
-    Task.secondary(()=>{
-        LoadingProgress.status('Loading plugins')
-
+        setTimeout(showApp, 200)
     })
 
     Task.start()

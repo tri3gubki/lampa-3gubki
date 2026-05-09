@@ -15,7 +15,6 @@ function ImageMirror(){
         'lampa.byskaz.ru/tmdb/img/'
     ]
 
-    if(false) Arrays.insert(mirrors, 0, 'imagetmdb.'+ Manifest.cub_domain+'/')
 
     mirrors.forEach(mirror=>{
         stat[mirror] = {
@@ -69,7 +68,6 @@ function init(){
         version: '1.0.6',
         description: 'Проксирование постеров и API сайта TMDB',
 
-        path_api: 'apitmdb.'+Manifest.cub_domain+'/3/',
         path_api_backup: 'lampa.byskaz.ru/tmdb/api/3/',
     }
 
