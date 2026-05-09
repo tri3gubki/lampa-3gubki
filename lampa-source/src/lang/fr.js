@@ -803,8 +803,6 @@ export default {
     title_language_short: 'Langue',
 
 
-    settings_rest_protocol_use: 'Connexion sécurisée',
-    settings_rest_protocol_descr: 'Utiliser HTTPS',
     install_app_apk_title: 'Installer Lampa sur Android',
     install_app_apk_text: 'Nous recommandons l\'installation via APK pour plus de stabilité. Instructions sur .',
     install_app_apk_qr: 'Scannez pour télécharger l\'APK',
@@ -898,8 +896,6 @@ export default {
     player_segments_skiped: 'Segment ignoré',
     no_watch_history: 'Aucun historique de visionnage',
 
-    settings_request_caching_use: 'Mise en cache des requêtes',
-    settings_request_caching_descr: 'Accélère l\'interface en réduisant l\'usage des données.',
 
     title_channels: 'Chaînes',
     title_best_of_2000: 'Années 2000 dorées',

@@ -816,8 +816,6 @@ export default {
     title_language_short: 'Мова',
 
 
-    settings_rest_protocol_use: 'Бяспечнае злучэнне',
-    settings_rest_protocol_descr: 'Выкарыстоўваць пратакол HTTPS',
     install_app_apk_title: 'Як усталяваць Lampa на Android', 
     install_app_apk_text: 'Мы заўважылі, што для запуску Lampa на Android вы карыстаецеся MediaStationX. Мы рэкамендуем вам усталяваць Lampa у выглядзе APK-прыкладанні. Гэта забяспечыць больш стабільную працу і доступ да ўсіх функцый прыкладання. <br><br>Перайдзіце ў групу TorrServer у Тэлеграме, каб спампаваць апошнюю версію APK і інструкцыі па ўстаноўцы.', 
     install_app_apk_qr: 'Адскануйце QR-код, каб спампаваць Lampa APK', 
@@ -923,8 +921,6 @@ export default {
     player_segments_skiped: 'Сегмент прапушчаны',
     no_watch_history: 'Няма гісторыі прагляду',
 
-    settings_request_caching_use: 'Кэшаванне запытаў',
-    settings_request_caching_descr: 'Захоўваць вынікі запытаў для паскарэння працы прыкладання',
 
     title_channels: 'Каналы',
     title_best_of_2000: 'Залатыя 2000-я', 

@@ -754,8 +754,6 @@ export default {
     title_language_short: '语言',
 
 
-    settings_rest_protocol_use: '安全连接',
-    settings_rest_protocol_descr: '使用HTTPS协议',
     
     install_app_apk_title: '如何在安卓设备上安装 Lampa',
     install_app_apk_text: '我们注意到您使用 MediaStationX 在安卓设备上运行 Lampa。我们建议您将 Lampa 安装为 APK 应用。这将确保更稳定的运行，并让您能够访问应用的所有功能。<br><br>前往 TorrServer Telegram 群组下载最新 APK 文件和安装说明。',
@@ -849,8 +847,6 @@ export default {
     player_segments_skiped: '片段已跳过',
     no_watch_history: '没有浏览历史记录',
 
-    settings_request_caching_use: '请求缓存',
-    settings_request_caching_descr: '缓存来自网络的请求以加快应用程序速度。',
 
     title_channels: '频道',
     title_best_of_2000: '黄金2000年代',

@@ -155,7 +155,6 @@ class Empty extends Emit{
             line('Protocol', window.location.protocol)
             line('Host', window.location.host)
             line('Platform', Platfrom.get())
-            line('Safe connection', Storage.field('protocol') == 'https' ? 'Yes' : 'No')
             line('Connection', Utils.protocol())
             line('TMDB Proxy', Storage.field('tmdb_proxy') ? 'Yes' : 'No')
             line('TMDB Proxy api',  Lampa.TMDB.api('').split('/').slice(0,3).join('/'))

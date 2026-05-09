@@ -803,8 +803,6 @@ export default {
     title_language_short: 'Език',
 
 
-    settings_rest_protocol_use: 'Сигурна връзка',
-    settings_rest_protocol_descr: 'Използвайте HTTPS протокол',
     install_app_apk_title: 'Как да инсталирате Lampa на Android',
     install_app_apk_text: 'Забелязахме, че използвате MediaStationX, за да стартирате Lampa на Android. Препоръчваме да инсталирате Lampa като APK приложение. Това ще осигури по-стабилна работа и достъп до всички функции на приложението. <br><br>Отидете в Telegram групата TorrServer, за да изтеглите най-новия APK файл и инструкции за инсталиране.',
     install_app_apk_qr: 'Сканирайте QR кода, за да изтеглите APK файла на Lampa',
@@ -899,8 +897,6 @@ export default {
     player_segments_skiped: 'Сегментът е пропуснат',
     no_watch_history: 'Няма история на сърфиране',
 
-    settings_request_caching_use: 'Кеширане на заявки',
-    settings_request_caching_descr: 'Кеширане на резултатите от заявките за по-бърз достъп при повторни заявки',
 
     title_channels: 'Канали',
     title_best_of_2000: 'Златните 2000-те',

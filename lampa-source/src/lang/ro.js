@@ -803,8 +803,6 @@ export default {
     title_language_short: 'Limbă',
 
 
-    settings_rest_protocol_use: 'Conexiune securizată',
-    settings_rest_protocol_descr: 'Folosește protocolul HTTPS',
     install_app_apk_title: 'Cum instalezi Lampa pe Android',
     install_app_apk_text: 'Am observat că folosești MediaStationX. Recomandăm instalarea versiunii APK pentru o experiență mai stabilă.',
     install_app_apk_qr: 'Scanează codul QR pentru a descărca APK-ul',
@@ -898,8 +896,6 @@ export default {
     player_segments_skiped: 'Segment sărit',
     no_watch_history: 'Niciun istoric de navigare',
 
-    settings_request_caching_use: 'Cache solicitări',
-    settings_request_caching_descr: 'Salvează cererile API pentru a optimiza viteza interfeței.',
 
     title_channels: 'Canale',
     title_best_of_2000: 'Anii 2000 de aur',

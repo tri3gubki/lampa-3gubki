@@ -83,8 +83,6 @@ export default {
     settings_rest_tmdb_example: "Například:",
     settings_rest_tmdb_api_descr: "Pro získání dat",
     settings_rest_tmdb_image_descr: "Pro získání obrázků",
-    settings_rest_protocol_use: "Bezpečné připojení",
-    settings_rest_protocol_descr: "Použít protokol HTTPS",
     settings_rest_cache_only: "Pouze cache",
     settings_rest_cache_only_descr: "Hlavní nastavení budou uložena",
     settings_rest_cache_all: "Cache a data",
@@ -905,8 +903,6 @@ export default {
     player_segments_value_user: 'Vlastní',
     player_segments_skiped: 'Segment přeskočen',
     no_watch_history: 'Žádná historie prohlížení',
-    settings_request_caching_use: 'Povolit ukládání do mezipaměti',
-    settings_request_caching_descr: 'Ukládejte odpovědi z požadavků do mezipaměti pro rychlejší načítání obsahu.',
 
     title_channels: 'Kanály',
     title_best_of_2000: 'Zlatá léta 21. století',

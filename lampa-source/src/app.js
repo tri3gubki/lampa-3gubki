@@ -189,6 +189,14 @@ if(!window.localStorage.getItem('start_page_main_v22')){
     window.localStorage.setItem('start_page_main_v22','1')
 }
 
+// v23: protocol-toggle удалён (всегда https). request_caching скрыт
+// из UI, дефолт true. Сбрасываем старые значения у тех кто менял.
+if(!window.localStorage.getItem('rest_more_v23')){
+    window.localStorage.removeItem('protocol')
+    window.localStorage.removeItem('request_caching')
+    window.localStorage.setItem('rest_more_v23','1')
+}
+
 /**
  * Делаем классы доступными в глобальной области видимости
  */

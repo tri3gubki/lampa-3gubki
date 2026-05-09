@@ -803,8 +803,6 @@ export default {
     title_language_short: 'Language',
 
 
-    settings_rest_protocol_use: 'Secure connection',
-    settings_rest_protocol_descr: 'Use HTTPS protocol',
     install_app_apk_title: 'How to install Lampa on Android',
     install_app_apk_text: 'We noticed that you use MediaStationX to run Lampa on Android. We recommend installing Lampa as an APK app. This will ensure more stable operation and access to all the app\'s features. <br><br>Go to the TorrServer Telegram group to download the latest APK and installation instructions.',
     install_app_apk_qr: 'Scan the QR code to download the Lampa APK',
@@ -899,8 +897,6 @@ export default {
     player_segments_skiped: 'Segment skipped',
     no_watch_history: 'No browsing history',
 
-    settings_request_caching_use: 'Request Caching',
-    settings_request_caching_descr: 'Cache API requests to speed up the interface and reduce data usage.',
 
     title_channels: 'Channels',
     title_best_of_2000: 'Golden 2000s',

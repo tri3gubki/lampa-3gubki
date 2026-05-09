@@ -301,7 +301,7 @@ function rewriteIfHTTPS(u){
 }
 
 function fixProtocolLink(u){
-    return rewriteIfHTTPS((localStorage.getItem('protocol') || 'https') + '://' + u.replace(/^(http:\/\/|https:\/\/)/, ''))
+    return rewriteIfHTTPS('https://' + u.replace(/^(http:\/\/|https:\/\/)/, ''))
 }
 
 function shortText(fullStr, strLen, separator){
@@ -320,9 +320,9 @@ function shortText(fullStr, strLen, separator){
 }
 
 function protocol(){
-    let prot = localStorage.getItem('protocol') || 'https'
-
-    return window.location.protocol == 'https:' ? 'https://' : prot + '://'
+    // Внешние URL всегда https (к TMDB / image.tmdb.org). Если страница
+    // открыта по https — браузер сам не позволит mixed-content от http.
+    return 'https://'
 }
 
 
