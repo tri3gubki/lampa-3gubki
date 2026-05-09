@@ -2,7 +2,6 @@ import main from '../components/main'
 import full from '../components/full'
 import category_full from '../components/category/full'
 import category from '../components/category/main'
-import actor from '../components/person'
 import favorite from '../components/favorite'
 import torrents from '../components/torrents'
 import mytorrents from '../components/mytorrents'
@@ -12,7 +11,6 @@ import timetable from '../components/timetable'
 import company from '../components/company'
 import bookmarks from '../components/bookmarks'
 import episodes from '../components/episodes'
-import myperson from '../components/myperson'
 import ai_facts from '../components/facts'
 import discuss from '../components/discuss'
 
@@ -21,7 +19,6 @@ let component = {
     full,
     category,
     category_full,
-    actor,
     favorite,
     torrents,
     mytorrents,
@@ -31,7 +28,6 @@ let component = {
     company,
     bookmarks,
     episodes,
-    myperson,
     ai_facts,
     discuss
 }

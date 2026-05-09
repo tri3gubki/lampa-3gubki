@@ -101,9 +101,4 @@ router.add('recomend', (data) => ({
     media: data.media || 'movie'
 }))
 
-router.add('actor', (data) => ({
-    id: data.id,
-    job: (data.known_for_department || 'actor').toLowerCase(),
-}))
-
 export default router

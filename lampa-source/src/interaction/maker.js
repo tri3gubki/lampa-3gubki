@@ -23,9 +23,6 @@ import DiscussMap from './discuss/module/map'
 import Episode from './episode/episode'
 import EpisodeModule from './episode/module/module'
 import EpisodeMap from './episode/module/map'
-import Person from './person/person'
-import PersonModule from './person/module/module'
-import PersonMap from './person/module/map'
 import Register from './register/register'
 import RegisterModule from './register/module/module'
 import RegisterMap from './register/module/map'
@@ -45,7 +42,6 @@ let classes = {
     Company: Company,
     Discuss: Discuss,
     Episode: Episode,
-    Person: Person,
     Register: Register,
     Season: Season,
     CardParser: CardParser,
@@ -60,7 +56,6 @@ let modules = {
     Company: CompanyModule,
     Discuss: DiscussModule,
     Episode: EpisodeModule,
-    Person: PersonModule,
     Register: RegisterModule,
     Season: SeasonModule,
     Empty: EmptyModule
@@ -74,7 +69,6 @@ let maps = {
     Line: LineMap,
     Company: CompanyMap,
     Discuss: DiscussMap,
-    Person: PersonMap,
     Register: RegisterMap,
     Season: SeasonMap,
     Empty: EmptyMap

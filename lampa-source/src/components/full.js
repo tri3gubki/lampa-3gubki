@@ -1,6 +1,5 @@
 import Start from '../components/full/start'
 import Description from '../components/full/descr'
-import Persons from './full/persons'
 import Api from '../core/api/api'
 import Arrays from '../utils/arrays'
 import Discuss from './full/discuss'
@@ -23,7 +22,6 @@ import Keys from '../core/tmdb/keys'
 let components = {
     start: Start,
     description: Description,
-    persons: Persons,
     cards: Cards,
     discuss: Discuss,
     episodes: Episodes
@@ -132,21 +130,8 @@ function component(object){
                     }])
                 }
 
-                // Создаем режиссеров
-                if(!adult_block && data.persons && data.persons.crew && data.persons.crew.length) {
-                    let directors = data.persons.crew.filter(member => member.job === 'Director')
-
-                    directors.length && this.rows.push(['persons', {
-                        results: directors,
-                        title: Lang.translate('title_producer')
-                    }])
-                }
-
-                // Создаем актеров
-                if(!adult_block && data.persons && data.persons.cast && data.persons.cast.length) this.rows.push(['persons', {
-                    results: data.persons.cast,
-                    title: Lang.translate('title_actors')
-                }])
+                // Блоки «Режиссёр» и «Актёры» удалены вместе со страницей
+                // actor-карточки.
 
                 // Создаем отзывы
                 if(!adult_block && data.discuss) this.rows.push(['discuss', {
