@@ -270,7 +270,6 @@ export default {
     torrent_parser_no_responce: 'Parser-ul nu răspunde',
     torrent_parser_torlook_fallback_search_notification: 'Parser-ul Jackett nu este disponibil sau setările sunt incorecte. Se caută pe Torlook...',
 
-    about_text: 'Aplicația este complet gratuită și folosește link-uri publice pentru a obține informații despre videoclipuri, noutăți, filme populare etc. Toate informațiile sunt folosite exclusiv în scop educațional, aplicația nu folosește servere proprii pentru a distribui conținutul.',
     about_version: 'Versiune',
     about_donate: 'Donații',
 
@@ -960,19 +959,6 @@ export default {
     title_language_short: 'Limbă',
 
 
-    termsofuse_t_01: 'Termeni de utilizare',
-    termsofuse_t_02: 'Lampa este un instrument pentru explorarea noutăților din industria cinematografică. Pentru informații, se folosește site-ul open-source themoviedb.org.',
-    termsofuse_t_03: 'Conținut',
-    termsofuse_t_04: 'Lampa utilizează API-ul themoviedb.org pentru a prelua informații despre filme și seriale, precum și imagini sau trailere.',
-    termsofuse_t_05: 'API-ul themoviedb.org permite accesul la o bază de date vastă, oferind posibilitatea de căutare și vizualizare a metadatelor.',
-    termsofuse_t_06: 'Interacțiunea are loc prin cereri API trimise de aplicație către serverele themoviedb.org.',
-    termsofuse_t_07: 'Aplicația respectă termenii de utilizare și restricțiile impuse de deținătorul drepturilor.',
-    termsofuse_t_08: 'Extensii',
-    termsofuse_t_09: 'Extensiile permit îmbunătățirea capacităților aplicației și modificarea conținutului conform nevoilor.',
-    termsofuse_t_10: 'Utilizatorul instalează extensiile pe propriul risc. Lampa nu este responsabilă pentru consecințele utilizării acestora.',
-    termsofuse_t_11: 'Încălcarea drepturilor de autor',
-    termsofuse_t_12: 'Dacă descoperiți încălcări ale drepturilor de autor, contactați dezvoltatorii. Totuși, aplicația afișează date publice de pe TMDB.',
-    termsofuse_t_13: 'Dacă un conținut vă încalcă drepturile, puteți solicita eliminarea acestuia direct de pe themoviedb.org.',
     settings_rest_protocol_use: 'Conexiune securizată',
     settings_rest_protocol_descr: 'Folosește protocolul HTTPS',
     install_app_apk_title: 'Cum instalezi Lampa pe Android',

@@ -270,7 +270,6 @@ export default {
     torrent_parser_no_responce: 'L\'analyseur ne répond pas',
     torrent_parser_torlook_fallback_search_notification: 'Jackett indisponible ou mal configuré. Recherche sur Torlook...',
 
-    about_text: 'L\'application est gratuite et utilise des liens publics pour obtenir des infos sur les vidéos et nouveautés. Toutes les données sont utilisées à des fins éducatives. L\'application n\'héberge aucun contenu sur ses propres serveurs.',
     about_version: 'Version',
     about_donate: 'Donation',
 
@@ -960,19 +959,6 @@ export default {
     title_language_short: 'Langue',
 
 
-    termsofuse_t_01: 'Conditions d\'utilisation',
-    termsofuse_t_02: 'Lampa est un outil pour explorer l\'actualité du cinéma. Les données proviennent de themoviedb.org.',
-    termsofuse_t_03: 'Contenu',
-    termsofuse_t_04: 'Lampa utilise l\'API de themoviedb.org pour récupérer les infos, affiches et bandes-annonces.',
-    termsofuse_t_05: 'L\'API permet d\'accéder à une base de données exhaustive de films et séries.',
-    termsofuse_t_06: 'L\'interaction se fait via des requêtes API standard vers les serveurs de TMDB.',
-    termsofuse_t_07: 'Lampa respecte les conditions d\'utilisation imposées par TMDB.',
-    termsofuse_t_08: 'Extensions',
-    termsofuse_t_09: 'Les extensions permettent d\'ajouter des fonctionnalités à Lampa.',
-    termsofuse_t_10: 'L\'installation se fait aux risques de l\'utilisateur. Lampa n\'est pas responsable de leur contenu.',
-    termsofuse_t_11: 'Droits d\'auteur',
-    termsofuse_t_12: 'En cas de violation, contactez les développeurs. Les données TMDB étant publiques, elles ne constituent pas une infraction en soi.',
-    termsofuse_t_13: 'Lampa retirera tout contenu sur notification valide de violation de droits d\'auteur.',
     settings_rest_protocol_use: 'Connexion sécurisée',
     settings_rest_protocol_descr: 'Utiliser HTTPS',
     install_app_apk_title: 'Installer Lampa sur Android',

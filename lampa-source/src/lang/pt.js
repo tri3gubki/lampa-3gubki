@@ -268,7 +268,6 @@ export default {
     torrent_parser_no_responce: 'O analisador não está respondendo à solicitação',
     torrent_parser_torlook_fallback_search_notification: 'O analisador Jackett não está disponível ou as configurações de conexão estão incorretas. Procurando Torlook...',
 	
-	about_text: 'A aplicação é totalmente gratuita e usa endereços públicos para obter informações sobre vídeos, novos lançamentos, filmes populares, etc. Todas as informações disponíveis são usadas exclusivamente para fins educacionais, a aplicação não usa servidores próprios para distribuir informações.',
     about_version: 'Versão',
     about_donate: 'Donativos',
 

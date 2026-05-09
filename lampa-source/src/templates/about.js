@@ -1,7 +1,4 @@
 let html = `<div class="about">
-    <div>#{about_text}</div>
-
-
     <div class="overhide">
         <div class="about__contacts">
             <div>
@@ -24,47 +21,6 @@ let html = `<div class="about">
                 <span>{__APP_BUILD__}</span>
             </div>
         </div>
-    </div>
-
-    <div class="about__rules">
-        <h3>#{termsofuse_t_01}</h3>
-
-        <p>#{termsofuse_t_02}</p>
-
-        <ol>
-            <li>
-                <h6>#{termsofuse_t_03}</h6>
-
-                <ol>
-                    <li><p>#{termsofuse_t_04}</p></li>
-
-                    <li><p>#{termsofuse_t_05}</p></li>
-
-                    <li><p>#{termsofuse_t_06}</p></li>
-
-                    <li><p>#{termsofuse_t_07}</p></li>
-                </ol>
-                
-            </li>
-
-            <li>
-                <h6>#{termsofuse_t_08}</h6>
-
-                <ol>
-                    <li><p>#{termsofuse_t_09}</p></li>
-                    <li><p>#{termsofuse_t_10}</p></li>
-                </ol>
-            </li>
-
-            <li>
-                <h6>#{termsofuse_t_11}</h6>
-
-                <ol>
-                    <li><p>#{termsofuse_t_12}</p></li>
-                    <li><p>#{termsofuse_t_13}</p></li>
-                </ol>
-            </li>
-        </ol>
     </div>
 </div>`
 

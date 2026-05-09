@@ -311,7 +311,6 @@ export default {
     torrent_parser_no_responce: "Parser neodpovídá na požadavek",
     torrent_parser_torlook_fallback_search_notification: "Parser Jackett není dostupný nebo nastavení připojení nejsou správná. Probíhá hledání v Torlook...",
 
-    about_text: "Aplikace je zcela zdarma a používá veřejné odkazy pro získání informací o videích, novinkách, populárních filmech atd. Veškeré dostupné informace jsou používány výhradně pro vzdělávací účely, aplikace nepoužívá své vlastní servery pro šíření informací.",
     about_version: "Verze",
     about_donate: "Darovat",
 
@@ -1010,19 +1009,6 @@ export default {
     premiere_author_recomend_5: "Doporučuji ke sledování.",
     premiere_title: "Premiéra",
 
-    termsofuse_t_01: "Pravidla používání",
-    termsofuse_t_02: "Lampa je užitečný nástroj pro seznámení s novinkami filmového průmyslu, včetně filmů, seriálů, animovaných filmů a dalších informací. Pro získání informací o filmech se používá otevřený zdroj - web themoviedb.org",
-    termsofuse_t_03: "Obsah",
-    termsofuse_t_04: "Lampa používá API (Application Programming Interface) z katalogu themoviedb.org pro získání informací o filmech a televizních seriálech, stejně jako pro prohlížení souvisejících mediálních souborů, jako jsou plakáty, trailery a další.",
-    termsofuse_t_05: "API z themoviedb.org umožňuje aplikaci Lampa přístup k databázi filmů a televizních seriálů, poskytující možnost vyhledávání mediálních souborů a prohlížení informací o nich.",
-    termsofuse_t_06: "Interakce mezi aplikací Lampa a themoviedb.org probíhá prostřednictvím požadavků na API, které jsou odesílány z aplikace Lampa na servery themoviedb.org pro získání informací a mediálních souborů. Themoviedb.org zpracovává požadavky a odesílá zpět do aplikace Lampa požadovaná data.",
-    termsofuse_t_07: "Díky použití API z themoviedb.org poskytuje aplikace Lampa uživatelům přístup k rozsáhlé databázi filmů a televizních seriálů, přičemž dodržuje podmínky používání a omezení stanovená držitelem práv.",
-    termsofuse_t_08: "Rozšíření",
-    termsofuse_t_09: "Rozšíření jsou mocný nástroj poskytovaný pro aplikaci Lampa, který umožňuje uživatelům rozšířit její možnosti, přidat další funkce a změnit obsah podle jejich potřeb.",
-    termsofuse_t_10: "Je však třeba poznamenat, že uživatelé instalují rozšíření na vlastní nebezpečí. Veškeré důsledky vyplývající z používání rozšíření padají na uživatele. Uživatelům se doporučuje být opatrní při instalaci a používání rozšíření, pečlivě hodnotit jejich spolehlivost a bezpečnost.",
-    termsofuse_t_11: "Porušení autorských práv",
-    termsofuse_t_12: "Pokud jste objevili porušení autorských práv v aplikaci Lampa - kontaktujte vývojáře pomocí sekce Kontakty aplikace. Je však důležité vzít v úvahu, že aplikace Lampa používá API z katalogu themoviedb.org, který poskytuje otevřený přístup k informacím o filmech a seriálech. To znamená, že informace, které se zobrazují v aplikaci Lampa, jsou veřejně dostupné a neporušují autorská práva.",
-    termsofuse_t_13: "Pokud se domníváte, že v aplikaci Lampa je přesto obsah porušující autorská práva - obraťte se na držitele práv tohoto obsahu s žádostí o jeho odstranění ze stránek webu themoviedb.org. Aplikace Lampa může obsah odstranit po obdržení příslušného oznámení o porušení autorských práv.",
 
     install_app_apk_title: 'Jak nainstalovat Lampu na Android',
     install_app_apk_text: 'Všimli jsme si, že k spuštění Lampy na Androidu používáte MediaStationX. Doporučujeme nainstalovat Lampu jako aplikaci APK. Tím zajistíte stabilnější provoz a přístup ke všem funkcím aplikace. <br><br>Přejděte do telegramové skupiny TorrServer a stáhněte si nejnovější APK a pokyny k instalaci.',
