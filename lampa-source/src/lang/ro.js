@@ -32,7 +32,6 @@ export default {
     full_date_of_release: 'Data lansării',
     full_budget: 'Buget',
     full_countries: 'Țări',
-    full_like: 'Îmi place',
     full_torrents: 'Torrente',
     full_detail: 'Prezentare',
     full_notext: 'Fără descriere.',
@@ -41,8 +40,6 @@ export default {
     full_episode_days_left: 'Zile rămase',
     full_season: 'Sezon',
     full_episode: 'Episod',
-    full_directing: 'Regie',
-    full_writing: 'Scenariu',
     full_keywords: 'Etichete',
 
 
@@ -63,9 +60,7 @@ export default {
     settings_interface_view_card: 'Tip vizualizare poster',
     settings_interface_view_card_descr: 'Pe măsură ce derulezi, posterele se vor încărca treptat sau toate odată',
     settings_interface_lang: 'Limba interfeței',
-    settings_interface_lang_reload: 'Este necesară repornirea aplicației. Apasă "OK" pentru repornire.',
 
-    settings_main_account: 'Cont',
     settings_main_interface: 'Interfață',
     settings_main_player: 'Player',
     settings_main_parser: 'Parser',
@@ -85,9 +80,6 @@ export default {
     settings_rest_screensaver: 'Screensaver',
     settings_rest_screensaver_use: 'Afișează screensaver la inactivitate',
     settings_rest_screensaver_type: 'Tip screensaver',
-    settings_rest_helper: 'Sugestii',
-    settings_rest_helper_use: 'Afișează sugestii',
-    settings_rest_helper_reset: 'Afișează sugestiile din nou',
     settings_rest_pages: 'Pagini păstrate în memorie',
     settings_rest_pages_descr: 'Păstrează paginile în starea în care le-ai lăsat',
     settings_rest_time: 'Decalaj orar',
@@ -114,10 +106,6 @@ export default {
     settings_parser_jackett_key_placeholder: 'Exemplu: sa0sk83d..',
     settings_parser_jackett_key: 'Cheie API',
     settings_parser_jackett_key_descr: 'Se găsește în Jackett',
-    settings_parser_torlook_type: 'Metodă parsing site TorLook',
-    settings_parser_scraperapi_placeholder: 'Exemplu: scraperapi.com',
-    settings_parser_scraperapi_link: 'Link către parser-ul site-ului',
-    settings_parser_scraperapi_descr: 'Înregistrează-te pe scraperapi.com, introdu link-ul api.scraperapi.com?api_key=...&url={q}<br>W41.torlook.info va fi trimis în {q}',
     settings_parser_search: 'Căutare',
     settings_parser_search_descr: 'În ce limbă să se caute?',
     settings_parser_in_search: 'Parser în căutare',
@@ -228,7 +216,6 @@ export default {
     torrent_serial_season: 'Sezon',
     torrent_serial_date: 'Ieșire',
 
-    torrent_get_magnet: 'Se solicită link-ul magnet',
     torrent_remove_title: 'Șterge',
     torrent_remove_descr: 'Torrent-ul va fi eliminat din lista ta',
 
@@ -254,7 +241,6 @@ export default {
     torrent_parser_voice_two: 'Două voci',
     torrent_parser_voice_amateur: 'Amator',
     torrent_parser_reset: 'Resetează filtrul',
-    torrent_parser_empty: 'Nu s-au găsit rezultate',
     torrent_parser_no_hash: 'Eșec la obținerea HASH-ului, încearcă să reîncarci TorrServer',
     torrent_parser_added_to_mytorrents: 'adăugat la "Torrentele mele"',
     torrent_parser_add_to_mytorrents: 'Adaugă la "Torrentele mele"',
@@ -266,12 +252,9 @@ export default {
     torrent_parser_nofiles: 'Eșec la extragerea fișierelor potrivite',
     torrent_parser_set_link: 'Specifică un link pentru parsing',
     torrent_parser_request_error: 'Eroare de solicitare',
-    torrent_parser_magnet_error: 'Eșec la obținerea link-ului magnet',
     torrent_parser_no_responce: 'Parser-ul nu răspunde',
-    torrent_parser_torlook_fallback_search_notification: 'Parser-ul Jackett nu este disponibil sau setările sunt incorecte. Se caută pe Torlook...',
 
     about_version: 'Versiune',
-    about_donate: 'Donații',
 
     title_watched: 'Ai vizionat',
     title_settings: 'Setări',
@@ -632,7 +615,6 @@ export default {
     menu_filter: 'Filtru',
     menu_collections: 'Colecții',
     menu_relises: 'Lansări',
-    menu_anime: 'Anime',
     menu_bookmark: 'Bookmark-uri',
     menu_like: 'Îmi place',
     menu_time: 'Mai târziu',
@@ -683,7 +665,6 @@ export default {
     settings_param_subtitles_size_bigger: 'Mari',
     settings_param_screensaver_nature: 'Natură',
     settings_param_torrent_lang_orig: 'Originală',
-    settings_param_torrent_lang_ru: 'Rusă',
     settings_param_player_timecode_again: 'De la început',
     settings_param_player_timecode_continue: 'Continuă',
     settings_param_player_timecode_ask: 'Întreabă',
@@ -702,19 +683,7 @@ export default {
     helper_cleared: 'Succes, sugestiile vor fi afișate din nou.',
     helper_torrents_view: 'Ține apăsată tasta (OK) pentru a reseta progresul și a afișa meniul',
 
-    fav_sync_title: 'Sincronizare bookmark-uri',
-    fav_sync_text: 'Bookmark-urile tale preferate. Conectează sincronizarea și vizualizează pe orice dispozitiv. <br><br>Pentru asta, înregistrează-te pe site-ul {site}, creează un profil și autentifică-te în aplicație.',
-    fav_sync_site: 'Site web',
-    fav_remove_title: 'Elimină din istoric',
-    fav_remove_descr: 'Șterge elementul selectat',
     fav_clear_title: 'Șterge istoricul',
-    fav_clear_descr: 'Șterge tot istoricul de vizionare',
-    fav_clear_label_title: 'Șterge etichetele',
-    fav_clear_label_descr: 'Șterge etichetele de vizionare',
-    fav_clear_time_title: 'Șterge progresul de vizionare',
-    fav_clear_time_descr: 'Șterge tot progresul de vizionare',
-    fav_label_cleared: 'Etichete șterse',
-    fav_time_cleared: 'Progresul de vizionare a fost șters',
 
     timetable_empty: 'Această secțiune va afișa datele de lansare ale noilor episoade.',
 
@@ -755,34 +724,13 @@ export default {
     player_normalization_step_low: 'Scăzută',
     player_normalization_step_medium: 'Medie',
     player_normalization_step_hight: 'Ridicată',
-    player_youtube_no_played: 'Ne pare rău, acest video nu este disponibil în regiunea ta sau a fost blocat.',
-    player_youtube_start_play: 'Pentru a începe redarea, apasă butonul "Play".',
 
 
     card_new_episode: 'Episod nou',
-    card_book_remove: 'Elimină din bookmark-uri',
-    card_book_add: 'La bookmark-uri',
-    card_book_descr: 'Vezi în meniul (Bookmark-uri)',
-    card_like_remove: 'Elimină din favorite',
-    card_like_add: 'Îmi place',
-    card_like_descr: 'Vezi în meniul (Îmi place)',
-    card_wath_remove: 'Elimină din "Așteptate"',
-    card_wath_add: 'Vizionează mai târziu',
-    card_wath_descr: 'Vezi în meniul (Mai târziu)',
-    card_history_remove: 'Elimină din istoric',
-    card_history_add: 'În istoric',
-    card_history_descr: 'Vezi în meniul (Istoric)',
 
     keyboard_listen: 'Vorbește, ascult...',
     keyboard_nomic: 'Fără acces la microfon',
 
-    notice_new_quality: 'Calitate nouă disponibilă',
-    notice_quality: 'Calitate',
-    notice_new_episode: 'Episod nou',
-    notice_none: 'Nu ai încă notificări, înregistrează-te pe <b>{site}</b> pentru a urmări noi episoade.',
-    notice_in_quality: 'În format',
-    notice_none_account: 'Nu ai notificări încă, adaugă serialul la favorite și așteaptă noutăți.',
-    notice_none_system: 'Momentan nu ai notificări. Te vom anunța când apar noutăți.',
 
     copy_link: 'Copiază link-ul video',
     copy_secuses: 'Link copiat în clipboard',
@@ -856,32 +804,10 @@ export default {
     week_6: 'Sâm',
     week_7: 'Dum',
 
-    extensions_enable: 'Activează',
-    extensions_disable: 'Dezactivează',
-    extensions_check: 'Verifică stare',
-    extensions_install: 'Instalează',
     extensions_info: 'Informații',
     extensions_edit: 'Editează',
-    extensions_change_name: 'Schimbă numele',
-    extensions_change_link: 'Schimbă link-ul',
-    extensions_remove: 'Șterge',
-    extensions_set_name: 'Introdu numele plugin-ului',
-    extensions_set_url: 'Introdu URL-ul plugin-ului',
-    extensions_ready: 'Acest plugin este deja instalat',
-    extensions_no_info: 'Fără informații',
     extensions_no_name: 'Fără nume',
-    extensions_worked: 'Funcțional',
-    extensions_no_plugin: 'Plugin neverificat',
-    extensions_add: 'Adaugă Plugin',
-    extensions_from_memory: 'Instalat în memorie',
-    extensions_from_cub: 'Instalat din CUB',
-    extensions_from_popular: 'Plugin-uri populare',
-    extensions_from_lib: 'Biblioteca de plugin-uri',
-    extensions_from_connected: 'Plugin-uri conectate',
 
-    settings_webos_launcher: 'Lansare aplicație',
-    settings_webos_launcher_add_device: 'Instalează ca aplicație de pornire',
-    settings_webos_launcher_remove_device: 'Elimină din aplicațiile de pornire',
     player_normalization: 'Normalizare',
     change_source_on_cub: 'Schimbă sursa în CUB',
     settings_param_jackett_interview_all: 'Toate',
@@ -902,26 +828,13 @@ export default {
     settings_interface_glass_descr: 'Afișează interfața în stilul glass',
     settings_interface_black_style: 'Stil negru',
 
-    settings_reset: 'Resetare',
     title_channel: 'Canal',
 
-    input_detection_touch: 'Vrei să treci la control prin atingere?',
-    input_detection_mouse: 'Vrei să treci la control prin mouse?',
-    input_detection_remote: 'Vrei să treci la control prin telecomandă?',
 
     settings_interface_hide_outside_the_screen: 'Ascunde posterele din afara ecranului',
     settings_interface_hide_outside_the_screen_descr: 'Accelerează randarea UI și îmbunătățește performanța',
 
-    https_text: 'Folosești protocolul HTTPS; în acest protocol, aplicația s-ar putea să nu funcționeze corect. Se recomandă HTTP.',
 
-    extensions_hpu_best: 'Populare',
-    extensions_hpu_recomend: 'Recomandate',
-    extensions_hpu_theme: 'Teme',
-    extensions_hpu_screensaver: 'Screensaver',
-    extensions_hpu_video: 'Video',
-    extensions_hpu_control: 'Control',
-    extensions_hpu_other: 'Diverse',
-    extensions_hpu_: 'Altele',
 
     title_author: 'Autor',
 
@@ -942,8 +855,6 @@ export default {
 
     title_upcoming_episodes: 'Lansări episoade viitoare',
     title_recent_episodes: 'Lansări episoade recente',
-    settings_rest_cache_images: 'Cache imagini',
-    settings_rest_cache_images_descr: 'Salvează posterele și fundalurile în stocarea locală',
 
     settings_player_rewind_title: 'Derulare',
     settings_player_rewind_descr: 'Interval de derulare în secunde',
@@ -982,12 +893,6 @@ export default {
     title_reset: 'Repornire',
     back_to_card: 'Înapoi la poster',
 
-    premiere_author_recomend_1: 'Comandă o pizza și pregătește-te pentru acțiune.',
-    premiere_author_recomend_2: 'Petrecerea abia începe.',
-    premiere_author_recomend_3: 'Pregătește-te pentru adrenalină.',
-    premiere_author_recomend_4: 'Gata pentru o seară de neuitat?',
-    premiere_author_recomend_5: 'Recomand vizionarea.',
-    premiere_title: 'Premieră',
 
     settings_clear_cache_only: 'Cache șters',
     settings_rest_cache_only: 'Doar Cache',
@@ -1002,19 +907,11 @@ export default {
     title_parental_control: 'Control parental',
     title_worth_rewatch: 'Merită revăzut',
 
-    ad_disable: 'Abonându-te la CUB Premium, vei uita de reclame.',
-    ad_after: 'Publicitate în',
-    ad: 'Publicitate',
-    ad_skip: 'Sari peste',
-    ad_continue_after: 'Vizionarea va începe în',
     settings_parser_prowlarr_link_descr: 'Introdu link-ul către serverul Prowlarr',
     settings_parser_prowlarr_key_descr: 'Se află în setările Prowlarr la categoria General',
     settings_player_torrent_type: 'Tip player pentru torrente',
     settings_player_torrent_type_descr: 'Ce player să ruleze torrentele',
 
-    full_crew: 'Echipă',
-    full_editing: 'Montaj',
-    full_creator: 'Creator',
     player_normalization_step_none: 'Zero',
 
 
@@ -1025,8 +922,6 @@ export default {
 
     confirm_open_player: 'Un alt dispozitiv solicită acces la player. Vrei să rulezi video-ul?',
 
-    pincode_use_remote: 'Folosește tastele direcționale ale telecomenzii pentru a selecta cifrele.',
-    pincode_use_toggle: 'Ține apăsat butonul OK pentru a schimba formatul.',
 
     title_fire: 'Tare!',
     title_top_100: 'Top 100',
@@ -1035,7 +930,6 @@ export default {
     player_normalization_type_all: 'Toate',
     player_normalization_type_up: 'Doar creștere',
     player_normalization_type_down: 'Doar scădere',
-    storage_quota_exceeded: 'Spațiu de stocare insuficient. Golește memoria cache și încearcă din nou.',
 
     title_ai_assistant: 'Asistent AI',
     title_facts: 'Curiozități',
@@ -1050,14 +944,6 @@ export default {
     loading_progress_step_4: 'Aproape gata',
     loading_progress_step_5: 'Imediat...',
 
-    install_extension_rule_1: 'Instalarea unui plugin terț',
-    install_extension_rule_2: 'Plugin-urile sunt create de dezvoltatori independenți. Instalându-le, ești de acord că:',
-    install_extension_rule_3: '- Unele pot cere acces la datele tale.',
-    install_extension_rule_4: '- Ești responsabil pentru utilizarea lor conform legii.',
-    install_extension_rule_5: '- Instalează doar din surse sigure.',
-    install_extension_rule_6: 'LAMPA nu susține conținutul piratat.',
-    install_extension_rule_7: 'Continuând, confirmi că înțelegi riscurile.',
-    ad_plugin: 'Publicitate din plugin',
 
     terminal_title: 'Terminal',
     terminal_no_access: 'Fără acces',
@@ -1078,15 +964,6 @@ export default {
     empty_bookmark_text: 'Adaugă filmele și serialele care îți plac aici.',
     empty_mytorrents_title: 'Torrentele tale',
     empty_mytorrents_text: 'Torrentele descărcate prin TorServer vor apărea aici.',
-    developer_param_enabled: 'Mod Dezvoltator',
-    developer_param_nopremium: 'Dezactivează CUB Premium',
-    developer_param_nodemo: 'Dezactivează Mod Demo',
-    developer_param_ads: 'Afișează reclame',
-    developer_param_fps: 'Afișează FPS',
-    developer_trigger_help_1: 'Aproape ai ghicit :)',
-    developer_trigger_help_2: 'Încă puțin :)',
-    developer_trigger_help_3: 'Sigur vrei în modul Dezvoltator?',
-    developer_trigger_help_4: 'Mod Dezvoltator activat',
     settings_param_navigation_touch: 'Senzor',
     remote_helper_long: 'Ține apăsat OK pentru a deschide meniul',
     player_segments_title: 'Segmente',
@@ -1130,7 +1007,6 @@ export default {
     dmca_title_lgbt: 'Conținut restricționat',
     dmca_descr_lgbt: 'Vizualizarea nu este disponibilă în regiunea dvs., deoarece poate include conținut LGBT. Un astfel de material poate fi interzis sau restricționat în unele țări.',
 
-    settings_lgbt_content_block: 'Blocați conținutul LGBT',
 
     // todo:
     adult_content_title: 'Conținut pentru adulți',

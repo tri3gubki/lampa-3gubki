@@ -32,7 +32,6 @@ export default {
     full_date_of_release: 'Дата релиза',
     full_budget: 'Бюджет',
     full_countries: 'Страны',
-    full_like: 'Нравится',
     full_torrents: 'Торренты',
     full_detail: 'Подробно',
     full_notext: 'Без описания.',
@@ -41,12 +40,7 @@ export default {
     full_episode_days_left: 'Осталось дней',
     full_season: 'Cезон',
     full_episode: 'Эпизод',
-    full_directing: 'Режиссура',
-    full_writing: 'Сценарий',
     full_keywords: 'Теги',
-    full_crew: 'Еще',
-    full_editing: 'Монтаж',
-    full_creator: 'Создатель',
 
 
     settings_input_links: 'Избранное',
@@ -67,7 +61,6 @@ export default {
     settings_interface_view_card: 'Тип просмотра карточек',
     settings_interface_view_card_descr: 'По мере скроллинга ленты карточки будут подгружаться постепенно или загружаться все',
     settings_interface_lang: 'Язык интерфейса',
-    settings_interface_lang_reload: 'Необходимо перезапустить приложение, нажмите «OK» для перезагрузки',
     settings_interface_card_interfice: 'Интерфейс карточек',
     settings_interface_card_poster: 'Показать постер',
     settings_interface_card_cover: 'Показать обложку',
@@ -83,7 +76,6 @@ export default {
     settings_interface_sound_play: 'Переходы',
     settings_interface_sound_level: 'Уровень громкости',
 
-    settings_main_account: 'Аккаунт',
     settings_main_interface: 'Интерфейс',
     settings_main_player: 'Плеер',
     settings_main_parser: 'Парсер',
@@ -104,9 +96,6 @@ export default {
     settings_rest_screensaver_use: 'Показывать заставку при бездействии',
     settings_rest_screensaver_type: 'Тип заставки',
     settings_rest_screensaver_time: 'Через сколько минут запустить скринсейвер',
-    settings_rest_helper: 'Подсказки',
-    settings_rest_helper_use: 'Показывать подсказки',
-    settings_rest_helper_reset: 'Показать подсказки снова',
     settings_rest_pages: 'Сколько страниц хранить в памяти',
     settings_rest_pages_descr: 'Хранит страницы в том состоянии, в котором вы их покинули.',
     settings_rest_time: 'Сместить время',
@@ -122,8 +111,6 @@ export default {
     settings_rest_card_quality_descr: 'Отображать отметки качества на карточках',
     settings_rest_card_episodes: 'Отметки эпизодов',
     settings_rest_card_episodes_descr: 'Отображать отметки эпизодов на карточках',
-    settings_rest_cache_images: 'Кэш изображений',
-    settings_rest_cache_images_descr: 'Кэшировать постеры и фоны в локальное хранилище',
     settings_rest_protocol_use: 'Безопасное соединение',
     settings_rest_protocol_descr: 'Использовать протокол HTTPS',
     settings_rest_cache_only: 'Только кеш',
@@ -145,10 +132,6 @@ export default {
     settings_parser_jackett_key: 'Api-ключ',
     settings_parser_jackett_key_descr: 'Находится в Jackett',
     settings_parser_prowlarr_key_descr: 'Находится во вкладке настроек Prowlarr в категории основное',
-    settings_parser_torlook_type: 'Метод парсинга сайта TorLook',
-    settings_parser_scraperapi_placeholder: 'Например: scraperapi.com',
-    settings_parser_scraperapi_link: 'Ссылка на парсер сайтов',
-    settings_parser_scraperapi_descr: 'Зарегистрируйтесь на сайте scraperapi.com, введите ссылку api.scraperapi.com?api_key=...&url={q}<br>В {q} будет поставляться сайт w41.torlook.info',
     settings_parser_search: 'Поиск',
     settings_parser_search_descr: 'На каком языке производить поиск?',
     settings_parser_in_search: 'Парсер в поиске',
@@ -219,12 +202,8 @@ export default {
     settings_server_password: 'Пароль',
     settings_server_not_specified: 'Не указан',
 
-    settings_webos_launcher: 'Запуск приложения',
-    settings_webos_launcher_add_device: 'Установить как стартовое',
-    settings_webos_launcher_remove_device: 'Убрать из стартовых приложений',
 
 
-    settings_lgbt_content_block: 'Блокировать ЛГБТ контент',
 
 
 
@@ -274,7 +253,6 @@ export default {
     torrent_serial_season: 'Сезон',
     torrent_serial_date: 'Выход',
 
-    torrent_get_magnet: 'Запрашиваю magnet ссылку',
     torrent_remove_title: 'Удалить',
     torrent_remove_descr: 'Торрент будет удален из вашего списка',
 
@@ -300,7 +278,6 @@ export default {
     torrent_parser_voice_two: 'Двухголосый',
     torrent_parser_voice_amateur: 'Любительский',
     torrent_parser_reset: 'Сбросить фильтр',
-    torrent_parser_empty: 'Не удалось получить результатов',
     torrent_parser_no_hash: 'Не удалось получить HASH, попробуйте перезагрузить TorrServer',
     torrent_parser_added_to_mytorrents: 'добавлено в «Мои торренты»',
     torrent_parser_add_to_mytorrents: 'Добавить в «Мои торренты»',
@@ -312,12 +289,9 @@ export default {
     torrent_parser_nofiles: 'Не удалось извлечь подходящие файлы',
     torrent_parser_set_link: 'Укажите ссылку для парсинга',
     torrent_parser_request_error: 'Ошибка в запросе',
-    torrent_parser_magnet_error: 'Не удалось получить magnet ссылку',
     torrent_parser_no_responce: 'Парсер не отвечает на запрос',
-    torrent_parser_torlook_fallback_search_notification: 'Парсер Jackett не доступен или настройки подключения не верны. Осуществляется поиск в Torlook...',
 
     about_version: 'Версия',
-    about_donate: 'Донат',
 
     title_watched: 'Вы смотрели',
     title_settings: 'Настройки',
@@ -745,7 +719,6 @@ export default {
     menu_filter: 'Фильтр',
     menu_collections: 'Подборки',
     menu_relises: 'Релизы',
-    menu_anime: 'Аниме',
     menu_bookmark: 'Закладки',
     menu_like: 'Нравится',
     menu_time: 'Позже',
@@ -776,7 +749,6 @@ export default {
     settings_this_value: 'текущее значение',
     settings_added: 'Добавлено',
     settings_removed: 'Удалено',
-    settings_reset: 'Сброс настроек',
 
     settings_param_player_inner: 'Встроенный',
     settings_param_player_outside: 'Внешний',
@@ -831,19 +803,7 @@ export default {
     helper_cleared: 'Успешно, подсказки будут показаны заново.',
     helper_torrents_view: 'Для сброса тайм-кода и вызова меню удерживайте клавишу (ОК)',
 
-    fav_sync_title: 'Синхронизация закладок',
-    fav_sync_text: 'Ваши любимые закладки вместе с Вами. Подключите синхронизацию и просматривайте на любом устройстве. <br><br>Для этого зарегистрируйтесь на сайте {site}, создайте профиль и авторизуйтесь в приложение.',
-    fav_sync_site: 'Сайт',
-    fav_remove_title: 'Удалить из истории',
-    fav_remove_descr: 'Удалить выделенную карточку',
     fav_clear_title: 'Очистить историю',
-    fav_clear_descr: 'Удалить все карточки из истории',
-    fav_clear_label_title: 'Очистить метки',
-    fav_clear_label_descr: 'Очистить метки о просмотрах',
-    fav_clear_time_title: 'Очистить тайм-коды',
-    fav_clear_time_descr: 'Очистить все тайм-коды',
-    fav_label_cleared: 'Отметки очищены',
-    fav_time_cleared: 'Тайм-коды очищены',
 
     timetable_empty: 'В этом разделе будут отображаться даты выхода новых серий',
 
@@ -890,8 +850,6 @@ export default {
     player_normalization_type_all: 'Все',
     player_normalization_type_up: 'Только повышение',
     player_normalization_type_down: 'Только понижение',
-    player_youtube_no_played: 'К сожалению, это видео не доступно в вашем регионе, возможно, оно было заблокировано или удалено.',
-    player_youtube_start_play: 'Для начала проигрывания видео, нажмите кнопку "Плей"',
     player_segments_title: 'Сегменты',
     player_segments_descr: 'Пропуск интро и другие части видео',
     player_segments_ad_title: 'Рекламные вставки',
@@ -903,29 +861,10 @@ export default {
 
 
     card_new_episode: 'Новая серия',
-    card_book_remove: 'Убрать из закладок',
-    card_book_add: 'В закладки',
-    card_book_descr: 'Смотрите в меню (Закладки)',
-    card_like_remove: 'Убрать из понравившихся',
-    card_like_add: 'Нравится',
-    card_like_descr: 'Смотрите в меню (Нравится)',
-    card_wath_remove: 'Убрать из ожидаемых',
-    card_wath_add: 'Смотреть позже',
-    card_wath_descr: 'Смотрите в меню (Позже)',
-    card_history_remove: 'Убрать из истории',
-    card_history_add: 'В историю',
-    card_history_descr: 'Смотрите в меню (История)',
 
     keyboard_listen: 'Говорите, я слушаю...',
     keyboard_nomic: 'Нет доступа к микрофону',
 
-    notice_new_quality: 'Доступно новое качество',
-    notice_quality: 'Качество',
-    notice_new_episode: 'Новая серия',
-    notice_none: 'У вас еще нет никаких уведомлений, зарегистрируйтесь на сайте <b>{site}</b>, чтобы следить за новыми сериями и релизами.',
-    notice_in_quality: 'В качестве',
-    notice_none_account: 'У вас еще нет никаких уведомлений, добавьте сериалы в закладки и ожидайте уведомления о новых сериях.',
-    notice_none_system: 'На данный момент у вас отсутствуют уведомления. Мы обязательно оповестим вас, когда появятся новые уведомления.',
 
     copy_link: 'Копировать ссылку на видео',
     copy_secuses: 'Ссылка скопирована в буфер обмена',
@@ -1012,36 +951,9 @@ export default {
     time_m: 'м.',
     time_s: 'с.',
 
-    extensions_enable: 'Включить',
-    extensions_disable: 'Отключить',
-    extensions_check: 'Проверить статус',
-    extensions_install: 'Установить',
     extensions_info: 'Информация',
     extensions_edit: 'Редактировать',
-    extensions_change_name: 'Изменить название',
-    extensions_change_link: 'Изменить ссылку',
-    extensions_remove: 'Удалить',
-    extensions_set_name: 'Введите название плагина',
-    extensions_set_url: 'Введите адрес плагина',
-    extensions_ready: 'Этот плагин уже установлен',
-    extensions_no_info: 'Без информации',
     extensions_no_name: 'Без названия',
-    extensions_worked: 'Рабочий',
-    extensions_no_plugin: 'Плагин не подтверждён ',
-    extensions_add: 'Добавить плагин',
-    extensions_from_memory: 'Установленные в память ',
-    extensions_from_cub: 'Установленные из CUB',
-    extensions_from_popular: 'Популярные плагины',
-    extensions_from_lib: 'Библиотека плагинов',
-    extensions_from_connected: 'Подключенные плагины',
-    extensions_hpu_best: 'Популярные',
-    extensions_hpu_recomend: 'Рекомендуем',
-    extensions_hpu_theme: 'Темы',
-    extensions_hpu_screensaver: 'Скринсейвер',
-    extensions_hpu_video: 'Видео',
-    extensions_hpu_control: 'Управление',
-    extensions_hpu_other: 'Разное',
-    extensions_hpu_: 'Остальное',
 
 
     change_source_on_cub: 'Сменить источник на CUB',
@@ -1056,30 +968,14 @@ export default {
     tv_status_rumored:'По слухам',
     tv_status_post_production:'Скоро',
 
-    input_detection_touch: 'Хотите переключить на сенсорное управление?',
-    input_detection_mouse: 'Хотите переключить на управление мышью?',
-    input_detection_remote: 'Хотите переключить на управление пультом?',
 
-    https_text: 'Вы используйте протокол HTTPS, c которым Lampa работает некорректно. Для корректной работы приложения используйте адрес с протоколом HTTP',
 
-    premiere_author_recomend_1: 'Закажите пиццу и готовьтесь к драйву.',
-    premiere_author_recomend_2: 'Вечеринка только начинается.',
-    premiere_author_recomend_3: 'Подготовьтесь к адреналину.',
-    premiere_author_recomend_4: 'Готовы к незабываемому вечеру?',
-    premiere_author_recomend_5: 'Рекомендую к просмотру.',
-    premiere_title: 'Премьера',
 
 
     install_app_apk_title: 'Как установить Lampa на Android',
     install_app_apk_text: 'Мы заметили, что для запуска Lampa на Android вы используете MediaStationX. Мы рекомендуем вам установить Lampa в виде APK-приложения. Это обеспечит более стабильную работу и доступ ко всем функциям приложения. <br><br>Перейдите в группу TorrServer в Телеграме, чтобы скачать последнюю версию APK и инструкции по установке.',
     install_app_apk_qr: 'Отсканируйте QR-код, чтобы скачать Lampa APK',
 
-    ad: 'Реклама',
-    ad_disable: 'Подписавшись на CUB Premium, вы забудете о рекламе.',
-    ad_plugin: 'Реклама от плагина',
-    ad_after: 'Реклама через',
-    ad_skip: 'Пропустить',
-    ad_continue_after: 'Просмотр начнется через',
 
     discuss_rules_title: 'Следуйте правилам и уважайте других — создаём комфорт вместе!',
     discuss_rules_rule_1: 'Не используйте слова, состоящие только из цифр.',
@@ -1093,10 +989,7 @@ export default {
 
     confirm_open_player: 'Другое устройство запрашивает доступ к плееру. Хотите воспроизвести видео?',
 
-    pincode_use_remote: 'Используйте пульт для ввода кода, нажимая стрелки для выбора нужной цифры.',
-    pincode_use_toggle: 'Нажмите и удерживайте кнопку OK, чтобы сменить раскладку.',
 
-    storage_quota_exceeded: 'Превышен лимит хранилища. Удалите кеш и повторите попытку.',
 
 
     dmca_title: 'Контент заблокирован',
@@ -1111,13 +1004,6 @@ export default {
     loading_progress_step_4: 'Осталось немного',
     loading_progress_step_5: 'Уже скоро',
 
-    install_extension_rule_1: 'Установка стороннего плагина',
-    install_extension_rule_2: 'Плагины создаются независимыми разработчиками, и LAMPA не проверяет их содержимое. Устанавливая их, вы соглашаетесь с тем, что:',
-    install_extension_rule_3: '- Некоторые плагины могут запрашивать доступ к вашим данным или работать с непроверенными источниками.',
-    install_extension_rule_4: '- Если устанавливаемый вами плагин нарушает авторские права или другие законы, вся ответственность за его использование лежит на вас.',
-    install_extension_rule_5: '- Устанавливайте только плагины из доверенных источников. Если вы сомневаетесь в безопасности или законности плагина, лучше откажитесь от его установки.',
-    install_extension_rule_6: 'LAMPA не поддерживает и не одобряет плагины, связанные с пиратским контентом.',
-    install_extension_rule_7: 'Продолжая, вы подтверждаете, что понимаете эти риски.',
 
     terminal_title: 'Терминал',
     terminal_no_access: 'Без доступа',
@@ -1127,16 +1013,7 @@ export default {
     terminal_code: 'Код доступа',
     terminal_text: 'Вы запрашиваете доступ к терминалу. Разработчики могут получить доступ к вашему устройству и управлять им. Это может быть полезно для диагностики и устранения проблем, но также может представлять риск безопасности. Пожалуйста, убедитесь, что вы доверяете разработчикам, прежде чем предоставлять доступ. <br><br>Вы можете в любой момент отключить эту функцию нажав на кнопку "Запретить".',
 
-    developer_param_enabled: 'Режим разработчика',
-    developer_param_nopremium: 'Отключить CUB Premium',
-    developer_param_nodemo: 'Отключить демонстрационный режим',
-    developer_param_ads: 'Показывать рекламу',
-    developer_param_fps: 'Показывать FPS',
 
-    developer_trigger_help_1: 'Почти догадались :)',
-    developer_trigger_help_2: 'Еще немного :)',
-    developer_trigger_help_3: 'Точно хочешь войти в режим разработчика?',
-    developer_trigger_help_4: 'Режим разработчика активирован',
 
     remote_helper_long: 'Удерживайте кнопку (ОК) для вызова меню',
     no_watch_history: 'Нет истории просмотра',

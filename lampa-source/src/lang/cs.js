@@ -32,7 +32,6 @@ export default {
     full_date_of_release: "Datum vydání",
     full_budget: "Rozpočet",
     full_countries: "Země",
-    full_like: "Líbí se",
     full_torrents: "Torrenty",
     full_detail: "Podrobnosti",
     full_notext: "Bez popisu.",
@@ -41,12 +40,7 @@ export default {
     full_episode_days_left: "Zbývá dní",
     full_season: "Série",
     full_episode: "Epizoda",
-    full_directing: "Režie",
-    full_writing: "Scénář",
     full_keywords: "Klíčová slova",
-    full_crew: "Více",
-    full_editing: "Střih",
-    full_creator: "Tvůrce",
 
 
     settings_input_links: "Oblíbené",
@@ -67,7 +61,6 @@ export default {
     settings_interface_view_card: "Typ zobrazení karet",
     settings_interface_view_card_descr: "Při posouvání se karty budou načítat postupně nebo se načtou všechny",
     settings_interface_lang: "Jazyk rozhraní",
-    settings_interface_lang_reload: "Je nutné restartovat aplikaci, stiskněte (OK) pro restart",
     settings_interface_card_interfice: "Rozhraní karet",
     settings_interface_card_poster: "Zobrazit plakát",
     settings_interface_card_cover: "Zobrazit obal",
@@ -83,7 +76,6 @@ export default {
     settings_interface_sound_play: "Přechody",
     settings_interface_sound_level: "Úroveň hlasitosti",
 
-    settings_main_account: "Účet",
     settings_main_interface: "Rozhraní",
     settings_main_player: "Přehrávač",
     settings_main_parser: "Parser",
@@ -104,9 +96,6 @@ export default {
     settings_rest_screensaver_use: "Zobrazit spořič při nečinnosti",
     settings_rest_screensaver_type: "Typ spořiče",
     settings_rest_screensaver_time: "Po kolika minutách spustit spořič",
-    settings_rest_helper: "Nápověda",
-    settings_rest_helper_use: "Zobrazit nápovědu",
-    settings_rest_helper_reset: "Zobrazit nápovědu znovu",
     settings_rest_pages: "Kolik stránek uchovávat v paměti",
     settings_rest_pages_descr: "Uchovává stránky ve stavu, ve kterém jste je opustili.",
     settings_rest_time: "Posunout čas",
@@ -122,8 +111,6 @@ export default {
     settings_rest_card_quality_descr: "Zobrazit značky kvality na kartách",
     settings_rest_card_episodes: "Značky epizod",
     settings_rest_card_episodes_descr: "Zobrazit značky epizod na kartách",
-    settings_rest_cache_images: "Cache obrázků",
-    settings_rest_cache_images_descr: "Cache plakátů a pozadí do lokálního úložiště",
     settings_rest_protocol_use: "Bezpečné připojení",
     settings_rest_protocol_descr: "Použít protokol HTTPS",
     settings_rest_cache_only: "Pouze cache",
@@ -143,10 +130,6 @@ export default {
     settings_parser_jackett_key: "Api-klíč",
     settings_parser_jackett_key_descr: "Nachází se v Jackett",
     settings_parser_prowlarr_key_descr: "Nachází se v nastavení Prowlarr v kategorii hlavní",
-    settings_parser_torlook_type: "Metoda parsování webu TorLook",
-    settings_parser_scraperapi_placeholder: "Například: scraperapi.com",
-    settings_parser_scraperapi_link: "Odkaz na parser webů",
-    settings_parser_scraperapi_descr: "Zaregistrujte se na webu scraperapi.com, zadejte odkaz api.scraperapi.com?api_key=...&url={q}<br>V {q} bude dodán web w41.torlook.info",
     settings_parser_search: "Hledat",
     settings_parser_search_descr: "V jakém jazyce provádět hledání?",
     settings_parser_in_search: "Parser ve vyhledávání",
@@ -217,9 +200,6 @@ export default {
     settings_server_password: "Heslo",
     settings_server_not_specified: "Není uvedeno",
 
-    settings_webos_launcher: "Spuštění aplikace",
-    settings_webos_launcher_add_device: "Nastavit jako startovací",
-    settings_webos_launcher_remove_device: "Odebrat ze startovacích aplikací",
 
 
 
@@ -269,7 +249,6 @@ export default {
     torrent_serial_season: "Série",
     torrent_serial_date: "Vydání",
 
-    torrent_get_magnet: "Žádám magnet odkaz",
     torrent_remove_title: "Odstranit",
     torrent_remove_descr: "Torrent bude odstraněn z vašeho seznamu",
 
@@ -295,7 +274,6 @@ export default {
     torrent_parser_voice_two: "Dvouhlasý",
     torrent_parser_voice_amateur: "Amatérský",
     torrent_parser_reset: "Resetovat filtr",
-    torrent_parser_empty: "Nepodařilo se získat výsledky",
     torrent_parser_no_hash: "Nepodařilo se získat HASH",
     torrent_parser_added_to_mytorrents: "přidáno do «Moje torrenty»",
     torrent_parser_add_to_mytorrents: "Přidat do «Moje torrenty»",
@@ -307,12 +285,9 @@ export default {
     torrent_parser_nofiles: "Nepodařilo se extrahovat vhodné soubory",
     torrent_parser_set_link: "Uveďte odkaz pro parsování",
     torrent_parser_request_error: "Chyba v požadavku",
-    torrent_parser_magnet_error: "Nepodařilo se získat magnet odkaz",
     torrent_parser_no_responce: "Parser neodpovídá na požadavek",
-    torrent_parser_torlook_fallback_search_notification: "Parser Jackett není dostupný nebo nastavení připojení nejsou správná. Probíhá hledání v Torlook...",
 
     about_version: "Verze",
-    about_donate: "Darovat",
 
     title_watched: "Sledovali jste",
     title_settings: "Nastavení",
@@ -700,7 +675,6 @@ export default {
     menu_filter: "Filtr",
     menu_collections: "Kolekce",
     menu_relises: "Vydání",
-    menu_anime: "Anime",
     menu_bookmark: "Záložky",
     menu_like: "Líbí se",
     menu_time: "Později",
@@ -731,7 +705,6 @@ export default {
     settings_this_value: "aktuální hodnota",
     settings_added: "Přidáno",
     settings_removed: "Odstraněno",
-    settings_reset: "Resetovat nastavení",
 
     settings_param_player_inner: "Vestavěný",
     settings_param_player_outside: "Externí",
@@ -785,19 +758,7 @@ export default {
     helper_cleared: "Úspěšně, nápovědy budou zobrazeny znovu.",
     helper_torrents_view: "Pro resetování časového kódu a vyvolání menu podržte tlačítko (OK)",
 
-    fav_sync_title: "Synchronizace záložek",
-    fav_sync_text: "Vaše oblíbené záložky s vámi. Připojte synchronizaci a sledujte na jakémkoli zařízení. <br><br>Pro to se zaregistrujte na webu {site}, vytvořte profil a přihlaste se do aplikace.",
-    fav_sync_site: "Web",
-    fav_remove_title: "Odstranit z historie",
-    fav_remove_descr: "Odstranit vybranou kartu",
     fav_clear_title: "Vymazat historii",
-    fav_clear_descr: "Odstranit všechny karty z historie",
-    fav_clear_label_title: "Vymazat značky",
-    fav_clear_label_descr: "Vymazat značky o sledování",
-    fav_clear_time_title: "Vymazat časové kódy",
-    fav_clear_time_descr: "Vymazat všechny časové kódy",
-    fav_label_cleared: "Značky vymazány",
-    fav_time_cleared: "Časové kódy vymazány",
 
     timetable_empty: "V této sekci budou zobrazeny data vydání nových epizod",
 
@@ -840,34 +801,13 @@ export default {
     player_normalization_step_medium: "Střední",
     player_normalization_step_hight: "Vysoká",
     player_normalization: "Normalizace",
-    player_youtube_no_played: "Bohužel, toto video není dostupné ve vaší oblasti, možná bylo zablokováno nebo odstraněno.",
-    player_youtube_start_play: 'Pro spuštění přehrávání videa stiskněte tlačítko "Přehrát"',
 
 
     card_new_episode: "Nová epizoda",
-    card_book_remove: "Odebrat ze záložek",
-    card_book_add: "Do záložek",
-    card_book_descr: "Sledujte v menu (Záložky)",
-    card_like_remove: "Odebrat z oblíbených",
-    card_like_add: "Líbí se",
-    card_like_descr: "Sledujte v menu (Líbí se)",
-    card_wath_remove: "Odebrat z očekávaných",
-    card_wath_add: "Sledovat později",
-    card_wath_descr: "Sledujte v menu (Později)",
-    card_history_remove: "Odebrat z historie",
-    card_history_add: "Do historie",
-    card_history_descr: "Sledujte v menu (Historie)",
 
     keyboard_listen: "Mluvte, poslouchám...",
     keyboard_nomic: "Není přístup k mikrofonu",
 
-    notice_new_quality: "Dostupná nová kvalita",
-    notice_quality: "Kvalita",
-    notice_new_episode: "Nová epizoda",
-    notice_none: "Ještě nemáte žádná upozornění, zaregistrujte se na webu <b>{site}</b>, abyste sledovali nové epizody a vydání.",
-    notice_in_quality: "V kvalitě",
-    notice_none_account: "Ještě nemáte žádná upozornění, přidejte seriály do záložek a očekávejte upozornění o nových epizodách.",
-    notice_none_system: "Momentálně nemáte žádná upozornění. Určitě vás upozorníme, když se objeví nová upozornění.",
 
     copy_link: "Kopírovat odkaz na video",
     copy_secuses: "Odkaz zkopírován do schránky",
@@ -952,36 +892,9 @@ export default {
     time_m: "m.",
     time_s: "s.",
 
-    extensions_enable: "Povolit",
-    extensions_disable: "Zakázat",
-    extensions_check: "Zkontrolovat stav",
-    extensions_install: "Nainstalovat",
     extensions_info: "Informace",
     extensions_edit: "Upravit",
-    extensions_change_name: "Změnit název",
-    extensions_change_link: "Změnit odkaz",
-    extensions_remove: "Odstranit",
-    extensions_set_name: "Zadejte název pluginu",
-    extensions_set_url: "Zadejte adresu pluginu",
-    extensions_ready: "Tento plugin je již nainstalován",
-    extensions_no_info: "Bez informací",
     extensions_no_name: "Bez názvu",
-    extensions_worked: "Funkční",
-    extensions_no_plugin: "Plugin není potvrzen",
-    extensions_add: "Přidat plugin",
-    extensions_from_memory: "Nainstalováno do paměti",
-    extensions_from_cub: "Nainstalováno z CUB",
-    extensions_from_popular: "Populární pluginy",
-    extensions_from_lib: "Knihovna pluginů",
-    extensions_from_connected: "Připojené pluginy",
-    extensions_hpu_best: "Populární",
-    extensions_hpu_recomend: "Doporučujeme",
-    extensions_hpu_theme: "Témata",
-    extensions_hpu_screensaver: "Spořič obrazovky",
-    extensions_hpu_video: "Video",
-    extensions_hpu_control: "Ovládání",
-    extensions_hpu_other: "Různé",
-    extensions_hpu_: "Ostatní",
 
 
     change_source_on_cub: "Změnit zdroj na CUB",
@@ -996,18 +909,8 @@ export default {
     tv_status_rumored: "Podle pověstí",
     tv_status_post_production: "Brzy",
 
-    input_detection_touch: "Chcete přepnout na dotykové ovládání?",
-    input_detection_mouse: "Chcete přepnout na ovládání myší?",
-    input_detection_remote: "Chcete přepnout na ovládání dálkovým ovladačem?",
 
-    https_text: "Používáte protokol HTTPS, se kterým Lampa nefunguje správně. Pro správnou funkci aplikace použijte adresu s protokolem HTTP",
 
-    premiere_author_recomend_1: "Objednejte si pizzu a připravte se na jízdu.",
-    premiere_author_recomend_2: "Párty teprve začíná.",
-    premiere_author_recomend_3: "Připravte se na adrenalin.",
-    premiere_author_recomend_4: "Připraveni na nezapomenutelný večer?",
-    premiere_author_recomend_5: "Doporučuji ke sledování.",
-    premiere_title: "Premiéra",
 
 
     install_app_apk_title: 'Jak nainstalovat Lampu na Android',
@@ -1015,11 +918,6 @@ export default {
     install_app_apk_qr: 'Naskenujte QR kód a stáhněte si APK Lampy',
     copy_link_buffer: 'Kopírovat odkaz',
 
-    ad: "Reklama",
-    ad_disable: "Předplatným CUB Premium zapomenete na reklamu.",
-    ad_after: "Reklama za",
-    ad_skip: "Přeskočit",
-    ad_continue_after: "Sledování začne za",
 
     discuss_rules_title: "Dodržujte pravidla a respektujte ostatní — vytváříme pohodlí společně!",
     discuss_rules_rule_1: "Nepoužívejte slova složená pouze z čísel.",
@@ -1033,8 +931,6 @@ export default {
 
     confirm_open_player: "Jiné zařízení žádá o přístup k přehrávači. Chcete přehrát video?",
 
-    pincode_use_remote: "Použijte dálkový ovladač pro zadání kódu, stiskněte šipky pro výběr požadovaného čísla.",
-    pincode_use_toggle: "Stiskněte a podržte tlačítko OK pro změnu rozložení.",
     title_fire: 'Oheň!',
     title_top_100: 'Top 100',
 
@@ -1042,7 +938,6 @@ export default {
     player_normalization_type_all: 'Vše',
     player_normalization_type_up: 'Pouze zvýšení',
     player_normalization_type_down: 'Pouze snížení',
-    storage_quota_exceeded: 'Překročena kvóta úložiště. Vymažte mezipaměť a zkuste to znovu.',
 
     title_ai_assistant: 'AI asistent',
     title_facts: 'Zajímavá fakta',
@@ -1057,14 +952,6 @@ export default {
     loading_progress_step_4: 'Už jen trochu',
     loading_progress_step_5: 'Už brzy',
 
-    install_extension_rule_1: 'Instalace externího pluginu',
-    install_extension_rule_2: 'Pluginy jsou vytvářeny nezávislými vývojáři a LAMPA neověřuje jejich obsah. Instalací souhlasíte s tím, že:',
-    install_extension_rule_3: '- Některé pluginy mohou požadovat přístup k vašim datům nebo pracovat s neověřenými zdroji.',
-    install_extension_rule_4: '- Pokud vámi nainstalovaný plugin porušuje autorská práva nebo jiné zákony, veškerá odpovědnost za jeho použití je na vás.',
-    install_extension_rule_5: '- Instalujte pouze pluginy z důvěryhodných zdrojů. Pokud máte pochybnosti o bezpečnosti nebo legálnosti pluginu, raději jej neinstalujte.',
-    install_extension_rule_6: 'LAMPA nepodporuje ani neschvaluje pluginy související s pirátským obsahem.',
-    install_extension_rule_7: 'Pokračováním potvrzujete, že rozumíte těmto rizikům.',
-    ad_plugin: 'Reklama z pluginu',
 
     terminal_title: 'Terminál',
     terminal_no_access: 'Bez přístupu',
@@ -1085,15 +972,6 @@ export default {
     empty_bookmark_text: 'Přidejte filmy a seriály, které se vám líbí, do oblíbených, abyste je snadno našli v této sekci.',
     empty_mytorrents_title: 'Vaše torrenty',
     empty_mytorrents_text: 'Torrenty stažené přes TorServer se zobrazí zde.',
-    developer_param_enabled: 'Režim vývojáře',
-    developer_param_nopremium: 'Vypnout CUB Premium',
-    developer_param_nodemo: 'Vypnout demo režim',
-    developer_param_ads: 'Zobrazovat reklamy',
-    developer_param_fps: 'Zobrazovat FPS',
-    developer_trigger_help_1: 'Téměř jste to uhodli :)',
-    developer_trigger_help_2: 'Ještě trochu :)',
-    developer_trigger_help_3: 'Opravdu chcete vstoupit do režimu vývojáře?',
-    developer_trigger_help_4: 'Režim vývojáře aktivován',
     settings_param_navigation_touch: 'Dotykové ovládání',
     remote_helper_long: 'Podržte tlačítko (OK) pro otevření menu',
     player_segments_title: 'Segmenty',
@@ -1136,7 +1014,6 @@ export default {
     dmca_title_lgbt: 'Obsah omezen',
     dmca_descr_lgbt: 'Prohlížení není ve vašem regionu možné, protože může obsahovat LGBT obsah. Takový materiál může být v některých zemích zakázán nebo omezen.',
 
-    settings_lgbt_content_block: 'Blokovat LGBT obsah',
 
     // todo:
     adult_content_title: 'Obsah pro dospělé',

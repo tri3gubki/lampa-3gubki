@@ -32,7 +32,6 @@ export default {
     full_date_of_release: 'Дата рэлізу',
     full_budget: 'Бюджэт',
     full_countries: 'Краіны',
-    full_like: 'Падабаецца',
     full_torrents: 'Торэнты',
     full_detail: 'Падрабязна',
     full_notext: 'Без апісання.',
@@ -41,7 +40,6 @@ export default {
     full_episode_days_left: 'Засталося дзён',
     full_season: 'Сезон',
     full_episode: 'Эпізод',
-    full_directing: 'Рэжысура',
 
 
 
@@ -62,9 +60,7 @@ export default {
     settings_interface_view_card: 'Тып прагляду картак',
     settings_interface_view_card_descr: 'Па меры скралінга стужкі карткі будуць падгружацца паступова або загружацца ўсё',
     settings_interface_lang: 'Мова інтэрфейсу',
-    settings_interface_lang_reload: 'Неабходна перазагрузіць дадатак, націсніце "OK" для перазагрузкі.',
 
-    settings_main_account: 'Акаўнт',
     settings_main_interface: 'Інтэрфейс',
     settings_main_player: 'Плэер',
     settings_main_parser: 'Парсер',
@@ -84,9 +80,6 @@ export default {
     settings_rest_screensaver: 'Скрынсэйвер',
     settings_rest_screensaver_use: 'Паказваць застаўку пры бяздзейнасці',
     settings_rest_screensaver_type: 'Тып застаўкі',
-    settings_rest_helper: 'Падказкі',
-    settings_rest_helper_use: 'Паказваць падказкі',
-    settings_rest_helper_reset: 'Паказаць падказкі зноў',
     settings_rest_pages: 'Колькі старонак захоўваць у памяці',
     settings_rest_pages_descr: 'Захоўвае старонкі ў тым стане, у якім вы іх пакінулі',
     settings_rest_time: 'Зрушыць час',
@@ -113,10 +106,6 @@ export default {
     settings_parser_jackett_key_placeholder: 'Напрыклад: sa0sk83d..',
     settings_parser_jackett_key: 'Api ключ',
     settings_parser_jackett_key_descr: 'Знаходзіцца ў Jackett',
-    settings_parser_torlook_type: 'Метад парсінгу сайта TorLook',
-    settings_parser_scraperapi_placeholder: 'Напрыклад: scraperapi.com',
-    settings_parser_scraperapi_link: 'Спасылка на парсер сайтаў',
-    settings_parser_scraperapi_descr: 'Зарэгіструйцеся на сайце scraperapi.com, увядзіце спасылку api.scraperapi.com?api_key=...&url={q}<br>У {q} будзе пастаўляцца сайт w41.torlook.info',
     settings_parser_search: 'Пошук',
     settings_parser_search_descr: 'На якой мове рабіць пошук?',
     settings_parser_in_search: 'Парсер у пошуку',
@@ -228,7 +217,6 @@ export default {
     torrent_serial_season: 'Сезон',
     torrent_serial_date: 'Выхад',
 
-    torrent_get_magnet: 'Запытваю magnet спасылку',
     torrent_remove_title: 'Выдаліць',
     torrent_remove_descr: 'Торэнт будзе выдалены з вашага спісу',
 
@@ -254,7 +242,6 @@ export default {
     torrent_parser_voice_two: 'Двухгалосы',
     torrent_parser_voice_amateur: 'Любіцельскі',
     torrent_parser_reset: 'Скінуць фільтр',
-    torrent_parser_empty: 'Немагчыма атрымаць вынікаў',
     torrent_parser_no_hash: 'Не атрымалася атрымаць HASH, паспрабуйце перезагрузить TorrServer',
     torrent_parser_added_to_mytorrents: 'дададзена ў «Мае торэнты»',
     torrent_parser_add_to_mytorrents: 'Дадаць у «Мае торэнты»',
@@ -266,12 +253,9 @@ export default {
     torrent_parser_nofiles: 'Немагчыма атрымаць патрэбныя файлы',
     torrent_parser_set_link: 'Пазначце спасылку для парсінгу',
     torrent_parser_request_error: 'Памылка ў запыце',
-    torrent_parser_magnet_error: 'Не ўдалося атрымаць magnet спасылку',
     torrent_parser_no_responce: 'Парсер не адказвае на запыт',
-    torrent_parser_torlook_fallback_search_notification: 'Парсэр Jackett не даступны або налады падлучэння не дакладныя. Ажыццяўляецца пошук у Torlook...',
 
     about_version: 'Версія',
-    about_donate: 'Данат',
 
     title_watched: 'Вы глядзелі',
     title_settings: 'Налады',
@@ -632,7 +616,6 @@ export default {
     menu_filter: 'Фільтр',
     menu_collections: 'Падборкі',
     menu_relises: 'Рэлізы',
-    menu_anime: 'Анімэ',
     menu_bookmark: 'Закладкі',
     menu_like: 'Падабаецца',
     menu_time: 'Пазней',
@@ -686,7 +669,6 @@ export default {
     settings_param_subtitles_size_bigger: 'Вялікія',
     settings_param_screensaver_nature: 'Прырода',
     settings_param_torrent_lang_orig: 'Арыгінал',
-    settings_param_torrent_lang_ru: 'Рускі',
     settings_param_player_timecode_again: 'Пачаць з пачатку',
     settings_param_player_timecode_continue: 'Працягнуць',
     settings_param_player_timecode_ask: 'Пытаць',
@@ -705,19 +687,7 @@ export default {
     helper_cleared: 'Паспяхова, падказкі будуць паказаны нанава.',
     helper_torrents_view: 'Для скіду тайм-кода і выкліку меню ўтрымлівайце клавішу (ОК)',
 
-    fav_sync_title: 'Сінхранізацыя закладак',
-    fav_sync_text: 'Вашыя любімыя закладкі разам з Вамі. Падлучыце сінхранізацыю і праглядайце на любой прыладзе. <br><br>Для гэтага зарэгіструйцеся на сайце {site}, стварыце профіль і аўтарызуйцеся ў дадатак.',
-    fav_sync_site: 'Сайт',
-    fav_remove_title: 'Выдаліць з гісторыі',
-    fav_remove_descr: 'Выдаліць выдзеленую картку',
     fav_clear_title: 'Ачысціць гісторыю',
-    fav_clear_descr: 'Выдаліць усе карткі з гісторыі',
-    fav_clear_label_title: 'Ачысціць пазнакі',
-    fav_clear_label_descr: 'Ачысціць пазнакі аб праглядах',
-    fav_clear_time_title: 'Ачысціць тайм-коды',
-    fav_clear_time_descr: 'Ачысціць усе тайм-коды',
-    fav_label_cleared: 'Пазнакі ачышчаны',
-    fav_time_cleared: 'Тайм-коды ачышчаны',
 
     timetable_empty: 'У гэтым раздзеле будуць адлюстроўвацца даты выхаду новых серый',
 
@@ -758,32 +728,13 @@ export default {
     player_normalization_step_low: 'Нізкае',
     player_normalization_step_medium: 'Сярэдняе',
     player_normalization_step_hight: 'Высокае',
-    player_youtube_no_played: 'Нажаль, гэта відэа не даступна ў вашым рэгіёне, магчыма, яно было заблакавана ці выдаленае.',
-    player_youtube_start_play: 'Для пачатку прайгравання відэа, націсніце кнопку "Плэй"',
 
 
     card_new_episode: 'Новая серыя',
-    card_book_remove: 'Прыбраць з закладак',
-    card_book_add: 'У закладкі',
-    card_book_descr: 'Глядзіце ў меню (Закладкі)',
-    card_like_remove: 'Прыбраць з упадабаных',
-    card_like_add: 'Падабаецца',
-    card_like_descr: 'Глядзіце ў меню (Падабаецца)',
-    card_wath_remove: 'Прыбраць з чаканых',
-    card_wath_add: 'Глядзець пазней',
-    card_wath_descr: 'Глядзіце ў меню (Пазлей)',
-    card_history_remove: 'Прыбраць з гісторыі',
-    card_history_add: 'У гісторыю',
-    card_history_descr: 'Глядзіце ў меню (Гісторыя)',
 
     keyboard_listen: 'Гаварыце, я слухаю...',
     keyboard_nomic: 'Няма доступу да мікрафона',
 
-    notice_new_quality: 'Даступна новая якасць',
-    notice_quality: 'Якасць',
-    notice_new_episode: 'Новая серыя',
-    notice_none: 'У вас яшчэ няма ніякіх апавяшчэнняў, зарэгіструйцеся на сайце <b>{site}</b>, каб сачыць за новымі серыямі і рэлізамі.',
-    notice_in_quality: 'У якасці',
 
     copy_link: 'Капіяваць спасылку на відэа',
     copy_secuses: 'Спасылка скапіявана ў буфер абмену',
@@ -865,35 +816,11 @@ export default {
     week_6: 'Сб',
     week_7: 'Нд',
 
-    notice_none_account: 'У вас яшчэ няма ніякіх апавяшчэнняў, дадайце серыялы ў закладкі і чакайце апавяшчэння аб новых серыях.',
-    notice_none_system: 'На дадзены момант у вас адсутнічаюць апавяшчэння. Мы абавязкова апавясцім вас, калі з\'явяцца новыя апавяшчэнні.',
     
-    extensions_enable: 'Уключыць',
-    extensions_disable: 'Адключыць',
-    extensions_check: 'Праверыць статус',
-    extensions_install: 'Усталяваць',
     extensions_info: 'Інфармацыя',
     extensions_edit: 'рэдагаваць',
-    extensions_change_name: 'Змяніць назву',
-    extensions_change_link: 'Змяніць спасылку',
-    extensions_remove: 'Выдаліць',
-    extensions_set_name: 'Увядзіце назву плагіна',
-    extensions_set_url: 'Увядзіце адрас плагіна',
-    extensions_ready: 'Гэты плагін ужо ўсталяваны',
-    extensions_no_info: 'Без інфармацыі',
     extensions_no_name: 'Без назвы',
-    extensions_worked: 'Працаздольны',
-    extensions_no_plugin: 'Плагін не пацверджаны ',
-    extensions_add: 'Дадаць плагін',
-    extensions_from_memory: 'Устаноўленыя ў памяць ',
-    extensions_from_cub: 'Устаноўленыя з CUB',
-    extensions_from_popular: 'Папулярныя плагіны',
-    extensions_from_lib: 'Бібліятэка плагінаў',
-    extensions_from_connected: 'Падлучаныя плагіны',
 
-    settings_webos_launcher: 'Запуск прыкладання',
-    settings_webos_launcher_add_device: 'Усталяваць як стартавае',
-    settings_webos_launcher_remove_device: 'Прыбраць са стартавых прыкладанняў',
     player_normalization: 'Нармалізацыя',
     change_source_on_cub: 'Змяніць крыніцу на CUB',
     settings_param_jackett_interview_all: 'Усё',
@@ -914,26 +841,13 @@ export default {
     settings_interface_glass_descr: 'Паказваць інтэрфейс у шклопадобным стылі',
     settings_interface_black_style: 'Чорны стыль',
 
-    settings_reset: 'Скід налад',
     title_channel: 'Канал',
 
-    input_detection_touch: 'Жадаеце пераключыць на сэнсарнае кіраванне?',
-    input_detection_mouse: 'Жадаеце пераключыць на кіраванне мышшу?',
-    input_detection_remote: 'Жадаеце пераключыць на кіраванне пультам?',
 
     settings_interface_hide_outside_the_screen: 'Хаваць карткі за межамі экрана',
     settings_interface_hide_outside_the_screen_descr: 'Гэта паскорыць рэндэр інтэрфейсу і палепшыць прадукцыйнасць',
 
-    https_text: 'Вы выкарыстоўвайце HTTPS пратакол, у гэтым пратаколе лямпа працуе некарэктна. Для карэктнай працы лямпы, выкарыстоўвайце адрас з пратаколам HTTP',
 
-    extensions_hpu_best: 'Папулярныя',
-    extensions_hpu_recomend: 'Рэкамендуем',
-    extensions_hpu_theme: 'Тэмы',
-    extensions_hpu_screensaver: 'Скрынсэйвер',
-    extensions_hpu_video: 'Відэа',
-    extensions_hpu_control: 'Упраўленне',
-    extensions_hpu_other: 'Рознае',
-    extensions_hpu_: 'Астатняе',
 
     title_author: 'Аўтар',
 
@@ -954,8 +868,6 @@ export default {
     
     title_upcoming_episodes: 'Бліжэйшыя выхады эпізодаў',
     title_recent_episodes: 'Нядаўнія выхады эпізодаў',
-    settings_rest_cache_images: 'Кэш малюнкаў',
-    settings_rest_cache_images_descr: 'Кэшаваць постэры і фоны ў лакальнае сховішча',
 
     settings_player_rewind_title: 'Перамотка',
     settings_player_rewind_descr: 'Інтэрвал перамоткі ў секундах',
@@ -995,12 +907,6 @@ export default {
     title_reset: 'Перазагрузіць',
     back_to_card: 'Вярнуцца ў картку',
 
-    premiere_author_recomend_1: 'Замовіце піцу і падрыхтуйцеся да драйву.',
-    premiere_author_recomend_2: 'Вечарынка толькі пачынаецца.',
-    premiere_author_recomend_3: 'Прыгатуйцеся да адрэналіну.',
-    premiere_author_recomend_4: 'Гатовыя да нязабыўнага вечара?',
-    premiere_author_recomend_5: 'Я рэкамендую гэта праглядзець.',
-    premiere_title: 'Прем’ера',
 
     settings_clear_cache_only: 'Кеш ачышчаны',
     settings_rest_cache_only: 'Толькі кеш',
@@ -1015,20 +921,12 @@ export default {
     title_parental_control: 'Кантроль бацькіў',
     title_worth_rewatch: 'Варта перагледзець',
 
-    ad_disable: 'Падпісаўшыся на CUB Premium, вы забудзецеся аб рэкламе.',
-    ad_after: 'Рэклама праз',
-    ad: 'Рэклама',
-    ad_skip: 'Прапусціць',
-    ad_continue_after: 'Прагляд пачнецца праз',
 
     settings_parser_prowlarr_link_descr: 'Пазначце спасылку на сервер Prowlarr',
     settings_parser_prowlarr_key_descr: 'Знаходзіцца ва ўкладцы налад Prowlarr у катэгорыі асноўнае',
     settings_player_torrent_type: 'Тып плэера для торэнтаў',
     settings_player_torrent_type_descr: 'Якім плэерам прайграваць торэнты',
 
-    full_crew: 'Яшчэ',
-    full_editing: 'Рэдагаванне',
-    full_creator: 'Стваральнік',
     player_normalization_step_none: 'Нулявая',
 
 
@@ -1049,13 +947,10 @@ export default {
 
     confirm_open_player: 'Іншая прылада запытвае доступ да плэера. Жадаеце прайграць відэа?',
 
-    pincode_use_remote: 'Выкарыстоўвайце пульт для ўводу кода, націскаючы стрэлкі для выбару патрэбнай лічбы.',
-    pincode_use_toggle: 'Націсніце і ўтрымлівайце кнопку OK, каб змяніць раскладку.',
 
     title_fire: 'Агонь!',
     title_top_100: 'Топ 100',
 
-    storage_quota_exceeded: 'Перавышаны ліміт сховішча. Выдаліце кэш і паспрабуйце зноў.',
     player_normalization_type_title: 'Тып нармалізацыі',
     player_normalization_type_all: 'Усе',
     player_normalization_type_up: 'Толькі павышэнне',
@@ -1074,14 +969,6 @@ export default {
     loading_progress_step_4: 'Засталося крыху',
     loading_progress_step_5: 'Ужо хутка',
 
-    install_extension_rule_1: 'Устаноўка старонняга плагіна',
-    install_extension_rule_2: 'Плагіны ствараюцца незалежнымі распрацоўшчыкамі, і LAMPA не правярае іх змесціва. Усталёўваючы іх, вы згаджаецеся з тым, што:',
-    install_extension_rule_3: '- Некаторыя плагіны могуць запытваць доступ да вашых дадзеных або працаваць з непраўеранымі крыніцамі.',
-    install_extension_rule_4: '- Калі ўсталяваны вамі плагін парушае аўтарскія правы або іншыя законы, уся адказнасць за яго выкарыстанне ляжыць на вас.',
-    install_extension_rule_5: '- Усталёўвайце толькі плагіны з давераных крыніц. Калі вы сумняваецеся ў бяспецы або законнасці плагіна, лепш адмовіцца ад яго ўсталёўкі.',
-    install_extension_rule_6: 'LAMPA не падтрымлівае і не ўхваляе плагіны, звязаныя з пірацкім кантэнтам.',
-    install_extension_rule_7: 'Працягваючы, вы пацвярджаеце, што разумееце гэтыя рызыкі.',
-    ad_plugin: 'Рэклама ад плагіна',
 
     terminal_title: 'Тэрмінал',
     terminal_no_access: 'Без доступу',
@@ -1102,15 +989,6 @@ export default {
     empty_bookmark_text: 'Дадавайце фільмы і серыялы, якія вам падабаюцца, у абраныя, каб хутка знаходзіць іх у гэтым раздзеле.',
     empty_mytorrents_title: 'Вашы торэнты',
     empty_mytorrents_text: 'Торэнты, загружаныя праз TorServer, з’явяцца тут.',
-    developer_param_enabled: 'Рэжым распрацоўшчыка',
-    developer_param_nopremium: 'Адключыць CUB Premium',
-    developer_param_nodemo: 'Адключыць дэма-рэжым',
-    developer_param_ads: 'Паказваць рэкламу',
-    developer_param_fps: 'Паказваць FPS',
-    developer_trigger_help_1: 'Амаль адгадалі :)',
-    developer_trigger_help_2: 'Яшчэ крыху :)',
-    developer_trigger_help_3: 'Вы ўпэўнены, што хочаце ўвайсці ў рэжым распрацоўшчыка?',
-    developer_trigger_help_4: 'Рэжым распрацоўшчыка актываваны',
     settings_param_navigation_touch: 'Сэнсар',
     remote_helper_long: 'Утрымлівайце кнопку (OK), каб адкрыць меню',
     player_segments_title: 'Сегменты',
@@ -1154,7 +1032,6 @@ export default {
     dmca_title_lgbt: 'Кантэнт абмежаваны',
     dmca_descr_lgbt: 'Прагляд недаступны ў вашым рэгіёне, так як магчыма змяшчае ЛГБТ-кантэнт. У некаторых краінах такія матэрыялы могуць быць забаронены ці абмежаваны.',
 
-    settings_lgbt_content_block: 'Блокіроўка ЛГБТ-контента',
 
     // todo:
     adult_content_title: 'Кантэнт для дарослых',

@@ -32,7 +32,6 @@ export default {
     full_date_of_release: 'Data de lançamento',
     full_budget: 'Orçamento',
     full_countries: 'Países',
-    full_like: 'Gostos',
     full_torrents: 'Torrents',
     full_detail: 'Detalhes',
     full_notext: 'Sem descrição.',
@@ -41,7 +40,6 @@ export default {
     full_episode_days_left: 'Dias restantes',
     full_season: 'Temporada',
     full_episode: 'Episódio',
-    full_directing: 'Dirigir',
 
 
     settings_input_links: 'Favoritos',
@@ -61,9 +59,7 @@ export default {
     settings_interface_view_card: 'Tipo de visualização do cartão',
     settings_interface_view_card_descr: 'Conforme rola o feed, os cartões serão carregados gradualmente ou carregarão todos',
     settings_interface_lang: 'Idioma da interface',
-    settings_interface_lang_reload: 'É necessário reiniciar a aplicação, clique "OK" para reiniciar.',
 
-    settings_main_account: 'Conta',
     settings_main_interface: 'Interface',
     settings_main_player: 'Videoplayer',
     settings_main_parser: 'Analisador',
@@ -83,9 +79,6 @@ export default {
     settings_rest_screensaver: 'Protetor de ecrã',
     settings_rest_screensaver_use: 'Mostrar quando ocupado',
     settings_rest_screensaver_type: 'Tipo protetor de ecrã',
-    settings_rest_helper: 'Dicas',
-    settings_rest_helper_use: 'Mostrar dicas',
-    settings_rest_helper_reset: 'Mostrar dicas novamente',
     settings_rest_pages: 'Quantas páginas manter na memória',
     settings_rest_pages_descr: 'Manter as páginas no estado em as deixei',
     settings_rest_time: 'Shift time',
@@ -112,10 +105,6 @@ export default {
     settings_parser_jackett_key_placeholder: 'Por exemplo: sa0sk83d..',
     settings_parser_jackett_key: 'Chave da API',
     settings_parser_jackett_key_descr: 'Localizado em Jackett',
-    settings_parser_torlook_type: 'Método de análise do site TorLook',
-    settings_parser_scraperapi_placeholder: 'Por exemplo: scraperapi.com',
-    settings_parser_scraperapi_link: 'Endereço para o analisador do site',
-    settings_parser_scraperapi_descr: 'Registar-se no site scraperapi.com, digite o endereço api.scraperapi.com?api_key=...&url={q}<br>W41.torlook.info será entregue em {q}',
     settings_parser_search: 'Pesquisar',
     settings_parser_search_descr: 'Pesquisar em que idioma?',
     settings_parser_in_search: 'Analisador na pesquisa',
@@ -226,7 +215,6 @@ export default {
     torrent_serial_season: 'Temporada',
     torrent_serial_date: 'Data',
 
-    torrent_get_magnet: 'Solicitando um link magnético',
     torrent_remove_title: 'Remover',
     torrent_remove_descr: 'O torrent será removido da sua lista',
 
@@ -252,7 +240,6 @@ export default {
     torrent_parser_voice_two: 'Duas vozes',
     torrent_parser_voice_amateur: 'Amador',
     torrent_parser_reset: 'Redefinir filtro',
-    torrent_parser_empty: 'Falha ao obter resultados',
     torrent_parser_no_hash: 'Falha ao obter HASH, tente recarregar o TorrServer',
     torrent_parser_added_to_mytorrents: 'Adicionado a "Meus torrents"',
     torrent_parser_add_to_mytorrents: 'Adicionar a "Meus torrents"',
@@ -264,12 +251,9 @@ export default {
     torrent_parser_nofiles: 'Falha ao extrair ficheiros',
     torrent_parser_set_link: 'Especifique um endereço para análise',
     torrent_parser_request_error: 'Erro na solicitação',
-    torrent_parser_magnet_error: 'Falha ao obter o endereço magnético',
     torrent_parser_no_responce: 'O analisador não está respondendo à solicitação',
-    torrent_parser_torlook_fallback_search_notification: 'O analisador Jackett não está disponível ou as configurações de conexão estão incorretas. Procurando Torlook...',
 	
     about_version: 'Versão',
-    about_donate: 'Donativos',
 
 	title_watched: 'Você assistiu',
     title_settings: 'Configurações',
@@ -631,7 +615,6 @@ export default {
     menu_filter: 'Filtro',
     menu_collections: 'Coleções',
     menu_relises: 'Lançamentos',
-    menu_anime: 'Anime',
     menu_bookmark: 'Favoritos',
     menu_like: 'Gostos',
     menu_time: 'Ver mais tarde',
@@ -682,7 +665,6 @@ export default {
     settings_param_subtitles_size_bigger: 'Grande',
     settings_param_screensaver_nature: 'Natureza',
     settings_param_torrent_lang_orig: 'Original',
-    settings_param_torrent_lang_ru: 'Russo',
     settings_param_player_timecode_again: 'Começar de novo',
     settings_param_player_timecode_continue: 'Continuar',
     settings_param_player_timecode_ask: 'Perguntar',
@@ -701,19 +683,7 @@ export default {
     helper_cleared: 'Sucesso, dicas serão mostradas novamente.',
     helper_torrents_view: 'Mantenha pressionada a tecla (OK) para redefinir o tempo de visualizado e exibir o menu',
 	 
-	fav_sync_title: 'Sincronização dos favoritos',
-    fav_sync_text: 'Conecte a sincronização e visualize em qualquer dispositivo os seus favoritos. <br><br>Para isso, registe-se no site {site}, crie um perfil e faça login na aplicação.',
-    fav_sync_site: 'Site',
-    fav_remove_title: 'Remover do histórico',
-    fav_remove_descr: 'Eliminar cartão selecionado',
     fav_clear_title: 'Limpar o histórico',
-    fav_clear_descr: 'Eliminar todos os cartões do histórico',
-    fav_clear_label_title: 'Limpar rótulos',
-    fav_clear_label_descr: 'Limpar rótulos visualizados',
-    fav_clear_time_title: 'Limpar tempo visualizado',
-    fav_clear_time_descr: 'Limpar todos os tempos visualizados',
-    fav_label_cleared: 'Marcas apagadas',
-    fav_time_cleared: 'Tempos visualizados apagados',
 
     timetable_empty: 'Esta secção exibirá as datas de lançamento dos novos episódios.',
 
@@ -754,34 +724,13 @@ export default {
     player_normalization_step_low: 'Baixo',
     player_normalization_step_medium: 'Médio',
     player_normalization_step_hight: 'Alto',
-    player_youtube_no_played: 'Desculpe, este vídeo não está disponível em sua região e pode ter sido bloqueado ou removido.',
-    player_youtube_start_play: 'Para começar a reproduzir o vídeo, clique no botão "Reproduzir"',
 	
 
 	card_new_episode: 'Novo episódio',
-    card_book_remove: 'Remover dos favoritos',
-    card_book_add: 'Adicionar aos favoritos',
-    card_book_descr: 'Procure no menu (Favoritos)',
-    card_like_remove: 'Remover dos favoritos',
-    card_like_add: 'Gosto',
-    card_like_descr: 'Veja o menu (Gostos)',
-    card_wath_remove: 'Remover do ver mais tarde',
-    card_wath_add: 'Adicionar ao ver mais tarde',
-    card_wath_descr: 'Veja o menu (ver mais tarde)',
-    card_history_remove: 'Remover do histórico',
-    card_history_add: 'Na história',
-    card_history_descr: 'Procure no menu (Histórico)',
 
     keyboard_listen: 'Fale, estou ouvindo...',
     keyboard_nomic: 'Sem acesso ao microfone',
 
-	notice_new_quality: 'Nova qualidade disponível',
-    notice_quality: 'Qualidade',
-    notice_new_episode: 'Novo episódio',
-    notice_none: 'Ainda não tem notificações, registe-se em <b>{site}</b> para acompanhar novos episódios e lançamentos.',
-    notice_in_quality: 'Como',
-    notice_none_account: 'Você ainda não tem notificações, marque a série e aguarde as notificações de novos episódios.',
-    notice_none_system: 'Você não tem nenhuma notificação. Nós iremos notificá-lo quando novas notificações estiverem disponíveis.',
 	 
 	copy_link: 'Copiar endereço do vídeo',
     copy_secuses: 'Endereço copiado para a área de transferência',
@@ -855,32 +804,10 @@ export default {
     week_6: 'Sáb',
     week_7: 'Dom',
 
-	extensions_enable: 'Ativar',
-    extensions_disable: 'Desativar',
-    extensions_check: 'Verificar estado',
-    extensions_install: 'Instalar',
     extensions_info: 'Informações',
     extensions_edit: 'Editar',
-    extensions_change_name: 'Alterar nome',
-    extensions_change_link: 'Alterar endereço',
-    extensions_remove: 'Eliminar',
-    extensions_set_name: 'Digite o nome do plugin',
-    extensions_set_url: 'Digite o URL do plugin',
-    extensions_ready: 'Este plugin já está instalado',
-    extensions_no_info: 'Sem informação',
     extensions_no_name: 'Sem título',
-    extensions_worked: 'Verificado',
-    extensions_no_plugin: 'Plugin não verificado',
-    extensions_add: 'Adicionar Plugin',
-    extensions_from_memory: 'Instalado na memória',
-    extensions_from_cub: 'Instalado do CUB',
-    extensions_from_popular: 'Plugins populares',
-    extensions_from_lib: 'Biblioteca de plugins',
-    extensions_from_connected: 'Plugins conectados',
 
-    settings_webos_launcher: 'Lançamento do aplicativo',
-    settings_webos_launcher_add_device: 'Definir como início',
-    settings_webos_launcher_remove_device: 'Remover dos aplicativos iniciais',
     player_normalization: 'Normalização',
     change_source_on_cub: 'Alterar fonte para CUB',
     settings_param_jackett_interview_all: 'Tudo',
@@ -901,26 +828,13 @@ export default {
     settings_interface_glass_descr: 'Mostrar interface em estilo vítreo',
     settings_interface_black_style: 'Estilo preto',
 
-    settings_reset: 'Redefinir',
     title_channel: 'Canal',
 
-    input_detection_touch: 'Quer mudar para o controle de toque?',
-    input_detection_mouse: 'Deseja alternar para o controle do mouse?',
-    input_detection_remote: 'Quer mudar para controle remoto?',
 
     settings_interface_hide_outside_the_screen: 'Ocultar cartões fora da tela',
     settings_interface_hide_outside_the_screen_descr: 'Isso acelerará a interface renderizar e melhorar o desempenho',
 
-    https_text: 'Você está usando o protocolo HTTPS, neste protocolo a lâmpada não funciona corretamente. Para o correto funcionamento da lâmpada, utilize o endereço com o protocolo HTTP',
 
-    extensions_hpu_best: 'Popular',
-    extensions_hpu_recomend: 'Recomendado',
-    extensions_hpu_theme: 'Temas',
-    extensions_hpu_screensaver: 'Protetor de tela',
-    extensions_hpu_video: 'Vídeo',
-    extensions_hpu_control: 'Ao controle',
-    extensions_hpu_other: 'Diversos',
-    extensions_hpu_: 'Descansar',
 
     title_author: 'Autor',
 
@@ -941,8 +855,6 @@ export default {
 
     title_upcoming_episodes: 'Próximos lançamentos de episódios',
     title_recent_episodes: 'Lançamentos recentes de episódios',
-    settings_rest_cache_images: 'Cache de imagens',
-    settings_rest_cache_images_descr: 'Armazene pôsteres e planos de fundo no armazenamento local',
 
     settings_player_rewind_title: 'Rebobinar',
     settings_player_rewind_descr: 'Intervalo de retrocesso em segundos',
@@ -980,12 +892,6 @@ export default {
     title_reset: 'Reinício',
     back_to_card: 'Voltar ao cartão',
 
-    premiere_author_recomend_1: 'Peça pizza e prepare-se para a emoção.',
-    premiere_author_recomend_2: 'A festa está apenas começando.',
-    premiere_author_recomend_3: 'Prepare-se para a adrenalina.',
-    premiere_author_recomend_4: 'Pronto para uma noite inesquecível?',
-    premiere_author_recomend_5: 'Eu recomendo assistir.',
-    premiere_title: 'Estréia',
 
     settings_clear_cache_only: 'Cache Cleared',
     settings_rest_cache_only: 'Apenas Cache',
@@ -1000,19 +906,11 @@ export default {
     title_parental_control: 'Controle Parental',
     title_worth_rewatch: 'Vale a pena assistir novamente',
 
-    ad_disable: 'Ao assinar o CUB Premium, você esquecerá a publicidade.',
-    ad_after: 'Publicidade via',
-    ad: 'Anúncio',
-    ad_skip: 'Pular',
-    ad_continue_after: 'A visualização começará em',
     settings_parser_prowlarr_link_descr: 'Forneça um link para o servidor Prowlarr',
     settings_parser_prowlarr_key_descr: 'Localizado na guia de configurações do Prowlarr na categoria geral',
     settings_player_torrent_type: 'Tipo de player para torrents',
     settings_player_torrent_type_descr: 'Qual player jogar torrents',
 
-    full_crew: 'Mais',
-    full_editing: 'Edição',
-    full_creator: 'Criador',
     player_normalization_step_none: 'Zero',
 
 
@@ -1023,8 +921,6 @@ export default {
 
     confirm_open_player: 'Outro dispositivo está solicitando acesso ao player. Quer reproduzir o vídeo?',
 
-    pincode_use_remote: 'Utilize o comando para introduzir o código, premindo as setas para selecionar o número pretendido.',
-    pincode_use_toggle: 'Prima e mantenha premido o botão OK para alterar o layout.',
 
     title_fire: 'Fogo!',
     title_top_100: '100 melhores',
@@ -1033,7 +929,6 @@ export default {
     player_normalization_type_all: 'Todos',
     player_normalization_type_up: 'Apenas Aumento',
     player_normalization_type_down: 'Apenas Diminuição',
-    storage_quota_exceeded: 'Limite de armazenamento excedido. Limpe o cache e tente novamente.',
 
     title_ai_assistant: 'Assistente de IA',
     title_facts: 'Fatos Interessantes',
@@ -1048,14 +943,6 @@ export default {
     loading_progress_step_4: 'Quase pronto',
     loading_progress_step_5: 'Chegando em breve',
 
-    install_extension_rule_1: 'Instalação de um plug-in de terceiros',
-    install_extension_rule_2: 'Os plug-ins são criados por desenvolvedores independentes, e o LAMPA não verifica seu conteúdo. Ao instalá-los, você concorda que:',
-    install_extension_rule_3: '- Alguns plug-ins podem solicitar acesso aos seus dados ou trabalhar com fontes não verificadas.',
-    install_extension_rule_4: '- Se o plug-in que você instalar violar direitos autorais ou outras leis, toda a responsabilidade pelo seu uso será sua.',
-    install_extension_rule_5: '- Instale apenas plug-ins de fontes confiáveis. Se você tiver dúvidas sobre a segurança ou legalidade de um plug-in, é melhor não instalá-lo.',
-    install_extension_rule_6: 'O LAMPA não apoia nem aprova plug-ins relacionados a conteúdo pirata.',
-    install_extension_rule_7: 'Ao continuar, você confirma que compreende esses riscos.',
-    ad_plugin: 'Anúncio do plugin',
 
 	terminal_title: 'Terminal',
     terminal_no_access: 'Sem acesso',
@@ -1076,15 +963,6 @@ export default {
     empty_bookmark_text: 'Adicione filmes e séries que você gosta aos favoritos para encontrá-los facilmente nesta seção.',
     empty_mytorrents_title: 'Seus torrents',
     empty_mytorrents_text: 'Os torrents baixados via TorServer aparecerão aqui.',
-    developer_param_enabled: 'Modo desenvolvedor',
-    developer_param_nopremium: 'Desativar CUB Premium',
-    developer_param_nodemo: 'Desativar modo de demonstração',
-    developer_param_ads: 'Mostrar anúncios',
-    developer_param_fps: 'Mostrar FPS',
-    developer_trigger_help_1: 'Quase acertou :)',
-    developer_trigger_help_2: 'Mais um pouco :)',
-    developer_trigger_help_3: 'Tem certeza de que deseja entrar no modo desenvolvedor?',
-    developer_trigger_help_4: 'Modo desenvolvedor ativado',
     settings_param_navigation_touch: 'Sensor',
     remote_helper_long: 'Segure o botão (OK) para abrir o menu',
     player_segments_title: 'Segmentos',
@@ -1128,7 +1006,6 @@ export default {
     dmca_title_lgbt: 'Conteúdo restrito',
     dmca_descr_lgbt: 'A visualização não está disponível na sua região, pois pode conter conteúdo LGBT. Esse tipo de material pode ser proibido ou restrito em alguns países.',
 
-    settings_lgbt_content_block: 'Bloquear conteúdo LGBT',
 
     // todo:
     adult_content_title: 'Conteúdo adulto',

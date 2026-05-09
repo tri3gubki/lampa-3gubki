@@ -32,7 +32,6 @@ export default {
     full_date_of_release: 'дата на пускане',
     full_budget: 'Бюджет',
     full_countries: 'Страни',
-    full_like: 'Като',
     full_torrents: 'Торенти',
     full_detail: 'Подробно',
     full_notext: 'Без описание.',
@@ -41,8 +40,6 @@ export default {
     full_episode_days_left: 'Дни остават',
     full_season: 'Сезон',
     full_episode: 'Епизод',
-    full_directing: 'Режисура',
-    full_writing: 'Сценарии',
 
 
     settings_input_links: 'Любими',
@@ -62,9 +59,7 @@ export default {
     settings_interface_view_card: 'Тип изглед на карта',
     settings_interface_view_card_descr: 'Докато превъртате емисията, картите да се зареждат постепенно или всички',
     settings_interface_lang: 'Език на интерфейса',
-    settings_interface_lang_reload: 'Трябва да рестартирате приложението, изберете "OK", за да рестартирате.',
 
-    settings_main_account: 'Акаунт',
     settings_main_interface: 'Интерфейс',
     settings_main_player: 'Плеър',
     settings_main_parser: 'Парсър/Анализатор',
@@ -84,9 +79,6 @@ export default {
     settings_rest_screensaver: 'Скрийнсейвър',
     settings_rest_screensaver_use: 'Показване на началния екран при неактивност',
     settings_rest_screensaver_type: 'Тип скрийнсейвър',
-    settings_rest_helper: 'Съвети',
-    settings_rest_helper_use: 'Покажи съвети',
-    settings_rest_helper_reset: 'Покажи съветите отново',
     settings_rest_pages: 'Колко страници да се пазят в паметта',
     settings_rest_pages_descr: 'Пази страниците в състоянието, в което сте ги оставили',
     settings_rest_time: 'Време за смяна',
@@ -113,10 +105,6 @@ export default {
     settings_parser_jackett_key_placeholder: 'Например: sa0sk83d..',
     settings_parser_jackett_key: 'Api ключ',
     settings_parser_jackett_key_descr: 'намиращ се в Jackett',
-    settings_parser_torlook_type: 'Метод за обхождане на TorLook',
-    settings_parser_scraperapi_placeholder: 'Например: scraperapi.com',
-    settings_parser_scraperapi_link: 'Връзка към анализатор на сайта',
-    settings_parser_scraperapi_descr: 'Регистрирайте се в сайта scraperapi.com, въведете връзката на api.scraperapi.com?api_key=...&url={q}<br>W41.torlook.info ще бъдат доставени до {q}',
     settings_parser_search: 'Търсене',
     settings_parser_search_descr: 'На какъв език да търся?',
     settings_parser_in_search: 'Анализатор при търсене',
@@ -227,7 +215,6 @@ export default {
     torrent_serial_season: 'Сезон',
     torrent_serial_date: 'Изход',
 
-    torrent_get_magnet: 'Искане на магнитна връзка',
     torrent_remove_title: 'Изтрий',
     torrent_remove_descr: 'Торентът ще бъде премахнат от вашата листа',
 
@@ -253,7 +240,6 @@ export default {
     torrent_parser_voice_two: 'Два гласа',
     torrent_parser_voice_amateur: 'Аматьорски',
     torrent_parser_reset: 'Нулиране на филтъра',
-    torrent_parser_empty: 'Неуспешно получаване на резултати',
     torrent_parser_no_hash: 'Неуспешно получаване на HASH, опитайте да перезагрузите TorrServer',
     torrent_parser_added_to_mytorrents: 'Добавен в "Моите торенти"',
     torrent_parser_add_to_mytorrents: 'Добави в "Моите торенти"',
@@ -265,12 +251,9 @@ export default {
     torrent_parser_nofiles: 'Неуспешно извличане на нужните файлове',
     torrent_parser_set_link: 'Посочете връзка за анализиране',
     torrent_parser_request_error: 'Грешка в заявката',
-    torrent_parser_magnet_error: 'Неуспешно получаване на магнитна връзка',
     torrent_parser_no_responce: 'Анализаторът не отговаря на заявката',
-    torrent_parser_torlook_fallback_search_notification: 'Jackett анализаторът не е наличен или настройките за връзка са неправилни. Търся през Torlook...',
 
     about_version: 'Версия',
-    about_donate: 'Дарете',
 
     title_watched: 'Гледахте',
     title_settings: 'Настройки',
@@ -632,7 +615,6 @@ export default {
     menu_filter: 'Филтър',
     menu_collections: 'Колекции',
     menu_relises: 'Релийзи',
-    menu_anime: 'Аниме',
     menu_bookmark: 'Отметки',
     menu_like: 'Харесвам',
     menu_time: 'По-късно',
@@ -683,7 +665,6 @@ export default {
     settings_param_subtitles_size_bigger: 'големи',
     settings_param_screensaver_nature: 'Природа',
     settings_param_torrent_lang_orig: 'Оригинал',
-    settings_param_torrent_lang_ru: 'Руски',
     settings_param_player_timecode_again: 'Стартирай отначало',
     settings_param_player_timecode_continue: 'Продължи',
     settings_param_player_timecode_ask: 'Питай',
@@ -702,19 +683,7 @@ export default {
     helper_cleared: 'Успешно, подсказки ще бъдат показани отново.',
     helper_torrents_view: 'Задръжте натиснат клавиша (OK), за да нулирате времевия код и да покажете менюто',
 
-    fav_sync_title: 'Синхронизация отметки',
-    fav_sync_text: 'Любимите ви отметки с вас. Свързване на синхронизация и преглед на всяко устройство. <br><br>За да направите това, регистрирайте се на сайта {site}, създайте профил и влезте в приложението.',
-    fav_sync_site: 'Уебсайт',
-    fav_remove_title: 'Премахни от историята',
-    fav_remove_descr: 'Изтрий избраната карта',
     fav_clear_title: 'Изчистване на историята',
-    fav_clear_descr: 'Изтриване на всички карти от историята',
-    fav_clear_label_title: 'Изчисти отметките',
-    fav_clear_label_descr: 'Изчисти отметките за прегледани',
-    fav_clear_time_title: 'Изчисти времеви кодове',
-    fav_clear_time_descr: 'Изчисти всички времеви кодове',
-    fav_label_cleared: 'Маркировките са изчистени',
-    fav_time_cleared: 'Времевите кодове са изчистени',
 
     timetable_empty: 'Този раздел ще покаже датите на пускане на нови епизоди.',
 
@@ -755,34 +724,13 @@ export default {
     player_normalization_step_low: 'Ниско',
     player_normalization_step_medium: 'Средно',
     player_normalization_step_hight: 'Високо',
-    player_youtube_no_played: 'За съжаление това видео не е налично във вашия регион и може да е блокирано или премахнато.',
-    player_youtube_start_play: 'За да започнете да възпроизвеждате видеоклипа, кликнете върху бутона "Play".',
 
 
     card_new_episode: 'Нови сериали',
-    card_book_remove: 'Премахни от отметките',
-    card_book_add: 'В отметките',
-    card_book_descr: 'Погледнете в менюто (Отметки)',
-    card_like_remove: 'Премахване от Предпочитани',
-    card_like_add: 'Харесвам',
-    card_like_descr: 'Виж менюто (Харесвам)',
-    card_wath_remove: 'Премахни от очаквани',
-    card_wath_add: 'Гледай по-късно',
-    card_wath_descr: 'Виж менюто (По-късно)',
-    card_history_remove: 'Премахни от историята',
-    card_history_add: 'В историята',
-    card_history_descr: 'Виж менюто (История)',
 
     keyboard_listen: 'Говори, аз слушам...',
     keyboard_nomic: 'Няма достъп до микрофона',
 
-    notice_new_quality: 'Налично ново качество',
-    notice_quality: 'Качество',
-    notice_new_episode: 'Нови серии',
-    notice_none: 'Все още нямате известия, регистрирайте се на <b>{site}</b>, за да следите за нови епизоди и издания.',
-    notice_in_quality: 'В качество',
-    notice_none_account: 'Все още нямате известия, маркирайте поредицата и изчакайте известия за нови епизоди.',
-    notice_none_system: 'В момента нямате известия. Със сигурност ще Ви уведомим, когато се появят нови известия.',
 
     copy_link: 'Копиране на връзката към видеото',
     copy_secuses: 'Линка е копиран в клипборда',
@@ -856,32 +804,10 @@ export default {
     week_6: 'Съб',
     week_7: 'Нед',
 
-    extensions_enable: 'Включи',
-    extensions_disable: 'Забрани',
-    extensions_check: 'Провери състоянието',
-    extensions_install: 'Инсталирай',
     extensions_info: 'Информация',
     extensions_edit: 'Редакция',
-    extensions_change_name: 'Смяна на име',
-    extensions_change_link: 'Смяна на линк',
-    extensions_remove: 'Изтрий',
-    extensions_set_name: 'Въведете име на добавка',
-    extensions_set_url: 'Въведете адрес на добавка',
-    extensions_ready: 'Тази добавка вече е инсталирана',
-    extensions_no_info: 'Без информация',
     extensions_no_name: 'Без заглавие',
-    extensions_worked: 'Работи',
-    extensions_no_plugin: 'Добавката не е проверена',
-    extensions_add: 'Добави',
-    extensions_from_memory: 'Инсталиране от паметта',
-    extensions_from_cub: 'Инсталирана от CUB',
-    extensions_from_popular: 'Популярни добавки',
-    extensions_from_lib: 'Библиотека добавки',
-    extensions_from_connected: 'Свързани добавки',
 
-    settings_webos_launcher: 'Стартиране на приложение',
-    settings_webos_launcher_add_device: 'Инсталирайте като стартово приложение',
-    settings_webos_launcher_remove_device: 'Премахване от стартиращи приложения',
     player_normalization: 'Нормализация',
     change_source_on_cub: 'Променете източника на CUB',
     settings_param_jackett_interview_all: 'Всички',
@@ -902,26 +828,13 @@ export default {
     settings_interface_glass_descr: 'Покажи интерфейса в стил стъкло',
     settings_interface_black_style: 'Черен стил',
 
-    settings_reset: 'Нулиране',
     title_channel: 'Канал',
 
-    input_detection_touch: 'Искате ли да превключите на тъч управление?',
-    input_detection_mouse: 'Искате ли да превключите на управление с мишка?',
-    input_detection_remote: 'Искате ли да превключите на управление с дистанционно?',
 
     settings_interface_hide_outside_the_screen: 'Скриване на картите извън екрана',
     settings_interface_hide_outside_the_screen_descr: 'Това ще ускори рендирането на потребителския интерфейс и ще подобри производителността',
 
-    https_text: 'Използвате протокола HTTPS, в този протокол лампата не работи правилно. За правилната работа на лампата използвайте адреса с HTTP протокола',
 
-    extensions_hpu_best: 'Популярни',
-    extensions_hpu_recomend: 'Препоръчани',
-    extensions_hpu_theme: 'Теми',
-    extensions_hpu_screensaver: 'Скрийнсейвъри',
-    extensions_hpu_video: 'Видео',
-    extensions_hpu_control: 'Контрол',
-    extensions_hpu_other: 'Разни',
-    extensions_hpu_: 'Други',
 
     title_author: 'Автор',
 
@@ -942,8 +855,6 @@ export default {
 
     title_upcoming_episodes: 'Предстоящи епизоди',
     title_recent_episodes: 'Наскоро излезли епизоди',
-    settings_rest_cache_images: 'Кеш на изображения',
-    settings_rest_cache_images_descr: 'Кеширане на плакати и фонове в локалното хранилище',
 
     settings_player_rewind_title: 'Назад',
     settings_player_rewind_descr: 'Интервал Назад в секунди',
@@ -983,12 +894,6 @@ export default {
     title_reset: 'Рестартирайте',
     back_to_card: 'Връщане към картата',
 
-    premiere_author_recomend_1: 'Поръчайте пица и се пригответе за забава',
-    premiere_author_recomend_2: 'Вечеринката тъкмо започва',
-    premiere_author_recomend_3: 'Бъдете готови за адреналина.',
-    premiere_author_recomend_4: 'Готови ли сте за една незабравима вечер?',
-    premiere_author_recomend_5: 'Препоръчвам ви да гледате',
-    premiere_title: 'Премиера',
 
     settings_clear_cache_only: 'Изчисти кеш',
     settings_rest_cache_only: 'Само кеш',
@@ -1003,19 +908,11 @@ export default {
     title_parental_control: 'Родителски контрол',
     title_worth_rewatch: 'Заслужава си повторно гледане',
 
-    ad_disable: 'Като се абонирате за CUB Premium, ще забравите за рекламата.',
-    ad_after: 'Реклама чрез',
-    ad: 'Реклама',
-    ad_skip: 'Пропускане',
-    ad_continue_after: 'Гледането ще започне в',
     settings_parser_prowlarr_link_descr: 'Предоставете връзка към сървъра Prowlarr',
     settings_parser_prowlarr_key_descr: 'Намира се в раздела с настройки на Prowlarr в общата категория',
     settings_player_torrent_type: 'Тип плеър за торенти',
     settings_player_torrent_type_descr: 'На кой плеър да пускате торенти',
 
-    full_crew: 'Още',
-    full_editing: 'Редакция',
-    full_creator: 'Създател',
     player_normalization_step_none: 'Нула',
 
 
@@ -1026,8 +923,6 @@ export default {
 
     confirm_open_player: 'Друго устройство иска достъп до плейъра. Искате ли да пуснете видеоклипа?',
 
-    pincode_use_remote: 'Използвайте дистанционното управление, за да въведете кода, като натиснете стрелките, за да изберете желания номер.',
-    pincode_use_toggle: 'Натиснете и задръжте бутона OK, за да промените оформлението.',
 
     title_fire: 'Огън!',
     title_top_100: 'Топ 100',
@@ -1036,7 +931,6 @@ export default {
     player_normalization_type_all: 'Всички',
     player_normalization_type_up: 'Само увеличаване',
     player_normalization_type_down: 'Само намаляване',
-    storage_quota_exceeded: 'Надхвърлен е лимитът за съхранение. Изтрийте кеша и опитайте отново.',
 
     title_ai_assistant: 'AI-асистент',
     title_facts: 'Интересни факти',
@@ -1051,14 +945,6 @@ export default {
     loading_progress_step_4: 'Остава още малко',
     loading_progress_step_5: 'Скоро ще е готово',
 
-    install_extension_rule_1: 'Инсталиране на външен плъгин',
-    install_extension_rule_2: 'Плъгините са създадени от независими разработчици и LAMPA не проверява тяхното съдържание. С инсталирането им вие се съгласявате, че:',
-    install_extension_rule_3: '- Някои плъгини може да изискват достъп до вашите данни или да работят с непроверени източници.',
-    install_extension_rule_4: '- Ако инсталираният от вас плъгин нарушава авторски права или други закони, цялата отговорност за неговото използване е ваша.',
-    install_extension_rule_5: '- Инсталирайте само плъгини от надеждни източници. Ако се съмнявате в сигурността или законността на даден плъгин, по-добре се въздържайте от инсталирането му.',
-    install_extension_rule_6: 'LAMPA не поддържа и не одобрява плъгини, свързани с пиратско съдържание.',
-    install_extension_rule_7: 'Продължавайки, вие потвърждавате, че разбирате тези рискове.',
-    ad_plugin: 'Реклама от плъгина',
 
     terminal_title: 'Терминал',
     terminal_no_access: 'Без достъп',
@@ -1079,15 +965,6 @@ export default {
     empty_bookmark_text: 'Добавете филми и сериали, които харесвате, в „Любими“, за да ги намирате бързо в този раздел.',
     empty_mytorrents_title: 'Вашите торенти',
     empty_mytorrents_text: 'Торентите, които сте изтеглили чрез TorServer, ще се появят тук.',
-    developer_param_enabled: 'Режим за разработчици',
-    developer_param_nopremium: 'Деактивиране на CUB Premium',
-    developer_param_nodemo: 'Деактивиране на демо режим',
-    developer_param_ads: 'Показване на реклами',
-    developer_param_fps: 'Показване на FPS',
-    developer_trigger_help_1: 'Почти познахте :)',
-    developer_trigger_help_2: 'Още малко :)',
-    developer_trigger_help_3: 'Сигурни ли сте, че искате да влезете в режим за разработчици?',
-    developer_trigger_help_4: 'Режимът за разработчици е активиран',
     settings_param_navigation_touch: 'Сензор',
     remote_helper_long: 'Задръжте бутона (OK), за да отворите менюто',
     player_segments_title: 'Сегменти',
@@ -1131,7 +1008,6 @@ export default {
     dmca_title_lgbt: 'Съдържание с ограничен достъп',
     dmca_descr_lgbt: 'Преглеждането не е възможно във вашия регион, тъй като е възможно да съдържа ЛГБТ съдържание. Такива материали може да са забранени или ограничени в някои страни.',
 
-    settings_lgbt_content_block: 'Блокиране на ЛГБТ съдържание',
 
     // todo:
     adult_content_title: 'Съдържание за възрастни',
