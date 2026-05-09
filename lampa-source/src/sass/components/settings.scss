@@ -18,18 +18,18 @@
     }
 
     &__content{
-        // Компактное окно настроек прижатое к правому краю — как
-        // обычная Modal-форма Lampa, не бок-панель на всю высоту.
+        // Компактное окно прижатое к правому краю. Ширина подстраивается
+        // под контент (fit-content), но ограничена min/max. Высота — до 80vh.
         position: fixed;
         top: 50%;
         right: $offset;
-        // Сначала окно за правой границей экрана (translateX > 0),
-        // settings--open сдвигает его в видимую область.
         transform: translate3d(calc(100% + #{$offset}), -50%, 0);
         transition: transform $speed;
         background: #262829;
         border-radius: 1em;
-        width: 35%;
+        width: fit-content;
+        min-width: 22em;
+        max-width: 40%;
         max-height: 80vh;
         display: flex;
         flex-direction: column;
@@ -37,15 +37,17 @@
         will-change: transform;
 
         @media screen and (max-width: $media_md) {
-            width: 50%;
+            max-width: 60%;
         }
 
         @media screen and (max-width: $media_sm) {
-            width: 70%;
+            max-width: 80%;
         }
 
         @media screen and (max-width: $media_xm) {
             width: 100%;
+            max-width: none;
+            min-width: 0;
             right: 0;
             top: unset;
             bottom: 0;

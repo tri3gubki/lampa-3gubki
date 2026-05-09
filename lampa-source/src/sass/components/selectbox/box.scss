@@ -18,34 +18,43 @@
     }
 
     &__content{
+        // Тот же модальный стиль что и Settings (см. settings.scss).
         position: fixed;
-        top: 0;
-        left: 100%;
+        top: 50%;
+        right: $offset;
+        transform: translate3d(calc(100% + #{$offset}), -50%, 0);
         transition: transform $speed;
         background: #262829;
-        width: 35%;
+        border-radius: 1em;
+        width: fit-content;
+        min-width: 22em;
+        max-width: 40%;
+        max-height: 80vh;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         will-change: transform;
 
         @media screen and (max-width: $media_md) {
-            width: 50%;
+            max-width: 60%;
         }
 
         @media screen and (max-width: $media_sm) {
-            width: 70%;
+            max-width: 80%;
         }
 
         @media screen and (max-width: $media_xm) {
             width: 100%;
-            left: 0;
+            max-width: none;
+            min-width: 0;
+            right: 0;
             top: unset;
             bottom: 0;
+            max-height: none;
             height: auto !important;
             transition: none;
-            transform: translate3d(0, 100% ,0);
-            border-top-left-radius: 2em;
-            border-top-right-radius: 2em;
+            transform: translate3d(0, 100%, 0);
+            border-radius: 2em 2em 0 0;
         }
     }
 
@@ -56,8 +65,8 @@
     }
 
     &__body{
-        flex-grow: 1;
         display: flex;
+        min-height: 0;
 
         @media screen and (max-width: $media_xm) {
             height: auto !important;
@@ -96,7 +105,11 @@ body.selectbox--open{
         }
         &__content{
             @media screen and (min-width: $media_xm) {
-                transform: translate3d(-100%, 0 ,0);
+                transform: translate3d(0, -50%, 0);
+            }
+
+            @media screen and (max-width: $media_xm) {
+                transform: translate3d(0, 0, 0);
             }
         }
     }

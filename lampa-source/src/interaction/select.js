@@ -151,7 +151,16 @@ function show(object){
 
     $('body').toggleClass('selectbox--open',true)
 
-    html.find('.selectbox__body').addClass('layer--wheight').css('max-height', window.innerWidth <= 480 ? window.innerHeight * 0.6 : 'unset').data('mheight', html.find('.selectbox__head'))
+    // Окно selectbox ограничено 80vh (см. selectbox/box.scss). max-height
+    // body = высота окна минус шапка. Без layer--wheight чтобы layer.js
+    // не форсил height = innerHeight (полная высота экрана).
+    if(window.innerWidth <= 480){
+        html.find('.selectbox__body').css('max-height', window.innerHeight * 0.6)
+    }
+    else{
+        let head_h = html.find('.selectbox__head').outerHeight() || 0
+        html.find('.selectbox__body').css('max-height', 'calc(80vh - ' + head_h + 'px)')
+    }
 
     html.addClass('animate')
 
