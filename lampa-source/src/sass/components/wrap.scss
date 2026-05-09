@@ -37,7 +37,11 @@
 }
 
 
-body.menu--open{
+// menu--open сдвигает контент только на мобильных, где меню скрыто
+// и при открытии (через гамбургер) выезжает поверх. На десктопе/iPad
+// menu--always — меню уже всегда раскрыто, доп сдвиг от menu--open
+// после закрытия Select.show оставлял сдвиг и ломал layout.
+body.menu--open:not(.menu--always){
     .wrap{
         &__left{
             transform: translate3d(15em, 0, 0);
