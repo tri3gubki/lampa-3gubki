@@ -9,7 +9,6 @@ import LineModule from '../interaction/items/line/module/module'
 import Background from '../interaction/background'
 import Router from '../core/router'
 import CardModule from '../interaction/card/module/module'
-import Account from '../core/account/account'
 import EmptyRouter from '../interaction/empty/module/router'
 import ContentRows from '../core/content_rows'
 

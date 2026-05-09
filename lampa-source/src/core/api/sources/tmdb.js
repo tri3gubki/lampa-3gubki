@@ -12,7 +12,6 @@ import ContentRows from '../../content_rows'
 import Template from '../../../interaction/template'
 import LineModule from '../../../interaction/items/line/module/module'
 import Router from '../../router'
-import Permit from '../../account/permit'
 import Keys from '../../tmdb/keys'
 
 

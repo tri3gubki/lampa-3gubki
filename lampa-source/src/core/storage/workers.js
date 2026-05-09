@@ -3,7 +3,6 @@ import Storage from './storage'
 import Reguest from '../../utils/reguest'
 import Arrays from '../../utils/arrays'
 import Socket from '../socket'
-import Account from '../account/account'
 import Manifest from '../manifest'
 
 
@@ -109,38 +108,9 @@ class WorkerArray{
     }
 
     update(full, nolisten){
-        if(false && false && Date.now() - this.update_time > 1000 * 60 * 9){
-            let account = Account.Permit.account
-
-            this.update_time = Date.now()
-
-            let url = api() + 'storage/data/'+encodeURIComponent(this.field) + '/' + this.class_type
-            let all = full
-
-            if(Storage.get('storage_'+this.field+'_update_time','0') + 1000 * 60 * 60 * 24 < Date.now()) all = true
-
-            if(all) url = url + '?full=true'
-
-            network.silent(url,(result)=>{
-                try{
-                    this.parse(result.data, nolisten)
-                }
-                catch(e){
-                    console.log('StorageWorker',this.field,e.message)
-                }
-
-                Storage.set('storage_'+this.field+'_update_time',Date.now())
-
-                this.loaded = true
-            },(e)=>{
-                console.log('StorageWorker', this.field, e.decode_error)
-            },false,{
-                headers: {
-                    token: account.token,
-                    profile: account.profile.id
-                }
-            })
-        }
+        // CUB-sync удалён → загружать с сервера нечего, помечаем loaded
+        // чтобы остальной флоу не блокировался ожиданием remote-данных.
+        this.loaded = true
     }
 
     removeFromSocket(data){

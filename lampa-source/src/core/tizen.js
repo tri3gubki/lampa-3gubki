@@ -1,4 +1,3 @@
-import Account from './account/account'
 import TMDB from './api/sources/tmdb'
 import Status from '../utils/status'
 import Favorite from './favorite'
@@ -89,37 +88,18 @@ function lauchPick(){
 
     console.log('Tizen','start pick')
 
-    let status = new Status(3)
+    let status = new Status(2)  // notice-источник удалён, было 3
         status.onComplite = (result)=>{
             if(result.popular) data.sections.push(result.popular)
             if(result.continues) data.sections.push(result.continues)
-            if(result.notice) data.sections.push(result.notice)
 
             console.log('Tizen','set sections', data.sections.length)
             
             if(data.sections.length) setPick(data)
         }
 
-    Account.Api.notices((notices)=>{
-        let new_notices = notices.filter(n=>!n.viewed).slice(0,3)
-
-        if(new_notices.length){
-            let section = {
-                title: Lang.translate('title_notice'),
-                tiles: [],
-                position: 0
-            }
-
-            new_notices.forEach(noty => {
-                let info = JSON.parse(noty.data)
-
-                section.tiles.push(cardToTile(info.card,info.type == 'new_episode' ? Lang.translate('notice_new_episode') : Lang.translate('notice_in_quality')))
-            })
-
-            status.append('notice',section)
-        }
-        else status.error()
-    })
+    // CUB-Account.Api.notices удалён — Tizen-launcher больше не показывает
+    // секцию «уведомления о новых сериях».
 
     TMDB.get('movie/popular',{},(result)=>{
         if(result.results.length){

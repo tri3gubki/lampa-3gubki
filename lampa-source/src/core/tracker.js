@@ -1,5 +1,4 @@
 import Storage from './storage/storage'
-import Permit from './account/permit'
 
 /**
  * Трекер синхронизации

@@ -14,7 +14,6 @@ import MainModule from '../interaction/items/main/module/module'
 import Cards from './full/cards'
 import Background from '../interaction/background'
 import Template from '../interaction/template'
-import Permit from '../core/account/permit'
 import TMDB from '../core/api/sources/tmdb'
 import Keys from '../core/tmdb/keys'
 

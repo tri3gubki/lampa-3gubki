@@ -3,7 +3,6 @@ import Controller from '../../../core/controller'
 import Select from '../../../interaction/select'
 import Favorite from '../../../core/favorite'
 import Lang from '../../../core/lang'
-import Account from '../../../core/account/account'
 
 export default {
     onCreate: function(){

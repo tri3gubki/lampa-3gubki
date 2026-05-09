@@ -1,4 +1,3 @@
-import Account from '../account/account.js'
 import Manifest from '../manifest.js'
 import Storage from '../storage/storage.js'
 import Utils from '../../utils/utils.js'

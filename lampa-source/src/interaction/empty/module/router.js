@@ -1,8 +1,6 @@
 import Lang from '../../../core/lang'
 import Template from '../../template'
-import Device from '../../../core/account/device'
 import Arrays from '../../../utils/arrays'
-import Permit from '../../../core/account/permit'
 
 export default {
     onEmpty: function(e){
@@ -41,13 +39,6 @@ export default {
             params.icon   = Template.string('icon_empty_torrents')
         }
 
-        if(params.account && !''){
-            params.buttons.push({
-                title: Lang.translate('settings_cub_signin_button'),
-                onEnter: ()=>{
-                    Device.login(this.start.bind(this))
-                }
-            })
-        }
+        // CUB Device.login удалён — кнопка «Войти в CUB» больше не показывается.
     }
 }

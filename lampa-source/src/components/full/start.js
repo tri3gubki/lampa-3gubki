@@ -8,7 +8,6 @@ import Lang from '../../core/lang'
 import Event from '../../utils/event'
 import Emit from '../../utils/emit'
 import TMDB from '../../core/api/sources/tmdb'
-import Permit from '../../core/account/permit'
 
 import Options from './start/options'
 import Torrents from './start/torrents'

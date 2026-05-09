@@ -3,7 +3,6 @@ import Select from '../../../interaction/select'
 import Utils from '../../../utils/utils'
 import Lang from '../../../core/lang'
 import Noty from '../../../interaction/noty'
-import Account from '../../../core/account/account'
 import Loading from '../../../interaction/loading'
 import Template from '../../../interaction/template'
 
@@ -70,23 +69,8 @@ export default {
                                     }
                                 })
                             }
-                            else if(false){
-                                Account.Api.subscribeToTranslation({
-                                    card: this.card,
-                                    season: Utils.countSeasons(this.card),
-                                    episode: a.episode,
-                                    voice: a.voice
-                                },()=>{
-                                    Noty.show(Lang.translate('subscribe_success'))
-
-                                    button.addClass('active').data('voice',a.voice).find('path').attr('fill', 'currentColor')
-                                },()=>{
-                                    Noty.show(Lang.translate('subscribe_error'))
-                                })
-                            }
-                            else{
-                                void 0
-                            }
+                            // CUB-subscribe to translations удалён — здесь
+                            // только unsubscribe-ветка имеет смысл.
                         },
                         onFullDraw: (scroll)=>{
                             scroll.body(true).prepend(Template.elem('div', {class: 'selectbox__text', children: [
