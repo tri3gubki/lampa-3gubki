@@ -13,7 +13,6 @@ let html = `<div class="menu">
                 <div class="menu__ico">
                     <svg><use xlink:href="#sprite-edit"></use></svg>
                 </div>
-                <div class="menu__text">#{extensions_edit}</div>
             </li>
         </ul>
     </div>

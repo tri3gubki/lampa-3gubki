@@ -92,13 +92,16 @@ function mouseEvents(){
 
 function size(){
     let sl = Storage.field('interface_size')
+    // Уменьшен общий масштаб (раньше normal=1.0). На 1920px → ~18.5px,
+    // в ряду умещается 6-7 карточек, на экране — 2 полные строки и
+    // третья наполовину видна.
     let sz = {
-        normal: 1,
-        small: 0.9,
-        bigger: 1.05
+        normal: 0.82,
+        small: 0.72,
+        bigger: 0.92
     }
 
-    let fs = sz[sl]
+    let fs = sz[sl] || sz.normal
 
     $('body').css({
         fontSize: Math.max(window.innerWidth / 84.17 * fs, 10.6) + 'px'
