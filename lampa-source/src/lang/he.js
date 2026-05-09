@@ -53,7 +53,6 @@ export default {
     settings_main_parser: 'parser',
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'הרחבות',
-    settings_main_rest: 'אחר',
     settings_rest_tmdb_lang: 'איזו שפה להציג נתונים מ- TMDB',
     settings_rest_tmdb_prox: 'פרוקסי TMDB',
     settings_rest_tmdb_prox_auto: 'אפשר פרוקסי באופן אוטומטי',

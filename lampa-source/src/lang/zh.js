@@ -54,7 +54,6 @@ export default {
     settings_main_parser: '解析器',
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: '扩展',
-    settings_main_rest: '其他',
     settings_rest_tmdb_lang: '从 TMDB 显示数据的语言',
     settings_rest_tmdb_prox: '代理 TMDB',
     settings_rest_tmdb_prox_auto: '自动启用代理',

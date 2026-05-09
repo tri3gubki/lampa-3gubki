@@ -33,12 +33,6 @@ let html = `<div>
         </div>
         <div class="settings-folder__name">TMDB</div>
     </div>
-    <div class="settings-folder selector" data-component="more">
-        <div class="settings-folder__icon">
-            <img src="./img/icons/settings/more.svg" />
-        </div>
-        <div class="settings-folder__name">#{settings_main_rest}</div>
-    </div>
 </div>`
 
 export default html

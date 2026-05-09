@@ -62,7 +62,6 @@ export default {
     settings_main_parser: 'Parser',
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Extensions',
-    settings_main_rest: 'Other',
 
     settings_rest_tmdb_lang: 'What language to display data from TMDB',
     settings_rest_tmdb_prox: 'Proxy TMDB',
