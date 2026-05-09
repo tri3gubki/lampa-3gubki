@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: 'Favoris',
 
-    settings_interface_type: 'Version Lite',
     settings_interface_size: 'Taille de l\'interface',
     settings_interface_menu_always: 'Toujours afficher le menu latéral',
     settings_interface_background: 'Arrière-plan',
@@ -54,9 +53,6 @@ export default {
     settings_interface_performance: 'Performance',
     settings_interface_animation: 'Animation',
     settings_interface_animation_descr: 'Animation des fiches et du contenu',
-    settings_interface_attenuation: 'Atténuation',
-    settings_interface_attenuation_descr: 'Fondu progressif des fiches',
-    settings_interface_scroll: 'Type de défilement',
     settings_interface_view_card: 'Type d\'affichage des fiches',
     settings_interface_view_card_descr: 'Chargement progressif ou complet des fiches lors du défilement',
     settings_interface_lang: 'Langue de l\'interface',
@@ -788,8 +784,6 @@ export default {
     title_seasons: 'Saisons',
     title_episodes: 'Épisodes',
     title_rewiews: 'Critiques',
-    settings_interface_glass: 'Effet Verre',
-    settings_interface_glass_descr: 'Style d\'interface vitré',
     settings_interface_black_style: 'Style sombre total',
 
     title_channel: 'Chaîne',
@@ -809,11 +803,7 @@ export default {
     time_m: 'm.',
     time_s: 's.',
 
-    settings_param_glass_easy: 'Transparent',
-    settings_param_glass_medium: 'Semi-transparent',
-    settings_param_glass_blacked: 'Sombre',
 
-    settings_interface_glass_opacity: 'Transparence du verre',
     torrent_error_check_no_auth: 'Le serveur a répondu, mais l\'autorisation a échoué',
     settings_interface_card_cover: 'Afficher la couverture',
 
@@ -821,7 +811,6 @@ export default {
     title_recent_episodes: 'Sorties d\'épisodes récentes',
 
 
-    settings_interface_card_reactions: 'Afficher les réactions',
     title_look: 'Regarde',
     title_scheduled: 'Prévu',
     title_viewed: 'Vu',
@@ -873,10 +862,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Sons système',
-    settings_interface_sound_play: 'Transitions',
-    settings_interface_sound_level: 'Volume',
-    settings_interface_advanced_animation: 'Animations avancées',
 
     confirm_open_player: 'Un autre appareil demande l\'accès au lecteur. Autoriser ?',
 

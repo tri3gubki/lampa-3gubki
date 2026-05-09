@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: 'Favorite',
 
-    settings_interface_type: 'Versiune Lite',
     settings_interface_size: 'Dimensiune interfață',
 	settings_interface_menu_always: 'Afișează mereu meniul din stânga',
     settings_interface_background: 'Fundal',
@@ -54,9 +53,6 @@ export default {
     settings_interface_performance: 'Performanță',
     settings_interface_animation: 'Animație',
     settings_interface_animation_descr: 'Animația posterelor și a conținutului',
-    settings_interface_attenuation: 'Atenuare',
-    settings_interface_attenuation_descr: 'Efect de estompare a posterelor sus și jos',
-    settings_interface_scroll: 'Tip derulare',
     settings_interface_view_card: 'Tip vizualizare poster',
     settings_interface_view_card_descr: 'Pe măsură ce derulezi, posterele se vor încărca treptat sau toate odată',
     settings_interface_lang: 'Limba interfeței',
@@ -788,8 +784,6 @@ export default {
     title_seasons: 'Sezoane',
     title_episodes: 'Episoade',
     title_rewiews: 'Recenzii',
-    settings_interface_glass: 'Efect sticlă (Glass)',
-    settings_interface_glass_descr: 'Afișează interfața în stilul glass',
     settings_interface_black_style: 'Stil negru',
 
     title_channel: 'Canal',
@@ -809,11 +803,7 @@ export default {
     time_m: 'm.',
     time_s: 's.',
 
-    settings_param_glass_easy: 'Transparent',
-    settings_param_glass_medium: 'Semitransparent',
-    settings_param_glass_blacked: 'Întunecat',
 
-    settings_interface_glass_opacity: 'Transparență stil glass',
     torrent_error_check_no_auth: 'Serverul a răspuns, dar autorizarea a eșuat',
     settings_interface_card_cover: 'Afișează coperta',
 
@@ -821,7 +811,6 @@ export default {
     title_recent_episodes: 'Lansări episoade recente',
 
 
-    settings_interface_card_reactions: 'Afișează reacțiile',
     title_look: 'Urmăresc',
     title_scheduled: 'Programat',
     title_viewed: 'Vizionat',
@@ -873,10 +862,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Sunete sistem',
-    settings_interface_sound_play: 'Tranziții',
-    settings_interface_sound_level: 'Nivel volum',
-    settings_interface_advanced_animation: 'Animații avansate',
 
     confirm_open_player: 'Un alt dispozitiv solicită acces la player. Vrei să rulezi video-ul?',
 

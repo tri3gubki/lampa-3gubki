@@ -182,13 +182,3 @@
     }
 }
 
-body.light--version{
-    @media screen and (max-width: $media_lg) {
-        .explorer__left{
-            display: none;
-        }
-        .explorer__files{
-            width: 100%;
-        }
-    }
-}

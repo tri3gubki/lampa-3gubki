@@ -38,7 +38,6 @@ export default {
     full_season: '季',
     full_episode: '剧集',
     settings_input_links: '收藏夹',
-    settings_interface_type: '精简版',
     settings_interface_size: '界面大小',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: '背景',
@@ -47,9 +46,6 @@ export default {
     settings_interface_performance: '性能',
     settings_interface_animation: '动画',
     settings_interface_animation_descr: '卡片和内容的动画',
-    settings_interface_attenuation: '淡入淡出',
-    settings_interface_attenuation_descr: '从下方和上方平滑淡入卡片',
-    settings_interface_scroll: '滚动类型',
     settings_interface_view_card: '卡片视图类型',
     settings_interface_view_card_descr: '当您滚动时，卡片将逐渐加载或全部加载',
     settings_interface_lang: '界面语言',
@@ -739,8 +735,6 @@ export default {
     title_seasons: '季',
     title_episodes: '集',
     title_rewiews: '评论',
-    settings_interface_glass: '玻璃',
-    settings_interface_glass_descr: '以玻璃风格显示界面',
     settings_interface_black_style: '黑色风格',
 
     title_channel: '渠道',
@@ -760,11 +754,7 @@ export default {
     time_m: 'm.',
     time_s: 's.',
 
-    settings_param_glass_easy: '透明的',
-    settings_param_glass_medium: '半透明',
-    settings_param_glass_blacked: '黑屏了',
 
-    settings_interface_glass_opacity: '玻璃透明度',
     torrent_error_check_no_auth: '服务器响应请求，但授权失败。',
     settings_interface_card_cover: '显示封面',
 
@@ -772,7 +762,6 @@ export default {
     title_recent_episodes: '最近发布的剧集',
 
 
-    settings_interface_card_reactions: '显示反应',
     title_look: '正在观看',
     title_scheduled: '计划',
     title_viewed: '已查看',
@@ -825,10 +814,6 @@ export default {
 
 
 
-    settings_interface_sound: '系统声音',
-    settings_interface_sound_play: '过渡',
-    settings_interface_sound_level: '音量级别',
-    settings_interface_advanced_animation: '高级动画',
 
     confirm_open_player: '另一台设备正在请求访问播放器。想播放视频吗？',
 

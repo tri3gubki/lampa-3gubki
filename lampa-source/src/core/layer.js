@@ -250,19 +250,17 @@ function frameVisible(){
 
 function toggleClasses(){
     $('body').toggleClass('no--animation', !Storage.field('animation'))
-    $('body').toggleClass('no--mask', !Storage.field('mask'))
     $('body').toggleClass('no--poster', !Storage.field('card_interfice_poster'))
-    $('body').toggleClass('glass--style', Storage.field('glass_style'))
     $('body').toggleClass('black--style', Storage.field('black_style'))
     $('body').toggleClass('card--no-cover', !Storage.field('card_interfice_cover'))
-    $('body').toggleClass('advanced--animation', Storage.field('advanced_animation'))
-    $('body').toggleClass('light--version',Storage.field('light_version'))
     $('body').toggleClass('system--keyboard',Storage.field('keyboard_type') == 'lampa' ? false : true)
     $('body').toggleClass('menu--always', Platform.screen('tv') && Storage.field('menu_always'))
 
-    $('body').removeClass('glass--style-opacity--easy glass--style-opacity--medium glass--style-opacity--blacked')
-    
-    if(Storage.field('glass_style')) $('body').addClass('glass--style-opacity--'+Storage.field('glass_opacity'))
+    // Зашитые наглухо: расширенная анимация, маска (fade), эффект стекла
+    // с прозрачностью 'blacked'. Раньше тогглились, теперь просто
+    // выставляются всегда — настроек в UI больше нет.
+    $('body').addClass('advanced--animation glass--style glass--style-opacity--blacked')
+    $('body').removeClass('no--mask')
 
     Background.theme(Storage.field('black_style') ? 'black' : 'reset')
 }

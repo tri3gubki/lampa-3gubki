@@ -37,7 +37,6 @@ export default {
     full_season: 'עונה',
     full_episode: 'פרק',
     settings_input_links: 'מועדפים',
-    settings_interface_type: 'גרסת לייט',
     settings_interface_size: 'גודל ממשק',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: 'רקע כללי',
@@ -46,9 +45,6 @@ export default {
     settings_interface_performance: 'ביצועים',
     settings_interface_animation: 'אנימציה',
     settings_interface_animation_descr: 'אנימציה של כרטיסים ותכנים',
-    settings_interface_attenuation: 'הנחתה',
-    settings_interface_attenuation_descr: 'החלקה של כרטיסים מלמטה ומלמעלה',
-    settings_interface_scroll: 'סוג החלקה ',
     settings_interface_view_card: 'סוג תצוגת כרטיס',
     settings_interface_view_card_descr: 'כשתגללו את השידור, הקלפים יעמיסו בהדרגה או יעמיסו את כולם',
     settings_interface_lang: 'שפת ממשק',
@@ -729,8 +725,6 @@ export default {
     title_seasons: 'עונות',
     title_episodes: 'פרקים',
     title_rewiews: 'ביקורות',
-    settings_interface_glass: 'זכוכית',
-    settings_interface_glass_descr: 'הצג ממשק בסגנון זכוכית',
     settings_interface_black_style: 'סטייל שחור',
     title_channel: 'ערוץ',
     settings_interface_hide_outside_the_screen: 'הסתר כרטיסים מחוץ למסך',
@@ -741,15 +735,10 @@ export default {
     time_h: 'ש.',
     time_m: 'מ.',
     time_s: 'ש.',
-    settings_param_glass_easy: 'שקוף',
-    settings_param_glass_medium: 'שקוף למחצה',
-    settings_param_glass_blacked: 'מושחר',
-    settings_interface_glass_opacity: 'שקיפות זכוכית',
     torrent_error_check_no_auth: 'השרת הגיב לבקשה, אך ההרשאה נכשלה',
     settings_interface_card_cover: 'הצג את העטיפה',
     title_upcoming_episodes: 'שיחרור פרקים קרובים',
     title_recent_episodes: 'שחרורי פרקים אחרונים',
-    settings_interface_card_reactions: 'הצג תגובות',
     title_look: 'מחפשים',
     title_scheduled: 'מתוזמנים',
     title_viewed: 'נצפה',
@@ -772,10 +761,6 @@ export default {
 
 
 
-    settings_interface_sound: 'צלילי מערכת',
-    settings_interface_sound_play: 'מעברים',
-    settings_interface_sound_level: 'רמת עוצמת הקול',
-    settings_interface_advanced_animation: 'אנימציה מתקדמת',
 
     confirm_open_player: 'מכשיר אחר מבקש גישה לנגן. רוצה להפעיל את הסרטון?',
 

@@ -50,9 +50,6 @@ function init(){
         select('player', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}'}, 'none')
     }
 
-    trigger('glass_style', Platform.screen('mobile'))
-    trigger('advanced_animation', Platform.is('apple_tv') || Platform.is('browser') || Platform.desktop() || navigator.userAgent.toLowerCase().indexOf('shield') >= 0)
-
     let screensaver_types = {
         'nature': '#{settings_param_screensaver_nature}',
         'chrome': 'ChromeCast',
@@ -441,11 +438,6 @@ select('start_page', {
     'last': '#{title_last}'
 }, 'main')
 
-select('scroll_type', {
-    'css': 'CSS',
-    'js': 'Javascript'
-}, 'css')
-
 select('card_views_type', {
     'preload': '#{settings_param_card_view_load}',
     'view': '#{settings_param_card_view_all}'
@@ -460,20 +452,6 @@ select('card_interfice_type', {
     'old': '#{settings_param_card_interface_old}',
     'new': '#{settings_param_card_interface_new}'
 }, 'new')
-
-select('glass_opacity', {
-    'easy': '#{settings_param_glass_easy}',
-    'medium': '#{settings_param_glass_medium}',
-    'blacked': '#{settings_param_glass_blacked}'
-}, 'easy')
-
-select('interface_sound_level', {
-    '100': '100',
-    '80': '80',
-    '60': '60',
-    '40': '40',
-    '20': '20',
-}, '60')
 
 select('time_offset', {
     'n-10': '-10',
@@ -511,7 +489,6 @@ trigger('parser_use',false)
 trigger('cloud_use',false)
 trigger('account_use',false)
 trigger('torrserver_auth',false)
-trigger('mask',true)
 trigger('playlist_next',true)
 trigger('internal_torrclient', true)
 trigger('screensaver', true)
@@ -520,17 +497,13 @@ trigger('proxy_tmdb_auto', true)
 trigger('proxy_other', true)
 trigger('parse_in_search', false)
 trigger('helper', true)
-trigger('light_version', false)
 trigger('card_quality', true)
 trigger('card_episodes', true)
 trigger('card_interfice_poster', true)
-trigger('glass_style', false)
 trigger('black_style', false)
 trigger('hide_outside_the_screen', true)
 trigger('card_interfice_cover', true)
-trigger('card_interfice_reactions', true)
 trigger('cache_images', false)
-trigger('interface_sound_play', false)
 trigger('menu_always', false)
 trigger('player_external_fullscreen', true)
 trigger('adult_content_view', false)

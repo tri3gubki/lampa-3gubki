@@ -344,7 +344,7 @@ function load(){
  * @param {string} url
  */
 function change(url = ''){
-    if(url == src || Storage.field('light_version') || !Storage.field('background')) return
+    if(url == src || !Storage.field('background')) return
 
     bokeh.d = true
 
@@ -363,7 +363,7 @@ function change(url = ''){
  * @param {string} url
  */
 function immediately(url = ''){
-    if(Storage.field('light_version') || immed_time + 1000 > Date.now() || !Storage.field('background')) return
+    if(immed_time + 1000 > Date.now() || !Storage.field('background')) return
 
     if(url) src = url
 

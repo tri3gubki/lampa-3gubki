@@ -1,5 +1,4 @@
 import Arrays from '../utils/arrays.js'
-import Sound from '../core/sound.js'
 
 let bell
 let items = []
@@ -56,7 +55,6 @@ function Item(params){
 
     items.push(this)
 
-    Sound.play('bell')
 }
 
 function init(){

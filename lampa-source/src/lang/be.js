@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: 'Выбранае',
 
-    settings_interface_type: 'Аблегчаная версія',
     settings_interface_size: 'Памер інтэрфейсу',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: 'Фон',
@@ -54,9 +53,6 @@ export default {
     settings_interface_performance: 'Хуткадзейнасць',
     settings_interface_animation: 'Анімацыя',
     settings_interface_animation_descr: 'Анімацыя картак і кантэнту',
-    settings_interface_attenuation: 'Згасанне',
-    settings_interface_attenuation_descr: 'Плыўнае згасанне картак знізу і зверху',
-    settings_interface_scroll: 'Тып скролінга',
     settings_interface_view_card: 'Тып прагляду картак',
     settings_interface_view_card_descr: 'Па меры скралінга стужкі карткі будуць падгружацца паступова або загружацца ўсё',
     settings_interface_lang: 'Мова інтэрфейсу',
@@ -801,8 +797,6 @@ export default {
     title_seasons: 'Сезоны',
     title_episodes: 'Серыі',
     title_rewiews: 'Водгукі',
-    settings_interface_glass: 'Шкло',
-    settings_interface_glass_descr: 'Паказваць інтэрфейс у шклопадобным стылі',
     settings_interface_black_style: 'Чорны стыль',
 
     title_channel: 'Канал',
@@ -822,11 +816,7 @@ export default {
     time_m: 'х.',
     time_s: 'с.',
 
-    settings_param_glass_easy: 'Празрыстая',
-    settings_param_glass_medium: 'Напаўпразрыстая',
-    settings_param_glass_blacked: 'Зацемненая',
 
-    settings_interface_glass_opacity: 'Празрыстасць шкла',
     torrent_error_check_no_auth: 'Сервер адказаў на запыт, але не ўдалося прайсці аўтарызацыю',
     settings_interface_card_cover: 'Паказаць вокладку',
     
@@ -834,7 +824,6 @@ export default {
     title_recent_episodes: 'Нядаўнія выхады эпізодаў',
 
 
-    settings_interface_card_reactions: 'Паказаць рэакцыі',
     title_look: 'Гляджу',
     title_scheduled: 'Запланавана',
     title_viewed: 'Прагледжана',
@@ -888,10 +877,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Сістэмныя гукі',
-    settings_interface_sound_play: 'Пераходы',
-    settings_interface_sound_level: 'Узровень гучнасці',
-    settings_interface_advanced_animation: 'Продвинутая анимация',
 
     discuss_rules_title: 'Сачыце за правіламі і паважайце іншых — ствараем камфорт разам!',
     discuss_rules_rule_1: 'Не выкарыстоўвайце словы, якія складаюцца толькі з лічбаў.',

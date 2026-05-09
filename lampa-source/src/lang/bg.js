@@ -44,7 +44,6 @@ export default {
 
     settings_input_links: 'Любими',
 
-    settings_interface_type: 'Олекотена версия',
     settings_interface_size: 'Размер на интерфейса',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: 'Фон',
@@ -53,9 +52,6 @@ export default {
     settings_interface_performance: 'Производителност',
     settings_interface_animation: 'Анимация',
     settings_interface_animation_descr: 'Анимация на карти и съдържание',
-    settings_interface_attenuation: 'Смекчаване',
-    settings_interface_attenuation_descr: 'Плавно избледняване на картите отдолу и отгоре',
-    settings_interface_scroll: 'Тип превъртане',
     settings_interface_view_card: 'Тип изглед на карта',
     settings_interface_view_card_descr: 'Докато превъртате емисията, картите да се зареждат постепенно или всички',
     settings_interface_lang: 'Език на интерфейса',
@@ -788,8 +784,6 @@ export default {
     title_seasons: 'Сезони',
     title_episodes: 'Епизоди',
     title_rewiews: 'Отзиви',
-    settings_interface_glass: 'Стъклен',
-    settings_interface_glass_descr: 'Покажи интерфейса в стил стъкло',
     settings_interface_black_style: 'Черен стил',
 
     title_channel: 'Канал',
@@ -809,11 +803,7 @@ export default {
     time_m: 'м.',
     time_s: 'с.',
 
-    settings_param_glass_easy: 'Прозрачен',
-    settings_param_glass_medium: 'Полупрозрачен',
-    settings_param_glass_blacked: 'Затъмнен',
 
-    settings_interface_glass_opacity: 'Прозрачност',
     torrent_error_check_no_auth: 'Сървърът отговори на искането, но упълномощаването беше неуспешно',
     settings_interface_card_cover: 'Показване на корицата',
 
@@ -821,7 +811,6 @@ export default {
     title_recent_episodes: 'Наскоро излезли епизоди',
 
 
-    settings_interface_card_reactions: 'Показване на реакциите',
     title_look: 'Гледащи',
     title_scheduled: 'Планирани',
     title_viewed: 'Изгледани',
@@ -874,10 +863,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Системни звуци',
-    settings_interface_sound_play: 'Преходи',
-    settings_interface_sound_level: 'Ниво на звука',
-    settings_interface_advanced_animation: 'Разширена анимация',
 
     confirm_open_player: 'Друго устройство иска достъп до плейъра. Искате ли да пуснете видеоклипа?',
 

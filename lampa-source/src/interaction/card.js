@@ -130,8 +130,6 @@ function Card(data, params = {}){
                     this.card.querySelector('.card__view').appendChild(promo_wrap)
                 } 
 
-                if(Storage.field('light_version')) remove(this.card.querySelector('.card__title'))
-
                 remove(this.card.querySelector('.card__age'))
             }
 

@@ -46,7 +46,6 @@ export default {
 
     settings_input_links: 'Favoritos',
 
-    settings_interface_type: 'Versão Lite',
     settings_interface_size: 'Tamanho interface',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: 'Fundo',
@@ -55,9 +54,6 @@ export default {
     settings_interface_performance: 'Performance',
     settings_interface_animation: 'Animação',
     settings_interface_animation_descr: 'Animação de cartões e conteúdo',
-    settings_interface_attenuation: 'Atenuação',
-    settings_interface_attenuation_descr: 'Desvanecimento suave dos cartões de baixo e de cima',
-    settings_interface_scroll: 'Tipo de rolagem (scroll)',
     settings_interface_view_card: 'Tipo de visualização do cartão',
     settings_interface_view_card_descr: 'Conforme rola o feed, os cartões serão carregados gradualmente ou carregarão todos',
     settings_interface_lang: 'Idioma da interface',
@@ -788,8 +784,6 @@ export default {
     title_seasons: 'Temporadas',
     title_episodes: 'Series',
     title_rewiews: 'Avaliações',
-    settings_interface_glass: 'Vidro',
-    settings_interface_glass_descr: 'Mostrar interface em estilo vítreo',
     settings_interface_black_style: 'Estilo preto',
 
     title_channel: 'Canal',
@@ -809,11 +803,7 @@ export default {
     time_m: 'm.',
     time_s: 's.',
 
-    settings_param_glass_easy: 'Transparente',
-    settings_param_glass_medium: 'Translúcido',
-    settings_param_glass_blacked: 'Apagado',
 
-    settings_interface_glass_opacity: 'Transparência de vidro',
     torrent_error_check_no_auth: 'O servidor respondeu à solicitação, mas a autorização falhou',
     settings_interface_card_cover: 'Mostrar capa',
 
@@ -821,7 +811,6 @@ export default {
     title_recent_episodes: 'Lançamentos recentes de episódios',
 
 
-    settings_interface_card_reactions: 'Mostrar reações',
     title_look: 'A assistir',
     title_scheduled: 'Agendado',
     title_viewed: 'Visualizado',
@@ -872,10 +861,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Sons do sistema',
-    settings_interface_sound_play: 'Transições',
-    settings_interface_sound_level: 'Nível de volume',
-    settings_interface_advanced_animation: 'Animação Avançada',
 
     confirm_open_player: 'Outro dispositivo está solicitando acesso ao player. Quer reproduzir o vídeo?',
 

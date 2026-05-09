@@ -158,10 +158,6 @@ function version(name){
  * @returns Boolean
  */
 function screen(need){
-    if(need == 'light'){
-        return Storage.field('light_version') && screen('tv')
-    }
-
     let is_tv = true
 
     if(!(tv() || desktop())){

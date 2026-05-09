@@ -1,7 +1,6 @@
 import Subscribe from '../utils/subscribe'
 import Controller from './controller'
 import Orsay from './orsay'
-import Sound from './sound'
 
 let philipse = {
 	play: typeof VK_PLAY !== 'undefined' ? VK_PLAY : typeof KEYCODE_MEDIA_PLAY !== 'undefined' ? KEYCODE_MEDIA_PLAY : -1,
@@ -65,7 +64,6 @@ function keydownTrigger(e){
 
 	//4 - Samsung orsay
 	if (keycode == 37 || keycode == 4) {
-		Sound.play('hover')
 
 		listener.send('left', {code: keycode, enabled, event: e})
 
@@ -73,7 +71,6 @@ function keydownTrigger(e){
 	}
 	//29460 - Samsung orsay
 	if (keycode == 38 || keycode == 29460) {
-		Sound.play('hover')
 
 		listener.send('up', {code: keycode, enabled, event: e})
 
@@ -81,7 +78,6 @@ function keydownTrigger(e){
 	}
 	//5 - Samsung orsay
 	if (keycode == 39 || keycode == 5) {
-		Sound.play('hover')
 
 		listener.send('right', {code: keycode, enabled, event: e})
 
@@ -90,7 +86,6 @@ function keydownTrigger(e){
 	//5 - Samsung orsay
 	//29461 - Samsung orsay
 	if (keycode == 40 || keycode == 29461) {
-		Sound.play('hover')
 
 		listener.send('down', {code: keycode, enabled, event: e})
 
@@ -98,7 +93,6 @@ function keydownTrigger(e){
 	}
 	//33 - LG; 427 - Samsung
 	if (keycode == 33 || keycode == 427) {
-		Sound.play('hover')
 
 		listener.send('toup', {code: keycode, enabled, event: e})
 
@@ -106,7 +100,6 @@ function keydownTrigger(e){
 	}
 	//34 - LG; 428 - Samsung
 	if (keycode == 34 || keycode == 428) {
-		Sound.play('hover')
 
 		listener.send('todown', {code: keycode, enabled, event: e})
 
@@ -224,7 +217,6 @@ function init(){
 
 		if(!longpress){
 			if(isEnter(keyCode(e)) && !e.defaultPrevented){
-				Sound.play('enter')
 
 				listener.send('enter', {code: keyCode(e), enabled, event: e})
 

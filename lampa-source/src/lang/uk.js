@@ -39,7 +39,6 @@ export default {
     full_episode: 'Епізод',
 
     settings_input_links: 'Вибране',
-    settings_interface_type: 'Полегшена версія',
     settings_interface_size: 'Розмір інтерфейсу',
     settings_interface_menu_always: 'Завжди показувати ліве меню',
     settings_interface_background: 'Фон',
@@ -48,9 +47,6 @@ export default {
     settings_interface_performance: 'Швидкодія',
     settings_interface_animation: 'Анімація',
     settings_interface_animation_descr: 'Анімація карток та контенту',
-    settings_interface_attenuation: 'Згасання',
-    settings_interface_attenuation_descr: 'Плавне згасання карток знизу та зверху',
-    settings_interface_scroll: 'Тип скролінгу',
     settings_interface_view_card: 'Тип перегляду карток',
     settings_interface_view_card_descr: 'У міру скролінгу стрічки картки підвантажуватимуться поступово або завантажуватимуться всі',
     settings_interface_lang: 'Мова інтерфейсу',
@@ -749,8 +745,6 @@ export default {
     title_seasons: 'Сезони',
     title_episodes: 'Серії',
     title_rewiews: 'Відгуки',
-    settings_interface_glass: 'Скло',
-    settings_interface_glass_descr: 'Показувати інтерфейс у склоподібному стилі',
     settings_interface_black_style: 'Чорний стиль',
 
     title_channel: 'Канал',
@@ -770,11 +764,7 @@ export default {
     time_m: 'х.',
     time_s: 'с.',
 
-    settings_param_glass_easy: 'Прозора',
-    settings_param_glass_medium: 'Напівпрозора',
-    settings_param_glass_blacked: 'Затемнена',
 
-    settings_interface_glass_opacity: 'Прозорість скла',
     torrent_error_check_no_auth: 'Сервер відповів на запит, але не вдалося пройти авторизацію',
     settings_interface_card_cover: 'Показати обкладинку',
 
@@ -782,7 +772,6 @@ export default {
     title_recent_episodes: 'Нещодавні виходи епізодів',
 
 
-    settings_interface_card_reactions: 'Показати реакції',
     title_look: 'Дивлюся',
     title_scheduled: 'Заплановано',
     title_viewed: 'Переглянуто',
@@ -834,10 +823,6 @@ export default {
 
 
 
-    settings_interface_sound: 'Системні звуки',
-    settings_interface_sound_play: 'Переходи',
-    settings_interface_sound_level: 'Рівень гучності',
-    settings_interface_advanced_animation: 'Просунута анімація',
 
     discuss_rules_title: 'Дотримуйтесь правил і поважайте інших — створюємо комфорт разом!',
     discuss_rules_rule_1: 'Не використовуйте слова, що складаються тільки з цифр.',

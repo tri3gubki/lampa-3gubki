@@ -37,7 +37,7 @@
 }
 
 
-body.menu--open:not(.light--version){
+body.menu--open{
     .wrap{
         &__left{
             transform: translate3d(15em, 0, 0);
@@ -51,7 +51,7 @@ body.menu--open:not(.light--version){
     }
 }
 
-body.menu--always:not(.light--version){
+body.menu--always{
     .wrap{
         &__left{
             width: 5em;
@@ -65,7 +65,7 @@ body.menu--always:not(.light--version){
     }
 }
 
-body.menu--always.menu--open:not(.light--version){
+body.menu--always.menu--open{
     .wrap{
         &__left{
             transform: translate3d(0, 0, 0);
@@ -85,9 +85,6 @@ body.menu--always.menu--open:not(.light--version){
     }
 }
 
-body.light--version .wrap__left{
-    visibility: visible;
-}
 
 @media screen and (max-width: $media_md) {
     body.menu--open{

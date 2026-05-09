@@ -7,7 +7,6 @@ import Platform from './platform'
 import Noty from '../interaction/noty'
 import Keypad from './keypad'
 import DeviceInput from '../interaction/device_input'
-import Sound from './sound'
 import Select from '../interaction/select'
 import Modal from '../interaction/modal'
 import Player from '../interaction/player'
@@ -45,13 +44,12 @@ function observe(){
 }
 
 function animateTriggerEnter(elem){
-    if(Storage.field('advanced_animation')){
-        elem.addClass('animate-trigger-enter')
+    // advanced_animation всегда включён — UI-настройка удалена.
+    elem.addClass('animate-trigger-enter')
 
-        setTimeout(()=>{
-            elem.removeClass('animate-trigger-enter')
-        },500)
-    }
+    setTimeout(()=>{
+        elem.removeClass('animate-trigger-enter')
+    },500)
 }
 
 /**

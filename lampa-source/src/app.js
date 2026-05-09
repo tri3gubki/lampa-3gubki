@@ -59,7 +59,6 @@ import Color from './utils/color'
 import Cache from './utils/cache'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
-import Sound from './core/sound'
 import Bell from './interaction/bell'
 import HoverSwitcher from './core/switcher'
 import Task from './core/loading'
@@ -410,12 +409,6 @@ function startApp(){
 
     Android.init()
     LoadingProgress.status('Android init')
-
-    Sound.init()
-    LoadingProgress.status('Sound init')
-
-
-
 
     Search.init()
     LoadingProgress.status('Search init')

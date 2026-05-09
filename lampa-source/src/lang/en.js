@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: 'Favorites',
 
-    settings_interface_type: 'Lite version',
     settings_interface_size: 'Interface size',
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: 'Background',
@@ -54,9 +53,6 @@ export default {
     settings_interface_performance: 'Performance',
     settings_interface_animation: 'Animation',
     settings_interface_animation_descr: 'Animation of cards and content',
-    settings_interface_attenuation: 'Attenuation',
-    settings_interface_attenuation_descr: 'Smooth fading of cards from below and from above',
-    settings_interface_scroll: 'Scroll Type',
     settings_interface_view_card: 'Card view type',
     settings_interface_view_card_descr: 'As you scroll the feed, the cards will load gradually or load all',
     settings_interface_lang: 'Interface language',
@@ -788,8 +784,6 @@ export default {
     title_seasons: 'Seasons',
     title_episodes: 'Episodes',
     title_rewiews: 'Reviews',
-    settings_interface_glass: 'Glass',
-    settings_interface_glass_descr: 'Show interface in glassy style',
     settings_interface_black_style: 'Black style',
 
     title_channel: 'Channel',
@@ -809,11 +803,7 @@ export default {
     time_m: 'm.',
     time_s: 's.',
 
-    settings_param_glass_easy: 'Transparent',
-    settings_param_glass_medium: 'Semitransparent',
-    settings_param_glass_blacked: 'Blacked out',
 
-    settings_interface_glass_opacity: 'Glass transparency',
     torrent_error_check_no_auth: 'The server responded to the request, but the authorization failed',
     settings_interface_card_cover: 'Show cover',
 
@@ -821,7 +811,6 @@ export default {
     title_recent_episodes: 'Recent episode releases',
 
 
-    settings_interface_card_reactions: 'Show reactions',
     title_look: 'Looking',
     title_scheduled: 'Scheduled',
     title_viewed: 'Viewed',
@@ -873,10 +862,6 @@ export default {
 
 
 
-    settings_interface_sound: 'System sounds',
-    settings_interface_sound_play: 'Transitions',
-    settings_interface_sound_level: 'Volume level',
-    settings_interface_advanced_animation: 'Advanced animation',
 
     confirm_open_player: 'Another device is requesting access to the player. Do you want to play the video?',
 

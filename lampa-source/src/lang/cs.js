@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: "Oblíbené",
 
-    settings_interface_type: "Zjednodušená verze",
     settings_interface_size: "Velikost rozhraní",
 	settings_interface_menu_always: 'Always show the left menu',
     settings_interface_background: "Pozadí",
@@ -53,28 +52,17 @@ export default {
     settings_interface_background_type: "Typ pozadí",
     settings_interface_performance: "Výkon",
     settings_interface_animation: "Animace",
-    settings_interface_advanced_animation: "Pokročilá animace",
     settings_interface_animation_descr: "Animace karet a obsahu",
-    settings_interface_attenuation: "Útlum",
-    settings_interface_attenuation_descr: "Plynulé útlum karet shora a zdola",
-    settings_interface_scroll: "Typ posouvání",
     settings_interface_view_card: "Typ zobrazení karet",
     settings_interface_view_card_descr: "Při posouvání se karty budou načítat postupně nebo se načtou všechny",
     settings_interface_lang: "Jazyk rozhraní",
     settings_interface_card_interfice: "Rozhraní karet",
     settings_interface_card_poster: "Zobrazit plakát",
     settings_interface_card_cover: "Zobrazit obal",
-    settings_interface_card_reactions: "Zobrazit reakce",
-    settings_interface_glass: "Sklo",
-    settings_interface_glass_descr: "Zobrazit rozhraní ve skleněném stylu",
-    settings_interface_glass_opacity: "Průhlednost skla",
     settings_interface_black_style: "Černý styl",
     settings_interface_hide_outside_the_screen: "Skrýt karty mimo obrazovku",
     settings_interface_hide_outside_the_screen_descr: "To urychlí vykreslování rozhraní a zlepší výkon",
 
-    settings_interface_sound: "Systémové zvuky",
-    settings_interface_sound_play: "Přechody",
-    settings_interface_sound_level: "Úroveň hlasitosti",
 
     settings_main_interface: "Rozhraní",
     settings_main_player: "Přehrávač",
@@ -710,9 +698,6 @@ export default {
     settings_param_card_interface_old: "Starý",
     settings_param_card_interface_new: "Nový",
 
-    settings_param_glass_easy: "Průhledná",
-    settings_param_glass_medium: "Poloprůhledná",
-    settings_param_glass_blacked: "Ztmavená",
 
     settings_param_jackett_interview_all: "Vše",
     settings_param_jackett_interview_healthy: "Pouze dostupné",

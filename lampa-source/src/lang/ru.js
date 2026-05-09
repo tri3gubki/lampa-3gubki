@@ -45,7 +45,6 @@ export default {
 
     settings_input_links: 'Избранное',
 
-    settings_interface_type: 'Облегчённая версия',
     settings_interface_size: 'Размер интерфейса',
 	settings_interface_menu_always: 'Всегда показывать левое меню',
     settings_interface_background: 'Фон',
@@ -53,28 +52,17 @@ export default {
     settings_interface_background_type: 'Тип фона',
     settings_interface_performance: 'Быстродействие',
     settings_interface_animation: 'Анимация',
-    settings_interface_advanced_animation: 'Продвинутая анимация',
     settings_interface_animation_descr: 'Анимация карточек и контента',
-    settings_interface_attenuation: 'Затухание',
-    settings_interface_attenuation_descr: 'Плавное затухание карточек снизу и сверху',
-    settings_interface_scroll: 'Тип скролинга',
     settings_interface_view_card: 'Тип просмотра карточек',
     settings_interface_view_card_descr: 'По мере скроллинга ленты карточки будут подгружаться постепенно или загружаться все',
     settings_interface_lang: 'Язык интерфейса',
     settings_interface_card_interfice: 'Интерфейс карточек',
     settings_interface_card_poster: 'Показать постер',
     settings_interface_card_cover: 'Показать обложку',
-    settings_interface_card_reactions: 'Показать реакции',
-    settings_interface_glass: 'Стекло',
-    settings_interface_glass_descr: 'Показывать интерфейс в стекловидном стиле',
-    settings_interface_glass_opacity: 'Прозрачность стекла',
     settings_interface_black_style: 'Чёрный стиль',
     settings_interface_hide_outside_the_screen: 'Скрывать карточки за пределами экрана',
     settings_interface_hide_outside_the_screen_descr: 'Это ускорит рендер интерфейса и улучшит производительность',
 
-    settings_interface_sound: 'Системные звуки',
-    settings_interface_sound_play: 'Переходы',
-    settings_interface_sound_level: 'Уровень громкости',
 
     settings_main_interface: 'Интерфейс',
     settings_main_player: 'Плеер',
@@ -755,9 +743,6 @@ export default {
     settings_param_card_interface_old: 'Старый',
     settings_param_card_interface_new: 'Новый',
 
-    settings_param_glass_easy: 'Прозрачная',
-    settings_param_glass_medium: 'Полупрозрачная',
-    settings_param_glass_blacked: 'Затемнённая',
 
     settings_param_jackett_interview_all: 'Все',
     settings_param_jackett_interview_healthy: 'Только доступные',
