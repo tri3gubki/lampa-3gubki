@@ -16,20 +16,6 @@ let html = `<div class="menu">
                 </div>
                 <div class="menu__text">#{menu_settings}</div>
             </li>
-
-            <li class="menu__item selector" data-action="about">
-                <div class="menu__ico">
-                    <svg><use xlink:href="#sprite-info"></use></svg>
-                </div>
-                <div class="menu__text">#{menu_about}</div>
-            </li>
-
-            <li class="menu__item selector" data-action="console">
-                <div class="menu__ico">
-                    <svg><use xlink:href="#sprite-console"></use></svg>
-                </div>
-                <div class="menu__text">#{menu_console}</div>
-            </li>
         </ul>
     </div>
 

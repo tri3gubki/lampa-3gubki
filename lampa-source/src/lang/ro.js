@@ -254,7 +254,6 @@ export default {
     torrent_parser_request_error: 'Eroare de solicitare',
     torrent_parser_no_responce: 'Parser-ul nu răspunde',
 
-    about_version: 'Versiune',
 
     title_watched: 'Ai vizionat',
     title_settings: 'Setări',
@@ -284,7 +283,6 @@ export default {
     title_collection: 'Colecție',
     title_recomendations: 'Recomandări',
     title_similar: 'Similare',
-    title_about: 'Despre aplicație',
     title_timetable: 'Program',
     title_relises: 'Lansări digitale',
     title_catalog: 'Catalog',
@@ -621,8 +619,6 @@ export default {
     menu_timeline: 'Program',
     menu_torrents: 'Torrente',
     menu_settings: 'Setări',
-    menu_about: 'Informații',
-    menu_console: 'Consolă',
     menu_multmovie: 'Desene animate',
     menu_multtv: 'Seriale animate',
 

@@ -253,7 +253,6 @@ export default {
     torrent_parser_request_error: 'Грешка в заявката',
     torrent_parser_no_responce: 'Анализаторът не отговаря на заявката',
 
-    about_version: 'Версия',
 
     title_watched: 'Гледахте',
     title_settings: 'Настройки',
@@ -283,7 +282,6 @@ export default {
     title_collection: 'Колекция',
     title_recomendations: 'Препоръки',
     title_similar: 'Подобни',
-    title_about: 'Относно приложението',
     title_timetable: 'Разписание',
     title_relises: 'Дигитални издания',
     title_catalog: 'Каталог',
@@ -621,8 +619,6 @@ export default {
     menu_timeline: 'Разписание',
     menu_torrents: 'Торенти',
     menu_settings: 'Настройки',
-    menu_about: 'Информация',
-    menu_console: 'Конзола',
     menu_multmovie: 'Анимации',
     menu_multtv: 'Анимационни сериали',
 

@@ -3,7 +3,6 @@ import Controller from '../../core/controller'
 import Select from '../select'
 import Api from '../../core/api/api'
 import Activity from '../activity/activity'
-import Modal from '../modal'
 import Scroll from '../scroll'
 import Storage from '../../core/storage/storage'
 import Lang from '../../core/lang'
@@ -216,33 +215,6 @@ function ready(){
             
         }
 
-        if(action == 'about'){
-            let about = Template.get('about')
-
-            if(window.lampa_settings.white_use){
-                about.find('.about__contacts > div:eq(1)').remove()
-            }
-
-            if(Platform.is('android')){
-                about.find('.platform_android').removeClass('hide')
-                about.find('.version_android').text(Platform.version('android'))
-            }
-
-            about.find('.version_app').text(Platform.version('app'))
-
-            Modal.open({
-                about: true,
-                title: Lang.translate('title_about'),
-                html: about,
-                size: 'medium',
-                onBack: ()=>{
-                    Modal.close()
-
-                    Controller.toggle('content')
-                }
-            })
-        }
-
         if(action == 'favorite'){
                             if(prepared('bookmarks',['bookmarks'])){
                     Router.call('bookmarks', {
@@ -272,12 +244,6 @@ function ready(){
             Router.call('mytorrents', {
                 title: Lang.translate('title_mytorrents')
             })
-        }
-
-        // CUB-«Релизы» удалены вместе с компонентом relise.
-
-        if(action == 'console'){
-            Controller.toggle('console')
         }
 
         if(action == 'edit') Editor.start()

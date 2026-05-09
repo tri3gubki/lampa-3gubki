@@ -43,7 +43,6 @@ import empty_filter from '../templates/empty/filter'
 import torrent from '../templates/torrent/item'
 import torrent_file from '../templates/torrent/file'
 import files from '../templates/files'
-import about from '../templates/about'
 import error from '../templates/error'
 import season_episode from '../templates/season/episode'
 import season_episode_rate from '../templates/season/rate'
@@ -129,7 +128,6 @@ let templates = {
     torrent_install,
     torrent_error,
     files,
-    about,
     error,
     season_episode,
     season_episode_rate,

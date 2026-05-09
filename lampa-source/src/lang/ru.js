@@ -291,7 +291,6 @@ export default {
     torrent_parser_request_error: 'Ошибка в запросе',
     torrent_parser_no_responce: 'Парсер не отвечает на запрос',
 
-    about_version: 'Версия',
 
     title_watched: 'Вы смотрели',
     title_settings: 'Настройки',
@@ -327,7 +326,6 @@ export default {
     title_collection: 'Коллекция',
     title_recomendations: 'Рекомендации',
     title_similar: 'Похожие',
-    title_about: 'О приложении',
     title_timetable: 'Расписание',
     title_relises: 'Цифровые релизы',
     title_catalog: 'Каталог',
@@ -725,8 +723,6 @@ export default {
     menu_timeline: 'Расписание',
     menu_torrents: 'Торренты',
     menu_settings: 'Настройки',
-    menu_about: 'Информация',
-    menu_console: 'Консоль',
     menu_multmovie: 'Мультфильмы',
     menu_multtv: 'Мультсериалы',
     menu_feed: 'Лента',

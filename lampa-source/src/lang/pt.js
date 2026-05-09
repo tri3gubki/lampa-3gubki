@@ -253,7 +253,6 @@ export default {
     torrent_parser_request_error: 'Erro na solicitação',
     torrent_parser_no_responce: 'O analisador não está respondendo à solicitação',
 	
-    about_version: 'Versão',
 
 	title_watched: 'Você assistiu',
     title_settings: 'Configurações',
@@ -283,7 +282,6 @@ export default {
     title_collection: 'Coleção',
     title_recomendations: 'Recomendações',
     title_similar: 'Semelhantes',
-    title_about: 'Sobre a aplicação',
     title_timetable: 'Programação',
     title_relises: 'Lançamentos digitais',
     title_catalog: 'Catálogo',
@@ -621,8 +619,6 @@ export default {
     menu_timeline: 'Calendário',
     menu_torrents: 'Torrents',
     menu_settings: 'Configurações',
-    menu_about: 'Informações',
-    menu_console: 'Logs',
     menu_multmovie: 'Desenhos animados',
     menu_multtv: 'Séries animada',
 

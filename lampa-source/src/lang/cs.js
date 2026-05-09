@@ -287,7 +287,6 @@ export default {
     torrent_parser_request_error: "Chyba v požadavku",
     torrent_parser_no_responce: "Parser neodpovídá na požadavek",
 
-    about_version: "Verze",
 
     title_watched: "Sledovali jste",
     title_settings: "Nastavení",
@@ -322,7 +321,6 @@ export default {
     title_collection: "Kolekce",
     title_recomendations: "Doporučení",
     title_similar: "Podobné",
-    title_about: "O aplikaci",
     title_timetable: "Rozvrh",
     title_relises: "Digitální vydání",
     title_catalog: "Katalog",
@@ -681,8 +679,6 @@ export default {
     menu_timeline: "Rozvrh",
     menu_torrents: "Torrenty",
     menu_settings: "Nastavení",
-    menu_about: "Informace",
-    menu_console: "Konzole",
     menu_multmovie: "Animované filmy",
     menu_multtv: "Animované seriály",
     menu_feed: "Kanál",

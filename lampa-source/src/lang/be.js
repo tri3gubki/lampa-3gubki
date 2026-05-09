@@ -255,7 +255,6 @@ export default {
     torrent_parser_request_error: 'Памылка ў запыце',
     torrent_parser_no_responce: 'Парсер не адказвае на запыт',
 
-    about_version: 'Версія',
 
     title_watched: 'Вы глядзелі',
     title_settings: 'Налады',
@@ -285,7 +284,6 @@ export default {
     title_collection: 'Калекцыя',
     title_recomendations: 'Рэкамендацыі',
     title_similar: 'Падобныя',
-    title_about: 'Пра прыкладанне',
     title_timetable: 'Расклад',
     title_relises: 'Лічбавыя рэлізы',
     title_catalog: 'Каталог',
@@ -622,8 +620,6 @@ export default {
     menu_timeline: 'Расклад',
     menu_torrents: 'Торэнты',
     menu_settings: 'Налады',
-    menu_about: 'Інфармацыя',
-    menu_console: 'Кансоль',
     menu_multmovie: 'Мультфільмы',
     menu_multtv: 'Мультсерыялы',
     menu_feed: 'Стужка',

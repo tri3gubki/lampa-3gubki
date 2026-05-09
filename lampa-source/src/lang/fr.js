@@ -254,7 +254,6 @@ export default {
     torrent_parser_request_error: 'Erreur de requête',
     torrent_parser_no_responce: 'L\'analyseur ne répond pas',
 
-    about_version: 'Version',
 
     title_watched: 'Déjà vu',
     title_settings: 'Paramètres',
@@ -284,7 +283,6 @@ export default {
     title_collection: 'Collection',
     title_recomendations: 'Recommandations',
     title_similar: 'Similaires',
-    title_about: 'À propos',
     title_timetable: 'Calendrier',
     title_relises: 'Sorties numériques',
     title_catalog: 'Catalogue',
@@ -621,8 +619,6 @@ export default {
     menu_timeline: 'Calendrier',
     menu_torrents: 'Torrents',
     menu_settings: 'Paramètres',
-    menu_about: 'Infos',
-    menu_console: 'Console',
     menu_multmovie: 'Dessins animés',
     menu_multtv: 'Séries animées',
 

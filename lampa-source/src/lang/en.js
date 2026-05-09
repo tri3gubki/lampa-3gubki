@@ -254,7 +254,6 @@ export default {
     torrent_parser_request_error: 'Request error',
     torrent_parser_no_responce: 'The parser is not responding to the request',
 
-    about_version: 'Version',
 
     title_watched: 'You watched',
     title_settings: 'Settings',
@@ -284,7 +283,6 @@ export default {
     title_collection: 'Collection',
     title_recomendations: 'Recommendations',
     title_similar: 'Similar',
-    title_about: 'About the application',
     title_timetable: 'Schedule',
     title_relises: 'Digital releases',
     title_catalog: 'Catalog',
@@ -621,8 +619,6 @@ export default {
     menu_timeline: 'Schedule',
     menu_torrents: 'Torrents',
     menu_settings: 'Settings',
-    menu_about: 'Information',
-    menu_console: 'Console',
     menu_multmovie: 'Cartoons',
     menu_multtv: 'Animated series',
 
