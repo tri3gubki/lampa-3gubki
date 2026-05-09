@@ -20,7 +20,7 @@ function init(){
         component: component,
         icon,
         name: Lang.translate('settings_rest_cache_all'),
-        after: 'parental_control',
+        after: 'tmdb',
     })
 
     let status

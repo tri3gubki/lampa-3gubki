@@ -62,7 +62,6 @@ import Torserver from './interaction/torserver'
 import Sound from './core/sound'
 import Bell from './interaction/bell'
 import HoverSwitcher from './core/switcher'
-import HTTPS from './core/https'
 import Task from './core/loading'
 import App from './interaction/app'
 import LoadingProgress from './interaction/loading_progress'
@@ -329,11 +328,6 @@ function startApp(){
 
     Timeline.init()
     LoadingProgress.status('Timeline init')
-
-    HTTPS.init()
-    LoadingProgress.status('HTTPS init')
-
-
 
     Head.init()
     LoadingProgress.status('Head init')
