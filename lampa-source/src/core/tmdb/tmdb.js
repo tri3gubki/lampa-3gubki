@@ -30,9 +30,13 @@ function api(url){
  * @return {string} Проксированный URL изображения
  */
 function image(url){
-    let base  = Utils.protocol() + 'image.tmdb.org/' + url
+    let base = Utils.protocol() + 'image.tmdb.org/' + url
+    let full = Storage.field('proxy_tmdb') && Storage.field('tmdb_proxy_image') ? proxy('tmdb_proxy_image') + '/' + base : base
 
-    return Storage.field('proxy_tmdb') && Storage.field('tmdb_proxy_image') ? proxy('tmdb_proxy_image') + '/' + base : base
+    // нормализуем двойные слеши после "https://" — TMDB API часто
+    // возвращает poster_path с leading "/", из-за чего получалось
+    // image.tmdb.org/t/p/w300//qKK...jpg — Safari ругался на CORS
+    return full.slice(0, 8) + full.slice(8).replace(/\/+/g, '/')
 }
 
 /**

@@ -478,7 +478,7 @@ function category(params = {}, oncomplite, onerror){
 
     if(fullcat) Arrays.insert(parts_data, 0, Api.partPersons(parts_data, parts_limit, params.url, start_shuffle))
     
-    if(fullcat){
+    if(fullcat && genres[params.url]){
         genres[params.url].forEach(genre=>{
             let event = (call)=>{
                 get('discover/' + params.url+'?with_genres='+genre.id,params,(json)=>{

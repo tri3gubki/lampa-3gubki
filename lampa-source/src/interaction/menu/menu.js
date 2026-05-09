@@ -29,7 +29,6 @@ let menu_items = [
     {action: 'tv', title: 'menu_tv', sprite: 'tv'},
     {action: 'catalog', title: 'menu_catalog', sprite: 'catalog'},
     {action: 'filter', title: 'menu_filter', sprite: 'filter'},
-    {action: 'anime', title: 'menu_anime', sprite: 'anime'},
     {action: 'favorite', title: 'settings_input_links', sprite: 'favorite'},
     {action: 'history', title: 'menu_history', sprite: 'history'},
     {action: 'timetable', title: 'menu_timeline', sprite: 'calendar'},
@@ -47,8 +46,6 @@ function init(){
     // Фильтрация пунктов меню в зависимости от настроек
     menu_items = menu_items.filter(item=>{
         if(!window.lampa_settings.torrents_use && item.action == 'mytorrents') return false
-
-        if(!Lang.selected(['ru','uk','be']) && item.action == 'anime') return false
 
         return true
     })
@@ -191,11 +188,11 @@ function ready(){
 
         if(action == 'catalog') catalog()
 
-        if(action == 'movie' || action == 'tv' || action == 'anime'){
+        if(action == 'movie' || action == 'tv'){
             Router.call('category', {
                 url: action,
-                title: (action == 'movie' ? Lang.translate('menu_movies') : action == 'anime' ? Lang.translate('menu_anime') : Lang.translate('menu_tv')) + ' - ' + Storage.field('source').toUpperCase(),
-                source: action == 'anime' ? 'cub' : Storage.field('source')
+                title: Lang.translate(action == 'movie' ? 'menu_movies' : 'menu_tv') + ' - ' + Storage.field('source').toUpperCase(),
+                source: Storage.field('source')
             })
         }
 
