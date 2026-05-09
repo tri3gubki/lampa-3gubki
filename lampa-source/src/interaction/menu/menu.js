@@ -27,13 +27,11 @@ let menu_items = [
     {action: 'movie', title: 'menu_movies', sprite: 'movie'},
     {action: 'cartoon', title: 'menu_multmovie', sprite: 'cartoon'},
     {action: 'tv', title: 'menu_tv', sprite: 'tv'},
-    {action: 'myperson', title: 'title_persons', sprite: 'person'},
     {action: 'catalog', title: 'menu_catalog', sprite: 'catalog'},
     {action: 'filter', title: 'menu_filter', sprite: 'filter'},
     {action: 'anime', title: 'menu_anime', sprite: 'anime'},
     {action: 'favorite', title: 'settings_input_links', sprite: 'favorite'},
     {action: 'history', title: 'menu_history', sprite: 'history'},
-    {action: 'subscribes', title: 'title_subscribes', sprite: 'subscribes'},
     {action: 'timetable', title: 'menu_timeline', sprite: 'calendar'},
     {action: 'mytorrents', title: 'menu_torrents', sprite: 'torrent'},
 ]
@@ -49,8 +47,6 @@ function init(){
     // Фильтрация пунктов меню в зависимости от настроек
     menu_items = menu_items.filter(item=>{
         if(!window.lampa_settings.torrents_use && item.action == 'mytorrents') return false
-        if(window.lampa_settings.disable_features.persons && item.action == 'myperson') return false
-        if(window.lampa_settings.disable_features.subscribe && item.action == 'subscribes') return false
 
         if(!Lang.selected(['ru','uk','be']) && item.action == 'anime') return false
 
@@ -217,12 +213,6 @@ function ready(){
             })
         }
 
-        if(prepared(action,['myperson'])){
-            Router.call('myperson', {
-                title: Lang.translate('title_persons')
-            })
-        }
-
         if(action == 'search') Controller.toggle('search')
 
         if(action == 'settings'){
@@ -274,12 +264,6 @@ function ready(){
                     })
                 }
             
-        }
-
-        if(action == 'subscribes'){
-            Router.call('subscribes', {
-                title: Lang.translate('title_subscribes')
-            })
         }
 
         if(prepared(action,['timetable'])){

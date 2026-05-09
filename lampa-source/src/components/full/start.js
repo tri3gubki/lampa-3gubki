@@ -11,7 +11,6 @@ import TMDB from '../../core/api/sources/tmdb'
 import Options from './start/options'
 import Torrents from './start/torrents'
 import Poster from './start/poster'
-import Translations from './start/translations'
 import Bookmarks from './start/bookmarks'
 import Buttons from './start/buttons'
 
@@ -34,7 +33,6 @@ class Start extends Emit {
 
         this.use(Options)
         this.use(Poster)
-        this.use(Translations)
         this.use(Bookmarks)
         this.use(Buttons)
 
