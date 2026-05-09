@@ -175,7 +175,14 @@ function get(img){
 
 	ctx.drawImage(img, -(nw-canvas.width) / 2, -(nh-canvas.height) / 2, nw, nh)
 
-	return extract(ctx.getImageData(0, 0, canvas.width, canvas.height))
+	// canvas tainted при cross-origin <img> без CORS-headers — вернём
+	// fallback тёмно-серую палитру вместо SecurityError
+	try{
+		return extract(ctx.getImageData(0, 0, canvas.width, canvas.height))
+	}
+	catch(e){
+		return [[60,60,60], [40,40,40], [20,20,20]]
+	}
 }
 
 function blur(img, callback){
@@ -187,19 +194,26 @@ function blur(img, callback){
 		nh = img.height * ratio
 
     ctx.drawImage(img, -(nw-canvas.width) / 2, -(nh-canvas.height) / 2, nw, nh)
-    
-    Blur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 80,()=>{
-        let nimg = new Image()
 
-        try{
-            nimg.src = canvas.toDataURL()
-        }
-        catch(e){}
+    // Blur.canvasRGB читает getImageData — на tainted canvas упадёт.
+    // Без блюра отдаём оригинальный <img>, фон отрисуется без размытия.
+    try{
+        Blur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 80,()=>{
+            let nimg = new Image()
 
-        setTimeout(()=>{
-            callback(nimg)
-        },100)
-    })
+            try{
+                nimg.src = canvas.toDataURL()
+            }
+            catch(e){}
+
+            setTimeout(()=>{
+                callback(nimg)
+            },100)
+        })
+    }
+    catch(e){
+        setTimeout(()=>{ callback(img) }, 0)
+    }
 }
 
 function getImg(callback){
@@ -225,44 +239,52 @@ function blurPoster(img, w, h, callback){
 		nh = img.height * ratio
 
     setTimeout(()=>{
-    
+
         ctx_poster.drawImage(img, -(nw-canvas_poster.width) / 2, -(nh-canvas_poster.height) / 2, nw, nh)
-        
-        Blur.canvasRGB(canvas_poster, 0, 0, canvas_poster.width, canvas_poster.height, 50,()=>{
-            
-            let gradient = ctx_poster.createLinearGradient(0, 0, 0, canvas_poster.height)
-                gradient.addColorStop(0.5, 'rgba(0, 0, 0, 1)')
-                gradient.addColorStop(0.6, 'rgba(0, 0, 0, 0)')
-                gradient.addColorStop(1, 'rgba(0, 0, 0, 1)')
 
-            ctx_poster.globalCompositeOperation = 'destination-out'
-            ctx_poster.fillStyle = gradient
-            ctx_poster.fillRect(0, 0, canvas_poster.width, canvas_poster.height)
-            ctx_poster.globalCompositeOperation = 'source-over'
+        // Blur.canvasRGB → getImageData упадёт SecurityError если canvas
+        // tainted. Тогда отдаём callback с оригинальным <img> — постер
+        // покажется без размытия.
+        try{
+            Blur.canvasRGB(canvas_poster, 0, 0, canvas_poster.width, canvas_poster.height, 50,()=>{
 
-            
-            getImg((blured)=>{
-                canvas_poster.width  = w
-                canvas_poster.height = h
-
-                ctx_poster.drawImage(img, -(nw-canvas_poster.width) / 2, -(nh-canvas_poster.height) / 2, nw, nh)
-                
                 let gradient = ctx_poster.createLinearGradient(0, 0, 0, canvas_poster.height)
-                    gradient.addColorStop(0, 'rgba(0, 0, 0, 1)')
-                    gradient.addColorStop(0.6, 'rgba(0, 0, 0, 1)')
-                    gradient.addColorStop(0.65, 'rgba(0, 0, 0, 0)')
-                    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)')
+                    gradient.addColorStop(0.5, 'rgba(0, 0, 0, 1)')
+                    gradient.addColorStop(0.6, 'rgba(0, 0, 0, 0)')
+                    gradient.addColorStop(1, 'rgba(0, 0, 0, 1)')
 
-                ctx_poster.globalCompositeOperation = 'destination-in'
+                ctx_poster.globalCompositeOperation = 'destination-out'
                 ctx_poster.fillStyle = gradient
                 ctx_poster.fillRect(0, 0, canvas_poster.width, canvas_poster.height)
                 ctx_poster.globalCompositeOperation = 'source-over'
 
-                ctx_poster.drawImage(blured, 0, 0)
 
-                getImg(callback)
+                getImg((blured)=>{
+                    canvas_poster.width  = w
+                    canvas_poster.height = h
+
+                    ctx_poster.drawImage(img, -(nw-canvas_poster.width) / 2, -(nh-canvas_poster.height) / 2, nw, nh)
+
+                    let gradient = ctx_poster.createLinearGradient(0, 0, 0, canvas_poster.height)
+                        gradient.addColorStop(0, 'rgba(0, 0, 0, 1)')
+                        gradient.addColorStop(0.6, 'rgba(0, 0, 0, 1)')
+                        gradient.addColorStop(0.65, 'rgba(0, 0, 0, 0)')
+                        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)')
+
+                    ctx_poster.globalCompositeOperation = 'destination-in'
+                    ctx_poster.fillStyle = gradient
+                    ctx_poster.fillRect(0, 0, canvas_poster.width, canvas_poster.height)
+                    ctx_poster.globalCompositeOperation = 'source-over'
+
+                    ctx_poster.drawImage(blured, 0, 0)
+
+                    getImg(callback)
+                })
             })
-        })
+        }
+        catch(e){
+            callback(img)
+        }
     },100)
 }
 

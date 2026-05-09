@@ -304,10 +304,12 @@ function load(){
         let cache_src = src
         let colors
         let img = new Image()
-            // Без crossOrigin — Safari 26 даёт CORS-error если image
-            // ранее уже был закеширован без CORS-headers. Палитра
-            // через Color.get(canvas) тогда упадёт SecurityError —
-            // catch ниже подставит fallback-цвета.
+            // crossOrigin нужен чтобы canvas не был tainted (Color.get/blur
+            // используют getImageData). cache-bust ?cors=1 заставляет
+            // Safari взять свежий ответ — иначе он переиспользует
+            // закешированный без CORS-headers (от обычного <img>) и
+            // забракует.
+            img.crossOrigin = "Anonymous"
 
             img.onload = function(){
                 try{
@@ -333,7 +335,7 @@ function load(){
                 draw(false, false, true)
             }
 
-            img.src = src
+            img.src = src + (src.indexOf('?') >= 0 ? '&' : '?') + 'cors=1'
     }
 }
 

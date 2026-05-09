@@ -10,9 +10,7 @@ export default {
 
         if(window.innerWidth <= 480){
             this.img_poster = new Image()
-            // Без crossOrigin — Safari ругается из-за кеша без
-            // CORS-headers. Если canvas для blur даст SecurityError,
-            // try/catch ниже скипнет blur и оставит обычный постер.
+            this.img_poster.crossOrigin = "Anonymous"
         }
 
         this.img_poster.onerror = (e)=>{
@@ -99,6 +97,14 @@ export default {
 
         if(poster) this.html.find('.full-start__poster').addClass('background--poster')
 
-        this.img_poster.src = poster || this.card.img
+        let url = poster || this.card.img
+
+        // cache-bust для CORS-версии: Safari иначе переиспользует
+        // кеш от обычного <img src> без CORS-headers и блюр упадёт.
+        if(this.img_poster.crossOrigin && url){
+            url = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'cors=1'
+        }
+
+        this.img_poster.src = url
     }
 }
