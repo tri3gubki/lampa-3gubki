@@ -33,7 +33,13 @@
     left: 0;
     width: 100%;
     z-index: 15;
-    
+    // Полупрозрачный фон + blur — карточки уезжающие вверх под
+    // фиксированную шапку не просвечивают сквозь неё (текст года
+    // от верхнего ряда не торчит у заголовка).
+    background: rgba(29, 31, 32, 0.7);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+
     &__body{
         padding: 0.5em $offset;
         display: flex;
