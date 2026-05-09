@@ -41,8 +41,6 @@ import SettingsApi from './interaction/settings/api'
 import Modal from './interaction/modal'
 import Api from './core/api/api'
 import Card from './interaction/card'
-import Account from './core/account/account'
-import Socket from './core/socket'
 import TimeTable from './core/timetable'
 import Helper from './interaction/helper'
 import Tizen from './core/tizen'
@@ -52,7 +50,6 @@ import Parser from './core/api/sources/parser'
 import TMDB from './core/tmdb/tmdb'
 import Base64 from './utils/base64'
 import Loading from './interaction/loading'
-import Event from './utils/event'
 import Search from './interaction/search/global'
 import DeviceInput from './interaction/device_input'
 import AppWorker from './utils/worker'
@@ -271,8 +268,6 @@ function initClass(){
         SettingsApi,
         Android,
         Card,
-        Account,
-        Socket,
         Input,
         TimeTable,
         Helper,
@@ -284,7 +279,6 @@ function initClass(){
         TMDB,
         Base64,
         Loading,
-        Event,
         Search,
         DeviceInput,
         Worker: AppWorker,

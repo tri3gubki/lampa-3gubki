@@ -5,7 +5,6 @@ import Api from '../../core/api/api'
 import Arrays from '../../utils/arrays'
 import Storage from '../../core/storage/storage'
 import Lang from '../../core/lang'
-import Event from '../../utils/event'
 import Emit from '../../utils/emit'
 import TMDB from '../../core/api/sources/tmdb'
 
@@ -24,7 +23,7 @@ class Start extends Emit {
 
         this.data  = data
         this.card  = data.movie
-        this.event = new Event()
+        this.event = { call: function(){}, cancel: function(){}, destroy: function(){} }
 
         Arrays.extend(this.card,{
             title: this.card.name,

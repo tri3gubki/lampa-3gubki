@@ -2,7 +2,6 @@ import Utils from '../../utils/utils'
 import Storage from './storage'
 import Reguest from '../../utils/reguest'
 import Arrays from '../../utils/arrays'
-import Socket from '../socket'
 import Manifest from '../manifest'
 
 
@@ -23,51 +22,11 @@ class WorkerArray{
     }
 
     init(class_type){
-        let timer_update
-        let start_time = Date.now()
-
-        this.class_type  = class_type
-
-        console.log('StorageWorker', this.field, 'start follow')
-
-        Storage.listener.follow('change',(e)=>{
-            if(this.field == e.name && this.loaded && false && false){
-                try{
-                    this.save(e.value)
-                }
-                catch(e){
-                    console.log('StorageWorker',this.field,e.message)
-                }
-            }
-
-            if(e.name == 'account'){
-                clearTimeout(timer_update)
-
-                timer_update = setTimeout(this.update.bind(this,true),5 * 1000)
-            }
-        })
-
-        Socket.listener.follow('message',(e)=>{
-            if(e.method == 'storage' && e.data.name == this.field){
-                try{
-                    if(e.data.remove) this.removeFromSocket(e.data)
-                    else this.updateFromSocket(e.data)
-                }
-                catch(e){
-                    console.log('StorageWorker',this.field,e.message)
-                }
-            }
-        })
-
-        Socket.listener.follow('open',(e)=>{
-            if(Date.now() - start_time > 1000 * 60 * 5){
-                clearTimeout(timer_update)
-
-                timer_update = setTimeout(this.update.bind(this,false,true),10 * 1000)
-            }
-        })
-
-        this.update()
+        // CUB-Socket / Account-event'ы удалены — listener'ы Storage и
+        // Socket больше не нужны. Помечаем worker как loaded, ничего
+        // удалённо не загружаем.
+        this.class_type = class_type
+        this.loaded     = true
     }
 
     restrict(result){
@@ -129,51 +88,9 @@ class WorkerArray{
         this.parse(from, true)
     }
 
-    send(id,value){
-        if(!false) return
-
-        console.log('StorageWorker','save:',this.field, id,value)
-
-        let str = JSON.stringify(value)
-
-        if(str.length < 10000){
-            Socket.send('storage',{
-                params: {
-                    id: id,
-                    name: this.field,
-                    value: value
-                }
-            })
-        }
-    }
-
-    sendRemove(id,value){
-        let str = JSON.stringify(value)
-
-        console.log('StorageWorker','remove:',this.field, id,value)
-
-        if(str.length < 10000){
-            Socket.send('storage',{
-                params: {
-                    id: id,
-                    name: this.field,
-                    value: value,
-                    remove: true
-                }
-            })
-        }
-    }
-
-    sendClean(){
-        Socket.send('storage',{
-            params: {
-                id: null,
-                name: this.field,
-                value: '',
-                clean: true
-            }
-        })
-    }
+    send(id, value){}
+    sendRemove(id, value){}
+    sendClean(){}
 
     save(value){
         let uniq = value.filter(a=>this.data.indexOf(a) == -1)
