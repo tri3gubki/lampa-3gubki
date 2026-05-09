@@ -46,9 +46,6 @@ import Socket from './core/socket'
 import TimeTable from './core/timetable'
 import Helper from './interaction/helper'
 import Tizen from './core/tizen'
-import InteractionMain from './interaction/items/old/main'
-import InteractionCategory from './interaction/items/old/category'
-import InteractionLine from './interaction/items/old/line'
 import Status from './utils/status'
 import LangChoice from './interaction/lang'
 import Parser from './core/api/sources/parser'
@@ -281,9 +278,6 @@ function initClass(){
         Input,
         TimeTable,
         Helper,
-        InteractionMain,
-        InteractionCategory,
-        InteractionLine,
         Status,
         Tizen,
         Layer,

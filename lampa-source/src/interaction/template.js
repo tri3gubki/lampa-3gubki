@@ -102,7 +102,6 @@ import account_add_device_new from '../templates/account/add_device'
 import feed_item from '../templates/feed/item'
 import feed_head from '../templates/feed/head'
 import feed_episode from '../templates/feed/episode'
-import register from '../templates/register'
 import ad_bot from '../templates/ad/bot'
 import ad_video_block from '../templates/ad/video'
 import bookmarks_folder from '../templates/bookmarks_folder'
@@ -214,7 +213,6 @@ let templates = {
     feed_item,
     feed_head,
     feed_episode,
-    register,
     season_episode,
     season_episode_rate,
     season_info,

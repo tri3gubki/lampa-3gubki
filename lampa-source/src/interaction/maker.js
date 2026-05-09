@@ -20,9 +20,6 @@ import CompanyMap from './company/module/map'
 import Episode from './episode/episode'
 import EpisodeModule from './episode/module/module'
 import EpisodeMap from './episode/module/map'
-import Register from './register/register'
-import RegisterModule from './register/module/module'
-import RegisterMap from './register/module/map'
 import Season from './season/season'
 import SeasonModule from './season/module/module'
 import SeasonMap from './season/module/map'
@@ -38,7 +35,6 @@ let classes = {
     Line: Line,
     Company: Company,
     Episode: Episode,
-    Register: Register,
     Season: Season,
     CardParser: CardParser,
     Empty: Empty
@@ -51,7 +47,6 @@ let modules = {
     Line: LineModule,
     Company: CompanyModule,
     Episode: EpisodeModule,
-    Register: RegisterModule,
     Season: SeasonModule,
     Empty: EmptyModule
 }
@@ -63,7 +58,6 @@ let maps = {
     Category: CategoryMap,
     Line: LineMap,
     Company: CompanyMap,
-    Register: RegisterMap,
     Season: SeasonMap,
     Empty: EmptyMap
 }
