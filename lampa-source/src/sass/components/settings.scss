@@ -18,14 +18,22 @@
     }
 
     &__content{
+        // Компактное окно настроек прижатое к правому краю — как
+        // обычная Modal-форма Lampa, не бок-панель на всю высоту.
         position: fixed;
-        top: 0;
-        left: 100%;
+        top: 50%;
+        right: $offset;
+        // Сначала окно за правой границей экрана (translateX > 0),
+        // settings--open сдвигает его в видимую область.
+        transform: translate3d(calc(100% + #{$offset}), -50%, 0);
         transition: transform $speed;
         background: #262829;
+        border-radius: 1em;
         width: 35%;
+        max-height: 80vh;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         will-change: transform;
 
         @media screen and (max-width: $media_md) {
@@ -38,14 +46,14 @@
 
         @media screen and (max-width: $media_xm) {
             width: 100%;
-            left: 0;
+            right: 0;
             top: unset;
             bottom: 0;
+            max-height: none;
             height: auto !important;
             transition: none;
-            transform: translate3d(0, 100% ,0);
-            border-top-left-radius: 2em;
-            border-top-right-radius: 2em;
+            transform: translate3d(0, 100%, 0);
+            border-radius: 2em 2em 0 0;
         }
     }
 
@@ -267,7 +275,11 @@ body.settings--open{
         }
         &__content{
             @media screen and (min-width: $media_xm) {
-                transform: translate3d(-100%, 0 ,0);
+                transform: translate3d(0, -50%, 0);
+            }
+
+            @media screen and (max-width: $media_xm) {
+                transform: translate3d(0, 0, 0);
             }
         }
     }
