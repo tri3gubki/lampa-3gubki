@@ -72,8 +72,6 @@ function Main(){
     this.active = function(){
         Controller.collectionSet(comp)
         Controller.collectionFocus(last,comp)
-
-        scrl.height($('.settings__head'))
     }
 
     /**
