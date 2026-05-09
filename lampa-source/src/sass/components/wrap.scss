@@ -59,16 +59,13 @@ body.menu--always{
     .wrap{
         &__left{
             // Меню всегда раскрыто во всю ширину — иконки + текст.
-            // Background + blur — чтобы карточки выезжающие влево
-            // (через transform внутри scroll) перекрывались меню,
-            // а не торчали из-под него полу-обрезанными.
+            // Прозрачное (без background) — карточки выезжающие влево
+            // прячутся за счёт fade-mask на scroll-контейнере (см.
+            // sass/components/scroll.scss) + clip-path обрезает их.
             width: 15em;
             margin-left: 0;
             visibility: visible;
             transform: translate3d(0, 0, 0);
-            background: rgba(29, 31, 32, 0.85);
-            backdrop-filter: blur(1.5em);
-            -webkit-backdrop-filter: blur(1.5em);
             z-index: 5;
         }
     }
