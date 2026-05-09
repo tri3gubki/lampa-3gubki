@@ -701,6 +701,9 @@ export default {
     settings_removed: "Odstraněno",
 
     settings_param_player_inner: "Vestavěný",
+    settings_param_player_none: "Není vybráno",
+    player_none_title: 'Přehrávač nevybrán',
+    player_none_text: 'Vyberte přehrávač v <b>Nastavení → Přehrávač → Typ přehrávače</b>.',
     settings_param_player_outside: "Externí",
     settings_param_player_inner_tvos: 'Vnitřní',
     settings_param_yes: "Ano",

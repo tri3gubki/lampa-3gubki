@@ -640,6 +640,9 @@ export default {
     settings_removed: 'Выдалена',
 
     settings_param_player_inner: 'Убудаваны',
+    settings_param_player_none: 'Не выбраны',
+    player_none_title: 'Плэер не выбраны',
+    player_none_text: 'Выберыце плэер у <b>Налады → Плэер → Тып плэера</b>.',
     settings_param_player_outside: 'Вонкавы',
     settings_param_player_inner_tvos: 'Внутршній',
     settings_param_yes: 'Так',

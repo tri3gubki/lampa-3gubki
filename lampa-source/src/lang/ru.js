@@ -745,6 +745,9 @@ export default {
     settings_removed: 'Удалено',
 
     settings_param_player_inner: 'Встроенный',
+    settings_param_player_none: 'Не выбран',
+    player_none_title: 'Плеер не выбран',
+    player_none_text: 'Выберите плеер в <b>Настройки → Плеер → Тип плеера</b>. Встроенный плеер браузера плохо тянет HEVC, 4K, HDR, MKV и Dolby Audio — установите внешний плеер (VLC, Infuse, MX Player и т.п.) для нормального воспроизведения.',
     settings_param_player_outside: 'Внешний',
     settings_param_player_inner_tvos: 'Встроенный',
     settings_param_yes: 'Да',

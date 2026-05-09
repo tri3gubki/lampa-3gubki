@@ -636,6 +636,9 @@ export default {
     settings_removed: 'Изтрит',
 
     settings_param_player_inner: 'Lampa',
+    settings_param_player_none: 'Не е избрано',
+    player_none_title: 'Плеърът не е избран',
+    player_none_text: 'Изберете плеър в <b>Настройки → Плеър → Тип на плеъра</b>.',
     settings_param_player_outside: 'Външен',
     settings_param_player_inner_tvos: 'Вътрешен',
     settings_param_yes: 'Да',

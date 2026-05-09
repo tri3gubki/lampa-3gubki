@@ -765,6 +765,24 @@ function start(data, need, inner){
 
     if(data.launch_player) launch_player = data.launch_player
 
+    // Гейт: если плеер не выбран — показываем подсказку и выходим.
+    // YouTube-трейлеры и явно запрошенный inner (data.launch_player='inner')
+    // пропускаем — они не зависят от настройки.
+    if(Storage.field(player_need) == 'none' && launch_player != 'inner' && launch_player != 'lampa' && !Video.verifyTube(data.url)){
+        Modal.open({
+            title:  Lang.translate('player_none_title'),
+            html:   $('<div class="about"><div>'+ Lang.translate('player_none_text') +'</div></div>'),
+            size:  'medium',
+            onBack: ()=>{
+                Modal.close()
+                Controller.toggle('content')
+            }
+        })
+
+        listener.send('external', data)
+        return
+    }
+
     if(launch_player == 'lampa' || launch_player == 'inner' || Video.verifyTube(data.url)) launchInner()
     if(Platform.is('apple')){
         let external_url = externalPlayer(player_need, data, {

@@ -15,186 +15,60 @@ let listener = Subscribe()
  * Запуск
  */
 function init(){
+    // Дефолт = 'none' (плеер не выбран) для всех платформ кроме TV.
+    // На TV (tizen/webos/apple_tv/orsay) дефолт = системный плеер,
+    // т.к. он железный и сразу работает «из коробки».
+
     if(Platform.is('tizen')){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'tizen': 'Tizen',
-        },'tizen')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'tizen': 'Tizen',
-        },'tizen')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'tizen': 'Tizen',
-        },'tizen')
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'tizen':'Tizen'},'tizen')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'tizen':'Tizen'},'tizen')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'tizen':'Tizen'},'tizen')
     }
     if(Platform.is('orsay')){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'orsay': 'Orsay',
-        },'orsay')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'orsay': 'Orsay',
-        },'orsay')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'orsay': 'Orsay',
-        },'orsay')
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'orsay':'Orsay'},'orsay')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'orsay':'Orsay'},'orsay')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'orsay':'Orsay'},'orsay')
     }
     else if(Platform.is('webos')){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'webos': 'WebOS',
-        },'inner')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'webos': 'WebOS',
-        },'inner')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'webos': 'WebOS',
-        },'inner')
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'webos':'WebOS'},'webos')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'webos':'WebOS'},'webos')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'webos':'WebOS'},'webos')
     }
     else if (Platform.is('android')) {
-        select('player', {
-            'inner': '#{settings_param_player_inner}',
-            'android': 'Android'
-        }, 'android')
-
-        select('player_iptv', {
-            'inner': '#{settings_param_player_inner}',
-            'android': 'Android'
-        }, 'android')
-
-        select('player_torrent', {
-            'android': 'Android'
-        }, 'android')
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'android':'Android'},'none')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'android':'Android'},'none')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'android':'Android'},'none')
 
         trigger('internal_torrclient', false)
     }
     else if(Platform.desktop() && !Platform.macOS()){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'other': '#{settings_param_player_outside}',
-        },'inner')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'other': '#{settings_param_player_outside}',
-        },'inner')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'other': '#{settings_param_player_outside}',
-        },'inner')
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'other':'#{settings_param_player_outside}'},'none')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'other':'#{settings_param_player_outside}'},'none')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'other':'#{settings_param_player_outside}'},'none')
     }
     else if(Platform.macOS()){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'iina': 'IINA',
-            'infuse': 'Infuse',
-            'mpv': 'MPV',
-            'nplayer': 'nPlayer',
-            'tracyplayer': 'TracyPlayer',		
-        },'inner')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'iina': 'IINA',
-            'infuse': 'Infuse',
-            'mpv': 'MPV',
-            'nplayer': 'nPlayer',
-            'tracyplayer': 'TracyPlayer',		
-        },'inner')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'iina': 'IINA',
-            'infuse': 'Infuse',
-            'mpv': 'MPV',
-            'nplayer': 'nPlayer',
-            'tracyplayer': 'TracyPlayer',		
-        },'inner')
+        let macos_list = {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'iina':'IINA', 'infuse':'Infuse', 'mpv':'MPV', 'nplayer':'nPlayer', 'tracyplayer':'TracyPlayer'}
+        select('player',         macos_list, 'none')
+        select('player_iptv',    macos_list, 'none')
+        select('player_torrent', macos_list, 'none')
     }
     else if(Platform.is('apple')){
-        select('player',{
-            'inner': '#{settings_param_player_inner}',
-            'ios': 'iOS',
-            'vlc': 'VLC',
-            'nplayer': 'nPlayer',
-            'infuse': 'Infuse',
-            'vidhub': 'Vidhub',
-            'svplayer': 'SVPlayer',
-            'tracyplayer': 'TracyPlayer',
-            'senplayer': 'SenPlayer',	
-        },'inner')
-
-        select('player_iptv',{
-            'inner': '#{settings_param_player_inner}',
-            'ios': 'iOS',
-            'vlc': 'VLC',
-            'nplayer': 'nPlayer',
-            'infuse': 'Infuse',
-            'svplayer': 'SVPlayer',
-            'tracyplayer': 'TracyPlayer',
-            'senplayer': 'SenPlayer',		
-        },'inner')
-
-        select('player_torrent',{
-            'inner': '#{settings_param_player_inner}',
-            'ios': 'iOS',
-            'vlc': 'VLC',
-            'nplayer': 'nPlayer',
-            'infuse': 'Infuse',
-            'vidhub': 'Vidhub',
-            'svplayer': 'SVPlayer',
-            'tracyplayer': 'TracyPlayer',
-            'senplayer': 'SenPlayer',
-        },'inner')
+        let ios_list = {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}', 'ios':'iOS', 'vlc':'VLC', 'nplayer':'nPlayer', 'infuse':'Infuse', 'vidhub':'Vidhub', 'svplayer':'SVPlayer', 'tracyplayer':'TracyPlayer', 'senplayer':'SenPlayer'}
+        select('player',         ios_list, 'none')
+        select('player_iptv',    ios_list, 'none')
+        select('player_torrent', ios_list, 'none')
     }
     else if(Platform.is('apple_tv')){
-        select('player',{
-            'tvospro': '#{settings_param_player_inner_tvos} tvOS Pro',
-            'tvos': '#{settings_param_player_inner_tvos} tvOS Universal',
-            'tvosl': '#{settings_param_player_inner_tvos} tvOS Online',
-            'tvosSelect': '#{settings_param_player_outside}',
-            'vlc': 'VLC',
-            'infuse': 'Infuse',
-            'vidhub': 'Vidhub',
-            'inner': '#{settings_param_player_inner}',
-            'svplayer': 'SVPlayer'
-        },'tvos')
-
-        select('player_iptv',{
-            'tvospro': '#{settings_param_player_inner_tvos} tvOS Pro',
-            'tvos': '#{settings_param_player_inner_tvos} tvOS Universal',
-            'tvosl': '#{settings_param_player_inner_tvos} tvOS Online',
-            'tvosSelect': '#{settings_param_player_outside}',
-            'vlc': 'VLC',
-            'infuse': 'Infuse',
-            'vidhub': 'Vidhub',
-            'inner': '#{settings_param_player_inner}',
-            'svplayer': 'SVPlayer'
-        },'inner')
-
-        select('player_torrent',{
-            'tvospro': '#{settings_param_player_inner_tvos} tvOS Pro',
-            'tvos': '#{settings_param_player_inner_tvos} tvOS Universal',
-            'tvosSelect': '#{settings_param_player_outside}',
-            'infuse': 'Infuse',
-            'vidhub': 'Vidhub',
-            'vlc': 'VLC',
-            'inner': '#{settings_param_player_inner}',
-            'svplayer': 'SVPlayer'
-        },'tvos')
+        let atv_list = {'none':'#{settings_param_player_none}', 'tvospro':'#{settings_param_player_inner_tvos} tvOS Pro', 'tvos':'#{settings_param_player_inner_tvos} tvOS Universal', 'tvosl':'#{settings_param_player_inner_tvos} tvOS Online', 'tvosSelect':'#{settings_param_player_outside}', 'vlc':'VLC', 'infuse':'Infuse', 'vidhub':'Vidhub', 'inner':'#{settings_param_player_inner}', 'svplayer':'SVPlayer'}
+        select('player',         atv_list, 'tvos')
+        select('player_iptv',    atv_list, 'tvos')
+        select('player_torrent', atv_list, 'tvos')
+    }
+    else{
+        // Чистый browser (iPad Safari / Chrome / Firefox и т.п.)
+        select('player',         {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}'},'none')
+        select('player_iptv',    {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}'},'none')
+        select('player_torrent', {'none':'#{settings_param_player_none}', 'inner':'#{settings_param_player_inner}'},'none')
     }
 
     trigger('glass_style', Platform.screen('mobile'))

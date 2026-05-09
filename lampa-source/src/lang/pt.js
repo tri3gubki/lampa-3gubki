@@ -1,4 +1,7 @@
 export default {
+    settings_param_player_none: "Não selecionado",
+    player_none_title: 'Reprodutor não selecionado',
+    player_none_text: 'Escolha um reprodutor em <b>Configurações → Reprodutor → Tipo de reprodutor</b>.',
     lang_choice_title: 'Bem-vindo',
     lang_choice_subtitle: 'Escolhe o teu idioma',
 
