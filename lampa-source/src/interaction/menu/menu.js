@@ -6,11 +6,9 @@ import Activity from '../activity/activity'
 import Modal from '../modal'
 import Scroll from '../scroll'
 import Storage from '../../core/storage/storage'
-import Filter from '../content_filter/menu'
 import Lang from '../../core/lang'
 import Platform from '../../core/platform'
 import DeviceInput from '../device_input'
-import ParentalControl from '../parental_control'
 import Editor from './editor'
 import Utils from '../../utils/utils'
 import Router from '../../core/router'
@@ -231,9 +229,8 @@ function ready(){
         if(action == 'search') Controller.toggle('search')
 
         if(action == 'settings'){
-            ParentalControl.personal('settings',()=>{
-                Controller.toggle('settings')
-            }, false, true)
+                            Controller.toggle('settings')
+            
         }
 
         if(action == 'about'){
@@ -264,24 +261,22 @@ function ready(){
         }
 
         if(action == 'favorite'){
-            ParentalControl.personal('bookmarks',()=>{
-                if(prepared('bookmarks',['bookmarks'])){
+                            if(prepared('bookmarks',['bookmarks'])){
                     Router.call('bookmarks', {
                         title: Lang.translate('settings_input_links')
                     })
                 }
-            }, false, true)
+            
         }
 
         if(action == 'history'){
-            ParentalControl.personal('bookmarks',()=>{
-                if(prepared('favorite',['favorite'])){
+                            if(prepared('favorite',['favorite'])){
                     Router.call('favorite', {
                         title: Lang.translate('title_history'),
                         type: 'history'
                     })
                 }
-            }, false, true)
+            
         }
 
         if(action == 'subscribes'){
@@ -318,7 +313,7 @@ function ready(){
             Controller.toggle('console')
         }
 
-        if(action == 'filter') Filter.show()
+        // content_filter удалён
 
         if(action == 'edit') Editor.start()
 

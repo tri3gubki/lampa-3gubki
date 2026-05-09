@@ -18,7 +18,6 @@ import Lang from '../core/lang'
 import Arrays from '../utils/arrays'
 import Background from './background'
 import TV from './player/iptv' 
-import ParentalControl from './parental_control'
 import Footer from './player/footer'
 import Segments from './player/segments'
 import ExternalPlayer from '../core/externalPlayer.js'
@@ -693,9 +692,8 @@ function locked(data, call){
     let name = Controller.enabled().name
 
     if(data.locked){
-        ParentalControl.query(call, ()=>{
-            Controller.toggle(name)
-        })
+                    Controller.toggle(name)
+        
     }
     else call()
 }

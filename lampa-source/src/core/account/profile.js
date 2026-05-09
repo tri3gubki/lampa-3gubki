@@ -7,7 +7,6 @@ import Storage from '../storage/storage'
 import Template from '../../interaction/template'
 import Head from '../../interaction/head/head'
 import Manifest from '../manifest'
-import ParentalControl from '../../interaction/parental_control'
 import Controller from '../controller'
 import Select from '../../interaction/select'
 import Noty from '../../interaction/noty'
@@ -30,9 +29,7 @@ function init(){
         if(e.name == 'account' || e.name == 'protocol') update()
     })
 
-    ParentalControl.add('account_profiles',{
-        title: 'account_profiles'
-    })
+    // ParentalControl.add удалён — родительский контроль не используется.
 
     if(!Permit.token) update()
 }
@@ -96,8 +93,7 @@ function check(call){
  * @returns {void}
  */
 function select(callback){
-    ParentalControl.personal('account_profiles',()=>{
-        if(!Permit.token) return Advert.account()
+            if(!Permit.token) return Advert.account()
 
         let account = Permit.account
 
@@ -200,7 +196,7 @@ function select(callback){
             
             Noty.show(Lang.translate('account_profiles_empty'))
         })
-    }, false, true)
+    
 }
 
 export default {

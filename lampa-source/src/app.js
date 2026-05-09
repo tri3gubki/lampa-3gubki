@@ -67,7 +67,6 @@ import Color from './utils/color'
 import Cache from './utils/cache'
 import Torrent from './interaction/torrent'
 import Torserver from './interaction/torserver'
-import ParentalControl from './interaction/parental_control'
 import Sound from './core/sound'
 import Iptv from './core/iptv'
 import Bell from './interaction/bell'
@@ -304,7 +303,6 @@ function initClass(){
         Cache,
         Torrent,
         Torserver,
-        ParentalControl,
         Bell,
         StorageMenager,
         RemoteHelper,
@@ -519,8 +517,6 @@ function startApp(){
 
 
 
-    ParentalControl.init()
-    LoadingProgress.status('ParentalControl init')
 
     Android.init()
     LoadingProgress.status('Android init')

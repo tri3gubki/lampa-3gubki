@@ -5,7 +5,6 @@ import Main from './main'
 import Subscribe from '../../utils/subscribe'
 import DeviceInput from '../device_input'
 import Activity from '../activity/activity'
-import ParentalControl from '../parental_control'
 import Head from '../head/head'
 
 let html
@@ -81,14 +80,11 @@ function init(){
         }
     })
 
-    ParentalControl.add('settings',{
-        title: 'title_settings'
-    })
+    
 
     Head.addIcon(Template.string('icon_settings'), ()=>{
-        ParentalControl.personal('settings',()=>{
-            Controller.toggle('settings')
-        }, false, true)
+                    Controller.toggle('settings')
+        
     }).addClass('open--settings')
 }
 
