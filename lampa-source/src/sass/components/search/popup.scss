@@ -1,0 +1,169 @@
+.search-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 55;
+    pointer-events: none;
+
+    &__layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: opacity $speed;
+
+        @media screen and (max-width: $media_xm) {
+            backdrop-filter: blur(1em);
+        }
+    }
+
+    &__content{
+        // Чуть выше середины экрана — снизу остаётся место под OS-клавиатуру
+        // (Tizen/WebOS/Apple/Google), которая обычно занимает нижнюю треть.
+        // Mobile fallback на bottom-sheet (как у других модалок).
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        width: 60vw;
+        max-width: 60vw;
+        max-height: 70vh;
+        background: #262829;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0) scale(0.95);
+        transform-origin: center;
+        transition: opacity $speed, transform $speed;
+        will-change: transform, opacity;
+
+        @media screen and (max-width: $media_md) {
+            width: 80vw;
+            max-width: 80vw;
+        }
+
+        @media screen and (max-width: $media_xm) {
+            width: 100%;
+            max-width: none;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            max-height: 75vh;
+            transition: none;
+            transform: translate3d(0, 100%, 0);
+            opacity: 1;
+            border-radius: 2em 2em 0 0;
+        }
+    }
+
+    &__head{
+        flex-shrink: 0;
+        padding: $offset;
+
+        // Контейнер simple-keyboard внутри попапа — только инпут, без layout.
+        .simple-keyboard{
+            position: static;
+            background: transparent;
+            padding: 0;
+            display: block;
+        }
+
+        .simple-keyboard-input{
+            width: 100%;
+            font-size: 1.5em;
+            padding: 0.6em 1em;
+            background: rgba(255,255,255,0.06);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 0.6em;
+            color: #fff;
+            outline: none;
+            box-sizing: border-box;
+
+            &.focus,
+            &:focus{
+                border-color: #fff;
+            }
+        }
+    }
+
+    &__body{
+        flex-shrink: 1;
+        min-height: 0;
+        // overflow на body НЕ ставим — clip у overflow:hidden идёт
+        // по padding-box, content утекает в зону padding'а (видны
+        // обрезки 6-й карточки и фокус-обводки 1-й).
+        padding: 0 $offset $offset;
+
+        &--empty{
+            display: none;
+        }
+
+        // Внутренний враппер ловит overflow:hidden точно по своему
+        // border-box — карточки и focus-обводка клипаются ровно
+        // в зоне body content-box (после padding'а). Вертикальный
+        // padding под focus-обводку.
+        > .items-line,
+        > .search-popup__status{
+            overflow: hidden;
+            padding: 0.6em 0;
+        }
+
+        // Items-line внутри попапа — компактнее: убираем заголовок-плашку
+        // и лишний padding-bottom.
+        .items-line{
+            padding-bottom: 0;
+
+            &__head{
+                display: none;
+            }
+        }
+
+        // Свой ряд — горизонтальные отступы под focus-обводку (по 0.5em
+        // с каждой стороны), чтобы белая рамка фокуса не клипалась.
+        .scroll--horizontal .scroll__content{
+            padding: 0.5em;
+        }
+
+        // Карточка подобрана точно под 60vw модала: 5×8.45em + 4×1em
+        // margins = 46.25em. С 0.5em padding'ом scroll__content слева
+        // и справа = 47.25em. Шестая карточка стартует в 47.75em —
+        // за пределами видимой 47.4em зоны (overflow:hidden у .items-line).
+        // Focus-обводки 1-й и 5-й карточек (±0.5em outside) попадают
+        // в padding-зону scroll__content и видимы.
+        .card{
+            width: 8.45em;
+        }
+    }
+
+    &__status{
+        padding: 2em $offset;
+        text-align: center;
+        font-size: 1.2em;
+        color: rgba(255,255,255,0.6);
+    }
+}
+
+body.search-popup--open{
+    .search-popup{
+        pointer-events: auto;
+
+        &__layer{
+            opacity: 1;
+        }
+
+        &__content{
+            opacity: 1;
+            transform: translate3d(-50%, -50%, 0) scale(1);
+
+            @media screen and (max-width: $media_xm) {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}

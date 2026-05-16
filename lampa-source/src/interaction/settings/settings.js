@@ -82,10 +82,9 @@ function init(){
 
     
 
-    Head.addIcon(Template.string('icon_settings'), ()=>{
-                    Controller.toggle('settings')
-        
-    }).addClass('open--settings')
+    Head.render().find('.open--settings').on('hover:enter', ()=>{
+        Controller.toggle('settings')
+    })
 }
 
 function swipeAction(){

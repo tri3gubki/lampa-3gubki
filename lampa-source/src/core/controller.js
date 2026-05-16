@@ -10,7 +10,7 @@ import DeviceInput from '../interaction/device_input'
 import Select from '../interaction/select'
 import Modal from '../interaction/modal'
 import Player from '../interaction/player'
-import Search from '../interaction/search/global'
+import Search from '../interaction/search/popup'
 
 let listener = Subscribe()
 

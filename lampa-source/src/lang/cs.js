@@ -27,8 +27,6 @@ export default {
     search_start: "Začít hledat",
     search_nofound: "Podle vašeho dotazu nebylo nic nalezeno.",
 
-    full_genre: "Žánr",
-    full_production: "Produkce",
     full_date_of_release: "Datum vydání",
     full_budget: "Rozpočet",
     full_countries: "Země",
@@ -40,7 +38,6 @@ export default {
     full_episode_days_left: "Zbývá dní",
     full_season: "Série",
     full_episode: "Epizoda",
-    full_keywords: "Klíčová slova",
 
 
     settings_input_links: "Oblíbené",
@@ -256,8 +253,6 @@ export default {
     title_action: "Akce",
     title_producer: "Režisér",
     title_collection: "Kolekce",
-    title_recomendations: "Doporučení",
-    title_similar: "Podobné",
     title_timetable: "Rozvrh",
     title_relises: "Digitální vydání",
     title_catalog: "Katalog",
@@ -274,7 +269,6 @@ export default {
     title_now_watch: "Nyní sledují",
     title_latest: "Poslední přidání",
     title_continue: "Pokračovat ve sledování",
-    title_recomend_watch: "Doporučujeme sledovat",
     title_new_episodes: "Nové epizody",
     title_popular: "Populární",
     title_popular_movie: "Populární filmy",

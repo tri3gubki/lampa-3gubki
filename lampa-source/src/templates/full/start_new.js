@@ -35,10 +35,6 @@ let html = `<div class="full-start-new">
 
                     <span>#{settings_input_links}</span>
                 </div>
-
-                <div class="full-start__button selector button--options">
-                    <svg><use xlink:href="#sprite-dots"></use></svg>
-                </div>
             </div>
         </div>
     </div>

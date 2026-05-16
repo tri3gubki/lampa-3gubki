@@ -251,10 +251,6 @@
         @media screen and (max-width: $media_sm) {
             overflow: auto;
         }
-
-        .full-start__button:not(.focus) span{
-            display: none;
-        }
     }
 }
 

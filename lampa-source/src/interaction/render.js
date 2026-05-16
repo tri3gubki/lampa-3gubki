@@ -5,7 +5,7 @@ import Menu from './menu/menu'
 import Settings from './settings/settings'
 import Background from './background'
 import Activity from './activity/activity'
-import Search from './search/global'
+import Search from './search/popup'
 
 /**
  * Инициализирует основное приложение

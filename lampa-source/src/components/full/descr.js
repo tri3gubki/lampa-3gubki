@@ -1,13 +1,9 @@
 import Template from "../../interaction/template"
 import Controller from '../../core/controller'
 import Utils from '../../utils/utils'
-import Activity from '../../interaction/activity/activity'
 import Lang from '../../core/lang'
-import Select from '../../interaction/select'
 import Emit from '../../utils/emit'
 import TMDB from '../../core/api/sources/tmdb'
-import Router from '../../core/router'
-import Keys from '../../core/tmdb/keys'
 import Warning from '../../interaction/warning'
 import Modal from '../../interaction/modal'
 import Storage from '../../core/storage/storage'
@@ -25,7 +21,6 @@ class Descriptiopn extends Emit{
     create(){
         this.html = Template.get('items_line',{title: Lang.translate('full_detail')})
 
-        let media     = this.card.name ? 'tv' : 'movie'
         let countries = TMDB.parseCountries(this.card)
         let date      = (this.card.release_date || this.card.first_air_date || '') + ''
 
@@ -35,47 +30,6 @@ class Descriptiopn extends Emit{
             budget: '$ ' + Utils.numberWithSpaces(this.card.budget || 0),
             countries: countries.join(', ')
         })
-
-        let tags = this.body.find('.full-descr__tags')
-
-        if(this.card.genres.length){
-            tags.append(this.tag(Lang.translate('full_genre'), this.card.genres, (genre)=>{
-                Activity.push({
-                    url: genre.url || media,
-                    title: Utils.capitalizeFirstLetter(genre.name),
-                    component: this.card.source == 'cub' ? 'category' : 'category_full',
-                    genres: genre.id,
-                    source: this.card.source,
-                    page: 1
-                })
-            }))
-        }
-
-        if(this.card.production_companies.length){
-            tags.append(this.tag(Lang.translate('full_production'), this.card.production_companies, (company)=>{
-                Router.call('company', {...company, card: this.card})
-            }))
-        }
-
-        let key_tags = this.card.keywords ? (this.card.keywords.results || this.card.keywords.keywords) : []
-
-        if(key_tags.length && key_tags.find){
-            let tags_filter = key_tags.filter(key=>!Keys.adult.find(tag=>tag.indexOf(key.name.toLowerCase()) >= 0))
-                tags_filter = tags_filter.filter(key=>!Keys.lgbt.find(tag=>tag.indexOf(key.name.toLowerCase()) >= 0))
-
-            if(tags_filter.length){
-                tags.append(this.tag(Lang.translate('full_keywords'), tags_filter, (key)=>{
-                    Activity.push({
-                        url: 'discover/' + media,
-                        title: Utils.capitalizeFirstLetter(key.name),
-                        keywords: key.id,
-                        component: 'category_full',
-                        source: 'tmdb',
-                        page: 1
-                    })
-                }))
-            }
-        }
 
         if(!this.card.budget) $('.full--budget', this.body).remove()
         if(!countries.length) $('.full--countries', this.body).remove()
@@ -140,37 +94,6 @@ class Descriptiopn extends Emit{
         this.emit('create')
     }
 
-    tag(name, items, call){
-        let elem = $(`<div class="tag-count selector">
-            <div class="tag-count__name">${name}</div>
-            <div class="tag-count__count">${items.length}</div>
-        </div>`)
-    
-        elem.on('hover:enter',()=>{
-            let select = items.map(a=>{
-                return {
-                    title: Utils.capitalizeFirstLetter(a.name),
-                    elem: a
-                }
-            })
-    
-            Select.show({
-                title: name,
-                items: select,
-                onSelect: (a)=>{
-                    this.toggle()
-    
-                    call(a.elem)
-                },
-                onBack: ()=>{
-                    this.toggle()
-                }
-            })
-        })
-    
-        return elem
-    }
-    
     toggle(){
         let controller = {
             link: this,

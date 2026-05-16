@@ -27,8 +27,6 @@ export default {
     search_start: 'За да започнете търсене',
     search_nofound: 'Нищо не беше намерено според вашата заявка.',
 
-    full_genre: 'Жанр',
-    full_production: 'Продукция',
     full_date_of_release: 'дата на пускане',
     full_budget: 'Бюджет',
     full_countries: 'Страни',
@@ -234,8 +232,6 @@ export default {
     title_action: 'Действие',
     title_producer: 'Продуцент',
     title_collection: 'Колекция',
-    title_recomendations: 'Препоръки',
-    title_similar: 'Подобни',
     title_timetable: 'Разписание',
     title_relises: 'Дигитални издания',
     title_catalog: 'Каталог',
@@ -252,7 +248,6 @@ export default {
     title_now_watch: 'Гледани сега',
     title_latest: 'Последно добавени',
     title_continue: 'Продължете да разглеждате',
-    title_recomend_watch: 'Препоръчваме ви',
     title_new_episodes: 'Нови епизоди',
     title_popular: 'Популярни',
     title_popular_movie: 'Популярни филми',
@@ -810,7 +805,6 @@ export default {
     tv_status_rumored: 'Слухове',
     tv_status_post_production: 'Скоро',
 
-    full_keywords: 'Тагове',
     title_last_year: 'Миналата година',
 
     title_reset: 'Рестартирайте',

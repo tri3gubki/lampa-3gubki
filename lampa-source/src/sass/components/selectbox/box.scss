@@ -19,11 +19,15 @@
 
     &__content{
         // Тот же модальный стиль что и Settings (см. settings.scss).
+        // Desktop: fade+scale на месте; мобилка: bottom-sheet снизу.
         position: fixed;
         top: 50%;
         right: $offset;
-        transform: translate3d(calc(100% + #{$offset}), -50%, 0);
-        transition: transform $speed;
+        opacity: 0;
+        transform: translate3d(0, -50%, 0) scale(0.95);
+        transform-origin: top right;
+        transition: opacity $speed, transform $speed;
+        pointer-events: none;
         background: #262829;
         border-radius: 1em;
         width: fit-content;
@@ -33,7 +37,7 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        will-change: transform;
+        will-change: transform, opacity;
 
         @media screen and (max-width: $media_md) {
             max-width: 60%;
@@ -54,6 +58,7 @@
             height: auto !important;
             transition: none;
             transform: translate3d(0, 100%, 0);
+            opacity: 1;
             border-radius: 2em 2em 0 0;
         }
     }
@@ -74,6 +79,11 @@
 
         > * {
             width: 100%;
+        }
+
+        // Чуть больше воздуха сверху под заголовком, поменьше пустоты снизу.
+        .scroll--mask .scroll__content{
+            padding: 1.2em 0 1em;
         }
     }
 
@@ -96,6 +106,56 @@
             width: 100%;
         }
     }
+
+    // Окно по центру экрана + центрирование текста внутри. Используется для
+    // диалога выхода из приложения (см. activity.js → Select.show centered:true).
+    &--centered{
+        .selectbox__content{
+            @media screen and (min-width: $media_xm) {
+                right: auto;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0) scale(0.95);
+                transform-origin: center;
+                text-align: center;
+            }
+        }
+
+        .selectbox__head{
+            text-align: center;
+        }
+
+        .selectbox-item{
+            text-align: center;
+            padding-right: 2em;
+        }
+    }
+
+    // Окно прижатое к верху экрана по центру. Компактное (min-width
+    // меньше). Используется для contextual-меню типа long-press на карточке
+    // в Загрузках (Select.show top:true).
+    &--top{
+        .selectbox__content{
+            @media screen and (min-width: $media_xm) {
+                top: 4em;
+                right: auto;
+                left: 50%;
+                min-width: 18em;
+                max-width: 30em;
+                transform: translate3d(-50%, 0, 0) scale(0.95);
+                transform-origin: top center;
+                text-align: center;
+            }
+        }
+
+        .selectbox__head{
+            text-align: center;
+        }
+
+        .selectbox-item{
+            text-align: center;
+            padding-right: 2em;
+        }
+    }
 }
 
 body.selectbox--open{
@@ -105,11 +165,25 @@ body.selectbox--open{
         }
         &__content{
             @media screen and (min-width: $media_xm) {
-                transform: translate3d(0, -50%, 0);
+                opacity: 1;
+                transform: translate3d(0, -50%, 0) scale(1);
+                pointer-events: auto;
             }
 
             @media screen and (max-width: $media_xm) {
                 transform: translate3d(0, 0, 0);
+            }
+        }
+
+        &--centered .selectbox__content{
+            @media screen and (min-width: $media_xm) {
+                transform: translate3d(-50%, -50%, 0) scale(1);
+            }
+        }
+
+        &--top .selectbox__content{
+            @media screen and (min-width: $media_xm) {
+                transform: translate3d(-50%, 0, 0) scale(1);
             }
         }
     }

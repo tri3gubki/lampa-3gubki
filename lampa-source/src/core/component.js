@@ -10,6 +10,7 @@ import timetable from '../components/timetable'
 import company from '../components/company'
 import bookmarks from '../components/bookmarks'
 import episodes from '../components/episodes'
+import downloads from '../components/downloads'
 
 let component = {
     main,
@@ -24,6 +25,7 @@ let component = {
     company,
     bookmarks,
     episodes,
+    downloads,
 }
 
 /**

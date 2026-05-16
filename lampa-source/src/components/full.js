@@ -137,20 +137,6 @@ function component(object){
                     this.rows.push(['cards', data.collection])
                 }
 
-                // Создаем рекомендации
-                if(!adult_block && data.recomend && data.recomend.results && data.recomend.results.length){
-                    data.recomend.title   = Lang.translate('title_recomendations')
-
-                    this.rows.push(['cards', data.recomend])
-                }
-
-                // Создаем похожие
-                if(!adult_block && data.simular && data.simular.results && data.simular.results.length){
-                    data.simular.title   = Lang.translate('title_similar')
-
-                    this.rows.push(['cards', data.simular])
-                }
-
                 // Добавляем картинку для фона
                 this.html.prepend(Template.elem('img', {class: 'full-start__background'}))
 

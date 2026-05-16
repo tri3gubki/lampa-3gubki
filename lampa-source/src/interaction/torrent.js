@@ -555,6 +555,16 @@ function list(items, params){
         Lampa.Listener.send('torrent_file',{type:'render',element,item,items,params})
     })
 
+    // Один видео-файл и не сериал → запускаем сразу, окно «Файлы» не
+    // показываем. Modal-loading закрываем после trigger — Player.play
+    // уже запущен внутри hover:enter handler'а. params.seasons установлен
+    // только когда хотя бы у одного файла Torserver.parse нашёл season-теги.
+    if(playlist.length == 1 && !params.seasons){
+        first_item.trigger('hover:enter')
+        Modal.close()
+        return
+    }
+
     if(items.length == 0) html = Template.get('error',{title: Lang.translate('empty_title'),text: Lang.translate('torrent_parser_nofiles')})
     else Modal.title(Lang.translate('title_files'))
 

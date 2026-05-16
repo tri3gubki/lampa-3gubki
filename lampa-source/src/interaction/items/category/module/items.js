@@ -15,9 +15,9 @@ export default {
         Arrays.extend(this.params, {
             items: {
                 mapping: 'grid',
-                cols: 6,
-                limit_view: 6,
-                limit_collection: 36
+                cols: 7,
+                limit_view: 7,
+                limit_collection: 42
             }
         })
 

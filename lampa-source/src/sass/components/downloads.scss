@@ -1,0 +1,80 @@
+.downloads{
+    &__state{
+        padding: 3em 2em;
+        text-align: center;
+        opacity: 0.85;
+        line-height: 1.5;
+
+        &--err{
+            opacity: 1;
+        }
+
+        &-title{
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        &-descr{
+            opacity: 0.7;
+            font-size: 0.95em;
+        }
+    }
+}
+
+// Плейсхолдер 📁/🎬 поверх card__view — виден пока постер не загрузился.
+// После .downloads-card--loaded прячется чтобы не просвечивал сквозь постер.
+.downloads-card{
+    &__placeholder{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &--loaded &__placeholder{
+        display: none;
+    }
+
+    .card__img{
+        transition: opacity 0.25s;
+    }
+
+    // ===== Карточка эпизода (16:9 стоп-кадр) =====
+    // Внутри сезона сериала — постер заменён на TMDB still_path. Меняем
+    // aspect ratio с 2:3 на 16:9 чтобы кадр не растягивался/обрезался.
+    &--episode{
+        .card__view{
+            padding-bottom: 56.25%;
+        }
+    }
+
+    // ===== Overlay-иконка статуса торрента (▶/⏸) =====
+    // Информативная (не selector). Управление — через long-press menu.
+    // Стиль как у .head__action — белая иконка на тёмном полупрозрачном
+    // фоне со скруглением.
+    &__state{
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        width: 2.2em;
+        height: 2.2em;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(0.3em);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        pointer-events: none;
+        z-index: 2;
+
+        > svg{
+            width: 1.4em !important;
+            height: 1.4em !important;
+        }
+    }
+}

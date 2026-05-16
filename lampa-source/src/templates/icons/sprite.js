@@ -108,6 +108,16 @@ let html = `
         <rect x="0.357422" y="12.0215" width="38.501" height="5" rx="2.5" fill="currentColor"/>
     </symbol>
 
+    <symbol id="sprite-exit" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 1H3a1.5 1.5 0 0 0-1.5 1.5v19A1.5 1.5 0 0 0 3 23h11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12h14m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="sprite-download" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2v14m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 18v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
     <symbol id="sprite-search" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="9.9964" cy="9.63489" r="8.43556" stroke="currentColor" stroke-width="2.4"></circle>
         <path d="M20.7768 20.4334L18.2135 17.8701" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
@@ -128,10 +138,10 @@ let html = `
         <path d="M18.0739 13.634C18.7406 14.0189 18.7406 14.9811 18.0739 15.366L11.751 19.0166C11.0843 19.4015 10.251 18.9204 10.251 18.1506L10.251 10.8494C10.251 10.0796 11.0843 9.5985 11.751 9.9834L18.0739 13.634Z" fill="currentColor"></path>
     </symbol>
 
-    <symbol id="sprite-dots" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="4.88968" cy="4.98563" r="4.75394" fill="currentColor"/>
-        <circle cx="18.9746" cy="4.98563" r="4.75394" fill="currentColor"/>
-        <circle cx="33.0596" cy="4.98563" r="4.75394" fill="currentColor"/>
+    <symbol id="sprite-pause" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14.5" r="13" stroke="currentColor" stroke-width="2.7"></circle>
+        <rect x="9.5" y="9.5" width="3" height="10" rx="1" fill="currentColor"/>
+        <rect x="15.5" y="9.5" width="3" height="10" rx="1" fill="currentColor"/>
     </symbol>
 
     <symbol id="sprite-reaction" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">

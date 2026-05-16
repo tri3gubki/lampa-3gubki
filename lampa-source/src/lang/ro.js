@@ -27,8 +27,6 @@ export default {
     search_start: 'Pentru a începe căutarea',
     search_nofound: 'Nu s-a găsit nimic conform solicitării tale.',
 
-    full_genre: 'Gen',
-    full_production: 'Producție',
     full_date_of_release: 'Data lansării',
     full_budget: 'Buget',
     full_countries: 'Țări',
@@ -40,7 +38,6 @@ export default {
     full_episode_days_left: 'Zile rămase',
     full_season: 'Sezon',
     full_episode: 'Episod',
-    full_keywords: 'Etichete',
 
 
     settings_input_links: 'Favorite',
@@ -235,8 +232,6 @@ export default {
     title_action: 'Acțiune',
     title_producer: 'Producător',
     title_collection: 'Colecție',
-    title_recomendations: 'Recomandări',
-    title_similar: 'Similare',
     title_timetable: 'Program',
     title_relises: 'Lansări digitale',
     title_catalog: 'Catalog',
@@ -253,7 +248,6 @@ export default {
     title_now_watch: 'Se vizionează acum',
     title_latest: 'Ultima adăugare',
     title_continue: 'Continuă vizionarea',
-    title_recomend_watch: 'Recomandări pentru tine',
     title_new_episodes: 'Episoade noi',
     title_popular: 'Populare',
     title_popular_movie: 'Filme populare',

@@ -39,17 +39,16 @@
     }
 }
 
-@include generate-cols(6);
-@include generate-cols(5);
-@include generate-cols(4);
-@include generate-cols(3);
+@include generate-cols(8);
 
 body.platform--orsay,
 body.platform--netcast{
     .cols--3,
     .cols--4,
     .cols--5,
-    .cols--6{
+    .cols--6,
+    .cols--7,
+    .cols--8{
         display: block;
 
         &::after{

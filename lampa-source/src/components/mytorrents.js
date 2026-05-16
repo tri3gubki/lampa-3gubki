@@ -10,6 +10,8 @@ import Lang from '../core/lang'
 import Select from '../interaction/select'
 import Router from '../core/router'
 import EmptyRouter from '../interaction/empty/module/router'
+import Qbittorrent from '../interaction/qbittorrent'
+import Noty from '../interaction/noty'
 
 /**
  * Компонент "Мои торренты"
@@ -71,7 +73,27 @@ function component(object){
 
                     let enabled = Controller.enabled().name
                     let menu    = []
-                    
+
+                    // «Скачать в qBittorrent» — собираем magnet из hash+title
+                    // (TorrServer не отдаёт нам исходный .torrent), отправляем
+                    // через тот же qbittorrent.send что и из других мест.
+                    if(data.hash){
+                        menu.push({
+                            title: Lang.translate('torrent_parser_qbittorrent_send'),
+                            onSelect: ()=>{
+                                if(!Qbittorrent.configured()){
+                                    Noty.show(Lang.translate('qbittorrent_no_url'))
+                                }
+                                else{
+                                    let magnet = 'magnet:?xt=urn:btih:' + String(data.hash).toLowerCase()
+                                                + (data.title ? '&dn=' + encodeURIComponent(data.title) : '')
+                                    Qbittorrent.send(magnet, {title: data.title})
+                                }
+                                Controller.toggle(enabled)
+                            }
+                        })
+                    }
+
                     if(data.data.movie){
                         menu.push({
                             title: Lang.translate('title_card'),
@@ -81,21 +103,38 @@ function component(object){
 
                     menu.push({
                         title: Lang.translate('torrent_remove_title'),
-                        subtitle: Lang.translate('torrent_remove_descr'),
-                        onSelect: ()=>{
-                            Torserver.remove(data.hash)
-
-                            item.disable()
-
-                            Controller.toggle(enabled)
-                        }
+                        del: true
                     })
 
                     Select.show({
                         title: Lang.translate('title_action'),
+                        top: true,
                         items: menu,
-                        onBack: ()=>{
-                            Controller.toggle(enabled)
+                        onBack: ()=>{ Controller.toggle(enabled) },
+                        onSelect: (a)=>{
+                            // Подменю подтверждения удаления (как в Загрузках).
+                            if(a.del){
+                                Select.show({
+                                    title: Lang.translate('downloads_delete_title').replace('%s', data.title || ''),
+                                    top: true,
+                                    items: [
+                                        {title: Lang.translate('downloads_delete_confirm'), confirm: true},
+                                        {title: Lang.translate('cancel')}
+                                    ],
+                                    onBack: ()=>{ Controller.toggle(enabled) },
+                                    onSelect: (b)=>{
+                                        if(b.confirm){
+                                            Torserver.remove(data.hash)
+                                            item.disable()
+                                        }
+                                        Controller.toggle(enabled)
+                                    }
+                                })
+                            }
+                            else if(a.onSelect){
+                                a.onSelect()
+                            }
+                            else Controller.toggle(enabled)
                         }
                     })
                 }

@@ -2,98 +2,8 @@ import Storage from '../../storage/storage'
 import Utils from '../../../utils/utils'
 import Reguest from '../../../utils/reguest'
 import Lang from '../../lang'
-import Search from '../../../interaction/search/global'
-import Activity from '../../../interaction/activity/activity'
-import Torrent from '../../../interaction/torrent'
-import Torserver from '../../../interaction/torserver'
-import Platform from '../../platform'
-import CardParser from '../../../interaction/card_parser/card_parser'
 
 let network = new Reguest()
-
-function init(){
-    Storage.set('parser_torrent_type', Storage.get('parser_torrent_type') || 'jackett')
-
-    let source = {
-        title: Lang.translate('title_parser'),
-        search: (params, oncomplite)=>{
-            get({
-                search: decodeURIComponent(params.query),
-                other: true,
-                from_search: true
-            },(json)=>{
-                json.Results.sort((a,b)=>{
-                    return (b.Seeders || 0) - (a.Seeders || 0)
-                })
-                
-                json.title   = Lang.translate('title_parser')
-                json.results = json.Results.slice(0,20)
-                json.total   = json.Results.length
-                json.total_pages = Math.ceil(json.total / 20)
-
-                json.Results = null
-
-                json.results.forEach((element)=>{
-                    element.Title = Utils.shortText(element.Title,110)
-
-                    element.params = {
-                        createInstance: (item)=>new CardParser(item)
-                    }
-                })
-
-                oncomplite(json.results.length ? [json] : [])
-            },()=>{
-                oncomplite([])
-            })
-        },
-        onRecall: (data, last_query)=>{
-            data[0].results.forEach((element) => {
-                element.params = {
-                    createInstance: (item)=>new CardParser(item)
-                }
-            })
-        },
-        onCancel: network.clear.bind(network),
-        params: {
-            lazy: true
-        },
-        onMore: (params, close)=>{
-            close()
-
-            Activity.push({
-                url: '',
-                title: Lang.translate('title_torrents'),
-                component: 'torrents',
-                search: params.query,
-                from_search: true,
-                page: 1
-            })
-        },
-        onSelect: (params, close)=>{
-            Torrent.start(params.element, {
-                title: params.element.Title
-            })
-
-            Torrent.back(params.line.toggle.bind(params.line))
-        }
-    }
-
-    function addSource(){
-        let reg = Platform.is('android') ? true : Torserver.url()
-
-        if(Storage.field('parse_in_search') && reg) Search.addSource(source)
-    }
-
-    Storage.listener.follow('change',(e)=>{
-        if(e.name == 'parse_in_search' || e.name == 'torrserver_url' || e.name == 'torrserver_url_two' || e.name == 'torrserver_use_link'){
-            Search.removeSource(source)
-
-            addSource()
-        }
-    })
-
-    addSource()
-}
 
 function parserLinks(type){
     if(type == 'jackett'){
@@ -422,7 +332,6 @@ function clear(){
 }
 
 export default {
-    init,
     get,
     jackett,
     clear

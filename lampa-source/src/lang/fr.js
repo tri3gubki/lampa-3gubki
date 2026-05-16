@@ -27,8 +27,6 @@ export default {
     search_start: 'Pour commencer la recherche',
     search_nofound: 'Aucun résultat ne correspond à votre requête.',
 
-    full_genre: 'Genre',
-    full_production: 'Production',
     full_date_of_release: 'Date de sortie',
     full_budget: 'Budget',
     full_countries: 'Pays',
@@ -40,7 +38,6 @@ export default {
     full_episode_days_left: 'Jours restants',
     full_season: 'Saison',
     full_episode: 'Épisode',
-    full_keywords: 'Mots-clés',
 
 
     settings_input_links: 'Favoris',
@@ -235,8 +232,6 @@ export default {
     title_action: 'Action',
     title_producer: 'Producteur',
     title_collection: 'Collection',
-    title_recomendations: 'Recommandations',
-    title_similar: 'Similaires',
     title_timetable: 'Calendrier',
     title_relises: 'Sorties numériques',
     title_catalog: 'Catalogue',
@@ -253,7 +248,6 @@ export default {
     title_now_watch: 'En cours',
     title_latest: 'Ajouts récents',
     title_continue: 'Reprendre le visionnage',
-    title_recomend_watch: 'Nous recommandons',
     title_new_episodes: 'Nouveaux épisodes',
     title_popular: 'Populaire',
     title_popular_movie: 'Films populaires',

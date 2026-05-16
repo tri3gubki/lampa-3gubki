@@ -2,27 +2,29 @@
     width: 100%;
 
     &__split{
-        margin: 1em 1em;
+        margin: 1em auto;
         width: 2.3em;
         border-top: 2px solid rgba(255, 255, 255, 0.1);
-        margin-left: 1.7em;
     }
 
     &__list{
         margin: 0;
-        padding-left: 0.6em;
+        padding: 0;
     }
 
     &__item{
+        // Вертикальная компоновка: иконка сверху, текст под ней по центру.
         display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
         color: #fff;
         position: relative;
-        padding: 0.9em $offset;
-        border-radius: 1em;
+        padding: 0.7em 0.4em;
+        border-radius: 0.8em;
 
         + li{
-            margin-top: 0.1em;
+            margin-top: 0.2em;
         }
 
         &.focus,
@@ -69,23 +71,31 @@
     }
 
     &__ico{
-        margin-right: 1.5em;
-        width: 1.5em;
-        height: 1.5em;
+        margin-bottom: 0.4em;
+        width: 1.6em;
+        height: 1.6em;
         display: flex;
         flex-shrink: 0;
 
         > img{
-            width: 1.5em;
-            height: 1.5em;
+            width: 1.6em;
+            height: 1.6em;
+        }
+    }
+
+    // Кнопка «Редактировать» — только иконка карандаша, без надписи.
+    // Колоночная раскладка как у других пунктов, но без margin-bottom
+    // у иконки (нет текста под ней).
+    &__item[data-action="edit"]{
+        .menu__ico{
+            margin-bottom: 0;
         }
     }
 
     &__text{
-        font-size: 1.4em;
+        font-size: 0.85em;
         font-weight: 300;
-        line-height: 0.8;
-        margin-top: -0.1em;
+        line-height: 1.1;
     }
 
     &:not(.editable) .menu__item.hidden{

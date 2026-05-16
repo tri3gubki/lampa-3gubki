@@ -76,6 +76,73 @@
             width: 100%;
         }
     }
+
+    // Модальное оформление — для страницы торрентов после клика «Смотреть».
+    // Левую панель с постером/инфо прячем, правую центрируем как окно.
+    // Стиль фона как у других модалок (settings/selectbox/noty) —
+    // тёмный полупрозрачный с лёгким blur'ом.
+    //
+    // Высоту окна ограничиваем по vh, а внутреннее наполнение организуем
+    // как flex-column чтобы скролл-зона со списком торрентов получала
+    // оставшееся пространство и сама прокручивалась внутри, не вылезая
+    // за модальное окно.
+    &--modal{
+        max-width: 60em;
+        margin: 1.5em auto 4em;
+        max-height: calc(100vh - 6em);
+        background: rgba(38, 40, 41, 0.92);
+        backdrop-filter: blur(0.6em);
+        border-radius: 1em;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        .explorer__left{
+            display: none;
+        }
+
+        .explorer__files{
+            width: 100%;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+            &-head{
+                flex-shrink: 0;
+            }
+
+            &-body{
+                flex: 1;
+                min-height: 0;
+                overflow: hidden;
+            }
+        }
+
+        // Lampa-Scroll получает inline style height = innerHeight - head
+        // через класс layer--wheight (см. core/layer.js). Это превращало
+        // scroll в фикс-высоту 800+px, и модал не мог сжиматься под малый
+        // список. Снимаем эту привязку — scroll берёт высоту по контенту,
+        // max-height для прокрутки большого списка задаёт JS на
+        // .scroll__content (см. applyModalScrollHeight в torrents.js).
+        .layer--wheight{
+            height: auto !important;
+        }
+    }
+}
+
+// ===== Торренты как настоящий модал поверх страницы фильма =====
+// Активити лампы стекаются в .activitys__slides с opacity 0/1. Форсим
+// видимость предыдущей активити (страницы фильма) — модал просвечивает
+// сквозь свой полупрозрачный фон, и фильм виден сзади без отдельного
+// затемняющего backdrop'а.
+body.torrents-modal--open{
+    .activitys__slides > .activity:nth-last-child(2){
+        opacity: 1;
+    }
 }
 
 .explorer-list{

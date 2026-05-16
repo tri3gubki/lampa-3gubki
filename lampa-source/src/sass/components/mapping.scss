@@ -18,10 +18,14 @@
     &--grid{
         display: flex;
         flex-wrap: wrap;
-        padding: 0 1em;
+        // padding-top: верхний воздух для grid-страниц (История/Торренты/
+        // Избранное/категории). Поверх scroll__content padding-top 1.2em
+        // даёт ~2.7em — карточки не липнут к head bar.
+        padding: 1.5em 1em 0;
 
         > * {
-            padding: 0 0.5em 1em 0.5em;
+            // padding-bottom — вертикальный зазор между рядами grid-сетки.
+            padding: 0 0.5em 2em 0.5em;
             flex-shrink: 0;
         }
     }

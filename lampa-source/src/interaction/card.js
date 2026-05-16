@@ -11,7 +11,7 @@ import Timeline from './timeline'
 import Lang from '../core/lang'
 import Tmdb from '../core/tmdb/tmdb'
 import Manifest from '../core/manifest'
-import Search from './search/global'
+import Search from './search/popup'
 import Loading from './loading'
 import TmdbApi from '../core/api/sources/tmdb'
 

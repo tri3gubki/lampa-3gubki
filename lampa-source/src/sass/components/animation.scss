@@ -1,6 +1,6 @@
 @keyframes animation-card-focus {
     40% {
-        transform: translate3d(0,-1em,0);
+        transform: translate3d(0,-0.3em,0);
     }
     100% {
         transform: translate3d(0,0,0);
@@ -37,11 +37,11 @@
 @keyframes animation-modal {
     0%{
         opacity: 0;
-        transform: translate3d(0,-5em,0) scale(0.9);
+        transform: scale(0.95);
     }
     100% {
         opacity: 1;
-        transform: translate3d(0,0,0) scale(1);
+        transform: scale(1);
     }
 }
 
@@ -175,8 +175,6 @@ body.advanced--animation:not(.no--animation){
     .menu .menu__item,
     .full-start__button,
     .simple-button,
-    .full-descr__tag,
-    .tag-count,
     .full-review,
     .full-review-add{
         &.focus,

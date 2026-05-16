@@ -29,8 +29,6 @@ export default {
     search_start: 'Começar a pesquisar',
     search_nofound: 'Não encontrámos nada relacionado com a sua pesquisa.',
 
-    full_genre: 'Gênero',
-    full_production: 'Produção',
     full_date_of_release: 'Data de lançamento',
     full_budget: 'Orçamento',
     full_countries: 'Países',
@@ -236,8 +234,6 @@ export default {
     title_action: 'Ação',
     title_producer: 'Produtor',
     title_collection: 'Coleção',
-    title_recomendations: 'Recomendações',
-    title_similar: 'Semelhantes',
     title_timetable: 'Programação',
     title_relises: 'Lançamentos digitais',
     title_catalog: 'Catálogo',
@@ -254,7 +250,6 @@ export default {
     title_now_watch: 'Assistindo agora',
     title_latest: 'Última adição',
     title_continue: 'Continuar navegando',
-    title_recomend_watch: 'Recomendamos ver',
     title_new_episodes: 'Novos episódios',
     title_popular: 'Popular',
     title_popular_movie: 'Filmes populares',
@@ -808,7 +803,6 @@ export default {
     tv_status_released: 'Lançado',
     tv_status_rumored: 'Rumores',
     tv_status_post_production: 'Em breve',
-    full_keywords: 'Tag',
     title_last_year: 'Ano passado',
 
     title_reset: 'Reinício',

@@ -71,6 +71,16 @@ function init(){
         Menu.catalog()
     })
 
+    html.find('.open--exit').on('hover:enter',()=>{
+        Activity.confirmExit()
+    })
+
+    // Биндим запись last-фокуса и для статичных селекторов из шаблона —
+    // observe() ловит только будущие мутации, а кнопки трея уже в DOM.
+    html.find('.selector').on('hover:focus hover:hover hover:touch',(e)=>{
+        last = e.target
+    })
+
     observe()
 
     Controller.add('head',{

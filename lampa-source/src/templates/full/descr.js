@@ -18,11 +18,7 @@ let html = `<div class="full-descr">
                 <div class="full-descr__info-body">{countries}</div>
             </div>
         </div>
-
-        <div class="full-descr__tags"></div>
     </div>
-
-    
 </div>`
 
 export default html

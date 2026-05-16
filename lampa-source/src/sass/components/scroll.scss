@@ -33,10 +33,10 @@
         mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%);
 
         .scroll__content{
-            padding: 0.5em 0 2.5em;
+            padding: 0.7em 0 2.5em;
 
             @media screen and (max-width: $media_xs) {
-                padding: $offset 0;
+                padding: 0.7em 0 $offset;
             }
         }
     }
@@ -48,9 +48,11 @@
         overflow: hidden;
 
         .scroll__content{
-            // Вертикальный padding 0.7em — запас под белую focus-обводку
-            // карточки (.card.focus .card__view::after { top: -0.5em }).
-            padding: 0.7em $offset;
+            // Вертикальный padding: top 0.6em — минимум под focus-обводку
+            // карточки (.card.focus .card__view::after { top: -0.5em }),
+            // чтобы заголовок ряда был ближе к карточкам. bottom 1.5em —
+            // воздух между рядами (items-line padding-bottom убран).
+            padding: 0.6em $offset 1.5em;
         }
 
         &.scroll--mask{
@@ -60,10 +62,10 @@
             mask-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 4%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%);
 
             .scroll__content{
-                padding: 0.7em 2.5em;
+                padding: 0.6em 2.5em 1.5em;
 
                 @media screen and (max-width: $media_xs) {
-                    padding: 0.7em $offset;
+                    padding: 0.6em $offset 1.5em;
                 }
             }
         }

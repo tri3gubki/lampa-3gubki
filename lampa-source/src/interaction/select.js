@@ -46,6 +46,8 @@ function bind(){
 
     html.find('.selectbox__title').text(active.title)
     html.toggleClass('selectbox--fullsize', active.fullsize ? true : false)
+    html.toggleClass('selectbox--centered', active.centered ? true : false)
+    html.toggleClass('selectbox--top', active.top ? true : false)
 
     active.items.forEach(element => {
         if(element.hide) return

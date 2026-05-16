@@ -21,13 +21,75 @@ import Explorer from '../interaction/explorer'
 import Layer from '../core/layer'
 import WatchedHistory from '../interaction/watched_history'
 import Listener from './torrents/listener'
+import Qbittorrent from '../interaction/qbittorrent'
 
 import voices from './torrents/voices'
 import filter_langs from './torrents/lang'
 
+// Базовый фильтр мусора ДЛЯ ФИЛЬМОВ: только живые раздачи (Seeders >= 1),
+// только 4K/1080p/720p, без камрипов/screener'ов, размер >= 3 GB (отсекает
+// «сжатки» под мобильные). Сортировка: больший размер → больше сидеров.
+// Для сериалов пока НЕ применяется — там настроим отдельно.
+const TRASH_TAGS_RE = /\b(cam|hdcam|ts|hdts|hdtc|tc|telesync|telecine|workprint|screener|dvdscr)\b/i
+const QUALITY_RE    = /\b(2160p|4k|uhd|1080p?|720p?)\b/i
+const MIN_MOVIE_SIZE_BYTES = 3 * 1024 * 1024 * 1024   // 3 GB
+
+/**
+ * Ключ-сигнатура раздачи: одинаковые качество+HDR+DV+размер с разных
+ * трекеров — это, по сути, одна и та же раздача в дубле. Дедупим
+ * оставляя ту что с большим Seeders.
+ */
+function movieDedupeKey(item){
+    let title = (item.Title || '').toLowerCase()
+    let q   = /\b(2160p|4k|uhd)\b/.test(title) ? '4k'
+            : /\b1080p?\b/.test(title)         ? '1080p'
+            : /\b720p?\b/.test(title)          ? '720p'
+            : '?'
+    let hdr = /\bhdr/.test(title) ? '1' : '0'
+    let dv  = /\b(dv|dolby[\s.]?vision)\b/.test(title) ? '1' : '0'
+    // Размер группируем в bucket'ы по 100MB — реальные байты двух копий
+    // одного релиза с разных трекеров могут отличаться на десятки МБ
+    // (точные число / контейнер), но это та же раздача.
+    let size_bucket = Math.round((item.Size || 0) / (100 * 1024 * 1024))
+    return q + '|' + hdr + '|' + dv + '|' + size_bucket
+}
+
+function filterTrashMovie(data){
+    if(!data || !Array.isArray(data.Results)) return data
+
+    let filtered = data.Results.filter(item => {
+        if((item.Seeders || 0) < 1) return false
+        let title = item.Title || ''
+        if(TRASH_TAGS_RE.test(title)) return false
+        if(!QUALITY_RE.test(title)) return false
+        if((item.Size || 0) < MIN_MOVIE_SIZE_BYTES) return false
+        return true
+    })
+
+    // Дедуп: одна сигнатура (качество+HDR+DV+размер) — оставляем самую
+    // живую. Это убирает дубли той же раздачи которые висят на разных
+    // трекерах.
+    let seen = new Map()
+    filtered.forEach(item => {
+        let key = movieDedupeKey(item)
+        let prev = seen.get(key)
+        if(!prev || (item.Seeders || 0) > (prev.Seeders || 0)){
+            seen.set(key, item)
+        }
+    })
+
+    data.Results = Array.from(seen.values()).sort((a, b) => {
+        let sa = a.Size || 0, sb = b.Size || 0
+        if(sa !== sb) return sb - sa
+        return (b.Seeders || 0) - (a.Seeders || 0)
+    })
+
+    return data
+}
+
 /**
  * Компонент "Torrents"
- * @param {*} object 
+ * @param {*} object
  */
 function component(object){
     Arrays.extend(object, {
@@ -110,7 +172,31 @@ function component(object){
     if(object.from_search) object.movie.original_title = ''
 
     this.create = function(){
+        // Превращаем активити в модал-окно: скрываем левую панель
+        // (постер/название/описание) и центрируем правую с торрент-листом.
+        // Body-класс позволяет SCSS показать ПРЕДЫДУЩУЮ активити (страницу
+        // фильма) сквозь backdrop — визуально торренты всплывают поверх
+        // фильма, как настоящая модалка.
+        files.render().addClass('explorer--modal')
+        $('body').addClass('torrents-modal--open')
         return this.render()
+    }
+
+    /**
+     * Как Modal.max() — ограничиваем .scroll__content по max-height
+     * относительно фактической высоты модала минус шапка с фильтром.
+     * Без этого Lampa-Scroll (через .layer--wheight) вылезает на полный
+     * экран и нижние торренты не видны.
+     */
+    this.applyModalScrollHeight = function(){
+        let modal_el = files.render()[0]
+        if(!modal_el) return
+
+        let modal_h  = modal_el.getBoundingClientRect().height
+        let head_h   = files.render().find('.explorer__files-head').outerHeight() || 0
+        let target_h = Math.max(200, modal_h - head_h - 24)
+
+        files.render().find('.scroll__content').css('max-height', target_h + 'px')
     }
 
     this.initialize = function(){
@@ -152,8 +238,22 @@ function component(object){
     this.parse = function(){
         filter = new Filter(object)
 
+        // Для ФИЛЬМОВ — фиксированный поиск «оригинал + год» + наш фильтр
+        // мусора. Для СЕРИАЛОВ — пока оставляем как было (parse_lang
+        // настройка пользователя, без нашего фильтра). Настроим отдельно.
+        let movie    = object.movie || {}
+        let isSeries = !!(movie.name || movie.original_name)
+
+        if(!isSeries){
+            let orig = movie.original_title || ''
+            let year = ((movie.release_date || '') + '').slice(0, 4)
+            if(orig){
+                object.search = (orig + (year ? ' ' + year : '')).trim()
+            }
+        }
+
         Parser.get(object,(data)=>{
-            results = data
+            results = isSeries ? data : filterTrashMovie(data)
 
             this.build()
 
@@ -162,6 +262,11 @@ function component(object){
             this.activity.loader(false)
 
             this.activity.toggle()
+
+            // Та же логика что в Modal.max() — после рендера ограничиваем
+            // .scroll__content по max-height чтобы torrent-list скроллился
+            // внутри модала, а не вылезал за нижний край.
+            this.applyModalScrollHeight()
         },(text)=>{
             this.empty(Lang.translate('torrent_error_connect') + ': ' + text)
         })
@@ -878,6 +983,11 @@ function component(object){
                 let enabled = Controller.enabled().name
                 let menu = [
                     {
+                        title: Lang.translate('torrent_parser_qbittorrent_send'),
+                        subtitle: Lang.translate('torrent_parser_qbittorrent_descr'),
+                        qbit: true
+                    },
+                    {
                         title: Lang.translate('torrent_parser_add_to_mytorrents'),
                         tomy: true
                     },
@@ -902,7 +1012,43 @@ function component(object){
                         Controller.toggle(enabled)
                     },
                     onSelect: (a)=>{
-                        if(a.tomy){
+                        if(a.qbit){
+                            if(!Qbittorrent.configured()){
+                                Noty.show(Lang.translate('qbittorrent_no_url'))
+                            }
+                            else{
+                                console.log('Qbittorrent: element keys', Object.keys(element), element)
+
+                                // Приоритет: чистый magnet > infoHash→magnet > HTTP-link.
+                                // HTTP-link от prowlarr-download-proxy часто 500-ит при
+                                // qBit-доступе (apikey/link expires, contained-DNS), magnet
+                                // же не зависит от внешних HTTP — qBit его сам тянет через DHT.
+                                let url = element.MagnetUri || element.magnetUrl || element.magnet || ''
+
+                                if(!url){
+                                    let h = element.infoHash || element.InfoHash || element.hash
+                                    if(h){
+                                        let name = element.Title || element.title || ''
+                                        url = 'magnet:?xt=urn:btih:' + String(h).toLowerCase()
+                                            + (name ? '&dn=' + encodeURIComponent(name) : '')
+                                    }
+                                }
+
+                                if(!url){
+                                    url = element.Link || element.downloadUrl || element.link
+                                       || element.url  || element.guid || ''
+                                }
+
+                                if(!url){
+                                    console.warn('Qbittorrent: no link in element', element)
+                                    Noty.show(Lang.translate('qbittorrent_error') + ': no link')
+                                }
+                                else{
+                                    Qbittorrent.send(url, {title: element.Title || element.title})
+                                }
+                            }
+                        }
+                        else if(a.tomy){
                             this.addToBase(element)
                         }
                         else if(a.mark){
@@ -911,7 +1057,7 @@ function component(object){
                         else if(a.unmark){
                             this.mark(element, item, false)
                         }
-    
+
                         Controller.toggle(enabled)
                     }
                 })
@@ -983,6 +1129,8 @@ function component(object){
     }
 
     this.destroy = function(){
+        $('body').removeClass('torrents-modal--open')
+
         network.clear()
         Parser.clear()
 

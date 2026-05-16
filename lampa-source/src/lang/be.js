@@ -27,8 +27,6 @@ export default {
     search_start: 'Пачаць пошук',
     search_nofound: 'Па вашым запыце нічога не знойдзена.',
 
-    full_genre: 'Жанр',
-    full_production: 'Вытворчасць',
     full_date_of_release: 'Дата рэлізу',
     full_budget: 'Бюджэт',
     full_countries: 'Краіны',
@@ -236,8 +234,6 @@ export default {
     title_action: 'Дзеянне',
     title_producer: 'Рэжысёр',
     title_collection: 'Калекцыя',
-    title_recomendations: 'Рэкамендацыі',
-    title_similar: 'Падобныя',
     title_timetable: 'Расклад',
     title_relises: 'Лічбавыя рэлізы',
     title_catalog: 'Каталог',
@@ -254,7 +250,6 @@ export default {
     title_now_watch: 'Глядзяць зараз',
     title_latest: 'Апошняе даданне',
     title_continue: 'Працягнуць прагляд',
-    title_recomend_watch: 'Рэкамендуем паглядзець',
     title_new_episodes: 'Новыя серыі',
     title_popular: 'Папулярнае',
     title_popular_movie: 'Папулярныя фільмы',
@@ -823,7 +818,6 @@ export default {
     tv_status_rumored: 'Па слыхам',
     tv_status_post_production: 'Хутка',
 
-    full_keywords: 'Тэгі',
     title_last_year: 'Мінулы год',
 
     title_reset: 'Перазагрузіць',

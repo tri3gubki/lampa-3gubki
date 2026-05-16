@@ -139,40 +139,12 @@ function init(){
         })
     }
 
-    // Выход из приложения
+    // Выход из приложения по двойному backward на корневой активности
     listener.follow('backward',(event)=>{
         let noout = Platform.is('browser') || Platform.desktop()
 
         if(event.count == 1 && Date.now() > start_time + (1000 * 2) && !noout){
-            let enabled = Controller.enabled().name
-
-            Select.show({
-                title: Lang.translate('title_out'),
-                items: [
-                    {
-                        title: Lang.translate('title_out_confirm'),
-                        out: true
-                    },
-                    {
-                        title: Lang.translate('cancel')
-                    }
-                ],
-                onSelect: (a)=>{
-                    if(a.out){
-                        out()
-
-                        Controller.toggle(enabled)
-
-                        App.close()
-                    }
-                    else{
-                        Controller.toggle(enabled)
-                    }
-                },
-                onBack: ()=>{
-                    Controller.toggle(enabled)
-                }
-            })
+            confirmExit()
         }
     })
 
@@ -574,6 +546,43 @@ function out(){
 }
 
 /**
+ * Показать модалку подтверждения выхода. Используется и при двойном
+ * backward на корневой активности, и кнопкой выхода в head bar.
+ */
+function confirmExit(){
+    let enabled = Controller.enabled().name
+
+    Select.show({
+        title: Lang.translate('title_out'),
+        centered: true,
+        items: [
+            {
+                title: Lang.translate('title_out_confirm'),
+                out: true
+            },
+            {
+                title: Lang.translate('cancel')
+            }
+        ],
+        onSelect: (a)=>{
+            if(a.out){
+                out()
+
+                Controller.toggle(enabled)
+
+                App.close()
+            }
+            else{
+                Controller.toggle(enabled)
+            }
+        },
+        onBack: ()=>{
+            Controller.toggle(enabled)
+        }
+    })
+}
+
+/**
  * Заменить активную активность
  * @param {object} replace - заменить на новые параметры
  * @param {boolean} clear - использовать только новые параметры, по умолчанию false
@@ -618,6 +627,7 @@ export default {
     call,
     last,
     out,
+    confirmExit,
     replace,
     active,
     all,

@@ -534,7 +534,8 @@ function category(params = {}, oncomplite, onerror){
 
 function full(params = {}, oncomplite, onerror){
     // Было Status(9): + reactions + discuss; CUB-source удалён → -2.
-    let status = new Status(7)
+    // Блоки «Рекомендации» и «Похожие» удалены → ещё -2.
+    let status = new Status(5)
         status.onComplite = oncomplite
 
     if(Utils.dcma(params.method, params.id)) return onerror()
@@ -582,33 +583,13 @@ function full(params = {}, oncomplite, onerror){
         status.error()
     }, {life: day * 7})
 
-    if(!false){
-        get(params.method+'/'+params.id+'/credits',params,(json)=>{
-            status.append('persons', json)
-        },status.error.bind(status), {life: day * 7})
+    get(params.method+'/'+params.id+'/credits',params,(json)=>{
+        status.append('persons', json)
+    },status.error.bind(status), {life: day * 7})
 
-        get(params.method+'/'+params.id+'/recommendations',params,(json)=>{
-            status.append('recomend', json)
-        },status.error.bind(status), {life: day * 7})
-
-        get(params.method+'/'+params.id+'/similar',params,(json)=>{
-            status.append('simular', json)
-        },status.error.bind(status), {life: day * 7})
-
-        if(!false){
-            videos(params, (json)=>{
-                status.append('videos', json)
-            },status.error.bind(status))
-        }
-        else{
-            status.need--
-        }
-    }
-    else{
-        status.need -= 4
-    }
-
-    // CUB-source удалён — reactions/discuss больше не подгружаются.
+    videos(params, (json)=>{
+        status.append('videos', json)
+    },status.error.bind(status))
 }
 
 function videos(params = {}, oncomplite, onerror){
@@ -682,6 +663,29 @@ function search(params = {}, oncomplite){
 
         status.append('person', json)
     },status.error.bind(status))
+}
+
+/**
+ * Мульти-поиск TMDB (movie+tv+person в одном запросе). Используется
+ * новым popup-поиском в head bar — отбрасываем persons, сортируем по
+ * популярности, возвращаем готовый смешанный список.
+ */
+function multi(params = {}, oncomplite, onerror){
+    get('search/multi', params, (json)=>{
+        let results = (json.results || [])
+            .filter(r => r.media_type === 'movie' || r.media_type === 'tv')
+            .map(r => {
+                if(r.media_type === 'tv'){
+                    r.title          = r.name || r.title
+                    r.original_title = r.original_name || r.original_title
+                }
+                r.source = 'tmdb'
+                return r
+            })
+            .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+
+        oncomplite({results})
+    }, onerror)
 }
 
 function discovery(){
@@ -1260,6 +1264,7 @@ export default {
     list,
     category,
     search,
+    multi,
     clear,
     company,
     person,

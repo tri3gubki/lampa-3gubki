@@ -30,6 +30,7 @@ let menu_items = [
     {action: 'history', title: 'menu_history', sprite: 'history'},
     {action: 'timetable', title: 'menu_timeline', sprite: 'calendar'},
     {action: 'mytorrents', title: 'menu_torrents', sprite: 'torrent'},
+    {action: 'downloads', title: 'menu_downloads', sprite: 'download'},
 ]
 
 /**
@@ -235,6 +236,12 @@ function ready(){
         if(prepared(action,['mytorrents'])){
             Router.call('mytorrents', {
                 title: Lang.translate('title_mytorrents')
+            })
+        }
+
+        if(prepared(action,['downloads'])){
+            Router.call('downloads', {
+                title: Lang.translate('title_downloads')
             })
         }
 

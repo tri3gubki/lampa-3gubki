@@ -37,6 +37,7 @@ import PlayerPlaylist from './interaction/player/playlist'
 import Timeline from './interaction/timeline'
 import Settings from './interaction/settings/settings'
 import SettingsApi from './interaction/settings/api'
+import Qbittorrent from './interaction/qbittorrent'
 import Modal from './interaction/modal'
 import Api from './core/api/api'
 import Card from './interaction/card'
@@ -49,7 +50,7 @@ import Parser from './core/api/sources/parser'
 import TMDB from './core/tmdb/tmdb'
 import Base64 from './utils/base64'
 import Loading from './interaction/loading'
-import Search from './interaction/search/global'
+import Search from './interaction/search/popup'
 import DeviceInput from './interaction/device_input'
 import AppWorker from './utils/worker'
 import DB from './utils/db'
@@ -64,7 +65,6 @@ import HoverSwitcher from './core/switcher'
 import Task from './core/loading'
 import App from './interaction/app'
 import LoadingProgress from './interaction/loading_progress'
-import Markers from './core/markers'
 import RemoteHelper from './interaction/remote_helper'
 import DataBase from './interaction/database'
 import Maker from './interaction/maker'
@@ -257,6 +257,7 @@ function initClass(){
         Api,
         Settings,
         SettingsApi,
+        Qbittorrent,
         Android,
         Card,
         Input,
@@ -436,6 +437,9 @@ function startApp(){
     Settings.init()
     LoadingProgress.status('Settings init')
 
+    Qbittorrent.init()
+    LoadingProgress.status('qBittorrent init')
+
     Select.init()
     LoadingProgress.status('Select init')
 
@@ -444,10 +448,6 @@ function startApp(){
 
     Background.init()
     LoadingProgress.status('Background init')
-
-    Markers.init()
-    LoadingProgress.status('Markers init')
-
 
     Bell.init()
     LoadingProgress.status('Bell init')
@@ -474,10 +474,6 @@ function startApp(){
 
     Player.init()
     LoadingProgress.status('Player init')
-
-
-    Parser.init()
-    LoadingProgress.status('Parser init')
 
 
     NavigationBar.init()

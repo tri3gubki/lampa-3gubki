@@ -1,35 +1,30 @@
 .noty{
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 50%;
+    bottom: 1.5em;
     z-index: 99;
-    background: #65eaa7;
-    color: #000;
-    transform: translateY(100%);
+    max-width: 80%;
+    background: rgba(38, 40, 41, 0.92);
+    backdrop-filter: blur(0.6em);
+    color: #fff;
+    border-radius: 0.8em;
+    transform: translate(-50%, calc(100% + 1.5em));
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
     line-height: 1.4;
+    box-shadow: 0 0.6em 1.5em rgba(0, 0, 0, 0.35);
 
     &__body{
-        padding: $offset;
+        padding: 0.8em 1.4em;
         text-align: center;
     }
 
     &__text{
-        font-size: 1.2em;
+        font-size: 1.05em;
     }
 
     &--visible{
-        transform: translateY(0%);
+        transform: translate(-50%, 0);
         opacity: 1;
-    }
-
-    &--style{
-        &--glass{
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(1em);
-            color: #fff;
-        }
     }
 }
