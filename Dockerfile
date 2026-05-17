@@ -35,4 +35,8 @@ FROM nginx:alpine
 
 COPY --from=build /app/build/github/lampa/ /usr/share/nginx/html/
 
+# nginx-конфиг: автоподстановка адреса сервера в msx/start.json
+# (см. lampa.conf) — MSX работает без ручной правки файлов.
+COPY lampa.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
