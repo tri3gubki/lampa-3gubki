@@ -31,6 +31,7 @@ import selectbox_icon from '../templates/selectbox/icon'
 import filter from '../templates/filter'
 import more from '../templates/more'
 import search_popup from '../templates/search/popup'
+import torrents_modal from '../templates/torrents_modal'
 import settings_input from '../templates/settings/input'
 import modal from '../templates/modal'
 import company from '../templates/company'
@@ -109,6 +110,7 @@ let templates = {
     selectbox_icon,
     more,
     search_popup,
+    torrents_modal,
     settings_input,
     modal,
     company,

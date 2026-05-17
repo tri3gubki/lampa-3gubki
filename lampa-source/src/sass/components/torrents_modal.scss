@@ -1,0 +1,27 @@
+// Overlay-окно торрентов для фильмов (interaction/torrents_modal/movie.js).
+// Сам бокс — .explorer--modal (стили в explorer.scss, переиспользуем).
+// Здесь только полноэкранный слой, затемнение и спиннер загрузки.
+.torrents-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 52;
+
+    &__layer{
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(0.3em);
+    }
+
+    &__loader{
+        position: absolute;
+        inset: 0;
+        display: none;
+        background: url(../img/loader.svg) no-repeat 50% 50%;
+        z-index: 2;
+    }
+
+    &--loading &__loader{
+        display: block;
+    }
+}

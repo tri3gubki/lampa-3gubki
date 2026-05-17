@@ -102,6 +102,12 @@ function component(object){
         }
     })
 
+    // modal_mode — компонент работает не как Activity, а как контент
+    // overlay-окна (см. interaction/torrents_modal/movie.js). Тогда
+    // body-классы, Background и Activity.replace не трогаем — этим
+    // управляет обёртка.
+    let modal_mode = !!object.modal_mode
+
     let network = new Reguest()
     let scroll  = new Scroll({mask:true,over: true})
     let files   = new Explorer(object)
@@ -172,13 +178,11 @@ function component(object){
     if(object.from_search) object.movie.original_title = ''
 
     this.create = function(){
-        // Превращаем активити в модал-окно: скрываем левую панель
-        // (постер/название/описание) и центрируем правую с торрент-листом.
-        // Body-класс позволяет SCSS показать ПРЕДЫДУЩУЮ активити (страницу
-        // фильма) сквозь backdrop — визуально торренты всплывают поверх
-        // фильма, как настоящая модалка.
+        // Скрываем левую панель (постер/инфо), правую центрируем как окно.
         files.render().addClass('explorer--modal')
-        $('body').addClass('torrents-modal--open')
+        // body-класс — только для legacy activity-режима (сериалы). Для
+        // modal_mode контейнером управляет обёртка torrents_modal/movie.js.
+        if(!modal_mode) $('body').addClass('torrents-modal--open')
         return this.render()
     }
 
@@ -272,10 +276,17 @@ function component(object){
         })
 
         filter.onSearch = (value)=>{
-            Activity.replace({
-                search: value,
-                clarification: true
-            })
+            if(modal_mode){
+                // В overlay-режиме нет Activity-стека — переоткрываем
+                // окно с новым запросом через колбэк обёртки.
+                if(typeof object.onModalResearch == 'function') object.onModalResearch(value)
+            }
+            else{
+                Activity.replace({
+                    search: value,
+                    clarification: true
+                })
+            }
         }
 
         filter.onBack = ()=>{
@@ -1083,7 +1094,8 @@ function component(object){
             this.initialize()
         }
         
-        Background.immediately(Utils.cardImgBackgroundBlur(object.movie))
+        // В modal_mode фон страницы фильма за окном не трогаем.
+        if(!modal_mode) Background.immediately(Utils.cardImgBackgroundBlur(object.movie))
 
         Controller.add('content',{
             toggle: ()=>{
@@ -1129,7 +1141,7 @@ function component(object){
     }
 
     this.destroy = function(){
-        $('body').removeClass('torrents-modal--open')
+        if(!modal_mode) $('body').removeClass('torrents-modal--open')
 
         network.clear()
         Parser.clear()
