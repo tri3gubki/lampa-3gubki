@@ -500,25 +500,28 @@ function component(object){
     }
 
     self.load = function(){
-        if(!qbit_base()){
-            renderUnconfigured()
+        let done = () => {
             self.activity.loader(false)
             self.activity.toggle()
-            return
+        }
+
+        if(!qbit_base()){
+            renderUnconfigured()
+            return done()
         }
 
         self.activity.loader(true)
 
         fetch_listing(path, (data) => {
             resolveTvContext(() => {
-                renderList(data)
-                self.activity.loader(false)
-                self.activity.toggle()
+                // renderList докладывает карточки асинхронно (после prefetch
+                // qBit-state) — toggle/фокус только когда карточки уже в DOM,
+                // иначе фокус ставится на пустую сетку.
+                renderList(data, done)
             })
         }, (err) => {
             renderError(err)
-            self.activity.loader(false)
-            self.activity.toggle()
+            done()
         })
     }
 
@@ -571,10 +574,13 @@ function component(object){
         scroll.body().empty().append(body)
     }
 
-    function renderList(data){
+    function renderList(data, done){
         scroll.body().empty()
         let visible = data.filter(e => e && e.name && (e.type === 'directory' || VIDEO_RE.test(e.name)))
-        if(!visible.length) return renderEmpty()
+        if(!visible.length){
+            renderEmpty()
+            return done && done()
+        }
         visible.sort((a, b) => {
             let ad = a.type === 'directory', bd = b.type === 'directory'
             if(ad !== bd) return ad ? -1 : 1
@@ -599,6 +605,8 @@ function component(object){
                 let card = buildCard(entry, state, torrents, files_by_hash)
                 grid.append(card)
             })
+
+            if(done) done()
         })
     }
 

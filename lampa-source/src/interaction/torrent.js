@@ -30,6 +30,21 @@ let callback_back
 let autostart_timer
 let autostart_progress
 
+// Одиночный фильм-файл: окно «Файлы» не показываем, плеер запускаем сразу.
+// autoplay_single — флаг такого запуска. return_controller — контроллер,
+// которому вернуть фокус после закрытия плеера: file-picker Modal в этом
+// сценарии уже уничтожен, поэтому 'modal' не подходит. Захватываем активный
+// контроллер вызывающей стороны в start()/open() (страница фильма —
+// 'full_start', серии — 'content', «Мои торренты» — свой).
+let autoplay_single   = false
+let return_controller = 'content'
+
+function captureReturn(){
+    let enabled = Controller.enabled()
+
+    return_controller = (enabled && enabled.name) ? enabled.name : 'content'
+}
+
 let formats = [
     'asf',
     'wmv',
@@ -61,6 +76,8 @@ function start(element, movie){
 
     if(movie) SERVER.movie  = movie
 
+    captureReturn()
+
     if(Platform.is('android') && !Storage.field('internal_torrclient')){
         Android.openTorrent(SERVER)
 
@@ -79,6 +96,8 @@ function open(hash, movie){
     SERVER.hash = hash
 
     if(movie) SERVER.movie = movie
+
+    captureReturn()
 
     if(Platform.is('android') && !Storage.field('internal_torrclient')){
         Android.playHash(SERVER)
@@ -309,6 +328,8 @@ function list(items, params){
     let scroll_to_element
     let first_item
 
+    autoplay_single = false
+
     Lampa.Listener.send('torrent_file',{type:'list_open',items, params})
 
     let folder = ''
@@ -429,7 +450,7 @@ function list(items, params){
                 Player.play(element)
 
                 Player.callback(()=>{
-                    Controller.toggle('modal')
+                    Controller.toggle(autoplay_single ? return_controller : 'modal')
                 })
 
                 Player.playlist(playlist)
@@ -556,12 +577,27 @@ function list(items, params){
     })
 
     // Один видео-файл и не сериал → запускаем сразу, окно «Файлы» не
-    // показываем. Modal-loading закрываем после trigger — Player.play
-    // уже запущен внутри hover:enter handler'а. params.seasons установлен
-    // только когда хотя бы у одного файла Torserver.parse нашёл season-теги.
+    // показываем. params.seasons выставлен только когда хотя бы у одного
+    // файла Torserver.parse нашёл season-теги.
     if(playlist.length == 1 && !params.seasons){
-        first_item.trigger('hover:enter')
+        autoplay_single = true
+
+        // Окно «Файлы» не показываем → torrent.js close() в этом сценарии
+        // не вызывается. Сбрасываем callback_back, чтобы он не «протёк»
+        // в следующий торрент-флоу (серии).
+        callback_back = false
+
+        // Закрываем loading-Modal и ВОЗВРАЩАЕМ фокус на страницу-источник
+        // ДО запуска плеера. Внешний плеер открывается поверх — Lampa
+        // остаётся на странице фильма, фокус должен быть на кнопке.
+        // Если не вернуть тут: preload() → Loading.start() захватит
+        // активный контроллер 'modal', а к моменту Loading.stop() Modal
+        // уже уничтожен — фокус уходит в никуда. Modal.close() сам
+        // контроллер не переключает, поэтому toggle делаем явно.
         Modal.close()
+        Controller.toggle(return_controller)
+
+        first_item.trigger('hover:enter')
         return
     }
 

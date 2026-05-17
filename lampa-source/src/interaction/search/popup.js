@@ -209,6 +209,12 @@ function close(){
         keyboard = null
     }
 
+    // keyboard.destroy() в simple-режиме удаляет только сам <input>; кнопки
+    // «Готово/Отменить» (.simple-keyboard-buttons) и микрофон остаются в
+    // контейнере. html попапа постоянный (создаётся один раз в init) —
+    // без очистки контейнера кнопки накапливаются при каждом открытии.
+    html.find('.simple-keyboard').empty()
+
     destroyLine()
 
     if(!restore_pending) Controller.toggle('head')

@@ -471,8 +471,13 @@ function toggle(){
 function backward(){
     destroy()
 
+    // callback (Player.callback) сам решает, какому контроллеру вернуть
+    // фокус после плеера. Раньше Controller.toggle('content') шёл БЕЗУСЛОВНО
+    // после callback'а и перетирал его выбор — на странице фильма
+    // контроллера 'content' нет, фокус терялся. Теперь 'content' —
+    // только дефолт для плеера без callback'а (трейлеры и т.п.).
     if(callback) callback()
-    Controller.toggle('content')
+    else Controller.toggle('content')
 
     callback = false
 }

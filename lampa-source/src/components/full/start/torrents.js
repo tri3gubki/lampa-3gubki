@@ -1,7 +1,6 @@
-import Activity from '../../../interaction/activity/activity'
-import Lang from '../../../core/lang'
 import Storage from '../../../core/storage/storage'
 import TorrentsMovieModal from '../../../interaction/torrents_modal/movie'
+import TorrentsSeriesModal from '../../../interaction/torrents_modal/series'
 
 export default {
     onCreate: function(){
@@ -11,39 +10,13 @@ export default {
         if(window.lampa_settings.torrents_use) button.toggleClass('selector', status).toggleClass('hide',!status)
 
         button.on('hover:enter',()=>{
-            // Фильм (нет .name — это не TV-сериал) → overlay-модал поверх
-            // страницы фильма, без перехода на отдельную Activity.
-            // Сериал → старый путь Activity.push (рефактор сериалов — Phase 2).
+            // Сериал (есть .name / .original_name) → series-модал с выбором
+            // сезона. Фильм → movie-модал. Оба — overlay поверх текущей
+            // страницы, без перехода на отдельную Activity.
             let isSeries = !!(this.card.name || this.card.original_name)
 
-            if(!isSeries){
-                TorrentsMovieModal.open(this.card)
-                return
-            }
-
-            let year = ((this.card.first_air_date || this.card.release_date || '0000') + '').slice(0,4)
-            let combinations = {
-                'df': this.card.original_title,
-                'df_year': this.card.original_title + ' ' + year,
-                'df_lg': this.card.original_title + ' ' + this.card.title,
-                'df_lg_year': this.card.original_title + ' ' + this.card.title + ' ' + year,
-
-                'lg': this.card.title,
-                'lg_year': this.card.title + ' ' + year,
-                'lg_df': this.card.title + ' ' + this.card.original_title,
-                'lg_df_year': this.card.title + ' ' + this.card.original_title + ' ' + year,
-            }
-
-            Activity.push({
-                url: '',
-                title: Lang.translate('title_torrents'),
-                component: 'torrents',
-                search: combinations[Storage.field('parse_lang')],
-                search_one: this.card.title,
-                search_two: this.card.original_title,
-                movie: this.card,
-                page: 1
-            })
+            if(isSeries) TorrentsSeriesModal.open(this.card)
+            else TorrentsMovieModal.open(this.card)
         })
     }
 }

@@ -167,6 +167,12 @@ export default {
     torrents_modal_searching: 'Searching for torrents...',
     torrents_modal_quality: 'Choose quality',
     torrents_modal_nofound: 'No torrents found',
+    torrents_modal_season_choose: 'Choose a season',
+    torrents_modal_season: 'Season',
+    torrents_modal_specials: 'Specials',
+    torrents_modal_watch: 'Watch',
+    torrents_modal_download: 'Download to qBittorrent',
+    torrents_modal_download_descr: 'Send the torrent to qBittorrent',
 
     torrent_serial_episode: 'Series',
     torrent_serial_season: 'Season',

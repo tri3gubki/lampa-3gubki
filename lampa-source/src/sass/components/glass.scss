@@ -2,7 +2,9 @@
     @media screen and (max-width: $media_xm) {
         .selectbox__content,
         .modal__content,
-        .settings__content{
+        .settings__content,
+        .torrents-modal__content,
+        .search-popup__content{
             background-color: #262829;
         }
     }
@@ -13,6 +15,8 @@ body.glass--style{
     .settings__content,
     .settings-input__content,
     .modal__content,
+    .torrents-modal__content,
+    .search-popup__content,
     .settings-input--free,
     .navigation-bar__body,
     .discuss-rules,
@@ -81,6 +85,8 @@ body.glass--style{
             .settings__content,
             .settings-input__content,
             .modal__content,
+            .torrents-modal__content,
+            .search-popup__content,
             .settings-input--free,
             .navigation-bar__body,
             .bell__item{
@@ -106,6 +112,8 @@ body.glass--style{
             .settings__content,
             .settings-input__content,
             .modal__content,
+            .torrents-modal__content,
+            .search-popup__content,
             .settings-input--free,
             .navigation-bar__body,
             .bell__item{

@@ -185,6 +185,12 @@ export default {
     torrents_modal_searching: 'Идёт поиск торрентов...',
     torrents_modal_quality: 'Выберите качество',
     torrents_modal_nofound: 'Торренты не найдены',
+    torrents_modal_season_choose: 'Выберите сезон',
+    torrents_modal_season: 'Сезон',
+    torrents_modal_specials: 'Спецвыпуски',
+    torrents_modal_watch: 'Смотреть',
+    torrents_modal_download: 'Скачать в qBittorrent',
+    torrents_modal_download_descr: 'Отправить раздачу на загрузку в qBittorrent',
 
     torrent_serial_episode: 'Серия',
     torrent_serial_season: 'Сезон',

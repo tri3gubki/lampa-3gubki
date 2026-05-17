@@ -6,6 +6,7 @@ import Torrent from '../torrent'
 import Utils from '../../utils/utils'
 import DeviceInput from '../device_input'
 import Shared from './shared'
+import Actions from './actions'
 
 /**
  * Movie Torrents Modal — поиск и выбор торрента для ФИЛЬМА.
@@ -28,6 +29,8 @@ let buckets    = null
 let step       = ''        // search | quality | list | empty
 let opened     = false
 let prev_ctrl  = 'content'
+let last_focus = null      // строка, с которой открыли long-press меню
+let quality_bucket = null  // выбранный бакет качества (для возврата фокуса)
 
 function buildSearch(c){
     let year = ((c.release_date || '') + '').slice(0, 4)
@@ -52,7 +55,9 @@ function addController(){
     Controller.add('torrents-modal', {
         toggle: ()=>{
             Controller.collectionSet(html)
-            Controller.collectionFocus(false, html)
+            // last_focus — чтобы при возврате из long-press меню фокус
+            // встал на ту же строку, а не на первую.
+            Controller.collectionFocus(last_focus || false, html)
         },
         // Только Navigator.move — на краях no-op, фокус не покидает окно.
         up:    ()=> Navigator.move('up'),
@@ -125,11 +130,14 @@ function renderQuality(){
         list.append(el)
     })
 
-    refocus(list.find('.selector').eq(0)[0])
+    // При возврате со списка — фокус на ранее выбранном качестве.
+    let idx = quality_bucket ? buckets.indexOf(quality_bucket) : 0
+    refocus(list.find('.selector').eq(idx < 0 ? 0 : idx)[0])
 }
 
 function renderList(bucket){
     step = 'list'
+    quality_bucket = bucket
     setTitle(bucket.label)
 
     let body = bodyEl().empty()
@@ -155,6 +163,10 @@ function renderList(bucket){
         row.find('.torrents-modal__torrent-tracker').text(item.Tracker || '')
 
         row.on('hover:enter', ()=> pickTorrent(item))
+        row.on('hover:long', ()=>{
+            last_focus = row[0]
+            Actions.openMenu(item, pickTorrent)
+        })
 
         list.append(row)
     })
@@ -185,7 +197,8 @@ function onError(text){
 // ===== Выбор торрента =====
 
 function pickTorrent(item){
-    let movie = card
+    let movie  = card
+    let target = prev_ctrl   // контроллер страницы фильма ('full_start')
 
     // Torrent.start читает element.title (lowercase) и element.poster.
     item.title  = item.Title
@@ -194,6 +207,12 @@ function pickTorrent(item){
     // Закрываем окно ДО Torrent.start — он откроет свой Modal/контроллер.
     close()
 
+    // Назад из окна выбора файла (мульти-файловая раздача) → фокус обратно
+    // на страницу фильма. Для single-file автозапуска это окно не
+    // показывается, а возврат фокуса после плеера делает torrent.js сам
+    // (captureReturn → return_controller).
+    Torrent.back(()=> { try{ Controller.toggle(target) }catch(e){} })
+
     Torrent.start(item, movie)
 }
 
@@ -201,10 +220,12 @@ function pickTorrent(item){
 
 function open(movie){
     if(opened) return
-    opened  = true
-    card    = movie
-    buckets = null
-    step    = ''
+    opened     = true
+    card       = movie
+    buckets    = null
+    step       = ''
+    last_focus = null
+    quality_bucket = null
 
     let enabled = Controller.enabled()
     prev_ctrl = (enabled && enabled.name) ? enabled.name : 'content'

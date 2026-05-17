@@ -8,7 +8,11 @@
     &__layer{
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.3);
+
+        @media screen and (max-width: $media_xm) {
+            backdrop-filter: blur(1em);
+        }
     }
 
     &__content{
@@ -18,7 +22,9 @@
         max-width: 80vw;
         max-height: calc(100vh - 6em);
         margin: 3em auto;
-        background: #1f2123;
+        // Базовый фон совпадает с settings/selectbox. При body.glass--style
+        // окно получает glass-стиль (см. sass/components/glass.scss).
+        background: #262829;
         border-radius: 1em;
         overflow: hidden;
         display: flex;
@@ -70,8 +76,9 @@
         animation: torrents-modal-spin 0.8s linear infinite;
     }
 
-    // ===== Кнопка качества =====
-    &__quality{
+    // ===== Кнопка качества / сезона =====
+    &__quality,
+    &__season{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -86,11 +93,13 @@
         }
     }
 
-    &__quality-label{
+    &__quality-label,
+    &__season-label{
         font-size: 1.3em;
     }
 
-    &__quality-count{
+    &__quality-count,
+    &__season-count{
         font-size: 1em;
         min-width: 2em;
         text-align: center;
@@ -100,7 +109,9 @@
     }
 
     &__quality.focus &__quality-count,
-    &__quality.hover &__quality-count{
+    &__quality.hover &__quality-count,
+    &__season.focus &__season-count,
+    &__season.hover &__season-count{
         background: rgba(0, 0, 0, 0.12);
     }
 

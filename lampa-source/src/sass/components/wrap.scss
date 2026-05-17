@@ -5,7 +5,11 @@
 
     &__left{
         width: 6.5em;
-        padding-top: 5em;
+        // padding-top = высота шапки (~3.8em) + небольшой отступ. Верх
+        // .scroll-модуля встаёт ровно под шапкой — overflow:hidden режет
+        // прокручиваемый контент по нижнему краю шапки, кнопки не уезжают
+        // в её зону.
+        padding-top: 4em;
         flex-shrink: 0;
         margin-left: -6.5em;
         z-index: 2;
@@ -14,7 +18,7 @@
         will-change: transform;
 
         .scroll--mask .scroll__content{
-            padding: 1.9em 0;
+            padding: 0.6em 0;
         }
 
         &--hidden{
