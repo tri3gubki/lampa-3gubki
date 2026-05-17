@@ -57,7 +57,6 @@ export default {
 
     settings_main_interface: 'General',
     settings_main_player: 'Player',
-    settings_main_parser: 'Parser',
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Extensions',
 
@@ -68,19 +67,12 @@ export default {
     settings_rest_cache: 'Clear cache',
     settings_rest_cache_descr: 'All settings and data will be cleared',
 
-    settings_parser_use: 'Use parser',
-    settings_parser_use_descr: 'Hereby, you agree to accept all responsibility for the use of public links to view torrent and online content.',
-    settings_parser_type: 'Parser type for torrents',
     settings_parser_jackett_placeholder: 'For example: 192.168.x',
     settings_parser_jackett_link: 'Link',
     settings_parser_jackett_link_descr: 'Provide a link to the Jackett script',
     settings_parser_jackett_key_placeholder: 'For example: sa0sk83d..',
     settings_parser_jackett_key: 'Api key',
     settings_parser_jackett_key_descr: 'Located in Jackett',
-    settings_parser_search: 'Search',
-    settings_parser_search_descr: 'What language to search in?',
-    settings_parser_in_search: 'Parser in search',
-    settings_parser_in_search_descr: 'Show search results?',
     settings_parser_timeout_title: 'Parser timeout',
     settings_parser_timeout_descr: 'Time in seconds to wait for a response from the server',
 
@@ -103,13 +95,8 @@ export default {
     settings_plugins_install: 'Install Plugin',
     settings_plugins_install_descr: 'Install a plugin from the list of available',
 
-    settings_server_link: 'Use link',
-    settings_server_links: 'Links',
+    settings_server_link: 'Server address',
     settings_server_placeholder: 'For example: 192.168.X',
-    settings_server_link_one: 'Main Link',
-    settings_server_link_one_descr: 'Specify the main link to the TorrServer script',
-    settings_server_link_two: 'Additional link',
-    settings_server_link_two_descr: 'Provide an additional link to the TorrServer script',
     settings_server_additionally: 'Additionally',
     settings_server_client: 'Embedded client',
     settings_server_client_descr: 'Use the built-in TorrServer JS client, otherwise the system one starts.',
@@ -117,11 +104,6 @@ export default {
     settings_server_base_descr: 'The torrent will be added to the TorrServer database',
     settings_server_preload: 'Use prefetch buffer',
     settings_server_preload_descr: 'Wait for TorrServer\'s preload buffer to fill before playing',
-    settings_server_auth: 'Authorization',
-    settings_server_password_use: 'Password login',
-    settings_server_login: 'Login',
-    settings_server_password: 'Password',
-    settings_server_not_specified: 'Not specified',
 
     torent_nohash_reasons: 'The reasons',
     torent_nohash_reason_one: 'TorServer was unable to download the torrent file',
@@ -649,8 +631,6 @@ export default {
     settings_param_background_image: 'Picture',
     settings_param_link_use_one: 'Main',
     settings_param_link_use_two: 'Additional',
-    settings_param_link_use_both: 'Both',
-    settings_param_torrent_lang_orig: 'Original',
     settings_param_player_timecode_again: 'Start over',
     settings_param_player_timecode_continue: 'Proceed',
     settings_param_player_timecode_ask: 'To ask',
@@ -787,9 +767,6 @@ export default {
     extensions_no_name: 'Untitled',
 
     change_source_on_cub: 'Change source to CUB',
-    settings_param_jackett_interview_all: 'All',
-    settings_param_jackett_interview_healthy: 'Available only',
-    settings_parser_jackett_interview: 'Poll trackers',
     title_ongoing: 'Ongoings',
     title_pgrating: 'Age limit',
 

@@ -11,7 +11,7 @@ let html = `<div>
         <div class="settings-folder__icon">
             <img src="./img/icons/settings/parser.svg" />
         </div>
-        <div class="settings-folder__name">#{settings_main_parser}</div>
+        <div class="settings-folder__name">Prowlarr</div>
     </div>
     <div class="settings-folder selector" data-component="server">
         <div class="settings-folder__icon">

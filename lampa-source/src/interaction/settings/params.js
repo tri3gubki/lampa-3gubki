@@ -62,25 +62,6 @@ function init(){
     }, Platform.is('browser') || Platform.desktop() ? 'mouse' : Platform.screen('mobile') ? 'touch' : 'controll')
 
 
-    //язык и комбинации для поиска
-    let langcode = Storage.get('language', 'ru')
-    let langname = Lang.codes()[langcode]
-    let selector = {
-        'df': '#{settings_param_torrent_lang_orig}',
-        'df_year': '#{settings_param_torrent_lang_orig} + #{torrent_parser_year}',
-        'df_lg': '#{settings_param_torrent_lang_orig} + ' + langname,
-        'df_lg_year': '#{settings_param_torrent_lang_orig} + '+langname+' + #{torrent_parser_year}',
-
-        'lg': langname,
-        'lg_year': langname + ' + #{torrent_parser_year}',
-        'lg_df': langname + ' + #{settings_param_torrent_lang_orig}',
-        'lg_df_year': langname + ' + #{settings_param_torrent_lang_orig} + #{torrent_parser_year}',
-    }
-
-    if(Arrays.getKeys(selector).indexOf(Storage.get('parse_lang', 'df')) == -1) Storage.set('parse_lang', 'df')
-
-    select('parse_lang',selector,'df')
-
     select('tmdb_lang',Lang.codes(),'ru')
 
     // баг со старыми телеками, неправильно работает Utils.protocol()
@@ -352,23 +333,6 @@ select('poster_size',{
     'w500': '#{settings_param_poster_quality_high}'
 },'w500')
 
-select('parser_torrent_type',{
-    'jackett': 'Jackett',
-    'prowlarr': 'Prowlarr',
-    'torrserver': 'TorrServer'
-},'jackett')
-
-select('parser_use_link',{
-    'one': '#{settings_param_link_use_one}',
-    'two': '#{settings_param_link_use_two}',
-    'both': '#{settings_param_link_use_both}'
-},'one')
-
-select('jackett_interview',{
-    'all': '#{settings_param_jackett_interview_all}',
-    'healthy': '#{settings_param_jackett_interview_healthy}',
-},'all')
-
 select('background_type',{
     'complex': '#{settings_param_background_complex}',
     'simple': '#{settings_param_background_simple}',
@@ -389,10 +353,6 @@ select('torrserver_use_link',{
     'one': '#{settings_param_link_use_one}',
     'two': '#{settings_param_link_use_two}'
 },'one')
-
-select('parse_lang',{
-    'df': '#{settings_param_torrent_lang_orig}'
-},'df')
 
 select('parse_timeout',{
     '15': '15',
@@ -440,14 +400,12 @@ trigger('animation',true)
 trigger('background',true)
 trigger('torrserver_savedb',false)
 trigger('torrserver_preload', true)
-trigger('parser_use',false)
 trigger('cloud_use',false)
 trigger('account_use',false)
 trigger('torrserver_auth',false)
 trigger('playlist_next',true)
 trigger('internal_torrclient', true)
 trigger('proxy_other', true)
-trigger('parse_in_search', false)
 trigger('helper', true)
 trigger('card_episodes', true)
 trigger('card_interfice_poster', true)

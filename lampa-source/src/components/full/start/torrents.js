@@ -1,13 +1,13 @@
-import Storage from '../../../core/storage/storage'
 import TorrentsMovieModal from '../../../interaction/torrents_modal/movie'
 import TorrentsSeriesModal from '../../../interaction/torrents_modal/series'
 
 export default {
     onCreate: function(){
-        let status = Storage.field('parser_use')
         let button = this.html.find('.view--torrent')
 
-        if(window.lampa_settings.torrents_use) button.toggleClass('selector', status).toggleClass('hide',!status)
+        // Парсер всегда включён — кнопка «Смотреть» доступна, если торренты
+        // вообще разрешены в сборке (lampa_settings.torrents_use).
+        if(window.lampa_settings.torrents_use) button.addClass('selector').removeClass('hide')
 
         button.on('hover:enter',()=>{
             // Сериал (есть .name / .original_name) → series-модал с выбором

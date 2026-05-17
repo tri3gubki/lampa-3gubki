@@ -64,7 +64,6 @@ export default {
 
     settings_main_interface: 'Основные',
     settings_main_player: 'Плеер',
-    settings_main_parser: 'Парсер',
     settings_main_torrserver: 'TorrServer',
     settings_main_plugins: 'Расширения',
 
@@ -78,9 +77,6 @@ export default {
     settings_rest_cache_all: 'Кеш и данные',
     settings_rest_cache_all_descr: 'Будут очищены все настройки и данные',
 
-    settings_parser_use: 'Использовать парсер',
-    settings_parser_use_descr: 'Тем самым, вы соглашаетесь принять на себя всю ответственность за использование публичных ссылок для просмотра торрент и онлайн контента.',
-    settings_parser_type: 'Тип парсера для торрентов',
     settings_parser_jackett_placeholder: 'Например: 192.168.х',
     settings_parser_jackett_link: 'Ссылка',
     settings_parser_jackett_link_descr: 'Укажите ссылку на скрипт Jackett',
@@ -89,10 +85,6 @@ export default {
     settings_parser_jackett_key: 'Api-ключ',
     settings_parser_jackett_key_descr: 'Находится в Jackett',
     settings_parser_prowlarr_key_descr: 'Находится во вкладке настроек Prowlarr в категории основное',
-    settings_parser_search: 'Поиск',
-    settings_parser_search_descr: 'На каком языке производить поиск?',
-    settings_parser_in_search: 'Парсер в поиске',
-    settings_parser_in_search_descr: 'Показывать результаты в поиске?',
     settings_parser_timeout_title: 'Таймаут парсера',
     settings_parser_timeout_descr: 'Время (в секундах) ожидания ответа от сервера',
 
@@ -115,13 +107,8 @@ export default {
     settings_plugins_install: 'Установить плагин',
     settings_plugins_install_descr: 'Установить плагин из списка доступных',
 
-    settings_server_link: 'Использовать ссылку',
-    settings_server_links: 'Ссылки',
+    settings_server_link: 'Адрес сервера',
     settings_server_placeholder: 'Например: 192.168.х',
-    settings_server_link_one: 'Основная ссылка',
-    settings_server_link_one_descr: 'Укажите основную ссылку на TorrServer',
-    settings_server_link_two: 'Дополнительная ссылка',
-    settings_server_link_two_descr: 'Укажите дополнительную ссылку на TorrServer',
     settings_server_additionally: 'Дополнительно',
     settings_server_client: 'Встроенный клиент',
     settings_server_client_descr: 'Использовать встроенный JS-клиент TorrServer, иначе запускается системный.',
@@ -129,11 +116,6 @@ export default {
     settings_server_base_descr: 'Торрент будет добавлен в базу TorrServer',
     settings_server_preload: 'Использовать буфер пред.загрузки',
     settings_server_preload_descr: 'Дожидаться заполнения буфера предварительной загрузки TorrServer перед проигрыванием',
-    settings_server_auth: 'Авторизация',
-    settings_server_password_use: 'Вход по паролю',
-    settings_server_login: 'Логин',
-    settings_server_password: 'Пароль',
-    settings_server_not_specified: 'Не указан',
 
 
 
@@ -738,8 +720,6 @@ export default {
     settings_param_background_image: 'Картинка',
     settings_param_link_use_one: 'Основную',
     settings_param_link_use_two: 'Дополнительную',
-    settings_param_link_use_both: 'Обе',
-    settings_param_torrent_lang_orig: 'Оригинал',
     settings_param_player_timecode_again: 'Начать с начала',
     settings_param_player_timecode_continue: 'Продолжить',
     settings_param_player_timecode_ask: 'Спрашивать',
@@ -753,10 +733,6 @@ export default {
     settings_param_card_interface_old: 'Старый',
     settings_param_card_interface_new: 'Новый',
 
-
-    settings_param_jackett_interview_all: 'Все',
-    settings_param_jackett_interview_healthy: 'Только доступные',
-    settings_parser_jackett_interview: 'Опрашивать трекеры',
 
     helper_keyboard: 'После ввода значения нажмите кнопку «Назад» для сохранения',
     helper_torrents: 'Удерживайте клавишу (ОК) для вызова контекстного меню',
