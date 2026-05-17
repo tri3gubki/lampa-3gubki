@@ -90,8 +90,11 @@
         max-width: 60em;
         margin: 1.5em auto 4em;
         max-height: calc(100vh - 6em);
-        background: rgba(38, 40, 41, 0.92);
-        backdrop-filter: blur(0.6em);
+        // Почти непрозрачный фон без backdrop-filter: blur — blur заставлял
+        // браузер пересчитывать размытие на каждом кадре transform-скролла
+        // списка торрентов → дёрганая прокрутка. Сплошной фон композитится
+        // дёшево, прокрутка плавная как у полноэкранной активити.
+        background: #1f2123;
         border-radius: 1em;
         overflow: hidden;
         position: relative;

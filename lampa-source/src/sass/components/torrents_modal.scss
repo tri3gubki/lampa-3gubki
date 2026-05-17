@@ -1,6 +1,5 @@
-// Overlay-окно торрентов для фильмов (interaction/torrents_modal/movie.js).
-// Сам бокс — .explorer--modal (стили в explorer.scss, переиспользуем).
-// Здесь только полноэкранный слой, затемнение и спиннер загрузки.
+// Окно выбора торрента для фильма (interaction/torrents_modal/movie.js).
+// Многошаговое: поиск → выбор качества → список торрентов.
 .torrents-modal{
     position: fixed;
     inset: 0;
@@ -9,19 +8,163 @@
     &__layer{
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(0.3em);
+        background: rgba(0, 0, 0, 0.6);
     }
 
-    &__loader{
-        position: absolute;
-        inset: 0;
-        display: none;
-        background: url(../img/loader.svg) no-repeat 50% 50%;
-        z-index: 2;
+    &__content{
+        position: relative;
+        z-index: 1;
+        width: 50em;
+        max-width: 80vw;
+        max-height: calc(100vh - 6em);
+        margin: 3em auto;
+        background: #1f2123;
+        border-radius: 1em;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
-    &--loading &__loader{
-        display: block;
+    &__title{
+        flex-shrink: 0;
+        padding: 1em 1.4em 0.6em;
+        font-size: 1.5em;
+        font-weight: 300;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
+    &__body{
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        padding: 0.4em 1em 1em;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    // ===== Статус (поиск / ничего не найдено) =====
+    &__status{
+        padding: 3em 1.5em;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__status-text{
+        font-size: 1.2em;
+        opacity: 0.8;
+    }
+
+    &__spinner{
+        width: 3em;
+        height: 3em;
+        margin: 0 auto 1em;
+        border: 0.25em solid rgba(255, 255, 255, 0.15);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: torrents-modal-spin 0.8s linear infinite;
+    }
+
+    // ===== Кнопка качества =====
+    &__quality{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 1.2em;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0.6em;
+
+        &.focus,
+        &.hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    &__quality-label{
+        font-size: 1.3em;
+    }
+
+    &__quality-count{
+        font-size: 1em;
+        min-width: 2em;
+        text-align: center;
+        padding: 0.2em 0.6em;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 1em;
+    }
+
+    &__quality.focus &__quality-count,
+    &__quality.hover &__quality-count{
+        background: rgba(0, 0, 0, 0.12);
+    }
+
+    // ===== Строка торрента =====
+    &__torrent{
+        padding: 0.8em 1.2em;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0.6em;
+
+        &.focus,
+        &.hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+
+    &__torrent-title{
+        font-size: 1.1em;
+        line-height: 1.3;
+        max-height: 2.6em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: 0.4em;
+    }
+
+    &__torrent-meta{
+        display: flex;
+        gap: 1.2em;
+        font-size: 0.9em;
+        opacity: 0.65;
+    }
+
+    &__torrent.focus &__torrent-meta,
+    &__torrent.hover &__torrent-meta{
+        opacity: 0.75;
+    }
+
+    &__torrent-seeds{
+        flex-shrink: 0;
+    }
+
+    &__torrent-tracker{
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    // Mobile — окно во всю ширину снизу.
+    @media screen and (max-width: $media_xm) {
+        &__content{
+            width: 100%;
+            max-width: none;
+            max-height: 85vh;
+            margin: 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            border-radius: 1em 1em 0 0;
+        }
+    }
+}
+
+@keyframes torrents-modal-spin{
+    100% { transform: rotate(360deg); }
 }

@@ -164,6 +164,10 @@ export default {
     torrent_item_grabs: 'Leechers',
     torrent_item_mb: 'Mbps',
 
+    torrents_modal_searching: 'Searching for torrents...',
+    torrents_modal_quality: 'Choose quality',
+    torrents_modal_nofound: 'No torrents found',
+
     torrent_serial_episode: 'Series',
     torrent_serial_season: 'Season',
     torrent_serial_date: 'Exit',

@@ -182,6 +182,10 @@ export default {
     torrent_item_grabs: 'Качают',
     torrent_item_mb: 'Мбит/с',
 
+    torrents_modal_searching: 'Идёт поиск торрентов...',
+    torrents_modal_quality: 'Выберите качество',
+    torrents_modal_nofound: 'Торренты не найдены',
+
     torrent_serial_episode: 'Серия',
     torrent_serial_season: 'Сезон',
     torrent_serial_date: 'Выход',
